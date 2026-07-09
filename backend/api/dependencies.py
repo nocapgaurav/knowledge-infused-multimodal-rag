@@ -31,6 +31,17 @@ from backend.parser.interfaces.document_parser import DocumentParser
 from backend.parser.mapper.domain_mapper import DomainMapper
 from backend.parser.providers.docling_parser import DoclingDocumentParser
 from backend.parser.services.parser_service import ParserService
+from backend.retrieval.assembly.evidence_assembler import AssemblyBudget, EvidenceAssembler
+from backend.retrieval.candidate.candidate_generator import CandidateGenerator
+from backend.retrieval.evaluation.evidence_evaluator import EvidenceEvaluator
+from backend.retrieval.expansion.graph_expander import ExpansionBudget, GraphExpander
+from backend.retrieval.interfaces.graph_retriever import GraphRetriever
+from backend.retrieval.interfaces.vector_retriever import VectorRetriever
+from backend.retrieval.providers.neo4j_retriever import Neo4jRetriever
+from backend.retrieval.providers.qdrant_retriever import QdrantRetriever
+from backend.retrieval.repository.retrieval_repository import RetrievalRepository
+from backend.retrieval.services.retrieval_service import RetrievalService
+from backend.retrieval.validation.retrieval_validator import RetrievalValidator
 from backend.search.interfaces.vector_store import VectorStore
 from backend.search.providers.qdrant_provider import QdrantProvider
 from backend.search.repository.index_repository import IndexRepository
@@ -398,3 +409,188 @@ def get_graph_service(
         A configured `GraphService`.
     """
     return GraphService(repository=repository, store=store)
+
+
+@lru_cache
+def get_retrieval_storage() -> WorkspaceStorage:
+    """Return the process-wide retrieval manifest storage backend.
+
+    A seventh `WorkspaceStorage` instance, rooted at yet another directory --
+    the same reused abstraction as every other artifact lifecycle.
+
+    Returns:
+        A `WorkspaceStorage` implementation configured from application settings.
+    """
+    settings = get_settings()
+    return LocalFilesystemStorage(root=settings.retrieval_storage_root)
+
+
+@lru_cache
+def get_vector_retriever() -> VectorRetriever:
+    """Return the process-wide, read-only vector retriever.
+
+    A separate connection from Module 7's `VectorStore`, deliberately:
+    depending on this narrower interface is what makes retrieval logic
+    structurally incapable of writing to Qdrant.
+
+    Returns:
+        A `VectorRetriever` implementation configured from application settings.
+    """
+    settings = get_settings()
+    return QdrantRetriever(url=settings.qdrant_url)
+
+
+@lru_cache
+def get_graph_retriever() -> GraphRetriever:
+    """Return the process-wide, read-only graph retriever.
+
+    A separate connection from Module 8's `KnowledgeGraphStore`,
+    deliberately: depending on this narrower interface is what makes
+    retrieval logic structurally incapable of writing to Neo4j.
+
+    Returns:
+        A `GraphRetriever` implementation configured from application settings.
+    """
+    settings = get_settings()
+    return Neo4jRetriever(
+        uri=settings.neo4j_uri,
+        user=settings.neo4j_user,
+        password=settings.neo4j_password,
+        database=settings.neo4j_database,
+    )
+
+
+def get_candidate_generator(
+    text_provider: EmbeddingProvider = Depends(get_text_embedding_provider),
+    vector_retriever: VectorRetriever = Depends(get_vector_retriever),
+    settings: Settings = Depends(get_settings),
+) -> CandidateGenerator:
+    """Return a candidate generator wired to the configured embedding provider and retriever.
+
+    Args:
+        text_provider: Text embedding provider, injected.
+        vector_retriever: Read-only vector retriever, injected.
+        settings: Application settings, injected.
+
+    Returns:
+        A configured `CandidateGenerator`.
+    """
+    return CandidateGenerator(
+        embedding_provider=text_provider,
+        vector_retriever=vector_retriever,
+        top_k=settings.retrieval_top_k,
+    )
+
+
+def get_graph_expander(
+    graph_retriever: GraphRetriever = Depends(get_graph_retriever),
+    vector_retriever: VectorRetriever = Depends(get_vector_retriever),
+) -> GraphExpander:
+    """Return a graph expander wired to the configured retrievers.
+
+    Args:
+        graph_retriever: Read-only graph retriever, injected.
+        vector_retriever: Read-only vector retriever, injected.
+
+    Returns:
+        A configured `GraphExpander`.
+    """
+    return GraphExpander(graph_retriever=graph_retriever, vector_retriever=vector_retriever)
+
+
+@lru_cache
+def get_evidence_evaluator() -> EvidenceEvaluator:
+    """Return the process-wide evidence evaluator.
+
+    Returns:
+        An `EvidenceEvaluator` instance. Stateless, so a single shared instance is safe.
+    """
+    return EvidenceEvaluator()
+
+
+@lru_cache
+def get_evidence_assembler() -> EvidenceAssembler:
+    """Return the process-wide evidence assembler.
+
+    Returns:
+        An `EvidenceAssembler` instance. Stateless, so a single shared instance is safe.
+    """
+    return EvidenceAssembler()
+
+
+@lru_cache
+def get_retrieval_validator() -> RetrievalValidator:
+    """Return the process-wide retrieval validator.
+
+    Returns:
+        A `RetrievalValidator` instance. Stateless, so a single shared instance is safe.
+    """
+    return RetrievalValidator()
+
+
+def get_retrieval_repository(
+    embeddings_storage: WorkspaceStorage = Depends(get_embeddings_storage),
+    index_storage: WorkspaceStorage = Depends(get_index_storage),
+    graph_storage: WorkspaceStorage = Depends(get_graph_storage),
+    retrieval_storage: WorkspaceStorage = Depends(get_retrieval_storage),
+) -> RetrievalRepository:
+    """Return a retrieval repository wired to the configured storage backends.
+
+    Args:
+        embeddings_storage: Storage backend holding embedding manifests, injected.
+        index_storage: Storage backend holding index manifests, injected.
+        graph_storage: Storage backend holding graph manifests, injected.
+        retrieval_storage: Storage backend for retrieval manifests, injected.
+
+    Returns:
+        A configured `RetrievalRepository`.
+    """
+    return RetrievalRepository(
+        embeddings_storage=embeddings_storage,
+        index_storage=index_storage,
+        graph_storage=graph_storage,
+        retrieval_storage=retrieval_storage,
+    )
+
+
+def get_retrieval_service(
+    repository: RetrievalRepository = Depends(get_retrieval_repository),
+    candidate_generator: CandidateGenerator = Depends(get_candidate_generator),
+    graph_expander: GraphExpander = Depends(get_graph_expander),
+    evaluator: EvidenceEvaluator = Depends(get_evidence_evaluator),
+    assembler: EvidenceAssembler = Depends(get_evidence_assembler),
+    validator: RetrievalValidator = Depends(get_retrieval_validator),
+    settings: Settings = Depends(get_settings),
+) -> RetrievalService:
+    """Return a retrieval service wired to the configured phases and budgets.
+
+    Args:
+        repository: Retrieval repository, injected.
+        candidate_generator: Phase 1, injected.
+        graph_expander: Phase 2, injected.
+        evaluator: Phase 3, injected.
+        assembler: Phase 4, injected.
+        validator: Structural validator, injected.
+        settings: Application settings, injected.
+
+    Returns:
+        A configured `RetrievalService`.
+    """
+    return RetrievalService(
+        repository=repository,
+        candidate_generator=candidate_generator,
+        graph_expander=graph_expander,
+        evaluator=evaluator,
+        assembler=assembler,
+        validator=validator,
+        expansion_budget=ExpansionBudget(
+            max_depth=settings.retrieval_max_expansion_depth,
+            max_neighbors_per_node=settings.retrieval_max_neighbors_per_node,
+            max_total_evidence=settings.retrieval_max_total_evidence,
+            max_traversal_cost=settings.retrieval_max_traversal_cost,
+        ),
+        assembly_budget=AssemblyBudget(
+            max_evidence_groups=settings.retrieval_max_evidence_groups,
+            max_primaries_per_section=settings.retrieval_max_primaries_per_section,
+        ),
+    )

@@ -59,6 +59,19 @@ class Settings(BaseSettings):
         neo4j_user: Username to authenticate to Neo4j with.
         neo4j_password: Password to authenticate to Neo4j with.
         neo4j_database: Name of the Neo4j database to use.
+        retrieval_storage_root: Base directory retrieval manifests are written under.
+        retrieval_top_k: Maximum number of Phase 1 dense-retrieval candidates.
+        retrieval_max_expansion_depth: Maximum graph traversal depth in
+            Phase 2 (evidence expansion).
+        retrieval_max_neighbors_per_node: Maximum neighbors explored from
+            any single node during expansion.
+        retrieval_max_total_evidence: Maximum new candidates expansion may
+            discover, across the whole traversal.
+        retrieval_max_traversal_cost: Maximum total neighbor-edges examined
+            during expansion, before truncation.
+        retrieval_max_evidence_groups: Maximum evidence groups in the final bundle.
+        retrieval_max_primaries_per_section: Maximum evidence groups whose
+            primary candidate comes from the same section.
     """
 
     app_name: str = "Knowledge-Infused Multimodal RAG"
@@ -88,6 +101,14 @@ class Settings(BaseSettings):
     neo4j_user: str = "neo4j"
     neo4j_password: str = "kimrag-dev-password"
     neo4j_database: str = "neo4j"
+    retrieval_storage_root: Path = Path("data/retrieval")
+    retrieval_top_k: int = 20
+    retrieval_max_expansion_depth: int = 2
+    retrieval_max_neighbors_per_node: int = 10
+    retrieval_max_total_evidence: int = 50
+    retrieval_max_traversal_cost: int = 500
+    retrieval_max_evidence_groups: int = 5
+    retrieval_max_primaries_per_section: int = 2
 
     model_config = SettingsConfigDict(
         env_file=".env",

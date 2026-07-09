@@ -38,6 +38,15 @@ from backend.parser.exceptions import (
     ParserStorageError,
     UnreadablePdfError,
 )
+from backend.retrieval.exceptions import (
+    DocumentNotGraphedError,
+    DocumentNotIndexedError,
+    GraphRetrieverError,
+    QueryEmbeddingError,
+    RetrievalStorageError,
+    RetrievalValidationError,
+    VectorRetrieverError,
+)
 from backend.search.exceptions import (
     EmbeddingArtifactsNotFoundError,
     IndexStorageError,
@@ -245,4 +254,59 @@ def register_exception_handlers(app: FastAPI) -> None:
         return JSONResponse(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={"detail": "document graph construction failed"},
+        )
+
+    @app.exception_handler(DocumentNotIndexedError)
+    async def _handle_document_not_indexed(
+        request: Request, exc: DocumentNotIndexedError
+    ) -> JSONResponse:
+        return JSONResponse(status_code=status.HTTP_404_NOT_FOUND, content={"detail": str(exc)})
+
+    @app.exception_handler(DocumentNotGraphedError)
+    async def _handle_document_not_graphed(
+        request: Request, exc: DocumentNotGraphedError
+    ) -> JSONResponse:
+        return JSONResponse(status_code=status.HTTP_404_NOT_FOUND, content={"detail": str(exc)})
+
+    @app.exception_handler(QueryEmbeddingError)
+    async def _handle_query_embedding_error(
+        request: Request, exc: QueryEmbeddingError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(VectorRetrieverError)
+    async def _handle_vector_retriever_error(
+        request: Request, exc: VectorRetrieverError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "vector retrieval failed"},
+        )
+
+    @app.exception_handler(GraphRetrieverError)
+    async def _handle_graph_retriever_error(
+        request: Request, exc: GraphRetrieverError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "graph retrieval failed"},
+        )
+
+    @app.exception_handler(RetrievalValidationError)
+    async def _handle_retrieval_validation_error(
+        request: Request, exc: RetrievalValidationError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(RetrievalStorageError)
+    async def _handle_retrieval_storage_error(
+        request: Request, exc: RetrievalStorageError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "evidence retrieval failed"},
         )
