@@ -31,6 +31,34 @@ class Settings(BaseSettings):
             -based pages. Disabled by default: most scientific papers are
             born-digital with a real text layer, and enabling this pulls in
             an extra OCR model download in fresh environments.
+        knowledge_storage_root: Base directory knowledge representation
+            artifacts (knowledge units, relationships) are written under.
+        max_words_per_knowledge_unit: Word-count threshold above which a
+            paragraph is split at sentence boundaries into multiple
+            knowledge units.
+        min_words_per_knowledge_unit: Word-count floor below which a
+            paragraph is merged into a neighbor rather than becoming its
+            own knowledge unit.
+        embeddings_storage_root: Base directory embedding artifacts are
+            written under.
+        embedding_model_name: HuggingFace identifier of the text embedding
+            model.
+        embedding_model_revision: Explicit commit revision to pin the
+            embedding model to. If `None`, the current revision is
+            resolved once at load time via the HuggingFace Hub API.
+        embedding_batch_size: Number of knowledge units embedded per
+            provider call.
+        index_storage_root: Base directory index manifests are written under.
+        qdrant_url: URL of the Qdrant HTTP API.
+        qdrant_collection_prefix: Namespace prefix for collection names,
+            for operational safety if a Qdrant instance is ever shared
+            across deployments.
+        index_batch_size: Number of vectors upserted per vector store call.
+        graph_storage_root: Base directory graph manifests are written under.
+        neo4j_uri: Bolt URI of the Neo4j instance.
+        neo4j_user: Username to authenticate to Neo4j with.
+        neo4j_password: Password to authenticate to Neo4j with.
+        neo4j_database: Name of the Neo4j database to use.
     """
 
     app_name: str = "Knowledge-Infused Multimodal RAG"
@@ -44,6 +72,22 @@ class Settings(BaseSettings):
     max_upload_size_bytes: int = 50 * 1024 * 1024
     parsed_storage_root: Path = Path("data/parsed")
     docling_ocr_enabled: bool = False
+    knowledge_storage_root: Path = Path("data/knowledge")
+    max_words_per_knowledge_unit: int = 250
+    min_words_per_knowledge_unit: int = 4
+    embeddings_storage_root: Path = Path("data/embeddings")
+    embedding_model_name: str = "BAAI/bge-m3"
+    embedding_model_revision: str | None = None
+    embedding_batch_size: int = 32
+    index_storage_root: Path = Path("data/index")
+    qdrant_url: str = "http://localhost:6333"
+    qdrant_collection_prefix: str = "kimrag"
+    index_batch_size: int = 64
+    graph_storage_root: Path = Path("data/graph")
+    neo4j_uri: str = "bolt://localhost:7687"
+    neo4j_user: str = "neo4j"
+    neo4j_password: str = "kimrag-dev-password"
+    neo4j_database: str = "neo4j"
 
     model_config = SettingsConfigDict(
         env_file=".env",

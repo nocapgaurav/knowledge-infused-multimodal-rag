@@ -20,12 +20,14 @@ from backend.domain.identifiers import (
     ParagraphId,
     QueryId,
     ReferenceId,
+    RelationshipId,
     SectionId,
     TableId,
 )
 from backend.domain.paper import Author, Metadata, Paper
 from backend.domain.qa import Answer, Evidence, Query
 from backend.domain.reference import Reference
+from backend.domain.relationship import Relationship, RelationshipType
 from backend.domain.structure import Paragraph, Section
 from backend.domain.value_objects import BoundingBox
 from backend.domain.visuals import Caption, CaptionSubjectType, Figure, Table, TableCell
@@ -57,6 +59,9 @@ __all__ = [
     "QueryId",
     "Reference",
     "ReferenceId",
+    "Relationship",
+    "RelationshipId",
+    "RelationshipType",
     "Section",
     "SectionId",
     "Table",
