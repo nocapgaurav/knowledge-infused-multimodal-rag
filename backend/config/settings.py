@@ -85,6 +85,12 @@ class Settings(BaseSettings):
         generation_context_window: Maximum total tokens (prompt + completion) the model supports.
         evaluation_storage_root: Base directory benchmark runs are written under.
         evaluation_dataset_path: Path to the evaluation dataset JSON file.
+        cors_allowed_origins: Origins the browser-based frontend (Module 12)
+            is served from and is therefore allowed to call this API
+            from. Cross-origin browser requests are rejected by the
+            browser itself without this -- not an API behavior change,
+            just the transport-level permission every separately-hosted
+            frontend needs.
     """
 
     app_name: str = "Knowledge-Infused Multimodal RAG"
@@ -132,6 +138,7 @@ class Settings(BaseSettings):
     generation_context_window: int = 4096
     evaluation_storage_root: Path = Path("data/evaluation")
     evaluation_dataset_path: Path = Path("data/evaluation_dataset.json")
+    cors_allowed_origins: list[str] = ["http://localhost:3000"]
 
     model_config = SettingsConfigDict(
         env_file=".env",
