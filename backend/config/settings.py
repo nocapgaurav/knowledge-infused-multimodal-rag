@@ -72,6 +72,19 @@ class Settings(BaseSettings):
         retrieval_max_evidence_groups: Maximum evidence groups in the final bundle.
         retrieval_max_primaries_per_section: Maximum evidence groups whose
             primary candidate comes from the same section.
+        generation_storage_root: Base directory generation manifests are written under.
+        ollama_host: Base URL of the Ollama server.
+        generation_provider: Name of the generation backend.
+        generation_model: Model identifier as the provider understands it.
+            Development default (`qwen2.5:7b-instruct`) runs comfortably
+            on Apple Silicon with 8GB RAM; a production deployment
+            overrides this to a larger model without any code change.
+        generation_temperature: Sampling temperature.
+        generation_top_p: Nucleus sampling threshold.
+        generation_max_tokens: Maximum tokens the provider may generate for the answer.
+        generation_context_window: Maximum total tokens (prompt + completion) the model supports.
+        evaluation_storage_root: Base directory benchmark runs are written under.
+        evaluation_dataset_path: Path to the evaluation dataset JSON file.
     """
 
     app_name: str = "Knowledge-Infused Multimodal RAG"
@@ -109,6 +122,16 @@ class Settings(BaseSettings):
     retrieval_max_traversal_cost: int = 500
     retrieval_max_evidence_groups: int = 5
     retrieval_max_primaries_per_section: int = 2
+    generation_storage_root: Path = Path("data/generation")
+    ollama_host: str = "http://localhost:11434"
+    generation_provider: str = "ollama"
+    generation_model: str = "qwen2.5:7b-instruct"
+    generation_temperature: float = 0.1
+    generation_top_p: float = 0.9
+    generation_max_tokens: int = 800
+    generation_context_window: int = 4096
+    evaluation_storage_root: Path = Path("data/evaluation")
+    evaluation_dataset_path: Path = Path("data/evaluation_dataset.json")
 
     model_config = SettingsConfigDict(
         env_file=".env",

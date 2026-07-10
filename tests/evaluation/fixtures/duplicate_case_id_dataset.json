@@ -1,0 +1,24 @@
+[
+  {
+    "case_id": "case-001",
+    "question": "What are the main results reported in the paper?",
+    "document_id": "12f9e408-f3de-414d-80da-5bbbedd1e2a6",
+    "ground_truth_answer": "The paper reports a significant improvement over the baseline.",
+    "expected_knowledge_units": ["ku-1"],
+    "expected_citations": ["ku-1"],
+    "expected_answer_status": "sufficient_evidence",
+    "difficulty": "easy",
+    "category": "factual"
+  },
+  {
+    "case_id": "case-001",
+    "question": "A different question with a duplicate case_id.",
+    "document_id": "12f9e408-f3de-414d-80da-5bbbedd1e2a6",
+    "ground_truth_answer": "A different answer.",
+    "expected_knowledge_units": ["ku-2"],
+    "expected_citations": ["ku-2"],
+    "expected_answer_status": "sufficient_evidence",
+    "difficulty": "easy",
+    "category": "factual"
+  }
+]

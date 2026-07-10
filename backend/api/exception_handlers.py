@@ -18,6 +18,22 @@ from backend.embeddings.exceptions import (
     NoEmbeddingsProducedError,
     RepresentationNotFoundError,
 )
+from backend.evaluation.exceptions import (
+    BenchmarkNotFoundError,
+    DatasetNotFoundError,
+    DatasetValidationError,
+    EvaluationStorageError,
+    MetricComputationError,
+    NoBenchmarkRunYetError,
+)
+from backend.generation.exceptions import (
+    GenerationError,
+    GenerationProviderError,
+    GenerationStorageError,
+    GenerationValidationError,
+    NoClaimsExtractedError,
+    PromptValidationError,
+)
 from backend.graph.exceptions import (
     GraphStorageError,
     GraphStoreError,
@@ -309,4 +325,96 @@ def register_exception_handlers(app: FastAPI) -> None:
         return JSONResponse(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={"detail": "evidence retrieval failed"},
+        )
+
+    @app.exception_handler(PromptValidationError)
+    async def _handle_prompt_validation_error(
+        request: Request, exc: PromptValidationError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(GenerationProviderError)
+    async def _handle_generation_provider_error(
+        request: Request, exc: GenerationProviderError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "generation provider failed"},
+        )
+
+    @app.exception_handler(NoClaimsExtractedError)
+    async def _handle_no_claims_extracted_error(
+        request: Request, exc: NoClaimsExtractedError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(GenerationValidationError)
+    async def _handle_generation_validation_error(
+        request: Request, exc: GenerationValidationError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(GenerationStorageError)
+    async def _handle_generation_storage_error(
+        request: Request, exc: GenerationStorageError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "answer generation failed"},
+        )
+
+    @app.exception_handler(GenerationError)
+    async def _handle_generation_error(request: Request, exc: GenerationError) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "answer generation failed"},
+        )
+
+    @app.exception_handler(DatasetNotFoundError)
+    async def _handle_dataset_not_found(
+        request: Request, exc: DatasetNotFoundError
+    ) -> JSONResponse:
+        return JSONResponse(status_code=status.HTTP_404_NOT_FOUND, content={"detail": str(exc)})
+
+    @app.exception_handler(DatasetValidationError)
+    async def _handle_dataset_validation_error(
+        request: Request, exc: DatasetValidationError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(MetricComputationError)
+    async def _handle_metric_computation_error(
+        request: Request, exc: MetricComputationError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"detail": str(exc)}
+        )
+
+    @app.exception_handler(BenchmarkNotFoundError)
+    async def _handle_benchmark_not_found(
+        request: Request, exc: BenchmarkNotFoundError
+    ) -> JSONResponse:
+        return JSONResponse(status_code=status.HTTP_404_NOT_FOUND, content={"detail": str(exc)})
+
+    @app.exception_handler(NoBenchmarkRunYetError)
+    async def _handle_no_benchmark_run_yet(
+        request: Request, exc: NoBenchmarkRunYetError
+    ) -> JSONResponse:
+        return JSONResponse(status_code=status.HTTP_404_NOT_FOUND, content={"detail": str(exc)})
+
+    @app.exception_handler(EvaluationStorageError)
+    async def _handle_evaluation_storage_error(
+        request: Request, exc: EvaluationStorageError
+    ) -> JSONResponse:
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"detail": "benchmark persistence failed"},
         )

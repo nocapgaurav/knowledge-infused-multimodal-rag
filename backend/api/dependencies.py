@@ -22,6 +22,24 @@ from backend.embeddings.providers.sentence_transformers_provider import (
 )
 from backend.embeddings.repository.embedding_repository import EmbeddingRepository
 from backend.embeddings.services.embedding_service import EmbeddingService
+from backend.evaluation.benchmark.benchmark_runner import BenchmarkRunner
+from backend.evaluation.repository.evaluation_repository import EvaluationRepository
+from backend.evaluation.services.evaluation_service import EvaluationService
+from backend.evaluation.validation.evaluation_validator import EvaluationValidator
+from backend.generation.citations.citation_resolver import CitationResolver
+from backend.generation.context.context_optimizer import ContextOptimizer
+from backend.generation.formatting.response_formatter import ResponseFormatter
+from backend.generation.grounding.grounding_validator import GroundingValidator
+from backend.generation.interfaces.generation_provider import GenerationProvider
+from backend.generation.models.generation_config import GenerationConfig
+from backend.generation.planner.answer_planner import AnswerPlanner
+from backend.generation.prompt.prompt_composer import PromptComposer
+from backend.generation.prompt.prompt_validator import PromptValidator
+from backend.generation.providers.ollama_provider import OllamaProvider
+from backend.generation.quality.answer_quality_assessor import AnswerQualityAssessor
+from backend.generation.repository.generation_repository import GenerationRepository
+from backend.generation.services.generation_service import GenerationService
+from backend.generation.validation.generation_validator import GenerationValidator
 from backend.graph.interfaces.knowledge_graph_store import KnowledgeGraphStore
 from backend.graph.providers.neo4j_provider import Neo4jProvider
 from backend.graph.repository.graph_repository import GraphRepository
@@ -593,4 +611,326 @@ def get_retrieval_service(
             max_evidence_groups=settings.retrieval_max_evidence_groups,
             max_primaries_per_section=settings.retrieval_max_primaries_per_section,
         ),
+    )
+
+
+def get_dense_retrieval_service(
+    repository: RetrievalRepository = Depends(get_retrieval_repository),
+    candidate_generator: CandidateGenerator = Depends(get_candidate_generator),
+    graph_expander: GraphExpander = Depends(get_graph_expander),
+    evaluator: EvidenceEvaluator = Depends(get_evidence_evaluator),
+    assembler: EvidenceAssembler = Depends(get_evidence_assembler),
+    validator: RetrievalValidator = Depends(get_retrieval_validator),
+    settings: Settings = Depends(get_settings),
+) -> RetrievalService:
+    """Return a dense-only retrieval service, for evaluation comparison.
+
+    The same phases and assembly budget as `get_retrieval_service`, but
+    with a zero-depth expansion budget -- confirmed by real testing that
+    Module 9's own expansion loop discovers nothing new at `max_depth=0`,
+    so this is genuine dense-only retrieval, not a special code path.
+
+    Args:
+        repository: Retrieval repository, injected.
+        candidate_generator: Phase 1, injected.
+        graph_expander: Phase 2, injected.
+        evaluator: Phase 3, injected.
+        assembler: Phase 4, injected.
+        validator: Structural validator, injected.
+        settings: Application settings, injected.
+
+    Returns:
+        A `RetrievalService` configured for dense-only retrieval.
+    """
+    return RetrievalService(
+        repository=repository,
+        candidate_generator=candidate_generator,
+        graph_expander=graph_expander,
+        evaluator=evaluator,
+        assembler=assembler,
+        validator=validator,
+        expansion_budget=ExpansionBudget(
+            max_depth=0,
+            max_neighbors_per_node=0,
+            max_total_evidence=0,
+            max_traversal_cost=0,
+        ),
+        assembly_budget=AssemblyBudget(
+            max_evidence_groups=settings.retrieval_max_evidence_groups,
+            max_primaries_per_section=settings.retrieval_max_primaries_per_section,
+        ),
+    )
+
+
+@lru_cache
+def get_generation_storage() -> WorkspaceStorage:
+    """Return the process-wide generation manifest storage backend.
+
+    An eighth `WorkspaceStorage` instance, rooted at yet another directory --
+    the same reused abstraction as every other artifact lifecycle.
+
+    Returns:
+        A `WorkspaceStorage` implementation configured from application settings.
+    """
+    settings = get_settings()
+    return LocalFilesystemStorage(root=settings.generation_storage_root)
+
+
+@lru_cache
+def get_generation_provider() -> GenerationProvider:
+    """Return the process-wide generation provider.
+
+    Cached because constructing an `OllamaProvider` opens a client
+    connection -- reused across requests rather than reconnecting per call.
+
+    Returns:
+        A `GenerationProvider` implementation configured from application settings.
+    """
+    settings = get_settings()
+    return OllamaProvider(host=settings.ollama_host)
+
+
+def get_generation_config(settings: Settings = Depends(get_settings)) -> GenerationConfig:
+    """Return the process-wide generation configuration.
+
+    Args:
+        settings: Application settings, injected.
+
+    Returns:
+        A `GenerationConfig` built from application settings -- never a
+        hardcoded model or provider.
+    """
+    return GenerationConfig(
+        provider=settings.generation_provider,
+        model=settings.generation_model,
+        temperature=settings.generation_temperature,
+        top_p=settings.generation_top_p,
+        max_tokens=settings.generation_max_tokens,
+        context_window=settings.generation_context_window,
+    )
+
+
+@lru_cache
+def get_answer_planner() -> AnswerPlanner:
+    """Return the process-wide answer planner.
+
+    Returns:
+        An `AnswerPlanner` instance. Stateless, so a single shared instance is safe.
+    """
+    return AnswerPlanner()
+
+
+@lru_cache
+def get_context_optimizer() -> ContextOptimizer:
+    """Return the process-wide context optimizer.
+
+    Returns:
+        A `ContextOptimizer` instance. Stateless, so a single shared instance is safe.
+    """
+    return ContextOptimizer()
+
+
+@lru_cache
+def get_prompt_composer() -> PromptComposer:
+    """Return the process-wide prompt composer.
+
+    Returns:
+        A `PromptComposer` instance. Stateless, so a single shared instance is safe.
+    """
+    return PromptComposer()
+
+
+@lru_cache
+def get_prompt_validator() -> PromptValidator:
+    """Return the process-wide prompt validator.
+
+    Returns:
+        A `PromptValidator` instance. Stateless, so a single shared instance is safe.
+    """
+    return PromptValidator()
+
+
+@lru_cache
+def get_grounding_validator() -> GroundingValidator:
+    """Return the process-wide grounding validator.
+
+    Returns:
+        A `GroundingValidator` instance. Stateless, so a single shared instance is safe.
+    """
+    return GroundingValidator()
+
+
+@lru_cache
+def get_citation_resolver() -> CitationResolver:
+    """Return the process-wide citation resolver.
+
+    Returns:
+        A `CitationResolver` instance. Stateless, so a single shared instance is safe.
+    """
+    return CitationResolver()
+
+
+@lru_cache
+def get_answer_quality_assessor() -> AnswerQualityAssessor:
+    """Return the process-wide answer quality assessor.
+
+    Returns:
+        An `AnswerQualityAssessor` instance. Stateless, so a single shared instance is safe.
+    """
+    return AnswerQualityAssessor()
+
+
+@lru_cache
+def get_response_formatter() -> ResponseFormatter:
+    """Return the process-wide response formatter.
+
+    Returns:
+        A `ResponseFormatter` instance. Stateless, so a single shared instance is safe.
+    """
+    return ResponseFormatter()
+
+
+@lru_cache
+def get_generation_validator() -> GenerationValidator:
+    """Return the process-wide generation validator.
+
+    Returns:
+        A `GenerationValidator` instance. Stateless, so a single shared instance is safe.
+    """
+    return GenerationValidator()
+
+
+def get_generation_repository(
+    generation_storage: WorkspaceStorage = Depends(get_generation_storage),
+) -> GenerationRepository:
+    """Return a generation repository wired to the configured storage backend.
+
+    Args:
+        generation_storage: Storage backend for generation manifests, injected.
+
+    Returns:
+        A configured `GenerationRepository`.
+    """
+    return GenerationRepository(generation_storage=generation_storage)
+
+
+def get_generation_service(
+    repository: GenerationRepository = Depends(get_generation_repository),
+    provider: GenerationProvider = Depends(get_generation_provider),
+    planner: AnswerPlanner = Depends(get_answer_planner),
+    context_optimizer: ContextOptimizer = Depends(get_context_optimizer),
+    prompt_composer: PromptComposer = Depends(get_prompt_composer),
+    prompt_validator: PromptValidator = Depends(get_prompt_validator),
+    grounding_validator: GroundingValidator = Depends(get_grounding_validator),
+    citation_resolver: CitationResolver = Depends(get_citation_resolver),
+    quality_assessor: AnswerQualityAssessor = Depends(get_answer_quality_assessor),
+    response_formatter: ResponseFormatter = Depends(get_response_formatter),
+    generation_validator: GenerationValidator = Depends(get_generation_validator),
+) -> GenerationService:
+    """Return a generation service wired to the configured phases.
+
+    Args:
+        repository: Generation repository, injected.
+        provider: Generation provider, injected.
+        planner: Phase 2, injected.
+        context_optimizer: Phase 3, injected.
+        prompt_composer: Phase 4, injected.
+        prompt_validator: Phase 5, injected.
+        grounding_validator: Phase 7, injected.
+        citation_resolver: Phase 8, injected.
+        quality_assessor: Phase 9, injected.
+        response_formatter: Phase 10, injected.
+        generation_validator: Whole-response structural validator, injected.
+
+    Returns:
+        A configured `GenerationService`.
+    """
+    return GenerationService(
+        repository=repository,
+        provider=provider,
+        planner=planner,
+        context_optimizer=context_optimizer,
+        prompt_composer=prompt_composer,
+        prompt_validator=prompt_validator,
+        grounding_validator=grounding_validator,
+        citation_resolver=citation_resolver,
+        quality_assessor=quality_assessor,
+        response_formatter=response_formatter,
+        generation_validator=generation_validator,
+    )
+
+
+def get_evaluation_repository(settings: Settings = Depends(get_settings)) -> EvaluationRepository:
+    """Return an evaluation repository wired to the configured storage root.
+
+    Args:
+        settings: Application settings, injected.
+
+    Returns:
+        A configured `EvaluationRepository`.
+    """
+    return EvaluationRepository(storage_root=settings.evaluation_storage_root)
+
+
+@lru_cache
+def get_evaluation_validator() -> EvaluationValidator:
+    """Return the process-wide evaluation dataset validator.
+
+    Returns:
+        An `EvaluationValidator` instance. Stateless, so a single shared instance is safe.
+    """
+    return EvaluationValidator()
+
+
+def get_benchmark_runner(
+    dense_retrieval_service: RetrievalService = Depends(get_dense_retrieval_service),
+    hybrid_retrieval_service: RetrievalService = Depends(get_retrieval_service),
+    generation_service: GenerationService = Depends(get_generation_service),
+    generation_config: GenerationConfig = Depends(get_generation_config),
+) -> BenchmarkRunner:
+    """Return a benchmark runner wired to the real production services.
+
+    Reuses the exact same `RetrievalService` and `GenerationService`
+    instances (and configuration) a real caller would get -- evaluation
+    measures what production actually does, never a separately tuned copy.
+
+    Args:
+        dense_retrieval_service: Zero-depth-expansion retrieval service, injected.
+        hybrid_retrieval_service: The real, normally configured retrieval service, injected.
+        generation_service: The real generation service, injected.
+        generation_config: The real generation configuration, injected.
+
+    Returns:
+        A configured `BenchmarkRunner`.
+    """
+    return BenchmarkRunner(
+        dense_retrieval_service=dense_retrieval_service,
+        hybrid_retrieval_service=hybrid_retrieval_service,
+        generation_service=generation_service,
+        generation_config=generation_config,
+    )
+
+
+def get_evaluation_service(
+    repository: EvaluationRepository = Depends(get_evaluation_repository),
+    validator: EvaluationValidator = Depends(get_evaluation_validator),
+    runner: BenchmarkRunner = Depends(get_benchmark_runner),
+    settings: Settings = Depends(get_settings),
+) -> EvaluationService:
+    """Return an evaluation service wired to the configured dataset path.
+
+    Args:
+        repository: Evaluation repository, injected.
+        validator: Evaluation dataset validator, injected.
+        runner: Benchmark runner, injected.
+        settings: Application settings, injected.
+
+    Returns:
+        A configured `EvaluationService`.
+    """
+    return EvaluationService(
+        repository=repository,
+        validator=validator,
+        runner=runner,
+        dataset_path=settings.evaluation_dataset_path,
     )

@@ -5,6 +5,8 @@ from fastapi import FastAPI
 from backend.api.exception_handlers import register_exception_handlers
 from backend.api.routes.documents import router as documents_router
 from backend.api.routes.embedding import router as embedding_router
+from backend.api.routes.evaluation import router as evaluation_router
+from backend.api.routes.generation import router as generation_router
 from backend.api.routes.graph import router as graph_router
 from backend.api.routes.health import router as health_router
 from backend.api.routes.indexing import router as indexing_router
@@ -42,6 +44,8 @@ def create_app() -> FastAPI:
     app.include_router(indexing_router)
     app.include_router(graph_router)
     app.include_router(retrieval_router)
+    app.include_router(generation_router)
+    app.include_router(evaluation_router)
     register_exception_handlers(app)
 
     return app

@@ -1,0 +1,24 @@
+[
+  {
+    "case_id": "case-001",
+    "question": "What are the main results reported in the paper?",
+    "document_id": "12f9e408-f3de-414d-80da-5bbbedd1e2a6",
+    "ground_truth_answer": "The paper reports a significant improvement over the baseline.",
+    "expected_knowledge_units": ["ku-1", "ku-2"],
+    "expected_citations": ["ku-1"],
+    "expected_answer_status": "sufficient_evidence",
+    "difficulty": "easy",
+    "category": "factual"
+  },
+  {
+    "case_id": "case-002",
+    "question": "How does the proposed method compare to prior work?",
+    "document_id": "12f9e408-f3de-414d-80da-5bbbedd1e2a6",
+    "ground_truth_answer": "The proposed method outperforms prior work on the benchmark.",
+    "expected_knowledge_units": ["ku-3"],
+    "expected_citations": ["ku-3"],
+    "expected_answer_status": "partially_sufficient_evidence",
+    "difficulty": "medium",
+    "category": "comparative"
+  }
+]
