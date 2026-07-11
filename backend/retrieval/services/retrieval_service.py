@@ -13,7 +13,7 @@ from datetime import UTC, datetime
 
 from backend.domain import PaperId
 from backend.retrieval.assembly.evidence_assembler import AssemblyBudget, EvidenceAssembler
-from backend.retrieval.candidate.candidate_generator import CandidateGenerator
+from backend.retrieval.candidate.candidate_generator import CandidateGenerator, normalize_query
 from backend.retrieval.evaluation.evidence_evaluator import EvidenceEvaluator
 from backend.retrieval.expansion.graph_expander import ExpansionBudget, GraphExpander
 from backend.retrieval.models import (
@@ -30,7 +30,7 @@ from backend.retrieval.validation.retrieval_validator import RetrievalValidator
 logger = logging.getLogger(__name__)
 
 RETRIEVAL_ARTIFACT_VERSION = "1.0"
-RETRIEVAL_STRATEGY_VERSION = "1.0"
+RETRIEVAL_STRATEGY_VERSION = "1.1"
 """Version of this module's own candidate generation, expansion,
 evaluation, and assembly rules -- bumped when the retrieval strategy
 itself changes, independently of the manifest schema or any upstream
@@ -122,7 +122,7 @@ class RetrievalService:
         )
 
         phase_started = time.perf_counter()
-        scored_candidates = self._evaluator.evaluate(all_candidates)
+        scored_candidates = self._evaluator.evaluate(all_candidates, normalize_query(query))
         self._validator.validate_ranking(scored_candidates)
         phases.append(
             _phase_trace("evaluation", len(all_candidates), len(scored_candidates), phase_started)

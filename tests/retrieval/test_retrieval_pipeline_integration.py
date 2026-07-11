@@ -174,7 +174,7 @@ def test_real_pipeline_produces_a_valid_evidence_bundle(real_pipeline: dict) -> 
     assert len(bundle.candidates) > 0
     assert bundle.evidence_groups
     assert bundle.manifest.statistics.candidates_generated > 0
-    assert bundle.manifest.retrieval_strategy_version == "1.0"
+    assert bundle.manifest.retrieval_strategy_version == "1.1"
     assert {phase.phase for phase in bundle.trace.phases} == {
         "candidate_generation",
         "expansion",

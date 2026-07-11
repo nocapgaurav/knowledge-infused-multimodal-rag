@@ -26,6 +26,13 @@ class ContextSection(BaseModel):
         knowledge_unit_id: Identifier of the underlying knowledge unit,
             carried alongside the label so resolution never has to guess.
         text: The evidence's text content.
+        retrieval_context: The evidence's structural identity within the
+            paper ("Title of this paper", "Figure 1", ...), when the
+            chunking stage assigned one. Shown to the model alongside the
+            text so it can recognize what a bare string of evidence *is*
+            -- observed live: the paper's title was retrieved as the top
+            evidence yet the model answered "cannot determine the title"
+            because nothing identified that string as a title.
         modality: The kind of content this evidence represents.
         section_id: Identifier of the section this evidence belongs to, if any.
     """
@@ -34,6 +41,8 @@ class ContextSection(BaseModel):
 
     citation_label: str = Field(min_length=1)
     knowledge_unit_id: str = Field(min_length=1)
+    retrieval_context: str | None = None
+    page_numbers: tuple[int, ...] = ()
     text: str = Field(min_length=1)
     modality: ChunkModality
     section_id: str | None = None

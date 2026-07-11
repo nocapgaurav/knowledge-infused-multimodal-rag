@@ -8,6 +8,7 @@ class only knows how to turn a query and a collection name into candidates.
 """
 
 import logging
+import re
 from uuid import UUID
 
 from backend.domain import ChunkId, ChunkModality, PaperId, SectionId
@@ -20,6 +21,37 @@ from backend.search.models import EqualityFilter, SearchResult
 logger = logging.getLogger(__name__)
 
 
+_INTENT_EXPANSIONS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (
+        re.compile(
+            r"who\s+(?:wrote|authored|developed|created|conducted)|"
+            r"which\s+(?:university|institution|lab|group)|"
+            r"\bauthors?\b|\baffiliations?\b",
+            re.IGNORECASE,
+        ),
+        "authors affiliations title page",
+    ),
+    (
+        re.compile(r"\bkey\s?words?\b|\bindex\s+terms\b", re.IGNORECASE),
+        "keywords index terms",
+    ),
+    (
+        re.compile(
+            r"\bmethodolog(?:y|ies)\b|\bapproach\b|\bhow\s+does\s+it\s+work\b",
+            re.IGNORECASE,
+        ),
+        "method methodology proposed",
+    ),
+)
+"""Deterministic intent hints appended to the embedded query. Each entry
+maps researcher phrasings to the canonical vocabulary the paper's own
+structural chunks carry (their `retrieval_context`), closing the gap
+between how people ask ("who wrote this?", "which university?") and how
+the target chunk is labeled ("Authors and affiliations (title page)").
+A fixed rule table, not a model -- the same question always expands the
+same way, and the user's own words are always kept first."""
+
+
 def normalize_query(query: str) -> str:
     """Normalize a raw user question into a canonical form for embedding.
 
@@ -30,13 +62,27 @@ def normalize_query(query: str) -> str:
     kind of unjustified transformation that could silently change meaning
     (e.g. "COVID-19" vs "covid 19").
 
+    Deterministic intent hints are appended (never substituted) when the
+    question matches a known researcher phrasing -- see
+    `_INTENT_EXPANSIONS`.
+
     Args:
         query: The raw question text.
 
     Returns:
-        The normalized query text.
+        The normalized query text, possibly with appended intent hints.
     """
-    return " ".join(query.split())
+    normalized = " ".join(query.split())
+    if not normalized:
+        return normalized
+    hints = [
+        hint
+        for pattern, hint in _INTENT_EXPANSIONS
+        if pattern.search(normalized) and hint.split()[0].lower() not in normalized.lower()
+    ]
+    if hints:
+        return normalized + " | " + " ".join(hints)
+    return normalized
 
 
 class CandidateGenerator:
@@ -108,6 +154,8 @@ def _to_candidate(result: SearchResult) -> RetrievalCandidate:
         section_id=SectionId(UUID(str(section_id_value))) if section_id_value else None,
         modality=ChunkModality(payload["modality"]),
         text=payload["text"],
+        retrieval_context=payload.get("retrieval_context"),
+        page_numbers=tuple(payload.get("page_numbers") or ()),
         asset_uri=payload.get("asset_uri"),
         reading_order=payload["reading_order"],
         citation_count=payload.get("citation_count") or 0,

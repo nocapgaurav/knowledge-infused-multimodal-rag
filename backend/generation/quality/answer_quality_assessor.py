@@ -149,4 +149,8 @@ def _determine_status(
         return AnswerStatus.SUFFICIENT_EVIDENCE
     if grounded_ratio > 0.0:
         return AnswerStatus.PARTIALLY_SUFFICIENT_EVIDENCE
-    return AnswerStatus.INSUFFICIENT_EVIDENCE
+    # Evidence exists but no claim could be verified against it: that is a
+    # property of this answer (usually missing citations), not of the
+    # paper -- reporting it as "insufficient evidence" told users the
+    # information was absent when it was sitting in the evidence panel.
+    return AnswerStatus.UNVERIFIED_ANSWER

@@ -17,6 +17,10 @@ class ResolvedCitation(BaseModel):
         knowledge_unit_id: The real knowledge unit this label resolves to.
         text_excerpt: The cited evidence's own text, for display alongside
             the citation.
+        display_label: Human-readable identity of the cited evidence
+            ("Figure 2", "Section: III. Methodology", ...), when known --
+            what a reader should see instead of the internal label.
+        page_numbers: Source PDF page(s) the cited evidence appears on.
     """
 
     model_config = ConfigDict(frozen=True, extra="forbid")
@@ -24,6 +28,8 @@ class ResolvedCitation(BaseModel):
     label: str = Field(min_length=1)
     knowledge_unit_id: str = Field(min_length=1)
     text_excerpt: str = Field(min_length=1)
+    display_label: str | None = None
+    page_numbers: tuple[int, ...] = ()
 
 
 class UnresolvedCitation(BaseModel):

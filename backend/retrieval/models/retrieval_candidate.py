@@ -34,6 +34,11 @@ class RetrievalCandidate(BaseModel):
         section_id: Identifier of the section this candidate belongs to, if any.
         modality: The kind of content this candidate represents.
         text: The candidate's text content.
+        retrieval_context: The chunk's structural identity within the
+            paper ("Title", "Figure 1", ...), when the chunking stage
+            assigned one -- a deterministic ranking input, never content.
+        page_numbers: Source PDF page(s) this chunk's content appears on,
+            from its bounding boxes; empty when the parser recorded none.
         asset_uri: Opaque reference to a renderable image asset, if any.
         reading_order: Zero-based position among all chunks in the
             document, in reading order.
@@ -53,6 +58,8 @@ class RetrievalCandidate(BaseModel):
     section_id: SectionId | None
     modality: ChunkModality
     text: str = Field(min_length=1)
+    retrieval_context: str | None = None
+    page_numbers: tuple[int, ...] = ()
     asset_uri: str | None
     reading_order: int = Field(ge=0)
     citation_count: int = Field(ge=0)

@@ -90,11 +90,8 @@ class EvidenceAssembler:
                 dropped.append(_dropped(candidate_id, "evidence group budget reached"))
                 continue
 
-            section_key = str(scored.candidate.section_id) if scored.candidate.section_id else None
-            if (
-                section_key is not None
-                and section_primary_counts[section_key] >= budget.max_primaries_per_section
-            ):
+            section_key = _diversity_bucket(scored)
+            if section_primary_counts[section_key] >= budget.max_primaries_per_section:
                 dropped.append(
                     _dropped(
                         candidate_id,
@@ -115,8 +112,7 @@ class EvidenceAssembler:
             claimed.add(candidate_id)
             for member in supporting:
                 claimed.add(str(member.candidate.knowledge_unit_id))
-            if section_key is not None:
-                section_primary_counts[section_key] += 1
+            section_primary_counts[section_key] += 1
 
             modalities = tuple(
                 dict.fromkeys(
@@ -149,6 +145,25 @@ class EvidenceAssembler:
             extra={"groups": len(groups), "dropped": len(dropped)},
         )
         return AssemblyResult(groups=groups, dropped=dropped)
+
+
+def _diversity_bucket(scored: ScoredCandidate) -> str:
+    """The diversity bucket a candidate's primary slot counts against.
+
+    Sectioned chunks bucket by section, as before. Section-less chunks
+    bucket by their structural-identity *family* ("Bibliography
+    reference [7]" -> "Bibliography reference"), so twenty near-identical
+    bibliography entries share one capped bucket -- observed live: they
+    flooded four of five evidence groups for an author-style question --
+    while the title, abstract, keywords, and author block each remain
+    individually eligible rather than competing for the same two slots.
+    """
+    if scored.candidate.section_id is not None:
+        return str(scored.candidate.section_id)
+    context = scored.candidate.retrieval_context
+    if context:
+        return "ctx:" + context.split("[")[0].strip()
+    return "__no_section__"
 
 
 def _is_direct_neighbor_of(scored: ScoredCandidate, primary_id: str) -> bool:

@@ -19,14 +19,14 @@ from dataclasses import dataclass
 from backend.domain import PaperId
 from backend.generation.models.answer_plan import AnswerPlan
 from backend.generation.models.answer_provenance import AnswerProvenance
-from backend.generation.models.citation import CitationResolutionReport
+from backend.generation.models.citation import CitationResolutionReport, ResolvedCitation
 from backend.generation.models.generation_manifest import GenerationStatistics
 from backend.generation.models.generation_trace import GenerationTrace
 from backend.generation.models.grounded_response import GroundedResponse, SupportingEvidenceItem
 from backend.generation.models.grounding_report import ClaimGroundingStatus, GroundingReport
 from backend.generation.models.prompt_context import ContextSection
 from backend.generation.quality.answer_quality_assessor import QualityAssessment
-from backend.retrieval.models import EvidenceBundle
+from backend.retrieval.models import EvidenceBundle, RetrievalCandidate
 
 
 @dataclass(frozen=True)
@@ -73,17 +73,28 @@ class ResponseFormatter:
         section_by_label = {
             section.citation_label: section for section in formatting_input.context_sections
         }
+        candidate_by_id = {
+            str(candidate.knowledge_unit_id): candidate for candidate in bundle.candidates
+        }
 
         supporting_evidence = tuple(
-            SupportingEvidenceItem(
-                label=citation.label,
-                knowledge_unit_id=citation.knowledge_unit_id,
-                text=citation.text_excerpt,
-                modality=section_by_label[citation.label].modality,
+            _evidence_item(
+                citation,
+                section_by_label[citation.label],
+                candidate_by_id.get(citation.knowledge_unit_id),
             )
             for citation in formatting_input.citation_report.resolved
             if citation.label in section_by_label
         )
+        if not supporting_evidence:
+            # The model cited nothing resolvable. Showing an empty evidence
+            # panel reads as "nothing was found", which is false whenever
+            # context existed -- so fall back to the evidence the model was
+            # actually shown, honestly labeled as uncited context.
+            supporting_evidence = tuple(
+                _uncited_context_item(section, candidate_by_id.get(section.knowledge_unit_id))
+                for section in formatting_input.context_sections
+            )
 
         references = tuple(
             f"[{citation.label}] {citation.text_excerpt}"
@@ -121,6 +132,59 @@ class ResponseFormatter:
             generation_statistics=formatting_input.generation_statistics,
             answer_provenance=formatting_input.answer_provenance,
         )
+
+
+def _uncited_context_item(
+    section: ContextSection, candidate: "RetrievalCandidate | None"
+) -> SupportingEvidenceItem:
+    """A context section surfaced as evidence when the answer cited nothing.
+
+    Explicitly labeled as uncited context: it is what the model was given,
+    not what the model verifiably used.
+    """
+    return SupportingEvidenceItem(
+        label=section.citation_label,
+        knowledge_unit_id=section.knowledge_unit_id,
+        text=section.text,
+        modality=section.modality,
+        display_label=section.retrieval_context,
+        page_numbers=section.page_numbers,
+        relevance=candidate.dense_similarity if candidate is not None else None,
+        discovery="Shown to the model as context (not cited in the answer)",
+    )
+
+
+def _evidence_item(
+    citation: ResolvedCitation,
+    section: ContextSection,
+    candidate: "RetrievalCandidate | None",
+) -> SupportingEvidenceItem:
+    """Build one supporting-evidence item, display metadata included.
+
+    `relevance` and `discovery` are copied from real retrieval facts on
+    the underlying candidate -- similarity scores and discovery method --
+    so the "why was this retrieved" a reader sees is provenance, not a
+    generated rationalization.
+    """
+    relevance = candidate.dense_similarity if candidate is not None else None
+    if candidate is None:
+        discovery = None
+    elif candidate.dense_similarity is not None:
+        discovery = "Matched your question directly"
+    else:
+        hops = candidate.graph_path.hops
+        relationship = hops[-1].relationship_type.replace("_", " ").lower() if hops else "graph"
+        discovery = f"Connected to matched evidence ({relationship})"
+    return SupportingEvidenceItem(
+        label=citation.label,
+        knowledge_unit_id=citation.knowledge_unit_id,
+        text=citation.text_excerpt,
+        modality=section.modality,
+        display_label=section.retrieval_context,
+        page_numbers=section.page_numbers,
+        relevance=relevance,
+        discovery=discovery,
+    )
 
 
 def _build_executive_summary(answer_text: str) -> str:

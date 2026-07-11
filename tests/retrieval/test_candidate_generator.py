@@ -130,3 +130,26 @@ def test_candidate_section_id_is_none_when_payload_has_no_section() -> None:
     candidates = generator.generate(document_id, "query", "some-collection")
 
     assert candidates[0].section_id is None
+
+
+def test_normalize_query_appends_author_intent_hints() -> None:
+    from backend.retrieval.candidate.candidate_generator import normalize_query
+
+    assert normalize_query("Who wrote this paper?") == (
+        "Who wrote this paper? | authors affiliations title page"
+    )
+    assert normalize_query("Which university conducted this research?") == (
+        "Which university conducted this research? | authors affiliations title page"
+    )
+
+
+def test_normalize_query_leaves_plain_questions_untouched() -> None:
+    from backend.retrieval.candidate.candidate_generator import normalize_query
+
+    assert normalize_query("What is Figure 2?") == "What is Figure 2?"
+
+
+def test_normalize_query_skips_hint_already_present_in_query() -> None:
+    from backend.retrieval.candidate.candidate_generator import normalize_query
+
+    assert normalize_query("Who are the authors?") == "Who are the authors?"

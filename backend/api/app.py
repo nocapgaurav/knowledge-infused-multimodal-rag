@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.exception_handlers import register_exception_handlers
+from backend.api.middleware import UnhandledErrorResponseMiddleware
 from backend.api.routes.documents import router as documents_router
 from backend.api.routes.embedding import router as embedding_router
 from backend.api.routes.evaluation import router as evaluation_router
@@ -37,6 +38,10 @@ def create_app() -> FastAPI:
         debug=settings.environment == "development",
     )
 
+    # Added before CORSMiddleware so CORS ends up outermost: unhandled
+    # errors become a JSON 500 here, then pick up CORS headers on the way
+    # out -- see backend/api/middleware.py for why this ordering matters.
+    app.add_middleware(UnhandledErrorResponseMiddleware)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_allowed_origins,

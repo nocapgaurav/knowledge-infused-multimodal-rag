@@ -1,0 +1,226 @@
+{
+  "document_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+  "count": 11,
+  "chunks": [
+    {
+      "id": "db7aea90-f933-4a32-8d84-275686d568d9",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": null,
+      "order": 0,
+      "modality": "text",
+      "text": "This paper presents a knowledge-infused multimodal question answering system for scientific research papers, combining structured parsing, retrieval, and evidence attribution.",
+      "asset_uri": null,
+      "token_count": 20,
+      "source_element_ids": [
+        "1a3e6c5b-8f61-4db3-b967-4fc5351bf5e0"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "5c2318ec-a714-4c8c-b27a-3862316fa921",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": null,
+      "order": 1,
+      "modality": "text",
+      "text": "Ada Researcher, Grace Scientist",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "4fffd34c-bdbb-40a0-b6ca-e1f274330355"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 78.0,
+          "y0": 124.82000000000005,
+          "x1": 223.61,
+          "y1": 134.07000000000005
+        }
+      ]
+    },
+    {
+      "id": "85a6627a-bd09-4291-a8c0-44ee9882268c",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "ecadca3e-188c-4958-943a-5a7411912772",
+      "order": 2,
+      "modality": "text",
+      "text": "Scientific papers contain rich multimodal information including text, tables, and figures. Understanding this information requires a system that can jointly reason over all modalities.",
+      "asset_uri": null,
+      "token_count": 24,
+      "source_element_ids": [
+        "24690843-e251-4fd7-a33d-91583ab4a3c9"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 78.0,
+          "y0": 252.82000000000005,
+          "x1": 527.6299999999999,
+          "y1": 274.07000000000005
+        }
+      ]
+    },
+    {
+      "id": "e99d41c1-e221-4599-9c9b-f49c1e01ec5c",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "ecadca3e-188c-4958-943a-5a7411912772",
+      "order": 3,
+      "modality": "text",
+      "text": "In this work we propose a pipeline that parses a PDF into a structured representation before any retrieval or generation takes place.",
+      "asset_uri": null,
+      "token_count": 22,
+      "source_element_ids": [
+        "5026c782-5664-4069-b58f-2c7531e328b7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 78.0,
+          "y0": 276.82000000000005,
+          "x1": 503.19999999999976,
+          "y1": 298.07
+        }
+      ]
+    },
+    {
+      "id": "32426725-daee-4764-8811-6dc1fe210cf5",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "b0ff134e-f6bd-4fb6-bbef-383bdba08943",
+      "order": 4,
+      "modality": "text",
+      "text": "Our method consists of four stages: ingestion, parsing, chunking, and retrieval.",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "a95f798f-5e8e-425f-ada7-4c022430ab9c"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 78.0,
+          "y0": 340.82,
+          "x1": 425.94,
+          "y1": 350.07
+        }
+      ]
+    },
+    {
+      "id": "02149bae-0797-4fa5-86e1-189484668a29",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "71cb230b-3ebb-4fdf-a59a-88b293fc3c43",
+      "order": 5,
+      "modality": "text",
+      "text": "The parsing stage converts a raw PDF into sections, paragraphs, tables, and figures using a document layout model.",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "fbc9d3fc-b6bd-43b7-9426-c0e71852599b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 78.0,
+          "y0": 388.82,
+          "x1": 532.0999999999998,
+          "y1": 410.07
+        }
+      ]
+    },
+    {
+      "id": "1ddf6846-6fe4-4095-b936-5b15efbe07ea",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "71cb230b-3ebb-4fdf-a59a-88b293fc3c43",
+      "order": 6,
+      "modality": "table",
+      "text": "Table 1: Comparison of baseline and proposed method.\n\nTable 1: Comparison of baseline and proposed method.\n\n| Model    |   Accuracy |   F1 |\n|----------|------------|------|\n| Baseline |       0.71 | 0.68 |\n| Ours     |       0.89 | 0.87 |",
+      "asset_uri": null,
+      "token_count": null,
+      "source_element_ids": [
+        "751f6b3d-478f-49ad-b872-72d2df7354b9",
+        "32f15374-2c83-4468-adce-1cb3c67e85b3"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 237.46090698242188,
+          "y0": 420.6160888671875,
+          "x1": 374.10223388671875,
+          "y1": 476.54913330078125
+        }
+      ]
+    },
+    {
+      "id": "80886c0d-0f8f-43fb-97a8-d42ad55d8d0b",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "71cb230b-3ebb-4fdf-a59a-88b293fc3c43",
+      "order": 7,
+      "modality": "figure",
+      "text": "Figure 1: Example bar chart illustrating result magnitudes.",
+      "asset_uri": "figures/ab8d26d0-d974-485d-b0c3-399a137c957f.png",
+      "token_count": null,
+      "source_element_ids": [
+        "ab8d26d0-d974-485d-b0c3-399a137c957f",
+        "589a154f-86f5-4341-a0d4-edc815296144"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 214.2274169921875,
+          "y0": 514.6957397460938,
+          "x1": 377.1672058105469,
+          "y1": 647.3181762695312
+        }
+      ]
+    },
+    {
+      "id": "acf33e07-51e4-47cd-be2c-55cc920bbbb6",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": "df458b3c-fbbf-49b4-857c-46daf594f63b",
+      "order": 8,
+      "modality": "text",
+      "text": "We presented a parsing pipeline for scientific documents and showed its role in a larger multimodal question answering system.",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "4490045c-0a97-488c-8247-963da96f87da"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 78.0,
+          "y0": 62.82000000000005,
+          "x1": 515.95,
+          "y1": 84.07000000000005
+        }
+      ]
+    },
+    {
+      "id": "361de322-365a-4821-9875-e9e62a4fde23",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": null,
+      "order": 9,
+      "modality": "text",
+      "text": "[1] Smith, J. (2020). A prior paper on document parsing.",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "1ea56aac-2d1d-4f0f-a8d2-c5bba2267b65"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "f3d1cda3-1a4b-442f-a813-4ee1243d9f8d",
+      "paper_id": "cd9f07eb-db3c-4326-a105-272d78cd387b",
+      "section_id": null,
+      "order": 10,
+      "modality": "text",
+      "text": "[2] Doe, A. (2021). Multimodal retrieval methods.",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "9b87c542-7769-47a0-92b8-950b3ca4e7e8"
+      ],
+      "bounding_boxes": []
+    }
+  ]
+}

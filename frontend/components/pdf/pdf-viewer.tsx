@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { ChevronLeft, ChevronRight, FileWarning, Loader2, ZoomIn, ZoomOut } from "lucide-react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
@@ -34,20 +34,17 @@ export function PdfViewer({
 
   const [file, setFile] = useState<Blob | null | undefined>(undefined);
   const [document, setDocument] = useState<PDFDocumentProxy | null>(null);
-  const [pageNumber, setPageNumberState] = useState(lastPage ?? 1);
+  const [pageNumber, setPageNumber] = useState(lastPage ?? 1);
   const [scale, setScale] = useState(1.1);
   const [searchStatus, setSearchStatus] = useState<"idle" | "searching" | "not-found">("idle");
 
-  const setPageNumber = useCallback(
-    (update: number | ((page: number) => number)) => {
-      setPageNumberState((current) => {
-        const next = typeof update === "function" ? update(current) : update;
-        setLastPdfPage(documentId, next);
-        return next;
-      });
-    },
-    [documentId, setLastPdfPage],
-  );
+  // Persisted after commit, never inside a state updater: a Zustand write
+  // notifies subscribers synchronously, and React may run updater
+  // functions during render ("Cannot update a component while rendering
+  // a different component" -- observed live in dev mode).
+  useEffect(() => {
+    setLastPdfPage(documentId, pageNumber);
+  }, [documentId, pageNumber, setLastPdfPage]);
 
   useEffect(() => {
     let cancelled = false;

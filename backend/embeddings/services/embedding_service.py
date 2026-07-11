@@ -183,7 +183,7 @@ class EmbeddingService:
     def _embed_text_batch(
         self, batch: list[EmbeddingTask], representation_version: str
     ) -> tuple[list[EmbeddingArtifact], int]:
-        texts = [task.chunk.text for task in batch]
+        texts = [_embedding_input(task.chunk) for task in batch]
         try:
             vectors = _call_with_retry(lambda: self._text_provider.embed_texts(texts))
         except EmbeddingProviderError:
@@ -205,7 +205,7 @@ class EmbeddingService:
                 model_name=self._text_provider.model_name,
                 model_version=self._text_provider.model_version,
                 embedding_dimension=self._text_provider.embedding_dimension,
-                checksum=hashlib.sha256(task.chunk.text.encode("utf-8")).hexdigest(),
+                checksum=hashlib.sha256(_embedding_input(task.chunk).encode("utf-8")).hexdigest(),
                 artifact_version=ARTIFACT_SCHEMA_VERSION,
                 source_representation_version=representation_version,
                 created_at=now,
@@ -234,3 +234,20 @@ def _call_with_retry(func: Callable[[], list[list[float]]]) -> list[list[float]]
                 time.sleep(_RETRY_BACKOFF_SECONDS * attempt)
     assert last_error is not None
     raise last_error
+
+
+def _embedding_input(chunk: Chunk) -> str:
+    """The text actually embedded for a chunk.
+
+    A chunk carrying a `retrieval_context` (its structural identity --
+    "Title", "Figure 1", "Bibliography reference [14]", ...) is embedded
+    with that identity prefixed, so questions phrased in structural terms
+    ("What is Figure 1?", "Who are the authors?") land on the right unit.
+    The stored/displayed `text` is deliberately untouched: contextualizing
+    only the embedding input changes ranking without changing what the
+    reader (or the frontend's PDF text matching) sees. The artifact
+    checksum hashes this same input, since it records what was embedded.
+    """
+    if chunk.retrieval_context:
+        return f"{chunk.retrieval_context}: {chunk.text}"
+    return chunk.text

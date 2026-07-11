@@ -9,6 +9,8 @@ function candidate(overrides: Partial<RetrievalCandidateDto>): RetrievalCandidat
     document_id: "doc-1",
     section_id: null,
     modality: "text",
+    retrieval_context: null,
+    page_numbers: [],
     text: "some evidence text",
     asset_uri: null,
     reading_order: 0,

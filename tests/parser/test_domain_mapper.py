@@ -76,6 +76,25 @@ def test_reconstructs_section_hierarchy_from_heading_levels(mapper: DomainMapper
     assert background_paragraph.section_id == by_title["1.1 Background"].id
 
 
+def test_blank_text_blocks_are_skipped_not_mapped(mapper: DomainMapper) -> None:
+    document = _document(
+        _text(HEADER, "1. Introduction", level=1),
+        _text(PARAGRAPH, "intro body"),
+        _text(PARAGRAPH, "   "),
+        _text(PARAGRAPH, ""),
+        _text(HEADER, "", level=1),
+        _text(PARAGRAPH, "later body"),
+    )
+
+    result = mapper.to_paper(
+        document_id=PaperId(uuid4()), source_filename="p.pdf", extracted=document
+    )
+    paper = result.paper
+
+    assert [p.text for p in paper.paragraphs] == ["intro body", "later body"]
+    assert [s.title for s in paper.sections] == ["1. Introduction"]
+
+
 def test_abstract_section_becomes_metadata_not_a_section(mapper: DomainMapper) -> None:
     document = _document(
         _text(HEADER, "Abstract", level=1),

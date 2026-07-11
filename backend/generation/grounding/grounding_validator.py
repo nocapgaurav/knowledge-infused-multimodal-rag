@@ -18,7 +18,7 @@ is `False` the moment even one claim fails.
 
 import re
 
-from backend.generation.citations.citation_resolver import CITATION_LABEL_IN_TEXT_PATTERN
+from backend.generation.citations.citation_resolver import citation_labels_in
 from backend.generation.exceptions import NoClaimsExtractedError
 from backend.generation.models.grounding_report import (
     ClaimGroundingStatus,
@@ -121,7 +121,7 @@ class GroundingValidator:
 
 
 def _verdict_for(claim: str, evidence_by_label: dict[str, ContextSection]) -> ClaimVerdict:
-    labels = CITATION_LABEL_IN_TEXT_PATTERN.findall(claim)
+    labels = citation_labels_in(claim)
     if not labels:
         return ClaimVerdict(
             claim_text=claim,
@@ -139,7 +139,11 @@ def _verdict_for(claim: str, evidence_by_label: dict[str, ContextSection]) -> Cl
             reason=f"citation label(s) not shown to the model: {unresolved}",
         )
 
-    if any(_is_supported(claim, evidence_by_label[label].text) for label in labels):
+    combined_evidence_text = " ".join(
+        f"{evidence_by_label[label].retrieval_context or ''} {evidence_by_label[label].text}"
+        for label in labels
+    )
+    if _is_supported(claim, combined_evidence_text):
         return ClaimVerdict(
             claim_text=claim,
             cited_labels=tuple(labels),
@@ -176,6 +180,15 @@ def _looks_like_a_claim(fragment: str) -> bool:
 
 
 def _is_supported(claim: str, evidence_text: str) -> bool:
+    """Whether a claim's vocabulary is sufficiently covered by the cited text.
+
+    Called with the UNION of every cited section's text, each prefixed
+    with its structural identity: a synthesis sentence legitimately draws
+    vocabulary from all the evidence it cites, and a sentence like "the
+    authors are listed on the title page [KU1]" legitimately draws its
+    vocabulary from the evidence's identity ("Authors and affiliations
+    (title page)") rather than from the names in its body.
+    """
     claim_words = _significant_words(claim)
     if not claim_words:
         return True  # a claim with no meaningful vocabulary (e.g. "Yes.") has nothing to check

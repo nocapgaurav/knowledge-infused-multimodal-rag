@@ -20,7 +20,13 @@ export type DiscoveryMethod = "dense_retrieval" | "graph_expansion";
 export type TraversalDirection = "outgoing" | "incoming";
 
 export type AnswerStatus =
-  "sufficient_evidence" | "partially_sufficient_evidence" | "insufficient_evidence";
+  | "sufficient_evidence"
+  | "partially_sufficient_evidence"
+  /** Evidence was retrieved but no claim in this answer could be verified
+   * against it -- a property of the answer, not the paper. */
+  | "unverified_answer"
+  /** Retrieval found nothing to answer from. */
+  | "insufficient_evidence";
 
 // ---------------------------------------------------------------------------
 // Document lifecycle (Module 3: ingestion; Modules 4-8: pipeline stages)
@@ -94,6 +100,10 @@ export interface RetrievalCandidateDto {
   section_id: string | null;
   modality: ChunkModality;
   text: string;
+  /** Structural identity assigned at chunking ("Figure 1", "Abstract",
+   * "Section: ..."), when known. */
+  retrieval_context: string | null;
+  page_numbers: number[];
   /** Backend-internal storage path, not a fetchable URL -- see
    * module12-backend-integration-gaps memory. Never rendered as an <img> src. */
   asset_uri: string | null;
@@ -190,12 +200,22 @@ export interface SupportingEvidenceItemDto {
   knowledge_unit_id: string;
   text: string;
   modality: ChunkModality;
+  /** Human-readable identity ("Figure 2", "Section: III. Methodology"). */
+  display_label: string | null;
+  page_numbers: number[];
+  /** Dense similarity when found by direct semantic match; null when
+   * discovered through the knowledge graph. */
+  relevance: number | null;
+  /** Honest provenance note derived from real retrieval facts. */
+  discovery: string | null;
 }
 
 export interface ResolvedCitationDto {
   label: string;
   knowledge_unit_id: string;
   text_excerpt: string;
+  display_label: string | null;
+  page_numbers: number[];
 }
 
 export interface GenerationStatisticsDto {

@@ -90,6 +90,8 @@ class ContextOptimizer:
                 citation_label=f"KU{index + 1}",
                 knowledge_unit_id=str(member.candidate.knowledge_unit_id),
                 text=member.candidate.text,
+                retrieval_context=member.candidate.retrieval_context,
+                page_numbers=member.candidate.page_numbers,
                 modality=member.candidate.modality,
                 section_id=(
                     str(member.candidate.section_id) if member.candidate.section_id else None

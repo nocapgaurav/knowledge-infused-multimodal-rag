@@ -25,6 +25,15 @@ class SupportingEvidenceItem(BaseModel):
         knowledge_unit_id: Identifier of the underlying knowledge unit.
         text: The evidence's text content.
         modality: The kind of content this evidence represents.
+        display_label: Human-readable identity ("Figure 2", "Abstract",
+            "Section: III. Methodology"), when known.
+        page_numbers: Source PDF page(s) this evidence appears on.
+        relevance: Dense similarity to the question, when this evidence
+            was found by direct semantic match; `None` when it was
+            discovered through the knowledge graph instead.
+        discovery: How this evidence was found -- a short, honest,
+            human-readable provenance note derived from real retrieval
+            facts, never a generated justification.
     """
 
     model_config = ConfigDict(frozen=True, extra="forbid")
@@ -33,6 +42,10 @@ class SupportingEvidenceItem(BaseModel):
     knowledge_unit_id: str = Field(min_length=1)
     text: str = Field(min_length=1)
     modality: ChunkModality
+    display_label: str | None = None
+    page_numbers: tuple[int, ...] = ()
+    relevance: float | None = None
+    discovery: str | None = None
 
 
 class GroundedResponse(BaseModel):

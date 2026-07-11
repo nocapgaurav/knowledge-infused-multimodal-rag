@@ -28,6 +28,12 @@ export const config = {
      * much longer than a typical request; measured at 5-20s during
      * Module 10/11's own verification. */
     generationTimeoutMs: 120_000,
+    /** Preparation stages (parse/represent/embed/index/graph) load real
+     * ML models server-side; on a cold backend the first embed alone can
+     * exceed two minutes while weights load. Observed live: an upload
+     * during backend cold-start failed at the embedding stage with a
+     * client-side timeout at the default 30s. */
+    preparationTimeoutMs: 300_000,
   },
   upload: {
     maxSizeBytes: 50 * 1024 * 1024,

@@ -55,6 +55,20 @@ def test_grounded_claim_with_strong_lexical_overlap() -> None:
     assert report.is_fully_grounded is True
 
 
+def test_grounded_claim_with_parenthesized_citation() -> None:
+    section = _section(
+        text="Rayleigh scattering causes shorter wavelengths of light to scatter more strongly."
+    )
+    answer = (
+        "Rayleigh scattering causes shorter wavelengths of light to scatter more strongly (KU1)."
+    )
+
+    report = GroundingValidator().validate(answer, _prompt([section]))
+
+    assert report.claims[0].status is ClaimGroundingStatus.GROUNDED
+    assert report.is_fully_grounded is True
+
+
 def test_claim_without_citation_is_missing_citation() -> None:
     answer = "The sky is blue."
 
@@ -124,3 +138,30 @@ def test_markdown_numbered_list_markers_are_not_treated_as_claims() -> None:
 
     assert all(claim.claim_text not in {"1.", "2."} for claim in report.claims)
     assert all(len(claim.claim_text) > 2 for claim in report.claims)
+
+
+def test_synthesis_claim_grounded_by_union_of_cited_evidence() -> None:
+    method = _section(
+        label="KU1", text="Our method consists of four stages: ingestion and parsing."
+    )
+    result = _section(label="KU2", text="The proposed method achieved an accuracy of 0.89 overall.")
+    claim = "The four-stage method of ingestion and parsing achieved 0.89 accuracy [KU1] [KU2]."
+
+    report = GroundingValidator().validate(claim, _prompt([method, result]))
+
+    assert report.claims[0].status is ClaimGroundingStatus.GROUNDED
+
+
+def test_meta_claim_grounded_via_cited_evidence_identity() -> None:
+    section = ContextSection(
+        citation_label="KU1",
+        knowledge_unit_id="abc",
+        text="Jane Doe University of Somewhere jane@somewhere.edu",
+        retrieval_context="Authors and affiliations (title page)",
+        modality="text",
+    )
+    answer = "The authors and affiliations are listed on the title page [KU1]."
+
+    report = GroundingValidator().validate(answer, _prompt([section]))
+
+    assert report.claims[0].status is ClaimGroundingStatus.GROUNDED

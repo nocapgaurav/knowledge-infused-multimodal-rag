@@ -102,3 +102,24 @@ def test_generate_is_deterministic_at_zero_temperature(provider: OllamaProvider)
     second = provider.generate(_prompt(), _config())
 
     assert first.text == second.text
+
+
+def test_render_section_includes_structural_identity() -> None:
+    from backend.generation.models.prompt_context import ContextSection
+    from backend.generation.providers.ollama_provider import _render_section
+
+    identified = ContextSection(
+        citation_label="KU1",
+        knowledge_unit_id="abc",
+        text="Knowledge-Infused Multimodal QA",
+        retrieval_context="Title of this paper",
+        modality="text",
+    )
+    plain = ContextSection(
+        citation_label="KU2", knowledge_unit_id="def", text="Body text.", modality="text"
+    )
+
+    assert _render_section(identified) == (
+        "[KU1] (Title of this paper) Knowledge-Infused Multimodal QA"
+    )
+    assert _render_section(plain) == "[KU2] Body text."

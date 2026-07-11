@@ -12,7 +12,7 @@ import { TYPOGRAPHY } from "@/constants/typography";
 import { useRelatedContent } from "@/services/queries";
 import { EMPTY_TURNS, useConversationStore } from "@/store/conversation-store";
 import { useWorkspaceStore } from "@/store/workspace-store";
-import type { ChunkModality } from "@/types/api";
+import type { ChunkModality, RetrievalCandidateDto } from "@/types/api";
 
 /** React Flow is a sizeable dependency only ever needed once a user
  * explicitly opens the Graph tab (Phase 3: relationship visualization is
@@ -104,6 +104,9 @@ export function RelatedContentPanel({ documentId }: { documentId: string }) {
                 item={{
                   knowledgeUnitId: candidate.knowledge_unit_id,
                   label: labelFor(candidate.modality),
+                  displayLabel: candidate.retrieval_context ?? undefined,
+                  pageNumbers: candidate.page_numbers?.length ? candidate.page_numbers : undefined,
+                  discovery: discoveryFor(candidate),
                   modality: candidate.modality,
                   text: candidate.text,
                   groupId: candidate.knowledge_unit_id,
@@ -125,6 +128,22 @@ export function RelatedContentPanel({ documentId }: { documentId: string }) {
 
 function labelFor(modality: ChunkModality): string {
   return modality === "figure" ? "Figure" : modality === "table" ? "Table" : "Related";
+}
+
+/** Honest provenance for a related item, from its real graph path: which
+ * relationship connected it to the evidence that answered the question. */
+function discoveryFor(candidate: RetrievalCandidateDto): string | undefined {
+  const lastHop = candidate.graph_path.hops.at(-1);
+  if (!lastHop) return undefined;
+  const relationship = lastHop.relationship_type;
+  const REASON: Record<string, string> = {
+    CITES: "Cited by matched evidence",
+    REFERENCES: "Referenced by matched evidence",
+    CONTINUES: "Continues a matched passage",
+    NEXT: "Adjacent to matched evidence",
+    BELONGS_TO: "Same section as matched evidence",
+  };
+  return REASON[relationship] ?? `Connected via ${relationship.toLowerCase()}`;
 }
 
 function EmptyState({ message }: { message: string }) {

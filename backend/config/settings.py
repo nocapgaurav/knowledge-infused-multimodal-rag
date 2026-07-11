@@ -134,8 +134,8 @@ class Settings(BaseSettings):
     generation_model: str = "qwen2.5:7b-instruct"
     generation_temperature: float = 0.1
     generation_top_p: float = 0.9
-    generation_max_tokens: int = 800
-    generation_context_window: int = 4096
+    generation_max_tokens: int = 1400
+    generation_context_window: int = 8192
     evaluation_storage_root: Path = Path("data/evaluation")
     evaluation_dataset_path: Path = Path("data/evaluation_dataset.json")
     cors_allowed_origins: list[str] = ["http://localhost:3000"]

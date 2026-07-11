@@ -1,0 +1,18 @@
+{
+  "document_id": "47da4a73-d5ec-4a19-b8f8-f88594fcb2df",
+  "query": "What is the proposed architecture?",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "d8d26f810a85963adb390e1e5fd9122762fc49acd9635302ce585f0736c9ca08",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 20,
+    "candidates_expanded": 36,
+    "candidates_scored": 56,
+    "evidence_groups": 5,
+    "evidence_items": 9,
+    "duration_ms": 1110.9000840224326
+  },
+  "created_at": "2026-07-11T08:26:08.547849Z"
+}

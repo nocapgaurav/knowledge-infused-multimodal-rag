@@ -1,0 +1,132 @@
+{
+  "document_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+  "count": 18,
+  "relationships": [
+    {
+      "id": "fd3f7048-660b-4cb7-8697-2c40127fce01",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "fd787190-95c4-411f-84b0-8cff14fd42ff",
+      "target_chunk_id": "9dd94de3-bcb4-4f85-a9c3-7fcc8a5563da",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "600dce7f-43cf-4222-9b17-bfa862706c88",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "fd787190-95c4-411f-84b0-8cff14fd42ff",
+      "target_chunk_id": "918c57eb-741d-4249-ae94-57c581a51fdf",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "428268fa-02df-47e0-b3d9-9645a5cffe6b",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "21d89885-cc44-426d-b8f7-5df43ddfa4b8",
+      "target_chunk_id": "d0bf5736-ebe1-4f9b-bba8-5d01eaaa7fed",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "3c424a88-9668-4516-a7dc-1aca0a53b200",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "21d89885-cc44-426d-b8f7-5df43ddfa4b8",
+      "target_chunk_id": "34568516-11c4-4091-a44f-5f4f87e9ec7e",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "23578295-5274-490a-9343-43223358bf87",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "21d89885-cc44-426d-b8f7-5df43ddfa4b8",
+      "target_chunk_id": "2c50d3b5-696b-4cd8-a45a-c0b78376a00d",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "ab78a6bd-b531-4a18-9458-d52c73672020",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "77bc8623-e428-43d9-97c0-f3775d7ea51a",
+      "target_chunk_id": "d0bf5736-ebe1-4f9b-bba8-5d01eaaa7fed",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "7fa3e72e-9f71-4953-a232-fb09d5aa6ce1",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "77bc8623-e428-43d9-97c0-f3775d7ea51a",
+      "target_chunk_id": "cb57ff54-11e3-4959-8446-bca82638d762",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "78a8e5a3-ef7c-424d-ba51-f1c0a125a0bf",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "58be3c4b-2ffe-455a-81db-8455ae145297",
+      "target_chunk_id": "97d5d8b1-0898-4b92-937b-9f03af14c84e",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "1ff08511-387f-4e36-b043-cfb303624a23",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "58be3c4b-2ffe-455a-81db-8455ae145297",
+      "target_chunk_id": "0fafe35b-8b90-4cf4-bd82-85802a1a2f3a",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "016dae31-c22a-48fc-9ad7-a43338a7b11f",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "c243977a-b18a-4466-9d89-bde83f38800d",
+      "target_chunk_id": "a8af2fba-d1c2-465d-b56a-f5630a4e7739",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "bfc3e4d6-5fef-4121-9f6d-fd7bb4f53580",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "c243977a-b18a-4466-9d89-bde83f38800d",
+      "target_chunk_id": "9dd94de3-bcb4-4f85-a9c3-7fcc8a5563da",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "98b3060b-3849-4147-921f-173f3f751f44",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "73a72810-095a-4314-937f-3a32b52b58f3",
+      "target_chunk_id": "97d5d8b1-0898-4b92-937b-9f03af14c84e",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "9bf4a43e-6d6a-4301-b768-7184b6100df6",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "f1866688-2dbc-4a7a-9081-c6ffb1a05c2c",
+      "target_chunk_id": "97d5d8b1-0898-4b92-937b-9f03af14c84e",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "9bb9dd5c-842c-4131-93b9-bed14ebd2450",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "722a83e1-6981-4102-b166-c81acae86672",
+      "target_chunk_id": "0fafe35b-8b90-4cf4-bd82-85802a1a2f3a",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "eb4e9d86-149d-4aa3-a1d5-dd519db49773",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "d7f19335-485b-444e-82bb-dc1aab20e261",
+      "target_chunk_id": "34568516-11c4-4091-a44f-5f4f87e9ec7e",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "e9d525fa-9fd5-4bc3-bce9-42be0164447f",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "d7f19335-485b-444e-82bb-dc1aab20e261",
+      "target_chunk_id": "369700d9-e5a5-4f36-be22-575ecd40da56",
+      "relationship_type": "cites"
+    },
+    {
+      "id": "249dc201-0108-4d35-b36b-feaac9716ebe",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "9febd80d-f2c4-4512-9f71-e55e4865a57a",
+      "target_chunk_id": "68641bff-1ebf-4f9b-a24b-997e1f1bc8bf",
+      "relationship_type": "references"
+    },
+    {
+      "id": "e8601c97-918e-4783-8bdc-02ae26292819",
+      "paper_id": "c69a7014-4b29-4d54-bf71-4f6f775cd973",
+      "source_chunk_id": "098aadd3-a87b-4bf7-97a9-9c255c9b8d37",
+      "target_chunk_id": "7f20c716-5176-4322-90c3-9957ee84d080",
+      "relationship_type": "references"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
-import { http, toAppError } from "@/lib/http";
+import { config } from "@/lib/config";
+import { createHttpClient, http, toAppError } from "@/lib/http";
 import type {
   BuildGraphResponseDto,
   DocumentStatusResponseDto,
@@ -19,11 +20,16 @@ import type {
  * really there, in order.
  */
 
+/** Preparation stages load real ML models server-side and can far exceed
+ * the default request timeout on a cold backend -- same idiom as
+ * `generation-service.ts`'s dedicated client. */
+const preparationHttp = createHttpClient(config.api.preparationTimeoutMs);
+
 export async function uploadDocument(file: File): Promise<DocumentUploadResponseDto> {
   const formData = new FormData();
   formData.append("file", file);
   try {
-    const response = await http.post<DocumentUploadResponseDto>("/documents", formData, {
+    const response = await preparationHttp.post<DocumentUploadResponseDto>("/documents", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     return response.data;
@@ -42,29 +48,37 @@ export async function getDocumentStatus(documentId: string): Promise<DocumentSta
 }
 
 async function parseDocument(documentId: string): Promise<ParseDocumentResponseDto> {
-  const response = await http.post<ParseDocumentResponseDto>(`/documents/${documentId}/parse`);
+  const response = await preparationHttp.post<ParseDocumentResponseDto>(
+    `/documents/${documentId}/parse`,
+  );
   return response.data;
 }
 
 async function representDocument(documentId: string): Promise<RepresentDocumentResponseDto> {
-  const response = await http.post<RepresentDocumentResponseDto>(
+  const response = await preparationHttp.post<RepresentDocumentResponseDto>(
     `/documents/${documentId}/represent`,
   );
   return response.data;
 }
 
 async function embedDocument(documentId: string): Promise<EmbedDocumentResponseDto> {
-  const response = await http.post<EmbedDocumentResponseDto>(`/documents/${documentId}/embed`);
+  const response = await preparationHttp.post<EmbedDocumentResponseDto>(
+    `/documents/${documentId}/embed`,
+  );
   return response.data;
 }
 
 async function indexDocument(documentId: string): Promise<IndexDocumentResponseDto> {
-  const response = await http.post<IndexDocumentResponseDto>(`/documents/${documentId}/index`);
+  const response = await preparationHttp.post<IndexDocumentResponseDto>(
+    `/documents/${documentId}/index`,
+  );
   return response.data;
 }
 
 async function buildGraph(documentId: string): Promise<BuildGraphResponseDto> {
-  const response = await http.post<BuildGraphResponseDto>(`/documents/${documentId}/graph`);
+  const response = await preparationHttp.post<BuildGraphResponseDto>(
+    `/documents/${documentId}/graph`,
+  );
   return response.data;
 }
 

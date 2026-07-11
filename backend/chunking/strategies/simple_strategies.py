@@ -1,11 +1,43 @@
-"""Trivial, direct-mapping strategies: the abstract and bibliography entries.
+"""Trivial, direct-mapping strategies: title, abstract, and bibliography entries.
 
-Grouped in one file since neither has splitting, merging, or relationship
+Grouped in one file since none has splitting, merging, or relationship
 -detection logic -- each is a single entity becoming a single chunk.
 """
 
 from backend.chunking.interfaces.context import BuildContext, StrategyResult
 from backend.domain import Chunk, ChunkModality, Reference
+
+
+class TitleStrategy:
+    """Builds one knowledge unit from the paper's title.
+
+    Without this, the title exists only in `Paper.metadata` and is
+    invisible to retrieval entirely -- observed live: "What is the title?"
+    could not retrieve the title because no chunk contained it.
+    """
+
+    def build(self, context: BuildContext) -> StrategyResult:
+        """Build a knowledge unit for the paper's title.
+
+        Args:
+            context: Shared build context.
+
+        Returns:
+            A single-chunk result. The parser guarantees a title exists.
+        """
+        title = context.paper.metadata.title
+        chunk = Chunk(
+            paper_id=context.paper.id,
+            section_id=None,
+            order=context.next_order(),
+            modality=ChunkModality.TEXT,
+            text=title,
+            retrieval_context="Title of this paper",
+            token_count=len(title.split()),
+            source_element_ids=[context.paper.metadata.id],
+            bounding_boxes=[],
+        )
+        return StrategyResult(chunks=[chunk], relationships=[])
 
 
 class AbstractStrategy:
@@ -36,6 +68,7 @@ class AbstractStrategy:
             order=context.next_order(),
             modality=ChunkModality.TEXT,
             text=metadata.abstract,
+            retrieval_context="Abstract",
             token_count=len(metadata.abstract.split()),
             source_element_ids=[metadata.id],
             bounding_boxes=[],
@@ -66,6 +99,7 @@ class ReferenceStrategy:
             order=context.next_order(),
             modality=ChunkModality.TEXT,
             text=reference.raw_text,
+            retrieval_context=f"Bibliography reference [{reference.order + 1}]",
             token_count=len(reference.raw_text.split()),
             source_element_ids=[reference.id],
             bounding_boxes=[],

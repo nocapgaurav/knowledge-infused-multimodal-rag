@@ -81,12 +81,58 @@ def _full_paper() -> Paper:
     )
 
 
-def test_abstract_is_the_first_chunk() -> None:
+def test_title_then_abstract_lead_the_chunk_order() -> None:
     result = _builder().build(_full_paper())
 
-    first = min(result.chunks, key=lambda c: c.order)
-    assert first.text == "This is the abstract."
-    assert first.order == 0
+    ordered = sorted(result.chunks, key=lambda c: c.order)
+    assert ordered[0].text == "A Full Paper"
+    assert ordered[0].retrieval_context == "Title of this paper"
+    assert ordered[1].text == "This is the abstract."
+    assert ordered[1].retrieval_context == "Abstract"
+
+
+def test_front_matter_paragraphs_get_title_page_context() -> None:
+    paper = _full_paper()
+    front = Paragraph(
+        paper_id=paper.id,
+        section_id=None,
+        order=0,
+        text="Jane Doe University of Somewhere jane@somewhere.edu",
+    )
+    body = paper.paragraphs[0]
+    paper = paper.model_copy(update={"paragraphs": [front, *paper.paragraphs]})
+
+    result = _builder().build(paper)
+
+    front_chunk = next(c for c in result.chunks if "Jane Doe" in c.text)
+    assert front_chunk.retrieval_context == "Authors and affiliations (title page)"
+    body_chunk = next(c for c in result.chunks if c.source_element_ids == [body.id])
+    assert body_chunk.retrieval_context == "Section: 1. Introduction"
+
+
+def test_roman_numeral_table_caption_gets_numbered_context() -> None:
+    paper = _full_paper()
+    roman = next(c for c in paper.captions if c.subject_type is CaptionSubjectType.TABLE)
+    paper = paper.model_copy(
+        update={
+            "captions": [
+                c.model_copy(update={"text": "TABLE I: Results."}) if c is roman else c
+                for c in paper.captions
+            ]
+        }
+    )
+
+    result = _builder().build(paper)
+
+    table_chunk = next(c for c in result.chunks if c.modality is ChunkModality.TABLE)
+    assert table_chunk.retrieval_context == "Table 1"
+
+
+def test_reference_chunk_carries_numbered_context() -> None:
+    result = _builder().build(_full_paper())
+
+    reference_chunk = max(result.chunks, key=lambda c: c.order)
+    assert reference_chunk.retrieval_context == "Bibliography reference [1]"
 
 
 def test_order_is_globally_unique_and_contiguous() -> None:
@@ -210,7 +256,7 @@ def test_paper_with_only_paragraphs_builds_without_error() -> None:
 
     result = _builder().build(paper)
 
-    assert len(result.chunks) == 5
+    assert len(result.chunks) == 6  # 5 paragraph chunks + the title chunk
     assert all(c.modality is ChunkModality.TEXT for c in result.chunks)
 
 
@@ -235,3 +281,22 @@ def test_deeply_nested_sections_resolve_correct_section_id() -> None:
 
     chunk = next(c for c in result.chunks if c.text == "Deeply nested text.")
     assert chunk.section_id == level3.id
+
+
+def test_front_matter_abstract_and_keyword_blocks_self_identify() -> None:
+    paper = _full_paper()
+    abstract_block = Paragraph(
+        paper_id=paper.id, section_id=None, order=0, text="Abstract -This paper studies things."
+    )
+    keywords_block = Paragraph(
+        paper_id=paper.id, section_id=None, order=1, text="Index Terms -Multimodal, QA"
+    )
+    paper = paper.model_copy(
+        update={"paragraphs": [abstract_block, keywords_block, *paper.paragraphs]}
+    )
+
+    result = _builder().build(paper)
+
+    by_text = {c.text[:12]: c for c in result.chunks}
+    assert by_text["Abstract -Th"].retrieval_context == "Abstract"
+    assert by_text["Index Terms "].retrieval_context == "Keywords (index terms)"

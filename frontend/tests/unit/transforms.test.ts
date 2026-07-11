@@ -17,6 +17,8 @@ function buildBundle(): EvidenceBundleDto {
         section_id: null,
         modality: "text",
         text: "primary text",
+        retrieval_context: "Section: 1. Introduction",
+        page_numbers: [2],
         asset_uri: null,
         reading_order: 0,
         citation_count: 0,
@@ -30,6 +32,8 @@ function buildBundle(): EvidenceBundleDto {
         section_id: null,
         modality: "table",
         text: "supporting text",
+        retrieval_context: "Table 1",
+        page_numbers: [3],
         asset_uri: null,
         reading_order: 1,
         citation_count: 0,
@@ -48,6 +52,8 @@ function buildBundle(): EvidenceBundleDto {
             section_id: null,
             modality: "text",
             text: "primary text",
+            retrieval_context: "Section: 1. Introduction",
+            page_numbers: [2],
             asset_uri: null,
             reading_order: 0,
             citation_count: 0,
@@ -69,6 +75,8 @@ function buildBundle(): EvidenceBundleDto {
               section_id: null,
               modality: "table",
               text: "supporting text",
+              retrieval_context: "Table 1",
+              page_numbers: [3],
               asset_uri: null,
               reading_order: 1,
               citation_count: 0,
@@ -141,9 +149,26 @@ function buildGroundedResponse(): GroundedResponseDto {
     answer: "The results show improvement [KU1].",
     executive_summary: "Improvement observed.",
     supporting_evidence: [
-      { label: "KU1", knowledge_unit_id: "ku-1", text: "primary text", modality: "text" },
+      {
+        label: "KU1",
+        knowledge_unit_id: "ku-1",
+        text: "primary text",
+        modality: "text",
+        display_label: "Section: 1. Introduction",
+        page_numbers: [2],
+        relevance: 0.9,
+        discovery: "Matched your question directly",
+      },
     ],
-    resolved_citations: [{ label: "KU1", knowledge_unit_id: "ku-1", text_excerpt: "primary text" }],
+    resolved_citations: [
+      {
+        label: "KU1",
+        knowledge_unit_id: "ku-1",
+        text_excerpt: "primary text",
+        display_label: "Section: 1. Introduction",
+        page_numbers: [2],
+      },
+    ],
     limitations: [],
     references: ["[KU1] primary text"],
     warnings: [],
@@ -183,7 +208,13 @@ describe("answerViewModelFromGroundedResponse", () => {
     const answer = answerViewModelFromGroundedResponse(buildGroundedResponse());
 
     expect(answer.citations).toEqual([
-      { label: "KU1", knowledgeUnitId: "ku-1", textExcerpt: "primary text" },
+      {
+        label: "KU1",
+        knowledgeUnitId: "ku-1",
+        textExcerpt: "primary text",
+        displayLabel: "Section: 1. Introduction",
+        pageNumbers: [2],
+      },
     ]);
     expect(answer.confidence).toBe(0.9);
     expect(answer.answerStatus).toBe("sufficient_evidence");

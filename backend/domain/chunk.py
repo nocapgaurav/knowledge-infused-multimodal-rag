@@ -56,6 +56,14 @@ class Chunk(DomainModel):
         token_count: Number of tokens in `text`, if computed by the
             chunking module. Recorded here to avoid re-tokenizing text
             later purely to check size.
+        retrieval_context: Short structural identity of this chunk within
+            the paper (e.g. "Title", "Abstract", "Reference [14]",
+            "Figure 1", "Table 2", "Title page"), set by the chunking
+            strategy that built it. Used to contextualize the text at
+            embedding time and as a ranking signal at retrieval time --
+            never shown as content, so `text` remains exactly what the
+            reader sees (and what the frontend matches against the PDF).
+            `None` for ordinary body text, which needs no qualifier.
         source_element_ids: Identifiers of the paragraph(s), figure(s),
             table(s), or caption(s) this chunk was built from. A chunk may
             combine several source elements (e.g. small paragraphs merged
@@ -73,6 +81,7 @@ class Chunk(DomainModel):
     order: int = Field(ge=0)
     modality: ChunkModality
     text: str = Field(min_length=1)
+    retrieval_context: str | None = None
     asset_uri: str | None = None
     token_count: int | None = Field(default=None, ge=0)
     source_element_ids: list[UUID] = Field(default_factory=list)

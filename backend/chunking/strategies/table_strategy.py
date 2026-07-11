@@ -41,12 +41,18 @@ class TableStrategy:
 
         source_element_ids = [table.id, *([caption.id] if caption is not None else [])]
 
+        number = next(
+            (n for n, tid in context.table_number_lookup.items() if tid == table.id), None
+        )
+        retrieval_context = f"Table {number}" if number is not None else "Table"
+
         chunk = Chunk(
             paper_id=context.paper.id,
             section_id=table.section_id,
             order=context.next_order(),
             modality=ChunkModality.TABLE,
             text=text,
+            retrieval_context=retrieval_context,
             asset_uri=table.asset_uri,
             source_element_ids=source_element_ids,
             bounding_boxes=table.bounding_boxes,

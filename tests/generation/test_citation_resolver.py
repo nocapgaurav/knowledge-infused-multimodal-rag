@@ -49,6 +49,52 @@ def test_resolves_valid_citation() -> None:
     assert report.unresolved == ()
 
 
+def test_resolves_parenthesized_citation_format() -> None:
+    section = _section(label="KU4", knowledge_unit_id="real-id", text="the evidence text")
+    answer = "The system combines multiple modalities (KU4)."
+
+    report = CitationResolver().resolve(answer, _prompt([section]))
+
+    assert len(report.resolved) == 1
+    assert report.resolved[0].label == "KU4"
+    assert report.unresolved == ()
+
+
+def test_resolves_every_label_in_a_comma_separated_citation_list() -> None:
+    sections = [
+        _section(label="KU4", knowledge_unit_id="id-4"),
+        _section(label="KU8", knowledge_unit_id="id-8"),
+    ]
+    answer = "The system combines text, tables, and images (KU4, KU8)."
+
+    report = CitationResolver().resolve(answer, _prompt(sections))
+
+    assert [c.label for c in report.resolved] == ["KU4", "KU8"]
+    assert report.unresolved == ()
+
+
+def test_resolves_every_label_in_a_bracketed_citation_list() -> None:
+    sections = [
+        _section(label="KU1", knowledge_unit_id="id-1"),
+        _section(label="KU2", knowledge_unit_id="id-2"),
+    ]
+    answer = "As shown earlier [KU1, KU2]."
+
+    report = CitationResolver().resolve(answer, _prompt(sections))
+
+    assert [c.label for c in report.resolved] == ["KU1", "KU2"]
+    assert report.unresolved == ()
+
+
+def test_ordinary_parenthesized_text_is_not_a_citation() -> None:
+    answer = "As shown before (Doe, 2021) and elsewhere (see Table 1), results hold [KU1]."
+
+    report = CitationResolver().resolve(answer, _prompt([_section(label="KU1")]))
+
+    assert [c.label for c in report.resolved] == ["KU1"]
+    assert report.unresolved == ()
+
+
 def test_unknown_label_is_unresolved() -> None:
     answer = "This cites something invented [KU99]."
 
@@ -87,3 +133,29 @@ def test_no_citations_used_produces_empty_report() -> None:
 
     assert report.resolved == ()
     assert report.unresolved == ()
+
+
+def test_identity_form_citation_resolves_to_its_label() -> None:
+    """Regression: real models sometimes cite by the parenthesized identity
+    shown next to the label -- observed live with qwen2.5:
+    "...provided in (Authors and affiliations (title page))"."""
+    section = ContextSection(
+        citation_label="KU1",
+        knowledge_unit_id="real-id",
+        text="Jane Doe University of Somewhere jane@somewhere.edu",
+        retrieval_context="Authors and affiliations (title page)",
+        modality="text",
+    )
+    answer = "The affiliations are given in (Authors and affiliations (title page))."
+
+    report = CitationResolver().resolve(answer, _prompt([section]))
+
+    assert [c.label for c in report.resolved] == ["KU1"]
+
+
+def test_identity_text_not_shown_in_this_prompt_never_resolves() -> None:
+    answer = "As shown in (Figure 9), results improved."
+
+    report = CitationResolver().resolve(answer, _prompt([_section(label="KU1")]))
+
+    assert report.resolved == ()

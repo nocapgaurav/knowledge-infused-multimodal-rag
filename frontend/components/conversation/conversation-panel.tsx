@@ -18,6 +18,16 @@ import { EMPTY_TURNS, useConversationStore } from "@/store/conversation-store";
 import { useWorkspaceStore } from "@/store/workspace-store";
 import type { ConversationTurn } from "@/types/view-models";
 
+/** Honest, reader-facing phrasing for each evidence status. In particular
+ * "unverified_answer" must not read as "the paper lacks this" -- evidence
+ * was found; the answer's citations just could not be verified. */
+const STATUS_BADGE_TEXT = {
+  sufficient_evidence: "Fully grounded in evidence",
+  partially_sufficient_evidence: "Partially verified against evidence",
+  unverified_answer: "Citations not verified",
+  insufficient_evidence: "Not found in this paper",
+} as const;
+
 /**
  * The Conversation experience (Phase 4B): a tool for understanding the
  * paper, never the product itself -- every answer stays visibly tied to
@@ -112,8 +122,8 @@ function ConversationTurnView({
             citations={turn.answer.citations}
             onSelectCitation={onSelectCitation}
           />
-          <Badge variant="outline" className="w-fit capitalize">
-            {turn.answer.answerStatus.replaceAll("_", " ")}
+          <Badge variant="outline" className="w-fit">
+            {STATUS_BADGE_TEXT[turn.answer.answerStatus]}
           </Badge>
         </div>
       )}

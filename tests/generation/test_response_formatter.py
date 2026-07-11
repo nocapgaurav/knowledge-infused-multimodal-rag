@@ -254,3 +254,16 @@ def test_generation_metadata_carries_question_type() -> None:
     response = ResponseFormatter().format(formatting_input, bundle)
 
     assert response.generation_metadata["question_type"] == "factual"
+
+
+def test_uncited_answer_falls_back_to_context_as_labeled_evidence() -> None:
+    document_id = uuid4()
+    result = ResponseFormatter().format(
+        _formatting_input(document_id, answer_text="An answer with no citations.", resolved=()),
+        _bundle(document_id),
+    )
+
+    assert len(result.supporting_evidence) == 1
+    item = result.supporting_evidence[0]
+    assert item.label == "KU1"
+    assert item.discovery == "Shown to the model as context (not cited in the answer)"

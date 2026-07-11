@@ -1,0 +1,23 @@
+{
+  "document_id": "2b3091ee-ef88-412b-b566-55caf659a1e3",
+  "query": "Which table supports the main claim?",
+  "generation_version": "1.0",
+  "prompt_version": "1.1",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "partially_sufficient_evidence",
+  "confidence": 0.5597999135,
+  "statistics": {
+    "context_sections_used": 14,
+    "context_sections_dropped": 0,
+    "claims_total": 4,
+    "claims_grounded": 1,
+    "citations_resolved": 2,
+    "citations_unresolved": 0,
+    "prompt_tokens": 1876,
+    "completion_tokens": 150,
+    "duration_ms": 8886.212124954909
+  },
+  "created_at": "2026-07-11T11:37:42.906900Z"
+}

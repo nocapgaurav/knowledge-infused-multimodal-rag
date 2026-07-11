@@ -1,0 +1,23 @@
+{
+  "document_id": "106aa886-998e-4356-b26c-35b3aeb5f0b5",
+  "query": "What are the main results described in this paper?",
+  "generation_version": "1.0",
+  "prompt_version": "1.0",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "partially_sufficient_evidence",
+  "confidence": 0.7732180405,
+  "statistics": {
+    "context_sections_used": 5,
+    "context_sections_dropped": 0,
+    "claims_total": 5,
+    "claims_grounded": 3,
+    "citations_resolved": 4,
+    "citations_unresolved": 0,
+    "prompt_tokens": 315,
+    "completion_tokens": 134,
+    "duration_ms": 5514.8521669907495
+  },
+  "created_at": "2026-07-11T08:27:31.934924Z"
+}

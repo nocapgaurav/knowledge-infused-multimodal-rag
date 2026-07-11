@@ -25,7 +25,12 @@ edges over broad ones."""
 
 _DIRECTIONS: dict[str, tuple[TraversalDirection, ...]] = {
     "CITES": (TraversalDirection.OUTGOING,),
-    "REFERENCES": (TraversalDirection.OUTGOING,),
+    # Bidirectional: outgoing finds the figure/table a seed paragraph
+    # mentions; INCOMING finds every paragraph that mentions a seed
+    # figure/table. Observed live in Sprint 2: "What is Figure 2?" seeded
+    # the figure chunk but retrieved none of the paragraphs discussing it,
+    # leaving the model nothing to explain beyond the caption.
+    "REFERENCES": (TraversalDirection.OUTGOING, TraversalDirection.INCOMING),
     "CONTINUES": (TraversalDirection.OUTGOING, TraversalDirection.INCOMING),
     "NEXT": (TraversalDirection.OUTGOING, TraversalDirection.INCOMING),
     "BELONGS_TO": (TraversalDirection.OUTGOING, TraversalDirection.INCOMING),

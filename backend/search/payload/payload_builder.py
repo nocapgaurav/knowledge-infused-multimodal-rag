@@ -62,6 +62,7 @@ class PayloadBuilder:
             "embedding_version": artifact.model_version,
             "source_document_checksum": manifest.source_representation_version,
             "text": chunk.text,
+            "retrieval_context": chunk.retrieval_context,
             "token_count": chunk.token_count,
             "asset_uri": chunk.asset_uri,
         }

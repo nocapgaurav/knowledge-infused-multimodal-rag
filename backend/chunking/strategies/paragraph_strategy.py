@@ -17,6 +17,10 @@ from dataclasses import dataclass, field
 from uuid import UUID
 
 from backend.chunking.interfaces.context import BuildContext, StrategyResult
+from backend.chunking.strategies.numbering import (
+    NUMBER_TOKEN_PATTERN,
+    parse_printed_number,
+)
 from backend.domain import (
     BoundingBox,
     Chunk,
@@ -25,12 +29,32 @@ from backend.domain import (
     Paragraph,
     Relationship,
     RelationshipType,
+    SectionId,
 )
 
 _SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?])\s+")
 _CITATION_PATTERN = re.compile(r"\[(\d+)\]")
-_FIGURE_MENTION_PATTERN = re.compile(r"\b(?:Figure|Fig\.?)\s+(\d+)", re.IGNORECASE)
-_TABLE_MENTION_PATTERN = re.compile(r"\bTable\s+(\d+)", re.IGNORECASE)
+_FIGURE_MENTION_PATTERN = re.compile(
+    r"\b(?:Figure|Fig\.?)\s+" + NUMBER_TOKEN_PATTERN, re.IGNORECASE
+)
+_TABLE_MENTION_PATTERN = re.compile(r"\bTable\s+" + NUMBER_TOKEN_PATTERN, re.IGNORECASE)
+
+
+def _section_context(section_id: SectionId | None, context: BuildContext) -> str | None:
+    """The section-title identity a body chunk carries into retrieval.
+
+    Embedding a paragraph together with the title of the section it lives
+    in lets section-level questions ("summarize the methodology") land on
+    the right passages, and gives every evidence card a human-readable
+    origin instead of a bare knowledge-unit id. `None` when the paragraph
+    has no section (front matter is labeled separately by the builder).
+    """
+    if section_id is None:
+        return None
+    section = next((s for s in context.paper.sections if s.id == section_id), None)
+    if section is None:
+        return None
+    return f"Section: {section.title}"
 
 
 def _word_count(text: str) -> int:
@@ -138,6 +162,7 @@ class ParagraphStrategy:
 
         paper_id = context.paper.id
         section_id = paragraphs[0].section_id
+        retrieval_context = _section_context(section_id, context)
         chunks: list[Chunk] = []
         relationships: list[Relationship] = []
 
@@ -150,6 +175,7 @@ class ParagraphStrategy:
                     order=context.next_order(),
                     modality=ChunkModality.TEXT,
                     text=part_text,
+                    retrieval_context=retrieval_context,
                     token_count=_word_count(part_text),
                     source_element_ids=[p.id for p in block.source_paragraphs],
                     bounding_boxes=block.bounding_boxes,
@@ -208,8 +234,12 @@ class ParagraphStrategy:
         for match in _CITATION_PATTERN.finditer(chunk.text):
             _emit(int(match.group(1)), context.reference_number_lookup, RelationshipType.CITES)
         for match in _FIGURE_MENTION_PATTERN.finditer(chunk.text):
-            _emit(int(match.group(1)), context.figure_number_lookup, RelationshipType.REFERENCES)
+            number = parse_printed_number(match.group(1).upper())
+            if number is not None:
+                _emit(number, context.figure_number_lookup, RelationshipType.REFERENCES)
         for match in _TABLE_MENTION_PATTERN.finditer(chunk.text):
-            _emit(int(match.group(1)), context.table_number_lookup, RelationshipType.REFERENCES)
+            number = parse_printed_number(match.group(1).upper())
+            if number is not None:
+                _emit(number, context.table_number_lookup, RelationshipType.REFERENCES)
 
         return relationships

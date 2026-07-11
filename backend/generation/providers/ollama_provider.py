@@ -17,7 +17,7 @@ from ollama import Client, RequestError, ResponseError
 from backend.generation.exceptions import GenerationProviderError
 from backend.generation.interfaces.generation_provider import GenerationProvider
 from backend.generation.models.generation_config import GenerationConfig
-from backend.generation.models.prompt_context import PromptContext
+from backend.generation.models.prompt_context import ContextSection, PromptContext
 from backend.generation.models.provider_response import ProviderResponse
 
 logger = logging.getLogger(__name__)
@@ -92,12 +92,22 @@ def _render_messages(prompt_context: PromptContext) -> list[dict[str, str]]:
     system_lines.extend(f"- {rule}" for rule in prompt_context.formatting_rules)
 
     evidence_lines = ["Evidence:"]
-    evidence_lines.extend(
-        f"[{section.citation_label}] {section.text}" for section in prompt_context.context_sections
-    )
+    evidence_lines.extend(_render_section(section) for section in prompt_context.context_sections)
     evidence_lines.extend(["", f"Question: {prompt_context.user_question}"])
 
     return [
         {"role": "system", "content": "\n".join(system_lines)},
         {"role": "user", "content": "\n".join(evidence_lines)},
     ]
+
+
+def _render_section(section: ContextSection) -> str:
+    """Render one evidence section for the model, identity included.
+
+    The parenthesized structural identity lets the model recognize what a
+    bare evidence string *is* (a title, a figure caption, the author
+    block) without altering the evidence text itself.
+    """
+    if section.retrieval_context:
+        return f"[{section.citation_label}] ({section.retrieval_context}) {section.text}"
+    return f"[{section.citation_label}] {section.text}"

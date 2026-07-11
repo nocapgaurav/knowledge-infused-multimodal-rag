@@ -180,7 +180,7 @@ def test_no_context_sections_yields_insufficient_evidence() -> None:
     assert result.answer_status is AnswerStatus.INSUFFICIENT_EVIDENCE
 
 
-def test_all_claims_ungrounded_yields_insufficient_evidence() -> None:
+def test_all_claims_ungrounded_with_evidence_yields_unverified_answer() -> None:
     document_id = uuid4()
     bundle = _bundle(document_id, [0.9])
 
@@ -192,7 +192,9 @@ def test_all_claims_ungrounded_yields_insufficient_evidence() -> None:
         _citations(resolved_count=0, unresolved_count=1),
     )
 
-    assert result.answer_status is AnswerStatus.INSUFFICIENT_EVIDENCE
+    # Evidence existed; only the answer's verification failed -- reporting
+    # that as missing evidence was Sprint 2's Problem 5.
+    assert result.answer_status is AnswerStatus.UNVERIFIED_ANSWER
 
 
 def test_missing_required_evidence_groups_lowers_completeness() -> None:

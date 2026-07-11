@@ -1,0 +1,23 @@
+{
+  "document_id": "a28bfb61-40be-410a-bc70-b07d066d2db6",
+  "query": "what about the other authors",
+  "generation_version": "1.0",
+  "prompt_version": "1.0",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "insufficient_evidence",
+  "confidence": 0.6217122294999999,
+  "statistics": {
+    "context_sections_used": 13,
+    "context_sections_dropped": 0,
+    "claims_total": 4,
+    "claims_grounded": 0,
+    "citations_resolved": 2,
+    "citations_unresolved": 0,
+    "prompt_tokens": 1380,
+    "completion_tokens": 107,
+    "duration_ms": 6440.131125040352
+  },
+  "created_at": "2026-07-11T08:31:41.310237Z"
+}

@@ -56,7 +56,7 @@ def test_represent_document_returns_counts(
     assert response.status_code == 200
     body = response.json()
     assert body["document_id"] == str(paper.id)
-    assert body["knowledge_units"] == 1
+    assert body["knowledge_units"] == 2  # the paragraph chunk + the title chunk
     assert body["status"] == "REPRESENTED"
     assert isinstance(body["relationships"], int)
 

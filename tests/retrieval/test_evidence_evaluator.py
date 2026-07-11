@@ -13,6 +13,8 @@ def _candidate(
     citation_count=0,
     depth=0,
     relationship_type="NEXT",
+    text="text",
+    retrieval_context=None,
 ) -> RetrievalCandidate:
     hops = (
         ()
@@ -32,7 +34,8 @@ def _candidate(
         document_id=document_id,
         section_id=section_id,
         modality="text",
-        text="text",
+        text=text,
+        retrieval_context=retrieval_context,
         asset_uri=None,
         reading_order=0,
         citation_count=citation_count,
@@ -80,37 +83,6 @@ def test_dense_match_outranks_graph_discovered_candidate_on_relationship_confide
     assert confidence_signal["relationship_confidence"].raw_value == 4.0
 
 
-def test_citation_importance_orders_by_citation_count() -> None:
-    document_id = uuid4()
-    highly_cited = _candidate(document_id, citation_count=10)
-    uncited = _candidate(document_id, citation_count=0)
-
-    scored = EvidenceEvaluator().evaluate([uncited, highly_cited])
-
-    ranks = {sc.candidate.knowledge_unit_id: sc.ranking.final_rank for sc in scored}
-    assert ranks[highly_cited.knowledge_unit_id] < ranks[uncited.knowledge_unit_id]
-
-
-def test_section_relevance_rewards_co_occurring_candidates() -> None:
-    document_id = uuid4()
-    shared_section = uuid4()
-    a = _candidate(document_id, section_id=shared_section)
-    b = _candidate(document_id, section_id=shared_section)
-    alone = _candidate(document_id, section_id=uuid4())
-
-    scored = EvidenceEvaluator().evaluate([a, b, alone])
-
-    section_signal = {
-        sc.candidate.knowledge_unit_id: next(
-            s.raw_value for s in sc.ranking.signals if s.name == "section_relevance"
-        )
-        for sc in scored
-    }
-    assert section_signal[a.knowledge_unit_id] == 1.0
-    assert section_signal[b.knowledge_unit_id] == 1.0
-    assert section_signal[alone.knowledge_unit_id] == 0.0
-
-
 def test_ranks_form_a_contiguous_sequence() -> None:
     document_id = uuid4()
     candidates = [_candidate(document_id, dense_similarity=i / 10) for i in range(5)]
@@ -136,3 +108,80 @@ def test_evaluation_is_deterministic_across_repeated_calls() -> None:
     assert [sc.candidate.knowledge_unit_id for sc in first] == [
         sc.candidate.knowledge_unit_id for sc in second
     ]
+
+
+def test_lexical_overlap_promotes_exact_structural_match() -> None:
+    document_id = uuid4()
+    # Same dense similarity; only the lexical signal separates them.
+    table = _candidate(
+        document_id,
+        dense_similarity=0.5,
+        text="COMPARISON OF EXISTING APPROACHES",
+        retrieval_context="Table 1",
+    )
+    prose = _candidate(document_id, dense_similarity=0.5, text="LLMs improved substantially.")
+
+    ranked = EvidenceEvaluator().evaluate([prose, table], query="What is Table 1?")
+
+    assert ranked[0].candidate.knowledge_unit_id == table.knowledge_unit_id
+
+
+def test_lexical_overlap_counts_retrieval_context_terms() -> None:
+    document_id = uuid4()
+    title = _candidate(
+        document_id,
+        dense_similarity=0.4,
+        text="Knowledge-Infused Multimodal Retrieval",
+        retrieval_context="Title of this paper",
+    )
+    prose = _candidate(document_id, dense_similarity=0.6, text="Scientific publication grows.")
+
+    ranked = EvidenceEvaluator().evaluate([prose, title], query="What is the title?")
+
+    lexical = {
+        s.name: s.rank
+        for s in next(
+            r for r in ranked if r.candidate.knowledge_unit_id == title.knowledge_unit_id
+        ).ranking.signals
+    }
+    assert lexical["lexical_overlap"] == 1
+
+
+def test_empty_query_keeps_lexical_signal_inert() -> None:
+    document_id = uuid4()
+    a = _candidate(document_id, dense_similarity=0.9, text="alpha")
+    b = _candidate(document_id, dense_similarity=0.1, text="beta")
+
+    ranked = EvidenceEvaluator().evaluate([a, b])
+
+    assert ranked[0].candidate.knowledge_unit_id == a.knowledge_unit_id
+
+
+def test_query_independent_priors_do_not_bury_the_best_dense_match() -> None:
+    """Regression for the Sprint 1 failure: a section-less #1 dense match
+    (e.g. the keywords block) must not be outranked by topically vague
+    chunks from popular, frequently-cited sections."""
+    document_id = uuid4()
+    section = uuid4()
+    target = _candidate(
+        document_id,
+        section_id=None,
+        dense_similarity=0.55,
+        citation_count=0,
+        text="Index Terms -Multimodal Learning, Question Answering",
+        retrieval_context="Keywords (index terms)",
+    )
+    hubs = [
+        _candidate(
+            document_id,
+            section_id=section,
+            dense_similarity=0.45 - i * 0.001,
+            citation_count=3,
+            text="A generally related hub paragraph.",
+        )
+        for i in range(6)
+    ]
+
+    ranked = EvidenceEvaluator().evaluate([*hubs, target], query="What are the keywords?")
+
+    assert ranked[0].candidate.knowledge_unit_id == target.knowledge_unit_id

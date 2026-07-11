@@ -207,6 +207,8 @@ def _to_candidate(point: VectorPoint, graph_path: GraphPath) -> RetrievalCandida
         section_id=SectionId(UUID(str(section_id_value))) if section_id_value else None,
         modality=ChunkModality(payload["modality"]),
         text=payload["text"],
+        retrieval_context=payload.get("retrieval_context"),
+        page_numbers=tuple(payload.get("page_numbers") or ()),
         asset_uri=payload.get("asset_uri"),
         reading_order=payload["reading_order"],
         citation_count=payload.get("citation_count") or 0,

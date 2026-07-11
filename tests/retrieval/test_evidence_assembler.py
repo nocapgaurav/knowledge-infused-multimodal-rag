@@ -21,6 +21,7 @@ def _scored(
     score=1.0,
     depth=0,
     source_id=None,
+    retrieval_context=None,
 ) -> ScoredCandidate:
     candidate_id = uuid4()
     hops = ()
@@ -40,6 +41,7 @@ def _scored(
         section_id=section_id,
         modality="text",
         text="text",
+        retrieval_context=retrieval_context,
         asset_uri=None,
         reading_order=0,
         citation_count=0,
@@ -141,3 +143,38 @@ def test_modalities_include_primary_and_supporting() -> None:
     result = EvidenceAssembler().assemble([primary], AssemblyBudget())
 
     assert result.groups[0].modalities == ("text",)
+
+
+def test_section_less_primaries_share_one_capped_bucket() -> None:
+    document_id = uuid4()
+    # Five section-less candidates (e.g. bibliography entries): the
+    # per-section cap must apply to them too, not only to real sections.
+    scored = [_scored(document_id, section_id=None, rank=i + 1) for i in range(5)]
+
+    result = EvidenceAssembler().assemble(
+        scored, AssemblyBudget(max_evidence_groups=5, max_primaries_per_section=2)
+    )
+
+    assert len(result.groups) == 2
+    assert any("__no_section__" in d.reason for d in result.dropped)
+
+
+def test_reference_family_is_capped_but_other_front_matter_stays_eligible() -> None:
+    document_id = uuid4()
+    scored = [
+        _scored(document_id, rank=1, retrieval_context="Bibliography reference [1]"),
+        _scored(document_id, rank=2, retrieval_context="Bibliography reference [2]"),
+        _scored(document_id, rank=3, retrieval_context="Bibliography reference [3]"),
+        _scored(document_id, rank=4, retrieval_context="Authors and affiliations (title page)"),
+    ]
+
+    result = EvidenceAssembler().assemble(
+        scored, AssemblyBudget(max_evidence_groups=5, max_primaries_per_section=2)
+    )
+
+    contexts = [g.primary.candidate.retrieval_context for g in result.groups]
+    assert contexts == [
+        "Bibliography reference [1]",
+        "Bibliography reference [2]",
+        "Authors and affiliations (title page)",
+    ]

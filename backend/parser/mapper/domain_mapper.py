@@ -190,6 +190,8 @@ class DomainMapper:
         return MappingResult(paper=paper, figure_images=state.figure_images)
 
     def _handle_text_block(self, state: _MappingState, block: ExtractedTextBlock) -> None:
+        if not block.text.strip():
+            return  # a blank layout artifact; neither a real heading nor a real paragraph
         if block.role is ExtractedTextRole.SECTION_HEADER:
             self._handle_heading(state, block)
             return

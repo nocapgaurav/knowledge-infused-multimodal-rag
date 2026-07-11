@@ -32,12 +32,18 @@ class FigureStrategy:
         text = caption.text if caption is not None else _UNCAPTIONED_FIGURE_TEXT
         source_element_ids = [figure.id, *([caption.id] if caption is not None else [])]
 
+        number = next(
+            (n for n, fid in context.figure_number_lookup.items() if fid == figure.id), None
+        )
+        retrieval_context = f"Figure {number}" if number is not None else "Figure"
+
         chunk = Chunk(
             paper_id=context.paper.id,
             section_id=figure.section_id,
             order=context.next_order(),
             modality=ChunkModality.FIGURE,
             text=text,
+            retrieval_context=retrieval_context,
             asset_uri=figure.asset_uri,
             source_element_ids=source_element_ids,
             bounding_boxes=figure.bounding_boxes,

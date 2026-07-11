@@ -30,10 +30,20 @@ Signals deliberately NOT included, with justification:
     - Modality: a relevant figure is not inherently better or worse
       evidence than a relevant paragraph; modality diversity is an
       assembly concern (Phase 4), not a ranking-priority concern.
+    - Citation importance and section co-occurrence (both fused in an
+      earlier revision): query-INDEPENDENT priors, not relevance
+      rankings, so fusing them violates the premise of the RRF result
+      cited above (which fuses independent *relevance* estimates).
+      Measured live in Sprint 1, they systematically buried the correct
+      evidence for factual questions: the chunk answering "What are the
+      keywords?" was the #1 dense match yet fell outside the top five
+      because it had no section (worst co-occurrence rank) and no
+      citations, while topically vague "hub" paragraphs from popular,
+      frequently-cited sections outranked it on both priors.
 """
 
 import logging
-from collections import defaultdict
+import re
 from collections.abc import Callable, Sequence
 
 from backend.retrieval.expansion.relationship_policy import confidence_tier
@@ -58,12 +68,16 @@ so it outranks every graph-discovered relationship tier (max tier 3, see
 class EvidenceEvaluator:
     """Ranks a candidate pool using multiple deterministic signals, fused by RRF."""
 
-    def evaluate(self, candidates: Sequence[RetrievalCandidate]) -> list[ScoredCandidate]:
+    def evaluate(
+        self, candidates: Sequence[RetrievalCandidate], query: str = ""
+    ) -> list[ScoredCandidate]:
         """Score and rank a candidate pool.
 
         Args:
             candidates: Every candidate under consideration (Phase 1's
                 dense matches plus Phase 2's graph-expanded discoveries).
+            query: The user's question, for the lexical overlap signal.
+                Empty disables that signal (it ranks all candidates tied).
 
         Returns:
             Scored candidates ordered by ascending final rank (best first).
@@ -71,13 +85,12 @@ class EvidenceEvaluator:
         if not candidates:
             return []
 
-        section_counts = _section_co_occurrence_counts(candidates)
+        query_terms = _content_terms(query)
         signal_definitions: dict[str, Callable[[RetrievalCandidate], float | None]] = {
             "dense_similarity": lambda c: c.dense_similarity,
+            "lexical_overlap": lambda c: _lexical_overlap(c, query_terms),
             "graph_proximity": lambda c: 1.0 / (1 + c.graph_path.depth),
             "relationship_confidence": _relationship_confidence,
-            "citation_importance": lambda c: float(c.citation_count),
-            "section_relevance": lambda c: _section_relevance(c, section_counts),
         }
         signal_ranks = {
             name: _rank_descending(candidates, key_fn)
@@ -112,18 +125,37 @@ def _relationship_confidence(candidate: RetrievalCandidate) -> float:
     return float(confidence_tier(candidate.graph_path.hops[-1].relationship_type))
 
 
-def _section_co_occurrence_counts(candidates: Sequence[RetrievalCandidate]) -> dict[str, int]:
-    counts: dict[str, int] = defaultdict(int)
-    for candidate in candidates:
-        if candidate.section_id is not None:
-            counts[str(candidate.section_id)] += 1
-    return counts
+_TERM_PATTERN = re.compile(r"[a-z0-9]+")
+
+_STOPWORDS = frozenset(
+    {"a", "an", "and", "are", "be", "by", "for", "from", "in", "is", "it", "of", "on", "or"}
+    | {"that", "the", "this", "to", "was", "were", "what", "when", "where", "which"}
+    | {"who", "why", "how"}
+)
 
 
-def _section_relevance(candidate: RetrievalCandidate, counts: dict[str, int]) -> float | None:
-    if candidate.section_id is None:
-        return None
-    return float(counts[str(candidate.section_id)] - 1)  # exclude the candidate itself
+def _content_terms(text: str) -> frozenset[str]:
+    return frozenset(_TERM_PATTERN.findall(text.lower())) - _STOPWORDS
+
+
+def _lexical_overlap(candidate: RetrievalCandidate, query_terms: frozenset[str]) -> float:
+    """Fraction of the query's content terms appearing in the candidate.
+
+    The one query-dependent signal besides dense similarity. Deterministic
+    and scale-free, it directly rewards structural-term matches dense
+    embeddings blur ("Table", "Figure", "Abstract", a printed number) --
+    the candidate's `retrieval_context` participates precisely so that a
+    chunk's structural identity counts as matchable text. With no query
+    terms every candidate ties, and RRF's rank fusion makes a fully tied
+    signal a no-op rather than noise.
+    """
+    if not query_terms:
+        return 0.0
+    haystack = candidate.text
+    if candidate.retrieval_context:
+        haystack = f"{candidate.retrieval_context} {haystack}"
+    candidate_terms = _content_terms(haystack)
+    return len(query_terms & candidate_terms) / len(query_terms)
 
 
 def _rank_descending(

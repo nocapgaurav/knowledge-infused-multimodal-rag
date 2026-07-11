@@ -59,14 +59,14 @@ def test_represent_document_persists_expected_artifacts(
 
     chunks, relationships = representation_service.represent_document(paper.id)
 
-    assert len(chunks) == 1
+    assert len(chunks) == 2  # the paragraph chunk + the title chunk
     workspace = tmp_path / "knowledge" / str(paper.id)
     units_payload = json.loads((workspace / "knowledge_units.json").read_text())
     relationships_payload = json.loads((workspace / "relationships.json").read_text())
 
     assert units_payload["document_id"] == str(paper.id)
-    assert units_payload["count"] == 1
-    assert len(units_payload["chunks"]) == 1
+    assert units_payload["count"] == 2
+    assert len(units_payload["chunks"]) == 2
     assert relationships_payload["count"] == len(relationships)
 
 

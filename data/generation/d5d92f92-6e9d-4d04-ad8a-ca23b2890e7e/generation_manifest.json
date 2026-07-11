@@ -1,0 +1,23 @@
+{
+  "document_id": "d5d92f92-6e9d-4d04-ad8a-ca23b2890e7e",
+  "query": "What is the conclusion?",
+  "generation_version": "1.0",
+  "prompt_version": "1.1",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "partially_sufficient_evidence",
+  "confidence": 0.7503020395,
+  "statistics": {
+    "context_sections_used": 11,
+    "context_sections_dropped": 0,
+    "claims_total": 6,
+    "claims_grounded": 3,
+    "citations_resolved": 3,
+    "citations_unresolved": 0,
+    "prompt_tokens": 1192,
+    "completion_tokens": 172,
+    "duration_ms": 11658.654959057458
+  },
+  "created_at": "2026-07-11T09:37:46.414224Z"
+}

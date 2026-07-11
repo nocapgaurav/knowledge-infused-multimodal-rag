@@ -1,0 +1,18 @@
+{
+  "document_id": "2b3091ee-ef88-412b-b566-55caf659a1e3",
+  "query": "Which table supports the main claim?",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "fbca3aaae8833d61ba40f93597ab5d5f939b3ab60d075d32ccab9e039705916a",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 20,
+    "candidates_expanded": 42,
+    "candidates_scored": 62,
+    "evidence_groups": 5,
+    "evidence_items": 14,
+    "duration_ms": 758.1637080293149
+  },
+  "created_at": "2026-07-11T11:37:43.699941Z"
+}

@@ -35,9 +35,19 @@ export interface DocumentSummary {
 
 export interface EvidenceItem {
   knowledgeUnitId: string;
-  /** The citation label as the model used it (e.g. "KU2") -- the only
-   * user-facing identifier; the raw knowledge_unit_id is never displayed. */
+  /** The citation label as the model used it (e.g. "KU2") -- kept for
+   * traceability to the answer's inline citations, but no longer the
+   * primary identity a reader sees (that is `displayLabel`). */
   label: string;
+  /** Human-readable identity ("Figure 2", "Abstract", "Section: III.
+   * Methodology"), when the backend knows it. */
+  displayLabel?: string;
+  /** Source PDF page(s), from the parser's own bounding boxes. */
+  pageNumbers?: number[];
+  /** Dense similarity to the question, when found by direct match. */
+  relevance?: number;
+  /** Honest provenance: how retrieval found this evidence. */
+  discovery?: string;
   modality: ChunkModality;
   text: string;
   groupId: string;
@@ -52,6 +62,9 @@ export interface Citation {
   label: string;
   knowledgeUnitId: string;
   textExcerpt: string;
+  /** Human-readable identity of the cited evidence, when known. */
+  displayLabel?: string;
+  pageNumbers?: number[];
 }
 
 // ---------------------------------------------------------------------------
