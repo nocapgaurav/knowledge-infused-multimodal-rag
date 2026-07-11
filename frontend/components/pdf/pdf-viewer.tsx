@@ -93,7 +93,12 @@ export function PdfViewer({
       }
       setPageNumber(location.page);
       setResolvedPage(location.page);
-      if (location.hasTextMatch) {
+      const isVisualEvidence = target.modality === "figure" || target.modality === "table";
+      if (isVisualEvidence && target.boundingBoxes?.length) {
+        // For a figure or table, the visual itself is the evidence -- its
+        // region communicates far more than marking a caption line would.
+        setResolution("region");
+      } else if (location.hasTextMatch) {
         setResolution("text");
       } else if (target.boundingBoxes?.length) {
         setResolution("region");
@@ -237,7 +242,11 @@ export function PdfViewer({
             {regionBoxes.map((box, index) => (
               <div
                 key={index}
-                ref={index === 0 ? (node) => node?.scrollIntoView({ block: "center" }) : undefined}
+                ref={
+                  index === 0
+                    ? (node) => node?.scrollIntoView({ block: "center", behavior: "smooth" })
+                    : undefined
+                }
                 className="pdf-evidence-region pointer-events-none absolute"
                 style={{
                   left: box.x0 * scale,

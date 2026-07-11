@@ -1,0 +1,23 @@
+{
+  "document_id": "da69f9df-2eb8-412e-94a9-1d31cb83f143",
+  "query": "explain fig. 1",
+  "generation_version": "1.0",
+  "prompt_version": "1.2",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "partially_sufficient_evidence",
+  "confidence": 0.6741568119615384,
+  "statistics": {
+    "context_sections_used": 8,
+    "context_sections_dropped": 0,
+    "claims_total": 13,
+    "claims_grounded": 2,
+    "citations_resolved": 2,
+    "citations_unresolved": 0,
+    "prompt_tokens": 1197,
+    "completion_tokens": 377,
+    "duration_ms": 36256.99445803184
+  },
+  "created_at": "2026-07-11T20:38:29.441266Z"
+}

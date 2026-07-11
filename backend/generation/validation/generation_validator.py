@@ -85,6 +85,13 @@ class GenerationValidator:
                 )
             seen_labels.add(citation.label)
 
+        if not response.resolved_citations:
+            # The uncited-answer fallback: when nothing resolved, the
+            # formatter surfaces the context shown to the model, honestly
+            # labeled as uncited -- those items intentionally have no
+            # matching resolved citation to be consistent with.
+            return
+
         resolved_ids = {citation.knowledge_unit_id for citation in response.resolved_citations}
         for item in response.supporting_evidence:
             if item.knowledge_unit_id not in resolved_ids:

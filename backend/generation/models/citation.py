@@ -8,6 +8,7 @@ mapping. Nothing the model writes is trusted as a valid reference on its own.
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from backend.domain import ChunkModality
 from backend.domain.value_objects import BoundingBox
 
 
@@ -33,6 +34,7 @@ class ResolvedCitation(BaseModel):
     display_label: str | None = None
     page_numbers: tuple[int, ...] = ()
     bounding_boxes: tuple[BoundingBox, ...] = ()
+    modality: ChunkModality = ChunkModality.TEXT
 
 
 class UnresolvedCitation(BaseModel):

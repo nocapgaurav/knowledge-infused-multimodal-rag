@@ -70,6 +70,7 @@ export function ConversationPanel({ documentId }: { documentId: string }) {
                     displayLabel: citation.displayLabel,
                     pageNumbers: citation.pageNumbers,
                     boundingBoxes: citation.boundingBoxes,
+                    modality: citation.modality,
                   })
                 }
               />

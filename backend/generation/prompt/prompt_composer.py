@@ -9,7 +9,7 @@ into its own wire format (see `providers/ollama_provider.py`).
 from backend.generation.models.answer_plan import AnswerPlan, QuestionType
 from backend.generation.models.prompt_context import ContextSection, PromptContext
 
-PROMPT_VERSION = "1.1"
+PROMPT_VERSION = "1.2"
 """Version of this module's own prompt template and rule set -- bumped
 when the wording or structure of the rules changes, independently of the
 `PromptContext`/`GroundedResponse` schema versions."""
@@ -68,12 +68,16 @@ _QUESTION_TYPE_FORMATTING_RULES: dict[QuestionType, tuple[str, ...]] = {
         "Explain how the different pieces of cited evidence connect to form the answer.",
     ),
     QuestionType.FIGURE_CENTRIC: (
-        "Explain the figure like a researcher walking a colleague through it: "
-        "what it depicts (from its caption), what purpose it serves in the "
-        "paper, and how the surrounding cited text explains its components, "
-        "workflow, or significance. Draw ONLY on the cited evidence -- if the "
-        "evidence describes the pipeline the figure illustrates, use it; if "
-        "something about the figure is not in the evidence, say so plainly.",
+        "Begin from the figure itself, never from generic theory: state what "
+        "the figure is, then what is VISUALLY shown -- its components, axes or "
+        "flows, labels, and any visible patterns -- drawing on the figure "
+        "evidence (which may include an automated visual analysis of the "
+        "image) and its caption.",
+        "Then explain the observations that matter, what conclusions the "
+        "cited evidence supports, why the authors included this figure, and "
+        "how it supports the rest of the paper. If something about the "
+        "figure is not in the evidence, say so plainly -- never invent "
+        "visual details.",
     ),
     QuestionType.TABLE_CENTRIC: (
         "Interpret the table like a researcher: what it compares or reports, "

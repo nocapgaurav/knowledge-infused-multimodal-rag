@@ -73,6 +73,7 @@ export function citationsFromGroundedResponse(response: GroundedResponseDto): Ci
     displayLabel: citation.display_label ?? undefined,
     pageNumbers: citation.page_numbers?.length ? citation.page_numbers : undefined,
     boundingBoxes: citation.bounding_boxes?.length ? citation.bounding_boxes : undefined,
+    modality: citation.modality,
   }));
 }
 

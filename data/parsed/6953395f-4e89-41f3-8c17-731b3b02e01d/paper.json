@@ -1,0 +1,2687 @@
+{
+  "id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+  "metadata": {
+    "id": "f88abb73-c141-4dae-92e7-1313ecd20c75",
+    "title": "Effective Medical Writing",
+    "authors": [],
+    "abstract": "Illustrations (also known as figures) are visual representations of the results obtained from a scientific study. Graphs are a common type of illustration that are often used in scientific papers to present information clearly and effectively, as well as to demonstrate relationships between variables in  the  data.    Graphs  also  serve  to reveal trends or patterns in the data. This article provides some basic guidelines to assist authors in preparing effective graphs for their papers.\n\nKeywords: figures, graphs, illustrations, medical writing, scientific paper\n\nSingapore Med J 2009; 50(3): 245-249",
+    "keywords": [],
+    "publication_date": null,
+    "venue": null,
+    "doi": null,
+    "arxiv_id": null,
+    "language": "en",
+    "source_filename": "preparingeffectiveillustrationspart1.pdf",
+    "page_count": 5
+  },
+  "sections": [
+    {
+      "id": "c5b22547-83ec-4205-8a08-ec06b057b5fc",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Preparing effective illustrations. Part 1: graphs",
+      "level": 1,
+      "order": 0,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 126.3081,
+          "y0": 192.7779999999999,
+          "x1": 475.3331000000001,
+          "y1": 238.85140914962324
+        }
+      ]
+    },
+    {
+      "id": "a71f82ba-7d68-419f-a2a3-d2d93187b006",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "INTRODUCTION",
+      "level": 1,
+      "order": 1,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 476.3064,
+          "x1": 168.51589999999996,
+          "y1": 484.38945812701826
+        }
+      ]
+    },
+    {
+      "id": "d38a1396-e2ea-4df8-a94e-43dd921ccf8e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "GENERAL GUIDELINES FOR PREPARING GRAPHS",
+      "level": 1,
+      "order": 2,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 263.8914,
+          "x1": 512.7441000000007,
+          "y1": 285.2744581270183
+        }
+      ]
+    },
+    {
+      "id": "8a6d9e94-90d8-4655-bb77-da66e1d8529c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Box 1. When to present data in graphs:",
+      "level": 1,
+      "order": 3,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 623.5033999999999,
+          "x1": 456.09110000000004,
+          "y1": 630.9474449069003
+        }
+      ]
+    },
+    {
+      "id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "PREPARING GRAPHS",
+      "level": 1,
+      "order": 4,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 702.7914,
+          "x1": 405.9451000000001,
+          "y1": 710.8744581270183
+        }
+      ]
+    },
+    {
+      "id": "36d78de3-455f-4160-a62c-9e1967f94774",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Correspondence to:",
+      "level": 1,
+      "order": 5,
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 717.9425,
+          "x1": 577.5191999999998,
+          "y1": 723.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "727b5deb-bb19-48e0-ab3c-8d4d44bec09a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "CHOOSING THE CORRECT GRAPH  TYPE",
+      "level": 1,
+      "order": 6,
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 483.8008,
+          "x1": 279.4093999999999,
+          "y1": 491.88385812701824
+        }
+      ]
+    },
+    {
+      "id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "PROVIDING LEGENDS",
+      "level": 1,
+      "order": 7,
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 630.1007999999999,
+          "x1": 190.44189999999995,
+          "y1": 638.1838581270183
+        }
+      ]
+    },
+    {
+      "id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Box 2. Common errors:",
+      "level": 1,
+      "order": 8,
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 324.7128,
+          "x1": 394.9631000000001,
+          "y1": 332.15684490690035
+        }
+      ]
+    },
+    {
+      "id": "30a9a8d1-fe6f-4252-af58-c43164aa847b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "SUMMARY",
+      "level": 1,
+      "order": 9,
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 483.8008,
+          "x1": 354.5596000000001,
+          "y1": 491.88385812701824
+        }
+      ]
+    },
+    {
+      "id": "37572da7-a419-45d2-b977-34c9605b8dd3",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Box 3. Take home points:",
+      "level": 1,
+      "order": 10,
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 604.0128,
+          "x1": 400.8131000000002,
+          "y1": 611.4568449069003
+        }
+      ]
+    },
+    {
+      "id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "Appendix 1. Common graph types.",
+      "level": 1,
+      "order": 11,
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 73.79419999999993,
+          "x1": 206.00700000000003,
+          "y1": 82.30268223896667
+        }
+      ]
+    },
+    {
+      "id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "level": 1,
+      "order": 12,
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 109.9031,
+          "y0": 97.34630000000004,
+          "x1": 486.23510000000005,
+          "y1": 119.70563046286327
+        }
+      ]
+    },
+    {
+      "id": "b307780e-32c4-4989-859a-d0f4cfda7733",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "SUBMISSION INSTRUCTIONS:",
+      "level": 1,
+      "order": 13,
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 696.3394000000001,
+          "x1": 179.94590000000005,
+          "y1": 701.7156546549836
+        }
+      ]
+    },
+    {
+      "id": "679eaf06-0870-4ebc-8f29-416939a92b2b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "parent_section_id": null,
+      "title": "RESULTS:",
+      "level": 1,
+      "order": 14,
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 726.3394,
+          "x1": 116.57740000000003,
+          "y1": 731.7156546549836
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": "80971681-18d1-432f-b992-27b243ff2ac3",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": null,
+      "order": 0,
+      "text": "Pointers to getting your article published",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 177.0591,
+          "y0": 120.92320000000007,
+          "x1": 417.91409999999985,
+          "y1": 135.8554188905547
+        }
+      ]
+    },
+    {
+      "id": "ef49730d-3e1c-43b4-a143-64253e0aafd1",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": null,
+      "order": 1,
+      "text": "Ng K H, Peh W C G",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 252.0444,
+          "y0": 158.71039999999994,
+          "x1": 343.27439999999984,
+          "y1": 167.21888223896667
+        }
+      ]
+    },
+    {
+      "id": "3859826e-6e3b-4925-86d0-1ba9582c2e85",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "a71f82ba-7d68-419f-a2a3-d2d93187b006",
+      "order": 0,
+      "text": "Illustrations (also known  as  figures) are visual representations of the results obtained from a scientific study.  There are basically two types of illustrations that are used in scientific papers - graphs and pictorial images such as photographs/images/diagrams. Graphs are the most common type of illustration and will be discussed in this article. The other types of illustrations will be discussed in the next article.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 490.1184,
+          "x1": 294.36140000000034,
+          "y1": 590.5970889375684
+        }
+      ]
+    },
+    {
+      "id": "72a4a2ea-e4f6-492e-a9a6-ce57e3f8b5d6",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "a71f82ba-7d68-419f-a2a3-d2d93187b006",
+      "order": 1,
+      "text": "On the whole, illustrations provide visual impact and are often the best way to communicate the main findings of a study. They are traditionally used to display trends and group results, but can also be used to communicate processes  or  to  display  detailed  data  in  a  simple  yet effective manner.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 596.5183999999999,
+          "x1": 294.1454000000003,
+          "y1": 670.3970889375685
+        }
+      ]
+    },
+    {
+      "id": "dcd13fbe-2fc7-4d19-9290-d968f096707c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "a71f82ba-7d68-419f-a2a3-d2d93187b006",
+      "order": 2,
+      "text": "The purpose of graphs is to present data that is too numerous or complicated to be described adequately in the text and/or to reveal trends or patterns in the data. Graphs (as well as tables) can be critical to achieving a better understanding of the results of a study. Readers who go beyond the  abstract  of  a  paper  are  likely  to examine the graphs (and tables) next.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 676.3184,
+          "x1": 294.3164000000001,
+          "y1": 763.4970889375685
+        }
+      ]
+    },
+    {
+      "id": "80904cb6-8fc8-4518-b3a5-dde496d3c138",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "d38a1396-e2ea-4df8-a94e-43dd921ccf8e",
+      "order": 0,
+      "text": "Authors are often faced with the dilemma of whether to present data in a table or in a graph. One rule of thumb that can help us decide whether the data is best presented within  the  text  or  in  a  table  or  graph  is:  if  the  data shows pronounced trends, paints an interesting picture or reveals relations between variables in the data, then a graph should be used. If the data fails to show any exciting trend in the evidence, then a graph is clearly not the data presentation format of choice.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 291.00340000000006,
+          "x1": 512.5211000000008,
+          "y1": 404.7820889375684
+        }
+      ]
+    },
+    {
+      "id": "afdc8950-e763-448a-aef7-82899161be38",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "d38a1396-e2ea-4df8-a94e-43dd921ccf8e",
+      "order": 1,
+      "text": "Organise the figures in such a manner that they tell a story. Be sure that all figures are cited within the text of the paper.  Limit the number of illustrations to include only those that provide essential information that cannot adequately be described in the text. Number each figure in the order in which they are referred to in the text. Note that figures and tables should be numbered separately.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 410.7034,
+          "x1": 512.4941000000001,
+          "y1": 497.8820889375684
+        }
+      ]
+    },
+    {
+      "id": "0cbd07c2-7bd7-4879-b968-99f0b470acf3",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "d38a1396-e2ea-4df8-a94e-43dd921ccf8e",
+      "order": 2,
+      "text": "Typically, when submitting a paper for consideration for  publication,  figures  are  placed  on  separate  pages following  the  reference  section;  the  author  should confirm this by checking the instructions to authors of the target journal. Generally, most journals require the figure legend and the figure to appear on the same page, with  each  figure  labelled  numerically  in  consecutive order and presented on a separate page.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 503.8034,
+          "x1": 512.4941000000007,
+          "y1": 604.2820889375685
+        }
+      ]
+    },
+    {
+      "id": "2596d301-07d5-425f-a4d6-94e15813c036",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "8a6d9e94-90d8-4655-bb77-da66e1d8529c",
+      "order": 0,
+      "text": "Show trends and patterns in the data.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 636.8034,
+          "x1": 454.90310000000017,
+          "y1": 644.1820889375684
+        }
+      ]
+    },
+    {
+      "id": "60568ac6-3e66-4020-8903-3b0aed56ca62",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "8a6d9e94-90d8-4655-bb77-da66e1d8529c",
+      "order": 1,
+      "text": "Paint an interesting picture and make a visual impact.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 650.1034,
+          "x1": 491.30809999999997,
+          "y1": 670.7820889375685
+        }
+      ]
+    },
+    {
+      "id": "52be75cd-2117-4af8-bfe4-831716d3f9d3",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "8a6d9e94-90d8-4655-bb77-da66e1d8529c",
+      "order": 2,
+      "text": "Reveal relations between variables in the data.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 676.7034,
+          "x1": 490.8851000000003,
+          "y1": 684.0820889375684
+        }
+      ]
+    },
+    {
+      "id": "fb4aebc4-1a4b-4bdc-a805-a7f4697ccc9f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 0,
+      "text": "While  there  are  sophisticated  computer  programmes available to assist with plotting graphs, it is still important for authors to pay attention to the principles of producing effective and  informative graphs.  The  most  basic",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 716.6034,
+          "x1": 512.5031000000006,
+          "y1": 763.8820889375685
+        }
+      ]
+    },
+    {
+      "id": "55ded1b5-e1c6-41bb-8f09-f59df02939c9",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 1,
+      "text": "Biomedical Imaging and Interventional Journal,",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 541.9424999999999,
+          "x1": 580.5782,
+          "y1": 563.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "54326008-f8f9-4ca3-8142-e9715f134d8c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 2,
+      "text": "c/o Department of Biomedical Imaging, University of Malaya, Kuala Lumpur 50603, Malaysia",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 565.9424999999999,
+          "x1": 584.9322000000002,
+          "y1": 603.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "922d9779-1fe1-4b02-bf97-296d7d481717",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 3,
+      "text": "Ng KH, PhD, MIPEM, DABMP Editor",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 613.9425,
+          "x1": 585.0441999999999,
+          "y1": 635.6814802847755
+        }
+      ]
+    },
+    {
+      "id": "731b2483-bbe8-4f9f-aa0a-8d9ee0135a65",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 4,
+      "text": "Singapore Medical Journal, 2 College Road, Singapore 169850",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 645.9425,
+          "x1": 576.5602,
+          "y1": 675.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "471e10c5-aa2f-4757-a0f7-c655bdcf8e8a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2a3d31c7-a161-4bed-8597-1f2a46508d90",
+      "order": 5,
+      "text": "Peh WCG, MD, FRCP, FRCR Editor",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 685.9425,
+          "x1": 585.3241999999999,
+          "y1": 707.6814802847755
+        }
+      ]
+    },
+    {
+      "id": "1a63507c-a845-41db-9fa9-e47552f0bb02",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "36d78de3-455f-4160-a62c-9e1967f94774",
+      "order": 0,
+      "text": "Prof Ng Kwan Hoong Tel: (60) 3 7949 2069 Fax: (60) 3 7949 4603 Email: dwlng@tm. net.my requirement for a graph is clarity. Therefore, authors need to ensure that the size of the letters and symbols are chosen carefully so that the final version of the graph printed in the journal is clear and readable. The size consideration is important to withstand photographic reduction.",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 725.9425,
+          "x1": 581.3482,
+          "y1": 763.6814802847755
+        },
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 85.31280000000004,
+          "x1": 294.2354000000005,
+          "y1": 145.8914889375684
+        }
+      ]
+    },
+    {
+      "id": "95933554-1eb8-4ba9-8eda-4cb510a263fa",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "36d78de3-455f-4160-a62c-9e1967f94774",
+      "order": 1,
+      "text": "If two or more graphs are related, then it is common practice to combine them into a composite graph. Not only does this save space, but it also provides readers with a better picture that allows viewing of the related parts in one location. Do not extend the abscissa  (x-axis) or the ordinate (y-axis) beyond the data that is presented in a graph. For example, if the data points range from 0 to 75, the maximum index number should be 80, and the data points should be 0, 20, 40, 60 and 80. Avoid the tendency to extend the graph to 100. Although this may sound like a nice round number, it will result in empty white space in the upper part of the graph, and the important data will only occupy the lower part instead of the whole graph.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 151.81280000000004,
+          "x1": 294.2624,
+          "y1": 318.7913889375684
+        }
+      ]
+    },
+    {
+      "id": "ff62665e-d85f-4c7b-a80c-0da24b20c4ca",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "36d78de3-455f-4160-a62c-9e1967f94774",
+      "order": 2,
+      "text": "Use standard symbols for graphs. Some common ones  include  open  and  closed  circles,  triangles  and squares ( \u25cf , \u25b2 , \u25a0 , \u25cf , \u25b2 , \u25a0 ). If the graph has one curve, use open circles for the reference points; if it has two, use open triangles for the second curve, etc.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 324.7128,
+          "x1": 294.28940000000046,
+          "y1": 385.29148893756843
+        }
+      ]
+    },
+    {
+      "id": "e7b06ea1-e7bc-41e8-8baa-dddb127f898f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "36d78de3-455f-4160-a62c-9e1967f94774",
+      "order": 3,
+      "text": "Graphs  are  usually  plotted  in  black  on  a  white background, using the same font type and size as the text. It is extremely expensive to publish in colour, so this  should  only  be  used  when  it  highlights  unique information or when it cannot be clearly presented in black and white.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 391.2128,
+          "x1": 294.27140000000037,
+          "y1": 465.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "d9868c29-3fee-4336-9abc-3ae907c7440f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "727b5deb-bb19-48e0-ab3c-8d4d44bec09a",
+      "order": 0,
+      "text": "Choose the correct graph type based on the kind of data to be presented: (1) if independent and dependent variables are numeric, then use line diagrams or scattergrams; (2) if only the dependent variable is numeric, then use bar graphs; (3) for proportions, use bar graphs or pie charts. Some of the common graph types are shown in Appendix 1. Other types of graphs include: frequency polygon, age pyramid, survival curve, and receiver operator characteristic (ROC) curve.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 497.6128,
+          "x1": 294.3614000000005,
+          "y1": 611.3914889375684
+        }
+      ]
+    },
+    {
+      "id": "2096589c-4815-4c2a-abde-def614ad006d",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "order": 0,
+      "text": "Provide a clear, descriptive legend for each graph. Like the title of the paper itself, each legend should concisely convey as much information as possible about what the graph tells the reader. However, a legend should not provide a summary or interpretation of the results or experimental details. A",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 643.9127,
+          "x1": 294.1813999999997,
+          "y1": 704.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "77f44593-9c44-4d3b-8f0d-211106ebc75c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "order": 1,
+      "text": "legend should be placed at the bottom of each graph. Examples of graph legends that appeared in recent issues of the Singapore Medical Journal are:",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 85.31280000000004,
+          "x1": 512.4041000000009,
+          "y1": 119.2913889375684
+        }
+      ]
+    },
+    {
+      "id": "0b565b51-4e1b-406d-a996-e1d6fef7a3ef",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "order": 2,
+      "text": "Bar chart shows the combined usage data of key antibiotic classes in local public hospitals according to defined daily dose per 1,000 patient-days.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 125.21280000000002,
+          "x1": 511.2341,
+          "y1": 159.19148893756847
+        }
+      ]
+    },
+    {
+      "id": "84b3e688-8858-464d-95c2-33154cb3f820",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "order": 3,
+      "text": "Graph shows the incidence of cleft deformities in relation to the number of live births during the period 1993-2002.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 165.1128,
+          "x1": 511.5131,
+          "y1": 199.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "f9f4e9fd-8e1e-4a4d-9e42-9b4bbf766345",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "f49183c3-9ec3-4c4d-8f04-3681b21756b9",
+      "order": 4,
+      "text": "Do not simply restate the axis labels with a 'versus' written  in  between,  for  example,  'Graph  shows temperature  vs.  time'.  Instead,  label  each  axis  with the relevant unit of measurement (where applicable), and clearly identify the data by labelling each line in a graph. Figures should be of high image quality. Check the journal's instructions to authors on which image file format the journal requires.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 205.01279999999997,
+          "x1": 512.5211000000011,
+          "y1": 305.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "9bc07f73-e233-4896-8235-92743e982764",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 0,
+      "text": "Information in the text is duplicated in graphs, or information in graphs is duplicated in tables.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 338.0128,
+          "x1": 511.3601,
+          "y1": 358.6914889375684
+        }
+      ]
+    },
+    {
+      "id": "c32f25f5-6c70-4d96-b53f-1e7aca029659",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 1,
+      "text": "The graph does not have proper legends.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 364.6128,
+          "x1": 464.0651000000005,
+          "y1": 371.9914889375684
+        }
+      ]
+    },
+    {
+      "id": "1732a757-0b3d-4eed-98ae-fc636cbdf639",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 2,
+      "text": "The wrong type of graph is chosen to represent the data.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 377.9128,
+          "x1": 512.1071,
+          "y1": 398.59148893756844
+        }
+      ]
+    },
+    {
+      "id": "74b1f762-ad45-4c19-9c64-03e8f27034ec",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 3,
+      "text": "The graph is not plotted to scale. Data is not labelled, is inconsistent, interrupted, or exaggerated to produce the desired effect.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 404.5128,
+          "x1": 512.4851,
+          "y1": 438.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "fd0ce254-bbac-4c68-9ae0-8c6a5927a2d7",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 4,
+      "text": "The source of previously-published data is not credited.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 444.4128,
+          "x1": 512.3590999999992,
+          "y1": 451.79148893756843
+        }
+      ]
+    },
+    {
+      "id": "c42983d2-0790-4654-800d-662f753115f6",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "da4086a0-006c-4869-8483-4b90b0d1a02e",
+      "order": 5,
+      "text": "The misuse of pseudo three-dimensional graphs.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 457.7128,
+          "x1": 490.38110000000063,
+          "y1": 465.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "3661ff9a-a7b8-47da-995e-835415945023",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "30a9a8d1-fe6f-4252-af58-c43164aa847b",
+      "order": 0,
+      "text": "Graphs are helpful tools for improving the readability of a scientific paper as they present data in a clear and effective manner. They make a visual impact and can be used to reveal trends or patterns in the data. Authors should decide which types are most suitable for publication before designing clear and effective graphs following the guidelines outlined in this article.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 497.6128,
+          "x1": 512.5930999999999,
+          "y1": 584.7914889375684
+        }
+      ]
+    },
+    {
+      "id": "f361f9fe-62cc-405d-b76d-5d8fdea5584f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "37572da7-a419-45d2-b977-34c9605b8dd3",
+      "order": 0,
+      "text": "Prepare the results and data of the study before drafting the graphs.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 617.3127999999999,
+          "x1": 487.5911,
+          "y1": 637.9914889375684
+        }
+      ]
+    },
+    {
+      "id": "4d46444c-3e8b-4911-af08-fd81e1cc8dc3",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "37572da7-a419-45d2-b977-34c9605b8dd3",
+      "order": 1,
+      "text": "The flow of the graphs should tell a logical story.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 643.9127,
+          "x1": 490.3991000000008,
+          "y1": 651.2913889375684
+        }
+      ]
+    },
+    {
+      "id": "8388d88f-0ee0-4996-98ea-be689fa3258b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "37572da7-a419-45d2-b977-34c9605b8dd3",
+      "order": 2,
+      "text": "Choose the appropriate graph type to match the study data.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 657.2128,
+          "x1": 489.8501,
+          "y1": 677.8914889375684
+        }
+      ]
+    },
+    {
+      "id": "46cc640e-3322-4844-b3d8-b0cdb9d03bae",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "37572da7-a419-45d2-b977-34c9605b8dd3",
+      "order": 3,
+      "text": "Design, provide legends and label the graphs carefully so that they are clear and easy to understand.",
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 683.8127999999999,
+          "x1": 509.2541000000007,
+          "y1": 704.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "a264f6bf-0d55-43aa-9523-0d9395e7618e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 0,
+      "text": "Type Purpose",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 87.73659999999995,
+          "x1": 61.32899999999999,
+          "y1": 94.57007530186604
+        },
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 87.73659999999995,
+          "x1": 142.737,
+          "y1": 94.57007530186604
+        }
+      ]
+    },
+    {
+      "id": "221368dd-cc30-41a1-86f4-0b3c2cadcaab",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 1,
+      "text": "Scattergram",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 121.64909999999998,
+          "x1": 85.68100000000004,
+          "y1": 128.48257530186606
+        }
+      ]
+    },
+    {
+      "id": "bb38d144-0b0c-470a-b556-41670a84dc3b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 2,
+      "text": "Line\tgraph",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 353.6386,
+          "x1": 80.20900000000002,
+          "y1": 360.4720753018661
+        }
+      ]
+    },
+    {
+      "id": "548c8f9b-3d26-4863-94f7-300d177995b9",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 3,
+      "text": "Bar\tgraph (also\tknown\tas bar\tchart)",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 570.2992999999999,
+          "x1": 95.953,
+          "y1": 596.332775301866
+        }
+      ]
+    },
+    {
+      "id": "06ec7072-0c24-4744-a365-d6e7f4a03113",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 4,
+      "text": "It\tis\tused\tto\tpresent\tmeasurements\ton\ttwo\tor\tmore variables\tthat\tare\trelated;\tthe\tvalues\tof\tthe\tvariables on\tthe\ty-axis\tare\tdependent\ton\tthe\tvalues\tof\tthe variable\tplotted\talong\tthe\tx-axis.",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 121.64909999999998,
+          "x1": 288.169,
+          "y1": 157.28257530186602
+        }
+      ]
+    },
+    {
+      "id": "11737e80-ed3f-4590-b1b2-78333e6c0c57",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 5,
+      "text": "It\tis\tsimilar\tin\tsome\tways\tto\tthe\tscattergram,\twith the\tcondition\tthat\tthe\tvalues\tof\tthe\tx\tvariable\thave their\town\tsequence.\tThose\tvalues\trepresent\ta continuous\tvariable,\tsuch\tas\ttime,\ttemperature\tor pressure.\tIt\tmay\tdisplay\tseveral\tdependent\tvariables on\tthe\tsame\tgraph.",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 353.6386,
+          "x1": 288.25699999999995,
+          "y1": 408.4720753018661
+        }
+      ]
+    },
+    {
+      "id": "4cdaae6e-bde9-40e7-987a-b245fa07ccc5",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 6,
+      "text": "It\tmay\teither\tbe\thorizontal\tor\tvertical\t(column graph).\t\tAn\timportant\tpoint\tabout\tbar\tgraphs\tis\tthe length\tof\tthe\tbars:\tthe\tgreater\tthe\tlength,\tthe greater\tthe\tvalue.\tIt\tis\tused\tfor\tdiscrete,\tgrouped data\tof\tordinal\tor\tnominal\tscale.",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 570.2992999999999,
+          "x1": 288.169,
+          "y1": 615.5327753018661
+        }
+      ]
+    },
+    {
+      "id": "125761bc-f2d7-4f16-b9e4-1ca6fe80fcab",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 7,
+      "text": "Example",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.937,
+          "y0": 87.73659999999995,
+          "x1": 331.105,
+          "y1": 94.57007530186604
+        }
+      ]
+    },
+    {
+      "id": "4b62ea21-7b6c-493c-8299-92743eb1d160",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 8,
+      "text": "n\t=\t133;\tr\t=\t0.73;\tp\t<\t0.001",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.5571,
+          "y0": 299.13059999999996,
+          "x1": 391.9411,
+          "y1": 305.96407530186605
+        }
+      ]
+    },
+    {
+      "id": "2e71dd9f-9c2f-44bb-85db-c919ee8bdf44",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 9,
+      "text": "*\tp\t<\t0.05\twhen\tcompared\tto\tthe\tGroup\tE\tlevel",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 745.1685,
+          "x1": 458.5870999999999,
+          "y1": 752.0019753018661
+        }
+      ]
+    },
+    {
+      "id": "1120553a-08dd-41d6-ab2e-6f8d9c920b8b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 10,
+      "text": "\u2020 \tp\t<\t0.05\twhen\tcompared\tto\tthe\tpreoperative\tlevel",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 754.379652,
+          "x1": 471.27239999999983,
+          "y1": 761.6019753018661
+        }
+      ]
+    },
+    {
+      "id": "750abf13-dc16-4337-bdc6-d291493f2905",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 11,
+      "text": "Histogram",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.5433,
+          "y0": 85.60199999999998,
+          "x1": 86.5513,
+          "y1": 92.43547530186606
+        }
+      ]
+    },
+    {
+      "id": "eee1c2d3-a049-4de9-a8c4-b6b304e3ab6a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 12,
+      "text": "Pie\tchart",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.1889,
+          "y0": 302.54089999999997,
+          "x1": 79.21289999999999,
+          "y1": 309.37437530186605
+        }
+      ]
+    },
+    {
+      "id": "4b93a8a1-1244-4076-b6c2-db38e3e9e2f1",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 13,
+      "text": "Box\tplot (also\tknown\tas box-andwhisker\tplot)",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.6614,
+          "y0": 522.2791,
+          "x1": 100.67739999999999,
+          "y1": 557.9125753018661
+        }
+      ]
+    },
+    {
+      "id": "b791d49a-1925-4929-9fb9-2d255ae62db6",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 14,
+      "text": "It\tis\ta\tspecialised\ttype\tof\tbar\tgraph\tthat\tresembles a\tcolumn\tgraph\tbut\tthere\tare\tno\tgaps\tbetween the\tcolumns.\tIt\tis\tused\tto\trepresent\tdata\tfrom\tthe measurement\tof\ta\tcontinuous\tvariable.\tIndividual data\tpoints\tare\tgrouped\ttogether\tin\tclasses\tto show\tthe\tfrequency\tof\tdata\tin\teach\tclass.\tThe frequency\tis\tmeasured\tby\tthe\tarea\tof\tthe\tcolumn.",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 118.5433,
+          "y0": 85.60199999999998,
+          "x1": 293.27930000000003,
+          "y1": 150.0353753018661
+        }
+      ]
+    },
+    {
+      "id": "db3d5c3d-4681-46f8-a3a1-73ef32199961",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 15,
+      "text": "It\tshows\tclasses\tor\tgroups\tof\tdata\tin\tproportion\tto the\twhole\tdata\tset.\tThe\tentire\tpie\trepresents\tall\tthe data,\twhile\teach\tslice\tor\tsegment\trepresents\ta different\tclass\tor\tgroup\twithin\tthe\twhole.\tEach\tslice should\tshow\tsignificant\tvariations.\t\tThe\tnumber\tof categories\tshould\tbe\tsmall\t(between\tthree\tand\tten).",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 118.18889999999999,
+          "y0": 302.54089999999997,
+          "x1": 292.51689999999996,
+          "y1": 357.37437530186605
+        }
+      ]
+    },
+    {
+      "id": "be394eeb-2fdf-47f7-919d-56b5b306f6b4",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 16,
+      "text": "It\tmay\tbe\teither\thorizontal\tor\tvertical.\tIt\tis\tused to\tdisplay\ta\tstatistical\tsummary\tof\tone\tor\tmore variables:\tminimum,\tlower\tquartile,\tmedian,\tupper quartile\tand\tmaximum.\tIt\tmay\talso\tindicate\twhich data\tmight\tbe\tconsidered\tas\toutliers.\tThe\tspacing between\tthe\tdifferent\tparts\tof\tthe\tbox\tindicate\tthe degree\tof\tdispersion\t(spread)\tand\tskewness\tin the\tdata.\tThis\thelps\tin\tvisualising\tthe\ttype\tof\tdata distribution,\twhether\tsymmetrical\tor\tskewed.",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 118.66139999999999,
+          "y0": 522.2791,
+          "x1": 292.06940000000003,
+          "y1": 605.9125753018661
+        }
+      ]
+    },
+    {
+      "id": "57d2fc76-b37a-4c0b-a2c8-62c9577ac7d0",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 17,
+      "text": "eGFR:\testimated\tglomerular\tfiltration\trate;\tDD:\tdeletion/deletion genotype",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.3071,
+          "y0": 711.8035,
+          "x1": 512.4430999999998,
+          "y1": 728.2369753018661
+        }
+      ]
+    },
+    {
+      "id": "abc83747-6624-408f-ac06-ec734c84b675",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 18,
+      "text": "*\tp-value\tis\tstatistically\tsignificant",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.3071,
+          "y0": 731.0035,
+          "x1": 409.9631,
+          "y1": 737.8369753018661
+        }
+      ]
+    },
+    {
+      "id": "72a6799e-c61d-4abb-a7b0-5fcae61db6b1",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 0,
+      "text": "Doctor's particulars:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 629.4852,
+          "x1": 166.9348,
+          "y1": 638.0463002979146
+        }
+      ]
+    },
+    {
+      "id": "4d415239-cde9-49c3-9f94-123fbb0bbf8f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 1,
+      "text": "Name in full: __________________________________________________________________________________",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 643.6022,
+          "x1": 509.4297999999991,
+          "y1": 650.9808889375685
+        }
+      ]
+    },
+    {
+      "id": "9fdcef93-b4e5-49a1-a064-ce330a84b23c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 2,
+      "text": "MCR number: _____________________________________ Specialty: ___________________________________",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 657.6022,
+          "x1": 508.7277999999991,
+          "y1": 664.9808889375685
+        }
+      ]
+    },
+    {
+      "id": "6368e5cc-7c1a-4824-a26a-c3bcfa78e18a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 3,
+      "text": "Email address: _________________________________________________________________________________",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 671.6022,
+          "x1": 510.6447999999991,
+          "y1": 678.9808889375685
+        }
+      ]
+    },
+    {
+      "id": "35b91782-64c1-4097-9489-e036347e98ac",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 4,
+      "text": "True",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 447.10679999999996,
+          "y0": 138.89229999999998,
+          "x1": 471.0943,
+          "y1": 147.92901698113212
+        }
+      ]
+    },
+    {
+      "id": "564c3a03-f393-4684-af04-edf1a7dc7c9a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 5,
+      "text": "False",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 481.5918,
+          "y0": 138.89229999999998,
+          "x1": 502.9763000000001,
+          "y1": 147.92901698113212
+        }
+      ]
+    },
+    {
+      "id": "2ecb42dd-07bd-4b22-be30-1325af7655dc",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 6,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 161.76350000000002,
+          "x1": 463.5073,
+          "y1": 168.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "a96d084a-6151-46b6-8a4d-7379653d6c78",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 7,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 161.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 168.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "705d449e-ec29-4186-be77-ff175a29e1a7",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 8,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 173.76350000000002,
+          "x1": 463.5073,
+          "y1": 180.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "a35d4cc4-e629-4744-9c8d-b5958b669600",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 9,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 173.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 180.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "3240a4d7-eca8-4a9c-afae-2466210d8811",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 10,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 185.76350000000002,
+          "x1": 463.5073,
+          "y1": 192.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "33857c77-98dd-4c57-9e2b-d9b311f26e36",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 11,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 185.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 192.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "216892c1-c5ab-43e1-9794-6b7cb72bf2f5",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 12,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 197.76350000000002,
+          "x1": 463.5073,
+          "y1": 204.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "34d64daa-a32f-4cfc-95a2-9e1cd09a3305",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 13,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 197.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 204.45790674394095
+        }
+      ]
+    },
+    {
+      "id": "9537f7b2-1f91-4f7c-af59-9157ecfad5fe",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 14,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 331.9368,
+          "x1": 463.5073,
+          "y1": 338.631206743941
+        }
+      ]
+    },
+    {
+      "id": "5a9949d7-40aa-4ef8-87d8-4c0409663b21",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 15,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 331.9368,
+          "x1": 498.9228,
+          "y1": 338.631206743941
+        }
+      ]
+    },
+    {
+      "id": "0ee7ac08-45a4-4b00-960b-7a1d9c54c837",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 16,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 343.9368,
+          "x1": 463.5073,
+          "y1": 350.631206743941
+        }
+      ]
+    },
+    {
+      "id": "deb3b9ec-64b6-4f09-8b4d-e75e79d891ce",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 17,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 343.9368,
+          "x1": 498.9228,
+          "y1": 350.631206743941
+        }
+      ]
+    },
+    {
+      "id": "597e9050-4358-48bb-989b-8cfc820f8a8f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 18,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 367.9368,
+          "x1": 463.5073,
+          "y1": 374.631206743941
+        }
+      ]
+    },
+    {
+      "id": "80c75f26-a495-4446-9fa7-01c3347bf58c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 19,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 367.9368,
+          "x1": 498.9228,
+          "y1": 374.631206743941
+        }
+      ]
+    },
+    {
+      "id": "a79c8353-932b-423a-871f-d321316be60e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 20,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 379.9368,
+          "x1": 463.5073,
+          "y1": 386.631206743941
+        }
+      ]
+    },
+    {
+      "id": "638112ba-a4a6-428d-9964-a59d4bcdf10f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 21,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 379.9368,
+          "x1": 498.86949999999996,
+          "y1": 386.631206743941
+        }
+      ]
+    },
+    {
+      "id": "aa0c6537-9800-42b8-bef1-7696adaa7984",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 22,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 413.8581,
+          "x1": 463.5073,
+          "y1": 420.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "74b2fdc5-ce71-428c-8cff-8a6e597b8a8f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 23,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 413.8581,
+          "x1": 498.9228,
+          "y1": 420.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "79c18d94-b0f4-4592-beaa-964733683793",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 24,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 425.8581,
+          "x1": 463.5073,
+          "y1": 432.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "10aa79a6-05db-4d5b-9a30-2238fee3a196",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 25,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 425.8581,
+          "x1": 498.9228,
+          "y1": 432.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "8edf2f53-230c-4852-a216-5f3cd7cb3f4d",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 26,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 437.8581,
+          "x1": 463.5073,
+          "y1": 444.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "797aa29d-3380-4b53-b591-136ca77a22cb",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 27,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 437.8581,
+          "x1": 498.9228,
+          "y1": 444.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "b3ec0397-c40a-4617-89b2-44a2bfe42452",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 28,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 461.8581,
+          "x1": 463.5073,
+          "y1": 468.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "57667021-5a55-4dde-9a92-42d5fa1e4582",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 29,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 461.8581,
+          "x1": 498.9228,
+          "y1": 468.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "bd6ef620-7863-49fb-9ad5-e85a45ab7779",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 30,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 497.8581,
+          "x1": 463.5073,
+          "y1": 504.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "1118b931-2fbe-4b28-a5b7-353bbeacbe14",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 31,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 497.8581,
+          "x1": 498.9228,
+          "y1": 504.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "3e5047c8-dd28-420d-a88c-d4a67deb7f3a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 32,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 509.8581,
+          "x1": 463.5052999999999,
+          "y1": 516.552506743941
+        }
+      ]
+    },
+    {
+      "id": "b923ed3c-0fee-4d51-923e-066cda2de6d6",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 33,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 509.8581,
+          "x1": 498.9228,
+          "y1": 516.552506743941
+        }
+      ]
+    },
+    {
+      "id": "eb2f93ed-9cd0-4a43-91a6-b5a26703f658",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 34,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 521.8580999999999,
+          "x1": 463.5052999999999,
+          "y1": 528.552506743941
+        }
+      ]
+    },
+    {
+      "id": "fa9d5fd5-6387-46e6-b3e0-741663860161",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 35,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 521.8580999999999,
+          "x1": 498.9228,
+          "y1": 528.552506743941
+        }
+      ]
+    },
+    {
+      "id": "4273f957-c887-42bb-8f0d-554a0599994b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 36,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 533.8580999999999,
+          "x1": 463.5052999999999,
+          "y1": 540.552506743941
+        }
+      ]
+    },
+    {
+      "id": "dcc1c50a-7c98-4e6b-9fb3-3c3c3326977e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 37,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 533.8580999999999,
+          "x1": 498.9228,
+          "y1": 540.552506743941
+        }
+      ]
+    },
+    {
+      "id": "20f83359-d2fb-4c36-8391-ff19582b12ac",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 38,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 567.7793,
+          "x1": 463.5052999999999,
+          "y1": 574.473706743941
+        }
+      ]
+    },
+    {
+      "id": "14f790ae-4b2b-44ce-aac6-4584225aa2a8",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 39,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 567.7793,
+          "x1": 498.9228,
+          "y1": 574.473706743941
+        }
+      ]
+    },
+    {
+      "id": "1873465c-0b2e-4a1e-a960-7f08afbfb904",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 40,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 579.7793,
+          "x1": 463.5052999999999,
+          "y1": 586.473706743941
+        }
+      ]
+    },
+    {
+      "id": "c1856484-5dbc-4ec1-919d-b87db0b90f55",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 41,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 579.7793,
+          "x1": 498.9228,
+          "y1": 586.473706743941
+        }
+      ]
+    },
+    {
+      "id": "f38207a0-0102-4fa7-aa67-d08da6a46c32",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 42,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 591.7792999999999,
+          "x1": 463.5052999999999,
+          "y1": 598.473706743941
+        }
+      ]
+    },
+    {
+      "id": "b2d7ad80-6411-4392-bc18-f77196460294",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 43,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 591.7792999999999,
+          "x1": 498.9228,
+          "y1": 598.473706743941
+        }
+      ]
+    },
+    {
+      "id": "3140ebfb-a14b-41cb-a339-d200c7de28ae",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 44,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 603.7792999999999,
+          "x1": 463.5052999999999,
+          "y1": 610.473706743941
+        }
+      ]
+    },
+    {
+      "id": "daa3afb3-8fbe-4858-abec-e509f125f19b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 45,
+      "text": "\u2610",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 603.7792999999999,
+          "x1": 498.9228,
+          "y1": 610.473706743941
+        }
+      ]
+    },
+    {
+      "id": "b75ccfe4-2814-4df6-a449-23831c881c71",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 46,
+      "text": "Question 1.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 148.66719999999998,
+          "x1": 131.0654,
+          "y1": 156.1112449069003
+        }
+      ]
+    },
+    {
+      "id": "a91e5c2b-f3ec-4212-90f1-6a0055a50011",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 47,
+      "text": "The purpose of graphs is:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 130.7053,
+          "y0": 148.66719999999998,
+          "x1": 221.9292999999999,
+          "y1": 156.0458889375684
+        }
+      ]
+    },
+    {
+      "id": "45d342d1-917e-414d-9484-b7268c6f0f59",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 48,
+      "text": "(a)  To reveal trends or patterns in the data.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 160.46720000000005,
+          "x1": 238.77739999999991,
+          "y1": 167.84588893756847
+        }
+      ]
+    },
+    {
+      "id": "0194afb3-d1bb-446d-bae8-8d686312047f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 49,
+      "text": "(b)  To reveal relations between variables in the data.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 172.2672,
+          "x1": 274.8403999999998,
+          "y1": 179.64588893756843
+        }
+      ]
+    },
+    {
+      "id": "bac5e0e4-c31a-4150-a611-739fb11f7d2d",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 50,
+      "text": "(c)  To present large amounts of repetitive data.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 184.06719999999996,
+          "x1": 254.9953999999999,
+          "y1": 191.44588893756838
+        }
+      ]
+    },
+    {
+      "id": "f55a2132-27dc-4a20-a838-58ed13657e1b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 51,
+      "text": "(d)  To paint an interesting picture.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 195.86720000000003,
+          "x1": 209.3113999999999,
+          "y1": 203.24588893756845
+        }
+      ]
+    },
+    {
+      "id": "74b876d5-a1c3-4c8a-8398-632f80d7da29",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 52,
+      "text": "Question 2. Based on this graph, answer the following questions:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 219.46720000000005,
+          "x1": 321.3207999999997,
+          "y1": 226.91124490690038
+        }
+      ]
+    },
+    {
+      "id": "cc3f546c-e8dd-4cc9-92d9-ec0380d9a33c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 53,
+      "text": "(a)  The graph is most appropriate for inclusion in the text.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 331.3365,
+          "x1": 294.9733999999998,
+          "y1": 338.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "eb65f46a-578a-49bd-a84f-6c1601ed210b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 54,
+      "text": "(b)  The graph could be simply replaced by one sentence in the text: 'Eight out of 50",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 343.1365,
+          "x1": 391.97540000000004,
+          "y1": 350.51518893756844
+        }
+      ]
+    },
+    {
+      "id": "c6c2d582-2ef4-4ec7-8c0f-b203a35c58aa",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 55,
+      "text": "patients with a mean age of 55 years were diagnosed with breast cancer'.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 99.0434,
+          "y0": 354.9365,
+          "x1": 361.8703999999995,
+          "y1": 362.31518893756845
+        }
+      ]
+    },
+    {
+      "id": "ee07b2df-bd23-4e6f-8d1a-5f094fc4129b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 56,
+      "text": "(c)  The graph should be replaced by a table.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 366.7365,
+          "x1": 244.32139999999984,
+          "y1": 374.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "76d44074-f875-4468-b835-4aa1a138e465",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 57,
+      "text": "(d)  A pie chart is more appropriate for presenting this information than a bar graph.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 378.5365,
+          "x1": 386.5933999999996,
+          "y1": 385.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "1bfa61c5-4f7c-46d1-bffb-0c3cc722e240",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 58,
+      "text": "Question 3.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 402.1365,
+          "x1": 128.75240000000002,
+          "y1": 409.58054490690034
+        }
+      ]
+    },
+    {
+      "id": "00508691-44b3-4ab5-8a1e-87e89b19cf2e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 59,
+      "text": "When preparing graphs:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 402.1365,
+          "x1": 217.9557999999999,
+          "y1": 409.51518893756844
+        }
+      ]
+    },
+    {
+      "id": "f0bf9b5c-2a3a-405a-94b5-ba13729d4afe",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 60,
+      "text": "(a)  All figures must be referenced in the text.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 413.9365,
+          "x1": 248.00239999999994,
+          "y1": 421.31518893756845
+        }
+      ]
+    },
+    {
+      "id": "d7fc01db-1a33-4589-9170-11549ede0467",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 61,
+      "text": "(b)  Do not include experimental details in the legend.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 425.7365,
+          "x1": 278.4763999999998,
+          "y1": 433.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "07287493-a3f9-43bb-8bf9-ac995502faed",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 62,
+      "text": "(c)  Ensure that the size of the font and symbols are appropriate so that they can be read",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 437.5365,
+          "x1": 400.7234,
+          "y1": 444.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "1b96d389-3068-4b7d-9d7f-b1ac15171c68",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 63,
+      "text": "when the graphs are printed.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 99.0434,
+          "y0": 449.3365,
+          "x1": 201.20239999999995,
+          "y1": 456.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "0d2792ca-5bab-4e96-972b-a668e4d30e8e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 64,
+      "text": "(d)  Always prepare them in full colour.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 461.1365,
+          "x1": 226.95139999999992,
+          "y1": 468.51518893756844
+        }
+      ]
+    },
+    {
+      "id": "affe81af-53e7-4b74-b812-b16ce88fe7f6",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 65,
+      "text": "Question 4.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 484.7365,
+          "x1": 128.75240000000002,
+          "y1": 492.1805449069003
+        }
+      ]
+    },
+    {
+      "id": "e215b9ec-8515-4daf-a569-67df537c5bdf",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 66,
+      "text": "Regarding graph legends:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 484.7365,
+          "x1": 223.74279999999987,
+          "y1": 492.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "e63def9e-1c37-49d3-a600-d316d75a8430",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 67,
+      "text": "(a)  They are always placed below the graphs.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 496.5365,
+          "x1": 249.55039999999988,
+          "y1": 503.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "4b858e6e-241b-41e5-8183-5afe064e6cac",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 68,
+      "text": "(b)  An example of a good legend is: 'Graph shows temperature vs. time'.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 508.3365,
+          "x1": 351.0163999999995,
+          "y1": 515.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "a55013ae-61c3-4f49-a790-2423e8845002",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 69,
+      "text": "(c)  They should be clear and concise.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 520.1365000000001,
+          "x1": 220.8043999999999,
+          "y1": 527.5151889375684
+        }
+      ]
+    },
+    {
+      "id": "e413f644-e2b4-4802-976f-2096576802ed",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 70,
+      "text": "(d)  They should provide an interpretation of the results.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 531.9365,
+          "x1": 286.2163999999998,
+          "y1": 539.3151889375685
+        }
+      ]
+    },
+    {
+      "id": "9f5499c0-ab9f-4c24-a4b9-1fc38e4d197e",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 71,
+      "text": "Question 5.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 555.5364999999999,
+          "x1": 128.75240000000002,
+          "y1": 562.9805449069004
+        }
+      ]
+    },
+    {
+      "id": "7770d86c-21b8-4b97-8cdd-3326493458b0",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 72,
+      "text": "The following statements regarding types of graphs are true:",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 555.5364999999999,
+          "x1": 348.1677999999996,
+          "y1": 562.9151889375685
+        }
+      ]
+    },
+    {
+      "id": "85a4f87f-cf66-49a5-a392-2de8ac10808a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 73,
+      "text": "(a)  Box plots show a distribution of data.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 567.3365,
+          "x1": 233.9623999999999,
+          "y1": 574.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "c38ef973-b126-419c-babe-88947c6e8228",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 74,
+      "text": "(b)  Bar graphs are used to display continuous data.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 579.1365000000001,
+          "x1": 268.8193999999998,
+          "y1": 586.5151889375684
+        }
+      ]
+    },
+    {
+      "id": "e291e825-8ee9-4a5a-84b9-6b31c5a41856",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 75,
+      "text": "(c)  Pie charts show classes of data in proportion to the whole data set.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 590.9365,
+          "x1": 336.6613999999996,
+          "y1": 598.3151889375685
+        }
+      ]
+    },
+    {
+      "id": "5b387739-7369-498e-b04f-867cdeb643ac",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "e011c3aa-2d10-4b67-a2e5-40715331b4eb",
+      "order": 76,
+      "text": "(d)  Line graphs allow the display of only one dependent variable.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 602.7365,
+          "x1": 321.26239999999956,
+          "y1": 610.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "a325d5f3-47dd-421d-91a6-7eb82392075a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "b307780e-32c4-4989-859a-d0f4cfda7733",
+      "order": 0,
+      "text": "(1) Log on at the SMJ website: http://www.sma.org.sg/cme/smj and select the appropriate set of questions. (2) Select your answers and provide your name, email address and MCR number. Click on 'Submit answers' to submit.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 703.8394000000001,
+          "x1": 511.6214000000014,
+          "y1": 716.6684531215772
+        }
+      ]
+    },
+    {
+      "id": "36c5fb44-3076-43a7-8a55-ec24a9a64637",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "679eaf06-0870-4ebc-8f29-416939a92b2b",
+      "order": 0,
+      "text": "(1) Answers will be published in the SMJ May 2009 issue. (2) The MCR numbers of successful candidates will be posted online at www.sma.org.sg/cme/smj by 20 May 2009.  (3) All online submissions will receive an automatic email acknowledgment. (4) Passing mark is 60%. No mark will be deducted for incorrect answers. (5) The SMJ editorial office will submit the list of successful candidates to the Singapore Medical Council.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 733.8394,
+          "x1": 511.90740000000187,
+          "y1": 754.1684531215772
+        }
+      ]
+    },
+    {
+      "id": "edd75a27-93cd-45f8-babf-9fc4afa42ffc",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "679eaf06-0870-4ebc-8f29-416939a92b2b",
+      "order": 1,
+      "text": "Deadline for submission: (March 2009 SMJ 3B CME programme): 12 noon, 15 May 2009.",
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 763.8394,
+          "x1": 333.5604000000001,
+          "y1": 769.2156546549836
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "2727324e-adce-4de8-a00b-68474d68241a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": null,
+      "order": 0,
+      "label": null,
+      "asset_uri": "figures/2727324e-adce-4de8-a00b-68474d68241a.png",
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 84.33423614501953,
+          "y0": 44.635887145996094,
+          "x1": 178.40750122070312,
+          "y1": 61.0022087097168
+        }
+      ]
+    },
+    {
+      "id": "f12ebfa2-82cc-4856-802e-bedbcf6da62c",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 1,
+      "label": null,
+      "asset_uri": "figures/f12ebfa2-82cc-4856-802e-bedbcf6da62c.png",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 302.1810607910156,
+          "y0": 120.02479553222656,
+          "x1": 510.5022888183594,
+          "y1": 275.10382080078125
+        }
+      ]
+    },
+    {
+      "id": "01aca695-a05d-4b83-bcb5-534cdc553f14",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 2,
+      "label": null,
+      "asset_uri": "figures/01aca695-a05d-4b83-bcb5-534cdc553f14.png",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 301.7376403808594,
+          "y0": 350.0350341796875,
+          "x1": 510.4855041503906,
+          "y1": 505.5221252441406
+        }
+      ]
+    },
+    {
+      "id": "b14119e7-3fde-49b8-887d-0f8b6081d09b",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 3,
+      "label": null,
+      "asset_uri": "figures/b14119e7-3fde-49b8-887d-0f8b6081d09b.png",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 301.44769287109375,
+          "y0": 566.7427978515625,
+          "x1": 511.36859130859375,
+          "y1": 721.7432861328125
+        }
+      ]
+    },
+    {
+      "id": "44fc6711-e2fa-4628-8e50-e6b9712ee476",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 4,
+      "label": null,
+      "asset_uri": "figures/44fc6711-e2fa-4628-8e50-e6b9712ee476.png",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 302.21160888671875,
+          "y0": 83.58831024169922,
+          "x1": 510.2732238769531,
+          "y1": 239.03671264648438
+        }
+      ]
+    },
+    {
+      "id": "c729358a-b7d3-414b-bc2f-34b033bd855f",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 5,
+      "label": null,
+      "asset_uri": "figures/c729358a-b7d3-414b-bc2f-34b033bd855f.png",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 302.19390869140625,
+          "y0": 303.2716064453125,
+          "x1": 510.6086730957031,
+          "y1": 457.8699645996094
+        }
+      ]
+    },
+    {
+      "id": "2235fc18-7694-403c-892b-81d023350014",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "section_id": "2760e60b-a1f9-49e2-851a-d2abe6876490",
+      "order": 6,
+      "label": null,
+      "asset_uri": "figures/2235fc18-7694-403c-892b-81d023350014.png",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 301.5706481933594,
+          "y0": 521.0267944335938,
+          "x1": 510.6822509765625,
+          "y1": 679.4928588867188
+        }
+      ]
+    }
+  ],
+  "tables": [],
+  "captions": [
+    {
+      "id": "6c85f5bd-cbd2-41f0-bf64-1477b9b30617",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "subject_type": "figure",
+      "subject_id": "f12ebfa2-82cc-4856-802e-bedbcf6da62c",
+      "text": "Fig. 1 Scattergram\tshows\tthe\trelationship\tbetween\tthe\tend-tidal and\tarterial\tcarbon\tdioxide.",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.5571,
+          "y0": 279.9305999999999,
+          "x1": 512.7056,
+          "y1": 296.364075301866
+        }
+      ]
+    },
+    {
+      "id": "6db03e36-a1de-481e-a561-bb43e6c2b8cd",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "subject_type": "figure",
+      "subject_id": "01aca695-a05d-4b83-bcb5-534cdc553f14",
+      "text": "Fig.  2 Graph\t shows\t the\t hourly\t frequencies\t of\t out-of-hospital cardiac\tarrest\tpatients\tin\ta\t24-hour\tcycle.",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 508.6205,
+          "x1": 512.4593,
+          "y1": 525.0539753018661
+        }
+      ]
+    },
+    {
+      "id": "ced789f9-558f-490e-83a3-1cb6734f8ba7",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "subject_type": "figure",
+      "subject_id": "b14119e7-3fde-49b8-887d-0f8b6081d09b",
+      "text": "Fig.  3 Bar\t chart\t shows\t the\t glutathione-S-transferase\t (GST) levels\t(mean\t\u00b1\tSD).",
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 725.9685,
+          "x1": 512.4555,
+          "y1": 742.4019753018661
+        }
+      ]
+    },
+    {
+      "id": "13f018da-4c4d-4656-a27d-228d8cb6ea5a",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "subject_type": "figure",
+      "subject_id": "c729358a-b7d3-414b-bc2f-34b033bd855f",
+      "text": "Fig. 5 Pie\tchart\tshows\tthe\tdistribution\tof\tthe\tdifferent\ttypes\tof tumours.",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.5571,
+          "y0": 461.5173,
+          "x1": 512.7472000000001,
+          "y1": 477.35077530186607
+        }
+      ]
+    },
+    {
+      "id": "62568d93-e9cf-4220-8dc9-8a0f2c699279",
+      "paper_id": "6953395f-4e89-41f3-8c17-731b3b02e01d",
+      "subject_type": "figure",
+      "subject_id": "2235fc18-7694-403c-892b-81d023350014",
+      "text": "Fig. 6 Boxplot\tshows\tthe\tangiotensin-converting\tenzyme\tgene polymorphism\tand\tdisease\tprogression\tin\tthe\tDD\tand\tnon-DD patients.",
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.3071,
+          "y0": 683.0035,
+          "x1": 512.4671000000001,
+          "y1": 709.036975301866
+        }
+      ]
+    }
+  ],
+  "references": []
+}

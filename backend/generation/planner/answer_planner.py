@@ -37,7 +37,17 @@ _PROCEDURAL_MARKERS = (
     "process for",
 )
 _CITATION_MARKERS = ("who wrote", "which paper", "cite", "citation", "reference", "according to")
-_FIGURE_MARKERS = ("figure", "chart", "graph", "diagram", "image", "plot")
+_FIGURE_MARKERS = (
+    "figure",
+    "chart",
+    "graph",
+    "diagram",
+    "image",
+    "plot",
+    "architecture",
+    "workflow",
+    "illustration",
+)
 _TABLE_MARKERS = ("table",)
 _DESCRIPTIVE_MARKERS = ("what is", "what are", "describe", "explain", "overview of")
 

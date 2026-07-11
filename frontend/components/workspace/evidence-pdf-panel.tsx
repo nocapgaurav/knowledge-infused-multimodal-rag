@@ -64,6 +64,7 @@ export function EvidencePdfPanel({ documentId }: { documentId: string }) {
           displayLabel: fallbackItem.displayLabel,
           pageNumbers: fallbackItem.pageNumbers,
           boundingBoxes: fallbackItem.boundingBoxes,
+          modality: fallbackItem.modality,
         }
       : null);
 
@@ -90,6 +91,7 @@ export function EvidencePdfPanel({ documentId }: { documentId: string }) {
       displayLabel: item.displayLabel,
       pageNumbers: item.pageNumbers,
       boundingBoxes: item.boundingBoxes,
+      modality: item.modality,
     });
   }
 

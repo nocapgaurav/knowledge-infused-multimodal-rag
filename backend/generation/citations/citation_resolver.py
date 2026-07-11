@@ -94,6 +94,7 @@ class CitationResolver:
                     display_label=section.retrieval_context,
                     page_numbers=section.page_numbers,
                     bounding_boxes=section.bounding_boxes,
+                    modality=section.modality,
                 )
             )
         return CitationResolutionReport(resolved=tuple(resolved), unresolved=tuple(unresolved))

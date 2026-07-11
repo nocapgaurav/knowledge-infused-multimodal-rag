@@ -20,6 +20,7 @@ from backend.generation.context.context_optimizer import ContextOptimizer
 from backend.generation.formatting.response_formatter import FormattingInput, ResponseFormatter
 from backend.generation.grounding.grounding_validator import GroundingValidator
 from backend.generation.interfaces.generation_provider import GenerationProvider
+from backend.generation.models.answer_plan import QuestionType
 from backend.generation.models.answer_provenance import AnswerProvenance
 from backend.generation.models.generation_config import GenerationConfig
 from backend.generation.models.generation_manifest import GenerationManifest, GenerationStatistics
@@ -32,6 +33,7 @@ from backend.generation.prompt.prompt_validator import PromptValidator
 from backend.generation.quality.answer_quality_assessor import AnswerQualityAssessor
 from backend.generation.repository.generation_repository import GenerationRepository
 from backend.generation.validation.generation_validator import GenerationValidator
+from backend.generation.vision.figure_analyst import FigureAnalyst
 from backend.retrieval.models import EvidenceBundle
 
 logger = logging.getLogger(__name__)
@@ -59,6 +61,7 @@ class GenerationService:
         quality_assessor: AnswerQualityAssessor,
         response_formatter: ResponseFormatter,
         generation_validator: GenerationValidator,
+        figure_analyst: "FigureAnalyst | None" = None,
     ) -> None:
         """Initialize the service.
 
@@ -86,6 +89,7 @@ class GenerationService:
         self._quality_assessor = quality_assessor
         self._response_formatter = response_formatter
         self._generation_validator = generation_validator
+        self._figure_analyst = figure_analyst
 
     def generate(self, bundle: EvidenceBundle, config: GenerationConfig) -> GroundedResponse:
         """Generate a grounded answer for one evidence bundle.
@@ -125,10 +129,24 @@ class GenerationService:
             )
         )
 
+        context_sections = context_result.context_sections
+        if self._figure_analyst is not None and plan.question_type is QuestionType.FIGURE_CENTRIC:
+            phase_started = time.perf_counter()
+            context_sections, vision_notes = self._figure_analyst.augment(
+                bundle.document_id, context_sections, bundle
+            )
+            phases.append(
+                _phase_trace(
+                    "visual_analysis",
+                    len(context_result.context_sections),
+                    len(context_sections),
+                    phase_started,
+                    tuple(vision_notes),
+                )
+            )
+
         phase_started = time.perf_counter()
-        prompt_context = self._prompt_composer.compose(
-            bundle.query, plan, context_result.context_sections
-        )
+        prompt_context = self._prompt_composer.compose(bundle.query, plan, context_sections)
         phases.append(
             _phase_trace(
                 "prompt_composition",
@@ -179,7 +197,7 @@ class GenerationService:
 
         phase_started = time.perf_counter()
         quality = self._quality_assessor.assess(
-            bundle, plan, context_result.context_sections, grounding_report, citation_report
+            bundle, plan, context_sections, grounding_report, citation_report
         )
         phases.append(_phase_trace("answer_quality_assessment", 1, 1, phase_started))
 
@@ -216,7 +234,7 @@ class GenerationService:
             query=bundle.query,
             answer_text=provider_response.text,
             plan=plan,
-            context_sections=context_result.context_sections,
+            context_sections=context_sections,
             context_optimization_notes=context_result.notes,
             grounding_report=grounding_report,
             citation_report=citation_report,
@@ -232,7 +250,7 @@ class GenerationService:
         phases.append(
             _phase_trace(
                 "response_formatting",
-                len(context_result.context_sections),
+                len(context_sections),
                 1,
                 phase_started,
             )
@@ -241,7 +259,7 @@ class GenerationService:
         final_trace = GenerationTrace(phases=tuple(phases))
         response = response.model_copy(update={"generation_trace": final_trace})
 
-        self._generation_validator.validate(response, context_result.context_sections)
+        self._generation_validator.validate(response, context_sections)
 
         manifest = GenerationManifest(
             document_id=bundle.document_id,

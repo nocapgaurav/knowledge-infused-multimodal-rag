@@ -83,6 +83,11 @@ class Settings(BaseSettings):
         generation_top_p: Nucleus sampling threshold.
         generation_max_tokens: Maximum tokens the provider may generate for the answer.
         generation_context_window: Maximum total tokens (prompt + completion) the model supports.
+        generation_vision_model: Local Ollama vision model used to analyze
+            figure images for figure-centric questions.
+        generation_vision_enabled: Whether figure images are visually
+            analyzed at all; disabling falls back to caption-only figure
+            evidence.
         evaluation_storage_root: Base directory benchmark runs are written under.
         evaluation_dataset_path: Path to the evaluation dataset JSON file.
         cors_allowed_origins: Origins the browser-based frontend (Module 12)
@@ -136,6 +141,8 @@ class Settings(BaseSettings):
     generation_top_p: float = 0.9
     generation_max_tokens: int = 1400
     generation_context_window: int = 8192
+    generation_vision_model: str = "gemma3:4b"
+    generation_vision_enabled: bool = True
     evaluation_storage_root: Path = Path("data/evaluation")
     evaluation_dataset_path: Path = Path("data/evaluation_dataset.json")
     cors_allowed_origins: list[str] = ["http://localhost:3000"]

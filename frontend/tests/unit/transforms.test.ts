@@ -173,6 +173,7 @@ function buildGroundedResponse(): GroundedResponseDto {
         display_label: "Section: 1. Introduction",
         page_numbers: [2],
         bounding_boxes: [],
+        modality: "text",
       },
     ],
     limitations: [],
@@ -220,6 +221,7 @@ describe("answerViewModelFromGroundedResponse", () => {
         textExcerpt: "primary text",
         displayLabel: "Section: 1. Introduction",
         pageNumbers: [2],
+        modality: "text",
       },
     ]);
     expect(answer.confidence).toBe(0.9);

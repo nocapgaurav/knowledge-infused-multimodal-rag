@@ -9,6 +9,7 @@ process-wide instance without needing a global variable.
 from functools import lru_cache
 
 from fastapi import Depends
+from ollama import Client as OllamaClient
 
 from backend.chunking.builder.knowledge_builder import KnowledgeBuilder
 from backend.chunking.services.knowledge_representation_service import (
@@ -40,6 +41,7 @@ from backend.generation.quality.answer_quality_assessor import AnswerQualityAsse
 from backend.generation.repository.generation_repository import GenerationRepository
 from backend.generation.services.generation_service import GenerationService
 from backend.generation.validation.generation_validator import GenerationValidator
+from backend.generation.vision.figure_analyst import FigureAnalyst
 from backend.graph.interfaces.knowledge_graph_store import KnowledgeGraphStore
 from backend.graph.providers.neo4j_provider import Neo4jProvider
 from backend.graph.repository.graph_repository import GraphRepository
@@ -814,6 +816,35 @@ def get_generation_repository(
     return GenerationRepository(generation_storage=generation_storage)
 
 
+def get_figure_analyst(
+    parsed_storage: WorkspaceStorage = Depends(get_parsed_storage),
+) -> FigureAnalyst:
+    """Return the figure analyst wired to the local Ollama vision model.
+
+    Args:
+        parsed_storage: Storage the parser wrote figure images to, injected.
+
+    Returns:
+        A configured `FigureAnalyst` (a no-op when disabled in settings).
+    """
+    settings = get_settings()
+
+    def describe(image: bytes, instruction: str) -> str:
+        client = OllamaClient(host=settings.ollama_host)
+        response = client.chat(
+            model=settings.generation_vision_model,
+            messages=[{"role": "user", "content": instruction, "images": [image]}],
+            options={"temperature": 0.1, "num_predict": 400},
+        )
+        return response["message"]["content"]
+
+    return FigureAnalyst(
+        parsed_storage=parsed_storage,
+        describe=describe,
+        enabled=settings.generation_vision_enabled,
+    )
+
+
 def get_generation_service(
     repository: GenerationRepository = Depends(get_generation_repository),
     provider: GenerationProvider = Depends(get_generation_provider),
@@ -826,6 +857,7 @@ def get_generation_service(
     quality_assessor: AnswerQualityAssessor = Depends(get_answer_quality_assessor),
     response_formatter: ResponseFormatter = Depends(get_response_formatter),
     generation_validator: GenerationValidator = Depends(get_generation_validator),
+    figure_analyst: FigureAnalyst = Depends(get_figure_analyst),
 ) -> GenerationService:
     """Return a generation service wired to the configured phases.
 
@@ -857,6 +889,7 @@ def get_generation_service(
         quality_assessor=quality_assessor,
         response_formatter=response_formatter,
         generation_validator=generation_validator,
+        figure_analyst=figure_analyst,
     )
 
 

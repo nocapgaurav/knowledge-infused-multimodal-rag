@@ -227,6 +227,7 @@ export interface ResolvedCitationDto {
   display_label: string | null;
   page_numbers: number[];
   bounding_boxes: BoundingBoxDto[];
+  modality: ChunkModality;
 }
 
 export interface GenerationStatisticsDto {

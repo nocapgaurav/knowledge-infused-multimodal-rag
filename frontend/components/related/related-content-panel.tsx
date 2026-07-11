@@ -117,6 +117,7 @@ export function RelatedContentPanel({ documentId }: { documentId: string }) {
                   openEvidence(candidate.knowledge_unit_id, {
                     text: candidate.text,
                     displayLabel: candidate.retrieval_context ?? undefined,
+                    modality: candidate.modality,
                     pageNumbers: candidate.page_numbers?.length
                       ? candidate.page_numbers
                       : undefined,

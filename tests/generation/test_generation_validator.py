@@ -155,6 +155,31 @@ def test_supporting_evidence_referencing_unresolved_id_raises() -> None:
         GenerationValidator().validate(response, [_section()])
 
 
+def test_uncited_fallback_evidence_passes_without_resolved_citations() -> None:
+    """Regression: when the model cites nothing, the formatter surfaces
+    the context shown to the model as honestly-labeled uncited evidence;
+    those items have no resolved citation to be consistent with and must
+    not fail validation (observed live on a figure-centric question)."""
+    document_id = uuid4()
+    fallback = (
+        SupportingEvidenceItem(
+            label="KU1",
+            knowledge_unit_id="context-section-id",
+            text="context text",
+            modality="text",
+            discovery="Shown to the model as context (not cited in the answer)",
+        ),
+    )
+    response = _response(
+        document_id,
+        supporting_evidence=fallback,
+        resolved_citations=(),
+        statistics=_statistics(citations_resolved=0),
+    )
+
+    GenerationValidator().validate(response, [_section()])
+
+
 def test_missing_trace_phase_raises() -> None:
     document_id = uuid4()
     incomplete_phases = tuple(

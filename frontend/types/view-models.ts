@@ -69,6 +69,7 @@ export interface Citation {
   displayLabel?: string;
   pageNumbers?: number[];
   boundingBoxes?: BoundingBoxDto[];
+  modality?: ChunkModality;
 }
 
 /** The selection payload carried alongside the canonical
@@ -81,6 +82,9 @@ export interface EvidenceTarget {
   displayLabel?: string;
   pageNumbers?: number[];
   boundingBoxes?: BoundingBoxDto[];
+  /** Evidence type -- figures and tables highlight as regions (the
+   * visual itself is the evidence), text as exact passages. */
+  modality?: ChunkModality;
 }
 
 // ---------------------------------------------------------------------------

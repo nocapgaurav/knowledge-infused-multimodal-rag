@@ -46,6 +46,7 @@ export function EvidenceList({ documentId }: { documentId: string }) {
                 displayLabel: item.displayLabel,
                 pageNumbers: item.pageNumbers,
                 boundingBoxes: item.boundingBoxes,
+                modality: item.modality,
               })
             }
           />
