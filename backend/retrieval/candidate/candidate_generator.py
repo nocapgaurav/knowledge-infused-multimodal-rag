@@ -12,6 +12,7 @@ import re
 from uuid import UUID
 
 from backend.domain import ChunkId, ChunkModality, PaperId, SectionId
+from backend.domain.value_objects import BoundingBox
 from backend.embeddings.interfaces.embedding_provider import EmbeddingProvider
 from backend.retrieval.exceptions import QueryEmbeddingError
 from backend.retrieval.interfaces.vector_retriever import VectorRetriever
@@ -156,6 +157,9 @@ def _to_candidate(result: SearchResult) -> RetrievalCandidate:
         text=payload["text"],
         retrieval_context=payload.get("retrieval_context"),
         page_numbers=tuple(payload.get("page_numbers") or ()),
+        bounding_boxes=tuple(
+            BoundingBox.model_validate(box) for box in payload.get("bounding_boxes") or ()
+        ),
         asset_uri=payload.get("asset_uri"),
         reading_order=payload["reading_order"],
         citation_count=payload.get("citation_count") or 0,

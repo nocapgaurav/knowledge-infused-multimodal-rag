@@ -15,6 +15,14 @@ export type UploadStatus = "UPLOADED" | "VALIDATING" | "READY_FOR_PARSING" | "FA
 
 export type ChunkModality = "text" | "table" | "figure";
 
+export interface BoundingBoxDto {
+  page_number: number;
+  x0: number;
+  y0: number;
+  x1: number;
+  y1: number;
+}
+
 export type DiscoveryMethod = "dense_retrieval" | "graph_expansion";
 
 export type TraversalDirection = "outgoing" | "incoming";
@@ -104,6 +112,7 @@ export interface RetrievalCandidateDto {
    * "Section: ..."), when known. */
   retrieval_context: string | null;
   page_numbers: number[];
+  bounding_boxes: BoundingBoxDto[];
   /** Backend-internal storage path, not a fetchable URL -- see
    * module12-backend-integration-gaps memory. Never rendered as an <img> src. */
   asset_uri: string | null;
@@ -203,6 +212,7 @@ export interface SupportingEvidenceItemDto {
   /** Human-readable identity ("Figure 2", "Section: III. Methodology"). */
   display_label: string | null;
   page_numbers: number[];
+  bounding_boxes: BoundingBoxDto[];
   /** Dense similarity when found by direct semantic match; null when
    * discovered through the knowledge graph. */
   relevance: number | null;
@@ -216,6 +226,7 @@ export interface ResolvedCitationDto {
   text_excerpt: string;
   display_label: string | null;
   page_numbers: number[];
+  bounding_boxes: BoundingBoxDto[];
 }
 
 export interface GenerationStatisticsDto {

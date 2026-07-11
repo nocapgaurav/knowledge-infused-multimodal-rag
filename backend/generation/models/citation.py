@@ -8,6 +8,8 @@ mapping. Nothing the model writes is trusted as a valid reference on its own.
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from backend.domain.value_objects import BoundingBox
+
 
 class ResolvedCitation(BaseModel):
     """A citation label successfully resolved to real evidence.
@@ -30,6 +32,7 @@ class ResolvedCitation(BaseModel):
     text_excerpt: str = Field(min_length=1)
     display_label: str | None = None
     page_numbers: tuple[int, ...] = ()
+    bounding_boxes: tuple[BoundingBox, ...] = ()
 
 
 class UnresolvedCitation(BaseModel):

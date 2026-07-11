@@ -15,6 +15,9 @@ export function evidenceItemsFromBundle(bundle: EvidenceBundleDto): EvidenceItem
       pageNumbers: group.primary.candidate.page_numbers?.length
         ? group.primary.candidate.page_numbers
         : undefined,
+      boundingBoxes: group.primary.candidate.bounding_boxes?.length
+        ? group.primary.candidate.bounding_boxes
+        : undefined,
       modality: group.primary.candidate.modality,
       text: group.primary.candidate.text,
       groupId: group.group_id,
@@ -26,6 +29,9 @@ export function evidenceItemsFromBundle(bundle: EvidenceBundleDto): EvidenceItem
       displayLabel: member.candidate.retrieval_context ?? undefined,
       pageNumbers: member.candidate.page_numbers?.length
         ? member.candidate.page_numbers
+        : undefined,
+      boundingBoxes: member.candidate.bounding_boxes?.length
+        ? member.candidate.bounding_boxes
         : undefined,
       modality: member.candidate.modality,
       text: member.candidate.text,
@@ -49,6 +55,7 @@ export function evidenceItemsFromGroundedResponse(response: GroundedResponseDto)
     label: item.label,
     displayLabel: item.display_label ?? undefined,
     pageNumbers: item.page_numbers?.length ? item.page_numbers : undefined,
+    boundingBoxes: item.bounding_boxes?.length ? item.bounding_boxes : undefined,
     relevance: item.relevance ?? undefined,
     discovery: item.discovery ?? undefined,
     modality: item.modality,
@@ -65,6 +72,7 @@ export function citationsFromGroundedResponse(response: GroundedResponseDto): Ci
     textExcerpt: citation.text_excerpt,
     displayLabel: citation.display_label ?? undefined,
     pageNumbers: citation.page_numbers?.length ? citation.page_numbers : undefined,
+    boundingBoxes: citation.bounding_boxes?.length ? citation.bounding_boxes : undefined,
   }));
 }
 

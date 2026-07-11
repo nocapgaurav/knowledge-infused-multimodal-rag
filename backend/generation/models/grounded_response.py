@@ -9,6 +9,7 @@ this object is ever constructed.
 from pydantic import BaseModel, ConfigDict, Field
 
 from backend.domain import ChunkModality, PaperId
+from backend.domain.value_objects import BoundingBox
 from backend.generation.models.answer_provenance import AnswerProvenance
 from backend.generation.models.answer_status import AnswerStatus
 from backend.generation.models.citation import ResolvedCitation
@@ -44,6 +45,7 @@ class SupportingEvidenceItem(BaseModel):
     modality: ChunkModality
     display_label: str | None = None
     page_numbers: tuple[int, ...] = ()
+    bounding_boxes: tuple[BoundingBox, ...] = ()
     relevance: float | None = None
     discovery: str | None = None
 

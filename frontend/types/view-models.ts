@@ -6,7 +6,7 @@
  * rather than storage structures").
  */
 
-import type { AnswerStatus, ChunkModality } from "@/types/api";
+import type { AnswerStatus, BoundingBoxDto, ChunkModality } from "@/types/api";
 
 // ---------------------------------------------------------------------------
 // Documents (client-tracked -- see module12-backend-integration-gaps memory:
@@ -44,6 +44,9 @@ export interface EvidenceItem {
   displayLabel?: string;
   /** Source PDF page(s), from the parser's own bounding boxes. */
   pageNumbers?: number[];
+  /** Exact source locations (top-left origin, PDF points at 1x zoom),
+   * for in-PDF evidence highlighting. */
+  boundingBoxes?: BoundingBoxDto[];
   /** Dense similarity to the question, when found by direct match. */
   relevance?: number;
   /** Honest provenance: how retrieval found this evidence. */
@@ -65,6 +68,19 @@ export interface Citation {
   /** Human-readable identity of the cited evidence, when known. */
   displayLabel?: string;
   pageNumbers?: number[];
+  boundingBoxes?: BoundingBoxDto[];
+}
+
+/** The selection payload carried alongside the canonical
+ * `openedEvidenceId`: everything the PDF viewer needs to locate this
+ * evidence, snapshotted from whichever view was clicked (answer
+ * citation, evidence card, or related item). The id remains the single
+ * synchronization key across all views. */
+export interface EvidenceTarget {
+  text: string;
+  displayLabel?: string;
+  pageNumbers?: number[];
+  boundingBoxes?: BoundingBoxDto[];
 }
 
 // ---------------------------------------------------------------------------

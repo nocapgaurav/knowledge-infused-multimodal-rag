@@ -10,6 +10,7 @@ backend) is the provider's job, not this module's.
 from pydantic import BaseModel, ConfigDict, Field
 
 from backend.domain import ChunkModality
+from backend.domain.value_objects import BoundingBox
 from backend.generation.models.answer_plan import AnswerPlan
 
 
@@ -43,6 +44,7 @@ class ContextSection(BaseModel):
     knowledge_unit_id: str = Field(min_length=1)
     retrieval_context: str | None = None
     page_numbers: tuple[int, ...] = ()
+    bounding_boxes: tuple[BoundingBox, ...] = ()
     text: str = Field(min_length=1)
     modality: ChunkModality
     section_id: str | None = None

@@ -63,6 +63,16 @@ class PayloadBuilder:
             "source_document_checksum": manifest.source_representation_version,
             "text": chunk.text,
             "retrieval_context": chunk.retrieval_context,
+            "bounding_boxes": [
+                {
+                    "page_number": box.page_number,
+                    "x0": box.x0,
+                    "y0": box.y0,
+                    "x1": box.x1,
+                    "y1": box.y1,
+                }
+                for box in chunk.bounding_boxes
+            ],
             "token_count": chunk.token_count,
             "asset_uri": chunk.asset_uri,
         }

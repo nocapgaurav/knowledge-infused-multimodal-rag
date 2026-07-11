@@ -23,7 +23,7 @@ export function CitationText({
 }: {
   text: string;
   citations: Citation[];
-  onSelectCitation: (knowledgeUnitId: string) => void;
+  onSelectCitation: (citation: Citation) => void;
 }) {
   const tokens = parseCitationLabels(text);
   const citationsByLabel = new Map(citations.map((citation) => [citation.label, citation]));
@@ -44,7 +44,7 @@ export function CitationText({
             key={index}
             type="button"
             className={TYPOGRAPHY.citation}
-            onClick={() => onSelectCitation(citation.knowledgeUnitId)}
+            onClick={() => onSelectCitation(citation)}
             aria-label={`View evidence ${citation.label}${
               citation.displayLabel ? ` (${citation.displayLabel})` : ""
             }`}

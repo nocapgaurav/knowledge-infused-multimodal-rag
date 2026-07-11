@@ -227,3 +227,18 @@ html.dark[data-high-contrast="true"] {
   --border: oklch(0.75 0 0);
   --muted-foreground: oklch(0.85 0 0);
 }
+
+/* Evidence highlighting inside the PDF viewer (Phase 4). Uses the
+   theme's own evidence color so light/dark/high-contrast all inherit
+   the right appearance. */
+.pdf-evidence-mark {
+  background-color: color-mix(in oklch, var(--evidence) 30%, transparent);
+  color: inherit;
+  border-radius: 2px;
+}
+
+.pdf-evidence-region {
+  background-color: color-mix(in oklch, var(--evidence) 14%, transparent);
+  outline: 2px solid color-mix(in oklch, var(--evidence) 65%, transparent);
+  border-radius: 4px;
+}

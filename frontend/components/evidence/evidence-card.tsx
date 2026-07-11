@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { FileText, Table2, Image as ImageIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -30,9 +31,15 @@ export function EvidenceCard({
 }) {
   const Icon = MODALITY_ICON[item.modality];
   const title = item.displayLabel ?? `Passage ${item.label}`;
+  const ref = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (isActive) ref.current?.scrollIntoView({ block: "nearest" });
+  }, [isActive]);
 
   return (
     <button
+      ref={ref}
       type="button"
       onClick={onSelect}
       className={cn(

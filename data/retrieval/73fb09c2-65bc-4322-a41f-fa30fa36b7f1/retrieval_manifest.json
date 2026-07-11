@@ -1,0 +1,18 @@
+{
+  "document_id": "73fb09c2-65bc-4322-a41f-fa30fa36b7f1",
+  "query": "Explain Figure 1.",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "ee230143766e6b5c3e89870baad035eeacbbe3da0184ebacc08392211adc43a0",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 20,
+    "candidates_expanded": 40,
+    "candidates_scored": 60,
+    "evidence_groups": 5,
+    "evidence_items": 12,
+    "duration_ms": 7667.764333076775
+  },
+  "created_at": "2026-07-11T14:42:24.515513Z"
+}

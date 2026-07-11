@@ -113,7 +113,18 @@ export function RelatedContentPanel({ documentId }: { documentId: string }) {
                   isPrimary: false,
                 }}
                 isActive={candidate.knowledge_unit_id === openedEvidenceId}
-                onSelect={() => openEvidence(candidate.knowledge_unit_id)}
+                onSelect={() =>
+                  openEvidence(candidate.knowledge_unit_id, {
+                    text: candidate.text,
+                    displayLabel: candidate.retrieval_context ?? undefined,
+                    pageNumbers: candidate.page_numbers?.length
+                      ? candidate.page_numbers
+                      : undefined,
+                    boundingBoxes: candidate.bounding_boxes?.length
+                      ? candidate.bounding_boxes
+                      : undefined,
+                  })
+                }
               />
             ))}
           </div>

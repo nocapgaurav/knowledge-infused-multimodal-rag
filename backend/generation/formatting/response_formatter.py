@@ -149,6 +149,7 @@ def _uncited_context_item(
         modality=section.modality,
         display_label=section.retrieval_context,
         page_numbers=section.page_numbers,
+        bounding_boxes=section.bounding_boxes,
         relevance=candidate.dense_similarity if candidate is not None else None,
         discovery="Shown to the model as context (not cited in the answer)",
     )
@@ -182,6 +183,7 @@ def _evidence_item(
         modality=section.modality,
         display_label=section.retrieval_context,
         page_numbers=section.page_numbers,
+        bounding_boxes=section.bounding_boxes,
         relevance=relevance,
         discovery=discovery,
     )

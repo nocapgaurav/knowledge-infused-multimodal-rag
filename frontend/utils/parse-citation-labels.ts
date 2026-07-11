@@ -17,8 +17,7 @@
  */
 
 export type CitationToken =
-  | { type: "text"; value: string }
-  | { type: "citation"; label: string; raw: string };
+  { type: "text"; value: string } | { type: "citation"; label: string; raw: string };
 
 const CITATION_PATTERN = /\[([A-Za-z0-9_-]+)\]|[[(]\s*(KU\d+(?:\s*,\s*KU\d+)*)\s*[\])]/g;
 

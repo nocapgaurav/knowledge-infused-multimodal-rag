@@ -40,3 +40,10 @@ Object.defineProperty(globalThis, "localStorage", {
   configurable: true,
   writable: true,
 });
+
+// jsdom implements neither scrollIntoView nor scrolling in general; the
+// app calls it for evidence-card/PDF-highlight synchronization. A no-op
+// shim keeps component behavior testable without faking scroll positions.
+if (!Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = () => {};
+}

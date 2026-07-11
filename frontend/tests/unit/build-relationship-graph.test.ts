@@ -10,6 +10,7 @@ function candidate(overrides: Partial<RetrievalCandidateDto>): RetrievalCandidat
     section_id: null,
     modality: "text",
     retrieval_context: null,
+    bounding_boxes: [],
     page_numbers: [],
     text: "some evidence text",
     asset_uri: null,

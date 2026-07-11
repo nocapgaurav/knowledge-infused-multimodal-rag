@@ -1,0 +1,12 @@
+{
+  "document_id": "a4884667-54af-40d5-b670-de79cba00b8e",
+  "model_name": "BAAI/bge-m3",
+  "model_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "embedding_dimension": 1024,
+  "artifact_version": "1.0",
+  "source_representation_version": "03caeffcaf7114dbf2f88777ec0e7243cf12f85c22e2b1cea3143412d7998076",
+  "embedding_count": 12,
+  "failed_count": 0,
+  "skipped_image_count": 1,
+  "created_at": "2026-07-11T13:56:36.862294Z"
+}

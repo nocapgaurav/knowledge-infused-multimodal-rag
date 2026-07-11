@@ -40,7 +40,14 @@ export function EvidenceList({ documentId }: { documentId: string }) {
             key={item.knowledgeUnitId}
             item={item}
             isActive={item.knowledgeUnitId === openedEvidenceId}
-            onSelect={() => openEvidence(item.knowledgeUnitId)}
+            onSelect={() =>
+              openEvidence(item.knowledgeUnitId, {
+                text: item.text,
+                displayLabel: item.displayLabel,
+                pageNumbers: item.pageNumbers,
+                boundingBoxes: item.boundingBoxes,
+              })
+            }
           />
         ))}
       </div>

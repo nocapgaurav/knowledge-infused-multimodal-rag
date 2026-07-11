@@ -92,6 +92,7 @@ class ContextOptimizer:
                 text=member.candidate.text,
                 retrieval_context=member.candidate.retrieval_context,
                 page_numbers=member.candidate.page_numbers,
+                bounding_boxes=member.candidate.bounding_boxes,
                 modality=member.candidate.modality,
                 section_id=(
                     str(member.candidate.section_id) if member.candidate.section_id else None

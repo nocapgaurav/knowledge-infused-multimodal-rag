@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 import { useAccessibilityStore } from "@/store/accessibility-store";
 import { EMPTY_TURNS, useConversationStore } from "@/store/conversation-store";
 import { useWorkspaceStore } from "@/store/workspace-store";
-import type { ConversationTurn } from "@/types/view-models";
+import type { Citation, ConversationTurn } from "@/types/view-models";
 
 /** Honest, reader-facing phrasing for each evidence status. In particular
  * "unverified_answer" must not read as "the paper lacks this" -- evidence
@@ -61,7 +61,18 @@ export function ConversationPanel({ documentId }: { documentId: string }) {
             <EmptyConversation />
           ) : (
             turns.map((turn) => (
-              <ConversationTurnView key={turn.id} turn={turn} onSelectCitation={openEvidence} />
+              <ConversationTurnView
+                key={turn.id}
+                turn={turn}
+                onSelectCitation={(citation) =>
+                  openEvidence(citation.knowledgeUnitId, {
+                    text: citation.textExcerpt,
+                    displayLabel: citation.displayLabel,
+                    pageNumbers: citation.pageNumbers,
+                    boundingBoxes: citation.boundingBoxes,
+                  })
+                }
+              />
             ))
           )}
         </div>
@@ -86,7 +97,7 @@ function ConversationTurnView({
   onSelectCitation,
 }: {
   turn: ConversationTurn;
-  onSelectCitation: (knowledgeUnitId: string) => void;
+  onSelectCitation: (citation: Citation) => void;
 }) {
   const explicitReducedMotion = useAccessibilityStore((state) => state.reducedMotion);
   const systemReducedMotion = useReducedMotion();

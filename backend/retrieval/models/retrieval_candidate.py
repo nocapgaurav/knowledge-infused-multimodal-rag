@@ -5,6 +5,7 @@ from enum import StrEnum
 from pydantic import BaseModel, ConfigDict, Field
 
 from backend.domain import ChunkId, ChunkModality, PaperId, SectionId
+from backend.domain.value_objects import BoundingBox
 from backend.retrieval.models.graph_path import GraphPath
 
 
@@ -39,6 +40,9 @@ class RetrievalCandidate(BaseModel):
             assigned one -- a deterministic ranking input, never content.
         page_numbers: Source PDF page(s) this chunk's content appears on,
             from its bounding boxes; empty when the parser recorded none.
+        bounding_boxes: Exact location(s) of this chunk's content in the
+            source PDF (top-left origin, PDF points), for evidence
+            highlighting; empty when the parser recorded none.
         asset_uri: Opaque reference to a renderable image asset, if any.
         reading_order: Zero-based position among all chunks in the
             document, in reading order.
@@ -60,6 +64,7 @@ class RetrievalCandidate(BaseModel):
     text: str = Field(min_length=1)
     retrieval_context: str | None = None
     page_numbers: tuple[int, ...] = ()
+    bounding_boxes: tuple[BoundingBox, ...] = ()
     asset_uri: str | None
     reading_order: int = Field(ge=0)
     citation_count: int = Field(ge=0)

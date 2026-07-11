@@ -21,7 +21,9 @@ describe("CitationText", () => {
     const citationButton = screen.getByRole("button", { name: "View evidence KU1" });
     await userEvent.click(citationButton);
 
-    expect(onSelectCitation).toHaveBeenCalledWith("ku-1");
+    expect(onSelectCitation).toHaveBeenCalledWith(
+      expect.objectContaining({ knowledgeUnitId: "ku-1" }),
+    );
   });
 
   it("renders an unresolved citation label as plain text, not a button", () => {

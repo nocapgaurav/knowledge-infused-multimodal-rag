@@ -1,0 +1,18 @@
+{
+  "document_id": "a4884667-54af-40d5-b670-de79cba00b8e",
+  "query": "What are the main results described in this paper?",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "03caeffcaf7114dbf2f88777ec0e7243cf12f85c22e2b1cea3143412d7998076",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 12,
+    "candidates_expanded": 0,
+    "candidates_scored": 12,
+    "evidence_groups": 5,
+    "evidence_items": 5,
+    "duration_ms": 223.89329108409584
+  },
+  "created_at": "2026-07-11T13:56:38.425730Z"
+}

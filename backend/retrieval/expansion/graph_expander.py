@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from uuid import UUID
 
 from backend.domain import ChunkId, ChunkModality, PaperId, SectionId
+from backend.domain.value_objects import BoundingBox
 from backend.retrieval.expansion.relationship_policy import (
     RELATIONSHIP_TYPES,
     directions_for,
@@ -209,6 +210,9 @@ def _to_candidate(point: VectorPoint, graph_path: GraphPath) -> RetrievalCandida
         text=payload["text"],
         retrieval_context=payload.get("retrieval_context"),
         page_numbers=tuple(payload.get("page_numbers") or ()),
+        bounding_boxes=tuple(
+            BoundingBox.model_validate(box) for box in payload.get("bounding_boxes") or ()
+        ),
         asset_uri=payload.get("asset_uri"),
         reading_order=payload["reading_order"],
         citation_count=payload.get("citation_count") or 0,
