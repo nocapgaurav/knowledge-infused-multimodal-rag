@@ -23,10 +23,6 @@ export interface BoundingBoxDto {
   y1: number;
 }
 
-export type DiscoveryMethod = "dense_retrieval" | "graph_expansion";
-
-export type TraversalDirection = "outgoing" | "incoming";
-
 export type AnswerStatus =
   | "sufficient_evidence"
   | "partially_sufficient_evidence"
@@ -85,119 +81,6 @@ export interface BuildGraphResponseDto {
   nodes: number;
   relationships: number;
   status: "GRAPH_CREATED";
-}
-
-// ---------------------------------------------------------------------------
-// Retrieval (Module 9)
-// ---------------------------------------------------------------------------
-
-export interface TraversalHopDto {
-  source_id: string;
-  target_id: string;
-  relationship_type: string;
-  direction: TraversalDirection;
-}
-
-export interface GraphPathDto {
-  hops: TraversalHopDto[];
-}
-
-export interface RetrievalCandidateDto {
-  knowledge_unit_id: string;
-  document_id: string;
-  section_id: string | null;
-  modality: ChunkModality;
-  text: string;
-  /** Structural identity assigned at chunking ("Figure 1", "Abstract",
-   * "Section: ..."), when known. */
-  retrieval_context: string | null;
-  page_numbers: number[];
-  bounding_boxes: BoundingBoxDto[];
-  /** Backend-internal storage path, not a fetchable URL -- see
-   * module12-backend-integration-gaps memory. Never rendered as an <img> src. */
-  asset_uri: string | null;
-  reading_order: number;
-  citation_count: number;
-  dense_similarity: number | null;
-  discovery_method: DiscoveryMethod;
-  graph_path: GraphPathDto;
-}
-
-export interface SignalScoreDto {
-  name: string;
-  raw_value: number;
-  rank: number;
-}
-
-export interface RankingExplanationDto {
-  signals: SignalScoreDto[];
-  fused_score: number;
-  final_rank: number;
-}
-
-export interface ScoredCandidateDto {
-  candidate: RetrievalCandidateDto;
-  ranking: RankingExplanationDto;
-}
-
-export interface EvidenceGroupDto {
-  group_id: string;
-  primary: ScoredCandidateDto;
-  supporting: ScoredCandidateDto[];
-  modalities: ChunkModality[];
-}
-
-export interface RetrievalPhaseTraceDto {
-  phase: string;
-  input_count: number;
-  output_count: number;
-  duration_ms: number;
-  notes: string[];
-}
-
-export interface DroppedCandidateDto {
-  knowledge_unit_id: string;
-  phase: string;
-  reason: string;
-}
-
-export interface RetrievalTraceDto {
-  phases: RetrievalPhaseTraceDto[];
-  dropped: DroppedCandidateDto[];
-}
-
-export interface RetrievalStatisticsDto {
-  candidates_generated: number;
-  candidates_expanded: number;
-  candidates_scored: number;
-  evidence_groups: number;
-  evidence_items: number;
-  duration_ms: number;
-}
-
-export interface RetrievalManifestDto {
-  document_id: string;
-  query: string;
-  retrieval_version: string;
-  retrieval_strategy_version: string;
-  representation_version: string;
-  embedding_version: string;
-  graph_version: string;
-  statistics: RetrievalStatisticsDto;
-  created_at: string;
-}
-
-export interface EvidenceBundleDto {
-  document_id: string;
-  query: string;
-  candidates: RetrievalCandidateDto[];
-  evidence_groups: EvidenceGroupDto[];
-  trace: RetrievalTraceDto;
-  manifest: RetrievalManifestDto;
-}
-
-export interface RetrieveEvidenceRequestDto {
-  query: string;
 }
 
 // ---------------------------------------------------------------------------

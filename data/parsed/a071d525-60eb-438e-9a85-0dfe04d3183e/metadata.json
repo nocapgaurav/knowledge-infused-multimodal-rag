@@ -1,0 +1,14 @@
+{
+  "id": "36918be9-cb16-4900-81fa-75bad0fd00ac",
+  "title": "Knowledge-Infused Multimodal Retrieval for Scientific Papers",
+  "authors": [],
+  "abstract": "This paper presents a knowledge-infused multimodal question answering system for scientific research papers, combining structured parsing, retrieval, and evidence attribution.",
+  "keywords": [],
+  "publication_date": null,
+  "venue": null,
+  "doi": null,
+  "arxiv_id": null,
+  "language": "en",
+  "source_filename": "sample_paper.pdf",
+  "page_count": 2
+}

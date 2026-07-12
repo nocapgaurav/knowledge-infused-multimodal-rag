@@ -16,20 +16,17 @@ interface WorkspaceState {
   openedEvidenceId: string | null;
   /** The selection payload snapshotted when evidence was opened -- how
    * the PDF viewer locates the evidence regardless of which view
-   * (citation, evidence card, related item) initiated the selection.
+   * (citation, evidence card) initiated the selection.
    * `openedEvidenceId` remains the single synchronization key. */
   openedEvidenceTarget: EvidenceTarget | null;
   sidebarOpen: boolean;
-  contextPanelOpen: boolean;
   conversationPanelPercent: number;
-  contextPanelPercent: number;
   lastPdfPageByDocument: Record<string, number>;
 
   selectDocument: (documentId: string | null) => void;
   openEvidence: (knowledgeUnitId: string | null, target?: EvidenceTarget | null) => void;
   toggleSidebar: () => void;
-  toggleContextPanel: () => void;
-  setPanelSizes: (conversationPercent: number, contextPercent: number) => void;
+  setPanelSizes: (conversationPercent: number) => void;
   setLastPdfPage: (documentId: string, page: number) => void;
 }
 
@@ -40,9 +37,7 @@ export const useWorkspaceStore = create<WorkspaceState>()(
       openedEvidenceId: null,
       openedEvidenceTarget: null,
       sidebarOpen: true,
-      contextPanelOpen: true,
       conversationPanelPercent: PANEL_WIDTH.conversationDefaultPercent,
-      contextPanelPercent: PANEL_WIDTH.contextDefaultPercent,
       lastPdfPageByDocument: {},
 
       selectDocument: (documentId) =>
@@ -50,14 +45,34 @@ export const useWorkspaceStore = create<WorkspaceState>()(
       openEvidence: (knowledgeUnitId, target) =>
         set({ openedEvidenceId: knowledgeUnitId, openedEvidenceTarget: target ?? null }),
       toggleSidebar: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
-      toggleContextPanel: () => set((state) => ({ contextPanelOpen: !state.contextPanelOpen })),
-      setPanelSizes: (conversationPercent, contextPercent) =>
-        set({ conversationPanelPercent: conversationPercent, contextPanelPercent: contextPercent }),
+      setPanelSizes: (conversationPercent) =>
+        set({ conversationPanelPercent: conversationPercent }),
       setLastPdfPage: (documentId, page) =>
         set((state) => ({
           lastPdfPageByDocument: { ...state.lastPdfPageByDocument, [documentId]: page },
         })),
     }),
-    { name: "workspace-store" },
+    {
+      name: "workspace-store",
+      // Bumped when the conversation/PDF default changed to an even
+      // 50/50 split: a returning browser's already-persisted
+      // `conversationPanelPercent` (saved under the old default) must
+      // not silently keep overriding the new one forever. Dropping the
+      // key here -- rather than migrating its value -- lets the fresh
+      // default from the store's initial state take over exactly once;
+      // a genuine resize made after this point persists normally, same
+      // as before.
+      version: 1,
+      migrate: (persistedState, version) => {
+        const state = { ...(persistedState as Record<string, unknown>) };
+        if (version < 1) {
+          delete state.conversationPanelPercent;
+          // Dead keys from the now-removed related-content panel.
+          delete state.contextPanelPercent;
+          delete state.contextPanelOpen;
+        }
+        return state;
+      },
+    },
   ),
 );

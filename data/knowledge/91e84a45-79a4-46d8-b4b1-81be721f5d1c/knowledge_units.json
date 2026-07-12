@@ -1,0 +1,2632 @@
+{
+  "document_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+  "count": 97,
+  "chunks": [
+    {
+      "id": "77146742-6d9e-4b6e-86ac-18aa0adc833b",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": null,
+      "order": 0,
+      "modality": "text",
+      "text": "Effective Medical Writing",
+      "retrieval_context": "Title of this paper",
+      "asset_uri": null,
+      "token_count": 3,
+      "source_element_ids": [
+        "f8ae1c4c-c86a-440d-8a17-122183fc88d0"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "53081798-5dd6-4e26-af7d-40d6c72c5758",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": null,
+      "order": 1,
+      "modality": "text",
+      "text": "Illustrations (also known as figures) are visual representations of the results obtained from a scientific study. Graphs are a common type of illustration that are often used in scientific papers to present information clearly and effectively, as well as to demonstrate relationships between variables in  the  data.    Graphs  also  serve  to reveal trends or patterns in the data. This article provides some basic guidelines to assist authors in preparing effective graphs for their papers.\n\nKeywords: figures, graphs, illustrations, medical writing, scientific paper\n\nSingapore Med J 2009; 50(3): 245-249",
+      "retrieval_context": "Abstract",
+      "asset_uri": null,
+      "token_count": 88,
+      "source_element_ids": [
+        "f8ae1c4c-c86a-440d-8a17-122183fc88d0"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "75c1184f-b401-4d45-8ea3-ad8c9f255ad0",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": null,
+      "order": 2,
+      "modality": "figure",
+      "text": "Untitled figure",
+      "retrieval_context": "Figure",
+      "asset_uri": "figures/067399e4-b16f-43fb-bf2b-9cc9acd81bfa.png",
+      "token_count": null,
+      "source_element_ids": [
+        "067399e4-b16f-43fb-bf2b-9cc9acd81bfa"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 84.33423614501953,
+          "y0": 44.635887145996094,
+          "x1": 178.40750122070312,
+          "y1": 61.0022087097168
+        }
+      ]
+    },
+    {
+      "id": "e38be292-56b9-42c3-9933-9adc7fe9ccab",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": null,
+      "order": 3,
+      "modality": "text",
+      "text": "Pointers to getting your article published",
+      "retrieval_context": null,
+      "asset_uri": null,
+      "token_count": 6,
+      "source_element_ids": [
+        "74feea21-f22d-4b27-8b8d-c20019435d42"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 177.0591,
+          "y0": 120.92320000000007,
+          "x1": 417.91409999999985,
+          "y1": 135.8554188905547
+        }
+      ]
+    },
+    {
+      "id": "3c2add50-c2b1-45b5-bb5b-9b692baadfae",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": null,
+      "order": 4,
+      "modality": "text",
+      "text": "Ng K H, Peh W C G",
+      "retrieval_context": null,
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "fa31dc3e-9739-4d47-a7fb-43169312756e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 252.0444,
+          "y0": 158.71039999999994,
+          "x1": 343.27439999999984,
+          "y1": 167.21888223896667
+        }
+      ]
+    },
+    {
+      "id": "1e850faf-10d5-466f-9c73-6f40db47b8bf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "64efae01-8908-4a4e-8338-aedc21591c13",
+      "order": 5,
+      "modality": "text",
+      "text": "Illustrations (also known  as  figures) are visual representations of the results obtained from a scientific study. There are basically two types of illustrations that are used in scientific papers - graphs and pictorial images such as photographs/images/diagrams. Graphs are the most common type of illustration and will be discussed in this article. The other types of illustrations will be discussed in the next article.",
+      "retrieval_context": "Section: INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 64,
+      "source_element_ids": [
+        "9fb5200f-6206-4f89-bd72-812d360bf62e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 490.1184,
+          "x1": 294.36140000000034,
+          "y1": 590.5970889375684
+        }
+      ]
+    },
+    {
+      "id": "331f4810-a2c5-43cd-bfe7-da8cda2e5963",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "64efae01-8908-4a4e-8338-aedc21591c13",
+      "order": 6,
+      "modality": "text",
+      "text": "On the whole, illustrations provide visual impact and are often the best way to communicate the main findings of a study. They are traditionally used to display trends and group results, but can also be used to communicate processes  or  to  display  detailed  data  in  a  simple  yet effective manner.",
+      "retrieval_context": "Section: INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 50,
+      "source_element_ids": [
+        "84e32281-6031-405f-811d-c202ed8103c7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 596.5183999999999,
+          "x1": 294.1454000000003,
+          "y1": 670.3970889375685
+        }
+      ]
+    },
+    {
+      "id": "93834f21-9e18-48ad-a64b-b01cd310949a",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "64efae01-8908-4a4e-8338-aedc21591c13",
+      "order": 7,
+      "modality": "text",
+      "text": "The purpose of graphs is to present data that is too numerous or complicated to be described adequately in the text and/or to reveal trends or patterns in the data. Graphs (as well as tables) can be critical to achieving a better understanding of the results of a study. Readers who go beyond the  abstract  of  a  paper  are  likely  to examine the graphs (and tables) next.",
+      "retrieval_context": "Section: INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 67,
+      "source_element_ids": [
+        "81f33f1e-ff3c-4aed-be93-c438839e3ba7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 85.0394,
+          "y0": 676.3184,
+          "x1": 294.3164000000001,
+          "y1": 763.4970889375685
+        }
+      ]
+    },
+    {
+      "id": "e1f97b0c-fc7f-4b39-88c3-a7d5a145f3ae",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "7586f9e0-92e1-4ebc-b5f7-ef2d83f8ca95",
+      "order": 8,
+      "modality": "text",
+      "text": "Authors are often faced with the dilemma of whether to present data in a table or in a graph. One rule of thumb that can help us decide whether the data is best presented within  the  text  or  in  a  table  or  graph  is:  if  the  data shows pronounced trends, paints an interesting picture or reveals relations between variables in the data, then a graph should be used. If the data fails to show any exciting trend in the evidence, then a graph is clearly not the data presentation format of choice.",
+      "retrieval_context": "Section: GENERAL GUIDELINES FOR PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 92,
+      "source_element_ids": [
+        "00448b2a-0eaa-4da4-91af-6e13890a66fd"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 291.00340000000006,
+          "x1": 512.5211000000008,
+          "y1": 404.7820889375684
+        }
+      ]
+    },
+    {
+      "id": "145e8f2d-d3a1-41d4-9221-0718fa27b5fd",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "7586f9e0-92e1-4ebc-b5f7-ef2d83f8ca95",
+      "order": 9,
+      "modality": "text",
+      "text": "Organise the figures in such a manner that they tell a story. Be sure that all figures are cited within the text of the paper. Limit the number of illustrations to include only those that provide essential information that cannot adequately be described in the text. Number each figure in the order in which they are referred to in the text. Note that figures and tables should be numbered separately.",
+      "retrieval_context": "Section: GENERAL GUIDELINES FOR PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 70,
+      "source_element_ids": [
+        "1156c31e-036e-4495-a8ef-285daa1f9989"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 410.7034,
+          "x1": 512.4941000000001,
+          "y1": 497.8820889375684
+        }
+      ]
+    },
+    {
+      "id": "b20f66dc-f094-4d2e-b05a-c9462491b094",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "7586f9e0-92e1-4ebc-b5f7-ef2d83f8ca95",
+      "order": 10,
+      "modality": "text",
+      "text": "Typically, when submitting a paper for consideration for  publication,  figures  are  placed  on  separate  pages following  the  reference  section;  the  author  should confirm this by checking the instructions to authors of the target journal. Generally, most journals require the figure legend and the figure to appear on the same page, with  each  figure  labelled  numerically  in  consecutive order and presented on a separate page.",
+      "retrieval_context": "Section: GENERAL GUIDELINES FOR PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 64,
+      "source_element_ids": [
+        "d7547710-3fec-4630-b446-a28c17e2c3d7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 503.8034,
+          "x1": 512.4941000000007,
+          "y1": 604.2820889375685
+        }
+      ]
+    },
+    {
+      "id": "4888a510-067a-4a94-9317-68a44aad96d1",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bf99f6cb-8605-4854-a8e5-7177309c9ad2",
+      "order": 11,
+      "modality": "text",
+      "text": "Show trends and patterns in the data.",
+      "retrieval_context": "Section: Box 1. When to present data in graphs:",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "4c483d13-73ef-478d-ad0f-788aa83f28c5"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 636.8034,
+          "x1": 454.90310000000017,
+          "y1": 644.1820889375684
+        }
+      ]
+    },
+    {
+      "id": "94b90c4d-e3c8-4d5b-87f5-cda6ebd766f9",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bf99f6cb-8605-4854-a8e5-7177309c9ad2",
+      "order": 12,
+      "modality": "text",
+      "text": "Paint an interesting picture and make a visual impact.",
+      "retrieval_context": "Section: Box 1. When to present data in graphs:",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "9571ecf8-406e-4b5b-9ab2-d5b474727853"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 650.1034,
+          "x1": 491.30809999999997,
+          "y1": 670.7820889375685
+        }
+      ]
+    },
+    {
+      "id": "6d108c31-8cc0-4ebb-9c92-060c28ebd571",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bf99f6cb-8605-4854-a8e5-7177309c9ad2",
+      "order": 13,
+      "modality": "text",
+      "text": "Reveal relations between variables in the data.",
+      "retrieval_context": "Section: Box 1. When to present data in graphs:",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "43666f94-2db2-4731-9574-c51140f9eb05"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 676.7034,
+          "x1": 490.8851000000003,
+          "y1": 684.0820889375684
+        }
+      ]
+    },
+    {
+      "id": "1e2b551e-3e24-4c56-90c8-d6c0530ee628",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 14,
+      "modality": "text",
+      "text": "Biomedical Imaging and Interventional Journal,",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "5bdf7768-174b-416b-a5a0-ab34b99b1db6"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 541.9424999999999,
+          "x1": 580.5782,
+          "y1": 563.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "cf6db423-27dc-4d47-b247-5c99087df02c",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 15,
+      "modality": "text",
+      "text": "c/o Department of Biomedical Imaging, University of Malaya, Kuala Lumpur 50603, Malaysia",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 12,
+      "source_element_ids": [
+        "20371caf-2716-42db-98bb-574eec588b7a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 565.9424999999999,
+          "x1": 584.9322000000002,
+          "y1": 603.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "6f07cacc-4f41-45a4-a1fe-ad6b7086dae2",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 16,
+      "modality": "text",
+      "text": "Ng KH, PhD, MIPEM, DABMP Editor",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 6,
+      "source_element_ids": [
+        "8b3524fd-0fa7-420f-a00c-41a9eefdf988"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 613.9425,
+          "x1": 585.0441999999999,
+          "y1": 635.6814802847755
+        }
+      ]
+    },
+    {
+      "id": "a82242d1-7b5c-4926-ad04-03479f2cfeab",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 17,
+      "modality": "text",
+      "text": "Singapore Medical Journal, 2 College Road, Singapore 169850",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "0fc2826c-c64d-46b8-9eee-e62fd9591bf6"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 645.9425,
+          "x1": 576.5602,
+          "y1": 675.7323127053669
+        }
+      ]
+    },
+    {
+      "id": "92d9d284-ebb6-4b36-9819-f24610bb8927",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 18,
+      "modality": "text",
+      "text": "Peh WCG, MD, FRCP, FRCR Editor",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 6,
+      "source_element_ids": [
+        "0641496b-943d-4b01-bd1d-a33f8800a7d1"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 685.9425,
+          "x1": 585.3241999999999,
+          "y1": 707.6814802847755
+        }
+      ]
+    },
+    {
+      "id": "80e001ce-9716-4846-9d13-2398e1ae8ff3",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "07609e29-5ae3-4828-b36b-4ce2bb6bec30",
+      "order": 19,
+      "modality": "text",
+      "text": "While  there  are  sophisticated  computer  programmes available to assist with plotting graphs, it is still important for authors to pay attention to the principles of producing effective and  informative graphs. The  most  basic",
+      "retrieval_context": "Section: PREPARING GRAPHS",
+      "asset_uri": null,
+      "token_count": 33,
+      "source_element_ids": [
+        "0453a20c-8f0e-4e6a-8bc5-469fd5e6bb50"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 303.3071,
+          "y0": 716.6034,
+          "x1": 512.5031000000006,
+          "y1": 763.8820889375685
+        }
+      ]
+    },
+    {
+      "id": "c2b7d3e0-652f-4669-8bbf-801864f73981",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "8dbde29a-bb7b-4e23-81f3-ad784411a2ac",
+      "order": 20,
+      "modality": "text",
+      "text": "Prof Ng Kwan Hoong Tel: (60) 3 7949 2069 Fax: (60) 3 7949 4603 Email: dwlng@tm. net.my requirement for a graph is clarity. Therefore, authors need to ensure that the size of the letters and symbols are chosen carefully so that the final version of the graph printed in the journal is clear and readable. The size consideration is important to withstand photographic reduction.",
+      "retrieval_context": "Section: Correspondence to:",
+      "asset_uri": null,
+      "token_count": 64,
+      "source_element_ids": [
+        "41051055-630f-4b05-a14f-d426c13f001d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 518.7402,
+          "y0": 725.9425,
+          "x1": 581.3482,
+          "y1": 763.6814802847755
+        },
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 85.31280000000004,
+          "x1": 294.2354000000005,
+          "y1": 145.8914889375684
+        }
+      ]
+    },
+    {
+      "id": "5393e5ac-5a57-4568-a571-4c97146fb6c8",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "8dbde29a-bb7b-4e23-81f3-ad784411a2ac",
+      "order": 21,
+      "modality": "text",
+      "text": "If two or more graphs are related, then it is common practice to combine them into a composite graph. Not only does this save space, but it also provides readers with a better picture that allows viewing of the related parts in one location. Do not extend the abscissa  (x-axis) or the ordinate (y-axis) beyond the data that is presented in a graph. For example, if the data points range from 0 to 75, the maximum index number should be 80, and the data points should be 0, 20, 40, 60 and 80. Avoid the tendency to extend the graph to 100. Although this may sound like a nice round number, it will result in empty white space in the upper part of the graph, and the important data will only occupy the lower part instead of the whole graph.",
+      "retrieval_context": "Section: Correspondence to:",
+      "asset_uri": null,
+      "token_count": 140,
+      "source_element_ids": [
+        "61631d5e-d734-45e8-8505-fb97875e539d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 151.81280000000004,
+          "x1": 294.2624,
+          "y1": 318.7913889375684
+        }
+      ]
+    },
+    {
+      "id": "589ff44b-877f-4905-a3f2-f4f336a72f7d",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "8dbde29a-bb7b-4e23-81f3-ad784411a2ac",
+      "order": 22,
+      "modality": "text",
+      "text": "Use standard symbols for graphs. Some common ones  include  open  and  closed  circles,  triangles  and squares ( \u25cf , \u25b2 , \u25a0 , \u25cf , \u25b2 , \u25a0 ). If the graph has one curve, use open circles for the reference points; if it has two, use open triangles for the second curve, etc.",
+      "retrieval_context": "Section: Correspondence to:",
+      "asset_uri": null,
+      "token_count": 54,
+      "source_element_ids": [
+        "802e75c2-15ba-4fb3-a084-e0aaac6271fd"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 324.7128,
+          "x1": 294.28940000000046,
+          "y1": 385.29148893756843
+        }
+      ]
+    },
+    {
+      "id": "856c8b82-028c-43df-a852-b7108b86c334",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "8dbde29a-bb7b-4e23-81f3-ad784411a2ac",
+      "order": 23,
+      "modality": "text",
+      "text": "Graphs  are  usually  plotted  in  black  on  a  white background, using the same font type and size as the text. It is extremely expensive to publish in colour, so this  should  only  be  used  when  it  highlights  unique information or when it cannot be clearly presented in black and white.",
+      "retrieval_context": "Section: Correspondence to:",
+      "asset_uri": null,
+      "token_count": 50,
+      "source_element_ids": [
+        "832c55b1-45ee-47a3-9fc0-2942efabea26"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 391.2128,
+          "x1": 294.27140000000037,
+          "y1": 465.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "d601e025-ce3f-4e7b-b4d8-71d006878137",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "0327206e-7676-4e31-b16c-2dfc6f0d4dd5",
+      "order": 24,
+      "modality": "text",
+      "text": "Choose the correct graph type based on the kind of data to be presented: (1) if independent and dependent variables are numeric, then use line diagrams or scattergrams; (2) if only the dependent variable is numeric, then use bar graphs; (3) for proportions, use bar graphs or pie charts. Some of the common graph types are shown in Appendix 1. Other types of graphs include: frequency polygon, age pyramid, survival curve, and receiver operator characteristic (ROC) curve.",
+      "retrieval_context": "Section: CHOOSING THE CORRECT GRAPH  TYPE",
+      "asset_uri": null,
+      "token_count": 77,
+      "source_element_ids": [
+        "8a29c8af-ebf2-40c8-ad01-b7d8d87dae74"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 497.6128,
+          "x1": 294.3614000000005,
+          "y1": 611.3914889375684
+        }
+      ]
+    },
+    {
+      "id": "0aa2f642-8ca0-4ba5-8403-58831bde2c8e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "94159f64-8fce-4e56-9161-2f91fe61bc50",
+      "order": 25,
+      "modality": "text",
+      "text": "legend should be placed at the bottom of each graph. Examples of graph legends that appeared in recent issues of the Singapore Medical Journal are:",
+      "retrieval_context": "Section: PROVIDING LEGENDS",
+      "asset_uri": null,
+      "token_count": 25,
+      "source_element_ids": [
+        "06aa3e5b-6d00-4437-88e2-67dfd9c749c5"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 85.31280000000004,
+          "x1": 512.4041000000009,
+          "y1": 119.2913889375684
+        }
+      ]
+    },
+    {
+      "id": "df9cf815-8950-44ef-adc7-b63bfef7b4eb",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "94159f64-8fce-4e56-9161-2f91fe61bc50",
+      "order": 26,
+      "modality": "text",
+      "text": "Bar chart shows the combined usage data of key antibiotic classes in local public hospitals according to defined daily dose per 1,000 patient-days.",
+      "retrieval_context": "Section: PROVIDING LEGENDS",
+      "asset_uri": null,
+      "token_count": 23,
+      "source_element_ids": [
+        "520f595c-fa2e-4c1a-acee-1c28f81ec96f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 125.21280000000002,
+          "x1": 511.2341,
+          "y1": 159.19148893756847
+        }
+      ]
+    },
+    {
+      "id": "f0ba6c72-e185-49ae-b028-2c3dc7b874a4",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "94159f64-8fce-4e56-9161-2f91fe61bc50",
+      "order": 27,
+      "modality": "text",
+      "text": "Graph shows the incidence of cleft deformities in relation to the number of live births during the period 1993-2002.",
+      "retrieval_context": "Section: PROVIDING LEGENDS",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "24851326-c40b-4c12-968d-341858205629"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 165.1128,
+          "x1": 511.5131,
+          "y1": 199.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "f29c4bc9-fd0b-4179-b881-7f5bd1a9e425",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "94159f64-8fce-4e56-9161-2f91fe61bc50",
+      "order": 28,
+      "modality": "text",
+      "text": "Do not simply restate the axis labels with a 'versus' written  in  between,  for  example,  'Graph  shows temperature  vs. time'. Instead,  label  each  axis  with the relevant unit of measurement (where applicable), and clearly identify the data by labelling each line in a graph. Figures should be of high image quality. Check the journal's instructions to authors on which image file format the journal requires.",
+      "retrieval_context": "Section: PROVIDING LEGENDS",
+      "asset_uri": null,
+      "token_count": 65,
+      "source_element_ids": [
+        "75ec66eb-f6b2-484d-863d-0d4a0ca1dd77"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 205.01279999999997,
+          "x1": 512.5211000000011,
+          "y1": 305.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "bc614b97-7632-4605-9056-c8c621856678",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "94159f64-8fce-4e56-9161-2f91fe61bc50",
+      "order": 29,
+      "modality": "text",
+      "text": "Provide a clear, descriptive legend for each graph. Like the title of the paper itself, each legend should concisely convey as much information as possible about what the graph tells the reader. However, a legend should not provide a summary or interpretation of the results or experimental details. A",
+      "retrieval_context": "Section: PROVIDING LEGENDS",
+      "asset_uri": null,
+      "token_count": 49,
+      "source_element_ids": [
+        "d6c4e422-7181-40cf-ad12-957c12946601"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 85.0394,
+          "y0": 643.9127,
+          "x1": 294.1813999999997,
+          "y1": 704.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "e53fe989-e66a-432c-a041-1ff5f70ae1bf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 30,
+      "modality": "text",
+      "text": "Information in the text is duplicated in graphs, or information in graphs is duplicated in tables.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 16,
+      "source_element_ids": [
+        "ea2a6373-c8f2-48e8-bdff-da4a81b9f566"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 338.0128,
+          "x1": 511.3601,
+          "y1": 358.6914889375684
+        }
+      ]
+    },
+    {
+      "id": "684e5b5b-f4b5-4289-937b-aa5674e8ff8b",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 31,
+      "modality": "text",
+      "text": "The graph does not have proper legends.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "15164885-39d6-4225-ac4a-30fd89e61c1b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 364.6128,
+          "x1": 464.0651000000005,
+          "y1": 371.9914889375684
+        }
+      ]
+    },
+    {
+      "id": "8d150ee6-e5ee-4f10-a7d0-760d2b32a0dd",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 32,
+      "modality": "text",
+      "text": "The wrong type of graph is chosen to represent the data.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "c0c8a4e9-5d38-4cd0-8a40-1dcb626dd1a0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 377.9128,
+          "x1": 512.1071,
+          "y1": 398.59148893756844
+        }
+      ]
+    },
+    {
+      "id": "d42fd241-c1fd-425b-8033-3113c8ccd288",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 33,
+      "modality": "text",
+      "text": "The graph is not plotted to scale. Data is not labelled, is inconsistent, interrupted, or exaggerated to produce the desired effect.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 21,
+      "source_element_ids": [
+        "6850f30f-4925-4903-b59d-f8bef7313d23"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 404.5128,
+          "x1": 512.4851,
+          "y1": 438.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "a1c4d70b-2fd3-4412-b4c9-abcc74e23f7f",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 34,
+      "modality": "text",
+      "text": "The source of previously-published data is not credited.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "18930311-8173-4f10-83b3-ba938a16bfcb"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 444.4128,
+          "x1": 512.3590999999992,
+          "y1": 451.79148893756843
+        }
+      ]
+    },
+    {
+      "id": "5bb0181f-4ab1-426a-bbf6-78b3df5794d3",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "5134af39-9b39-4b59-8755-b8a4d71ca295",
+      "order": 35,
+      "modality": "text",
+      "text": "The misuse of pseudo three-dimensional graphs.",
+      "retrieval_context": "Section: Box 2. Common errors:",
+      "asset_uri": null,
+      "token_count": 6,
+      "source_element_ids": [
+        "7800ccc3-004d-4ebe-97ba-dd9280ccf950"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 457.7128,
+          "x1": 490.38110000000063,
+          "y1": 465.09148893756844
+        }
+      ]
+    },
+    {
+      "id": "df9d320f-2354-4d71-8b3b-a425c53c473e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "d71e992b-a54a-474d-8a93-cf5084debae9",
+      "order": 36,
+      "modality": "text",
+      "text": "Graphs are helpful tools for improving the readability of a scientific paper as they present data in a clear and effective manner. They make a visual impact and can be used to reveal trends or patterns in the data. Authors should decide which types are most suitable for publication before designing clear and effective graphs following the guidelines outlined in this article.",
+      "retrieval_context": "Section: SUMMARY",
+      "asset_uri": null,
+      "token_count": 62,
+      "source_element_ids": [
+        "4cbcdac3-9761-4da6-ba02-bf4132b6888a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 497.6128,
+          "x1": 512.5930999999999,
+          "y1": 584.7914889375684
+        }
+      ]
+    },
+    {
+      "id": "3b2debab-65a2-4ee3-bb79-5e401c5adac6",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "ee157e0e-29ae-43d4-8d4d-e00eff81f630",
+      "order": 37,
+      "modality": "text",
+      "text": "Prepare the results and data of the study before drafting the graphs.",
+      "retrieval_context": "Section: Box 3. Take home points:",
+      "asset_uri": null,
+      "token_count": 12,
+      "source_element_ids": [
+        "40463bd3-b900-48a8-b04b-e4cc68ffd4bb"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 617.3127999999999,
+          "x1": 487.5911,
+          "y1": 637.9914889375684
+        }
+      ]
+    },
+    {
+      "id": "bdf11dd8-b769-41d7-bcf3-5f5a7c153898",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "ee157e0e-29ae-43d4-8d4d-e00eff81f630",
+      "order": 38,
+      "modality": "text",
+      "text": "The flow of the graphs should tell a logical story.",
+      "retrieval_context": "Section: Box 3. Take home points:",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "d2e525b5-0ade-428f-8065-9a8d84f4d28f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 643.9127,
+          "x1": 490.3991000000008,
+          "y1": 651.2913889375684
+        }
+      ]
+    },
+    {
+      "id": "68675ed3-dd55-40ed-9203-08341d64a6b8",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "ee157e0e-29ae-43d4-8d4d-e00eff81f630",
+      "order": 39,
+      "modality": "text",
+      "text": "Choose the appropriate graph type to match the study data.",
+      "retrieval_context": "Section: Box 3. Take home points:",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "0f39bbb9-8bfa-49fb-8578-3d4c4c3186ea"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 657.2128,
+          "x1": 489.8501,
+          "y1": 677.8914889375684
+        }
+      ]
+    },
+    {
+      "id": "195d6990-4e69-464e-94bc-36cde11d72fb",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "ee157e0e-29ae-43d4-8d4d-e00eff81f630",
+      "order": 40,
+      "modality": "text",
+      "text": "Design, provide legends and label the graphs carefully so that they are clear and easy to understand.",
+      "retrieval_context": "Section: Box 3. Take home points:",
+      "asset_uri": null,
+      "token_count": 17,
+      "source_element_ids": [
+        "4f9e8959-231c-4bf8-8890-5d9f0c141b59"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 303.3071,
+          "y0": 683.8127999999999,
+          "x1": 509.2541000000007,
+          "y1": 704.4914889375684
+        }
+      ]
+    },
+    {
+      "id": "dfc5035d-1b99-4631-bd96-f43cb76c5fcf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 41,
+      "modality": "text",
+      "text": "Type Purpose Example",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 3,
+      "source_element_ids": [
+        "e7daf30f-ff77-4cad-81bf-917f84e32cd9",
+        "83cc1a4c-80ee-443b-87d9-cfb4b9ad4435"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 87.73659999999995,
+          "x1": 61.32899999999999,
+          "y1": 94.57007530186604
+        },
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 87.73659999999995,
+          "x1": 142.737,
+          "y1": 94.57007530186604
+        },
+        {
+          "page_number": 3,
+          "x0": 303.937,
+          "y0": 87.73659999999995,
+          "x1": 331.105,
+          "y1": 94.57007530186604
+        }
+      ]
+    },
+    {
+      "id": "67e2839e-7c12-4998-8b66-ac7abca60980",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 42,
+      "modality": "figure",
+      "text": "Fig. 1 Scattergram\tshows\tthe\trelationship\tbetween\tthe\tend-tidal and\tarterial\tcarbon\tdioxide.",
+      "retrieval_context": "Figure 1",
+      "asset_uri": "figures/a1a1556e-261c-40c8-902c-d657441422ee.png",
+      "token_count": null,
+      "source_element_ids": [
+        "a1a1556e-261c-40c8-902c-d657441422ee",
+        "4311eb9a-1566-4387-8b22-50d690aa6dbf"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 302.1810607910156,
+          "y0": 120.02479553222656,
+          "x1": 510.5022888183594,
+          "y1": 275.10382080078125
+        }
+      ]
+    },
+    {
+      "id": "0d9b8543-09e3-4601-803c-23d69b713c4e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 43,
+      "modality": "text",
+      "text": "Scattergram It\tis\tused\tto\tpresent\tmeasurements\ton\ttwo\tor\tmore variables\tthat\tare\trelated;\tthe\tvalues\tof\tthe\tvariables on\tthe\ty-axis\tare\tdependent\ton\tthe\tvalues\tof\tthe variable\tplotted\talong\tthe\tx-axis.",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 35,
+      "source_element_ids": [
+        "c7cdcd5d-a04a-4482-ba47-3956ecc59cc6",
+        "0cd1d891-012f-4554-87e8-7305395e9f18"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 121.64909999999998,
+          "x1": 85.68100000000004,
+          "y1": 128.48257530186606
+        },
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 121.64909999999998,
+          "x1": 288.169,
+          "y1": 157.28257530186602
+        }
+      ]
+    },
+    {
+      "id": "05b677ab-062c-4b46-a778-b96a2c346afd",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 44,
+      "modality": "text",
+      "text": "n\t=\t133;\tr\t=\t0.73;\tp\t<\t0.001",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "1127e498-b703-4c80-8156-8773381c11c0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.5571,
+          "y0": 299.13059999999996,
+          "x1": 391.9411,
+          "y1": 305.96407530186605
+        }
+      ]
+    },
+    {
+      "id": "fe30de8c-7df2-4e22-85e5-851fadc49d23",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 45,
+      "modality": "figure",
+      "text": "Fig.  2 Graph\t shows\t the\t hourly\t frequencies\t of\t out-of-hospital cardiac\tarrest\tpatients\tin\ta\t24-hour\tcycle.",
+      "retrieval_context": "Figure 2",
+      "asset_uri": "figures/75af540e-ddea-4f24-9aa5-34cbcc747747.png",
+      "token_count": null,
+      "source_element_ids": [
+        "75af540e-ddea-4f24-9aa5-34cbcc747747",
+        "d63cba8c-8ea2-4bee-8601-b29ab6b4a87e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 301.7376403808594,
+          "y0": 350.0350341796875,
+          "x1": 510.4855041503906,
+          "y1": 505.5221252441406
+        }
+      ]
+    },
+    {
+      "id": "357efd31-4175-4c10-ba22-8e262e60af50",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 46,
+      "modality": "text",
+      "text": "Line\tgraph It\tis\tsimilar\tin\tsome\tways\tto\tthe\tscattergram,\twith the\tcondition\tthat\tthe\tvalues\tof\tthe\tx\tvariable\thave their\town\tsequence. Those\tvalues\trepresent\ta continuous\tvariable,\tsuch\tas\ttime,\ttemperature\tor pressure. It\tmay\tdisplay\tseveral\tdependent\tvariables on\tthe\tsame\tgraph.",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 47,
+      "source_element_ids": [
+        "9eb8b266-bc2b-4dce-a5e0-1de9a56ba91b",
+        "2963ea3d-c209-45cb-9d84-3c4b21bd9330"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 353.6386,
+          "x1": 80.20900000000002,
+          "y1": 360.4720753018661
+        },
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 353.6386,
+          "x1": 288.25699999999995,
+          "y1": 408.4720753018661
+        }
+      ]
+    },
+    {
+      "id": "beb65cd4-d7df-4e9e-8232-15239c5a0ed0",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 47,
+      "modality": "figure",
+      "text": "Fig.  3 Bar\t chart\t shows\t the\t glutathione-S-transferase\t (GST) levels\t(mean\t\u00b1\tSD).",
+      "retrieval_context": "Figure 3",
+      "asset_uri": "figures/37257b62-5109-45d7-8193-7bffa4d44617.png",
+      "token_count": null,
+      "source_element_ids": [
+        "37257b62-5109-45d7-8193-7bffa4d44617",
+        "c287b836-8510-4ed5-b529-54b84150131f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 301.44769287109375,
+          "y0": 566.7427978515625,
+          "x1": 511.36859130859375,
+          "y1": 721.7432861328125
+        }
+      ]
+    },
+    {
+      "id": "d96de95f-36d5-4ea6-b430-747ec178d294",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 48,
+      "modality": "text",
+      "text": "Bar\tgraph (also\tknown\tas bar\tchart)",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "7537fe64-f5fb-43b6-884f-fc2c3680024f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 43.937,
+          "y0": 570.2992999999999,
+          "x1": 95.953,
+          "y1": 596.332775301866
+        }
+      ]
+    },
+    {
+      "id": "944aedfd-6cc1-425a-a472-6b14bdae2200",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 49,
+      "modality": "text",
+      "text": "It\tmay\teither\tbe\thorizontal\tor\tvertical\t(column graph). An\timportant\tpoint\tabout\tbar\tgraphs\tis\tthe length\tof\tthe\tbars:\tthe\tgreater\tthe\tlength,\tthe greater\tthe\tvalue. It\tis\tused\tfor\tdiscrete,\tgrouped data\tof\tordinal\tor\tnominal\tscale.",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 41,
+      "source_element_ids": [
+        "9cbc54ea-7659-4e2b-a20d-a18e8dc2d700"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 113.937,
+          "y0": 570.2992999999999,
+          "x1": 288.169,
+          "y1": 615.5327753018661
+        }
+      ]
+    },
+    {
+      "id": "ce390e00-41d7-401c-a2c6-cd398dd16415",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 50,
+      "modality": "text",
+      "text": "*\tp\t<\t0.05\twhen\tcompared\tto\tthe\tGroup\tE\tlevel",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "59d34238-49dc-43be-9876-8482b555e21c"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 745.1685,
+          "x1": 458.5870999999999,
+          "y1": 752.0019753018661
+        }
+      ]
+    },
+    {
+      "id": "f7cf48fc-8f86-44a4-9872-2cb4a50928b3",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 51,
+      "modality": "text",
+      "text": "\u2020 \tp\t<\t0.05\twhen\tcompared\tto\tthe\tpreoperative\tlevel",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "b7b7410f-09e0-4544-a2ae-6f2317f685e9"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 303.3071,
+          "y0": 754.379652,
+          "x1": 471.27239999999983,
+          "y1": 761.6019753018661
+        }
+      ]
+    },
+    {
+      "id": "52a96040-1638-4754-8724-7a55aa5ca14c",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 52,
+      "modality": "figure",
+      "text": "Untitled figure",
+      "retrieval_context": "Figure",
+      "asset_uri": "figures/460537a9-f5e1-482e-9985-d273aa91df29.png",
+      "token_count": null,
+      "source_element_ids": [
+        "460537a9-f5e1-482e-9985-d273aa91df29"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 302.21160888671875,
+          "y0": 83.58831024169922,
+          "x1": 510.2732238769531,
+          "y1": 239.03671264648438
+        }
+      ]
+    },
+    {
+      "id": "38e37f2a-d252-428d-8e77-d6bf40779fd2",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 53,
+      "modality": "text",
+      "text": "Histogram It\tis\ta\tspecialised\ttype\tof\tbar\tgraph\tthat\tresembles a\tcolumn\tgraph\tbut\tthere\tare\tno\tgaps\tbetween the\tcolumns. It\tis\tused\tto\trepresent\tdata\tfrom\tthe measurement\tof\ta\tcontinuous\tvariable. Individual data\tpoints\tare\tgrouped\ttogether\tin\tclasses\tto show\tthe\tfrequency\tof\tdata\tin\teach\tclass. The frequency\tis\tmeasured\tby\tthe\tarea\tof\tthe\tcolumn.",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 62,
+      "source_element_ids": [
+        "5b449357-a0e9-4a63-8260-55c8670256f8",
+        "1f3e6df1-2072-45d0-b86e-02fa2ed457c0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.5433,
+          "y0": 85.60199999999998,
+          "x1": 86.5513,
+          "y1": 92.43547530186606
+        },
+        {
+          "page_number": 4,
+          "x0": 118.5433,
+          "y0": 85.60199999999998,
+          "x1": 293.27930000000003,
+          "y1": 150.0353753018661
+        }
+      ]
+    },
+    {
+      "id": "500db468-f9df-4ca3-aa5f-cfbd01897b03",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 54,
+      "modality": "text",
+      "text": "Pie\tchart It\tshows\tclasses\tor\tgroups\tof\tdata\tin\tproportion\tto the\twhole\tdata\tset. The\tentire\tpie\trepresents\tall\tthe data,\twhile\teach\tslice\tor\tsegment\trepresents\ta different\tclass\tor\tgroup\twithin\tthe\twhole. Each\tslice should\tshow\tsignificant\tvariations. The\tnumber\tof categories\tshould\tbe\tsmall\t(between\tthree\tand\tten).",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 54,
+      "source_element_ids": [
+        "9202f23d-2da0-49f4-bf6b-c5876caf310d",
+        "51c0a462-da81-4487-9b53-e7179402ed04"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.1889,
+          "y0": 302.54089999999997,
+          "x1": 79.21289999999999,
+          "y1": 309.37437530186605
+        },
+        {
+          "page_number": 4,
+          "x0": 118.18889999999999,
+          "y0": 302.54089999999997,
+          "x1": 292.51689999999996,
+          "y1": 357.37437530186605
+        }
+      ]
+    },
+    {
+      "id": "f60cf851-9112-414b-944a-5f24fa429dd0",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 55,
+      "modality": "figure",
+      "text": "Fig. 5 Pie\tchart\tshows\tthe\tdistribution\tof\tthe\tdifferent\ttypes\tof tumours.",
+      "retrieval_context": "Figure 5",
+      "asset_uri": "figures/b858917a-af27-4df8-a1d4-6b6d56263318.png",
+      "token_count": null,
+      "source_element_ids": [
+        "b858917a-af27-4df8-a1d4-6b6d56263318",
+        "3e8a2210-bc4b-4644-ae40-be5cf40ebf6a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 302.19390869140625,
+          "y0": 303.2716064453125,
+          "x1": 510.6086730957031,
+          "y1": 457.8699645996094
+        }
+      ]
+    },
+    {
+      "id": "bbf7e627-1d2f-40e4-b8a7-cb567be23d3a",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 56,
+      "modality": "figure",
+      "text": "Fig. 6 Boxplot\tshows\tthe\tangiotensin-converting\tenzyme\tgene polymorphism\tand\tdisease\tprogression\tin\tthe\tDD\tand\tnon-DD patients.",
+      "retrieval_context": "Figure 6",
+      "asset_uri": "figures/0efcbf62-595f-47da-b1d4-3a727249bfdb.png",
+      "token_count": null,
+      "source_element_ids": [
+        "0efcbf62-595f-47da-b1d4-3a727249bfdb",
+        "f7e8ac55-25af-437b-9bdb-b4f5cfe85850"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 301.5706481933594,
+          "y0": 521.0267944335938,
+          "x1": 510.6822509765625,
+          "y1": 679.4928588867188
+        }
+      ]
+    },
+    {
+      "id": "416824b5-1a95-438d-a990-99ed3040f375",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 57,
+      "modality": "text",
+      "text": "Box\tplot (also\tknown\tas box-andwhisker\tplot)",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "0a23886c-6cbc-4eb5-8b77-d9ead63f271f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.6614,
+          "y0": 522.2791,
+          "x1": 100.67739999999999,
+          "y1": 557.9125753018661
+        }
+      ]
+    },
+    {
+      "id": "a680401e-9cdb-4f71-9f57-d63ac9143908",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 58,
+      "modality": "text",
+      "text": "It\tmay\tbe\teither\thorizontal\tor\tvertical. It\tis\tused to\tdisplay\ta\tstatistical\tsummary\tof\tone\tor\tmore variables:\tminimum,\tlower\tquartile,\tmedian,\tupper quartile\tand\tmaximum. It\tmay\talso\tindicate\twhich data\tmight\tbe\tconsidered\tas\toutliers. The\tspacing between\tthe\tdifferent\tparts\tof\tthe\tbox\tindicate\tthe degree\tof\tdispersion\t(spread)\tand\tskewness\tin the\tdata. This\thelps\tin\tvisualising\tthe\ttype\tof\tdata distribution,\twhether\tsymmetrical\tor\tskewed.",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 72,
+      "source_element_ids": [
+        "c2c592f5-a4d0-4e9c-b573-85e4878dbc2d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 118.66139999999999,
+          "y0": 522.2791,
+          "x1": 292.06940000000003,
+          "y1": 605.9125753018661
+        }
+      ]
+    },
+    {
+      "id": "0696cea1-1e77-4ab9-8847-3490c95f20e2",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 59,
+      "modality": "text",
+      "text": "eGFR:\testimated\tglomerular\tfiltration\trate;\tDD:\tdeletion/deletion genotype",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "efe4bc6b-f11f-4790-aa88-0a9145cf14f7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.3071,
+          "y0": 711.8035,
+          "x1": 512.4430999999998,
+          "y1": 728.2369753018661
+        }
+      ]
+    },
+    {
+      "id": "4bf6e505-8a73-422a-94b2-5fb7da3bae29",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "f7eda6d4-2194-4709-9f48-2ba35986ff8d",
+      "order": 60,
+      "modality": "text",
+      "text": "*\tp-value\tis\tstatistically\tsignificant",
+      "retrieval_context": "Section: Appendix 1. Common graph types.",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "c9204055-e33e-421c-841d-05a1fe68e4f7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 303.3071,
+          "y0": 731.0035,
+          "x1": 409.9631,
+          "y1": 737.8369753018661
+        }
+      ]
+    },
+    {
+      "id": "f91fb776-f7ca-4a76-a81c-76b2a1037dd6",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 61,
+      "modality": "text",
+      "text": "True False Question 1.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "9b8777c0-2cb9-406f-9fa3-7fccbf576df4",
+        "b5a6eb68-c158-4d0f-b8b2-40b26a3c852e",
+        "bd32946b-3acc-4416-b8fb-342536b1ebb3"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 447.10679999999996,
+          "y0": 138.89229999999998,
+          "x1": 471.0943,
+          "y1": 147.92901698113212
+        },
+        {
+          "page_number": 5,
+          "x0": 481.5918,
+          "y0": 138.89229999999998,
+          "x1": 502.9763000000001,
+          "y1": 147.92901698113212
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 148.66719999999998,
+          "x1": 131.0654,
+          "y1": 156.1112449069003
+        }
+      ]
+    },
+    {
+      "id": "68193d96-7165-4438-837e-cea1c4b8231e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 62,
+      "modality": "text",
+      "text": "The purpose of graphs is:",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "79559f0f-c44d-42f2-8cd1-087aa0772cb4"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 130.7053,
+          "y0": 148.66719999999998,
+          "x1": 221.9292999999999,
+          "y1": 156.0458889375684
+        }
+      ]
+    },
+    {
+      "id": "186dcaa4-c485-4d7d-a9c9-b4816a497100",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 63,
+      "modality": "text",
+      "text": "(a)  To reveal trends or patterns in the data.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "6563717e-0dec-4e16-8428-89901e264622"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 160.46720000000005,
+          "x1": 238.77739999999991,
+          "y1": 167.84588893756847
+        }
+      ]
+    },
+    {
+      "id": "6e3b9826-db28-4ac9-8869-06b2d6944b4b",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 64,
+      "modality": "text",
+      "text": "\u2610 \u2610 (b)  To reveal relations between variables in the data.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "3fa626ca-c4d6-4d94-874b-a45c300e01b1",
+        "96533204-ac98-4726-95bb-2c62251d3edd",
+        "76f440a8-bdb0-43be-858a-5e6540f8d703"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 161.76350000000002,
+          "x1": 463.5073,
+          "y1": 168.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 161.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 168.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 172.2672,
+          "x1": 274.8403999999998,
+          "y1": 179.64588893756843
+        }
+      ]
+    },
+    {
+      "id": "6f104152-c67e-4c67-bca9-4a093d9d7193",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 65,
+      "modality": "text",
+      "text": "\u2610 \u2610 (c)  To present large amounts of repetitive data.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "c55032be-c75a-401e-9019-c064da36069a",
+        "eb295f2b-0002-429c-be0e-7510fab8a027",
+        "6d5e2d22-24aa-449d-a26c-e12096a1d067"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 173.76350000000002,
+          "x1": 463.5073,
+          "y1": 180.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 173.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 180.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 184.06719999999996,
+          "x1": 254.9953999999999,
+          "y1": 191.44588893756838
+        }
+      ]
+    },
+    {
+      "id": "9b8980e1-a07f-4bc6-a2a9-a678eb032a60",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 66,
+      "modality": "text",
+      "text": "\u2610 \u2610 (d)  To paint an interesting picture.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "1b8d1e0a-f602-4ff3-b298-7a5bf8473cf8",
+        "95afd012-e3de-4261-94ad-5643920304b9",
+        "40402b24-358a-4c10-b3ce-25532d6a13ff"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 185.76350000000002,
+          "x1": 463.5073,
+          "y1": 192.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 185.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 192.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 195.86720000000003,
+          "x1": 209.3113999999999,
+          "y1": 203.24588893756845
+        }
+      ]
+    },
+    {
+      "id": "165c280c-0faf-4cb4-9f4d-340844cefb00",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 67,
+      "modality": "text",
+      "text": "\u2610 \u2610 Question 2. Based on this graph, answer the following questions:",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 12,
+      "source_element_ids": [
+        "6d78150f-56b4-4006-91d8-470a47528f57",
+        "920ed559-bcc4-4b32-aa9e-143d8bb2356c",
+        "5cd2b6f7-910d-4c1e-887a-e3fc92fc20cf"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 197.76350000000002,
+          "x1": 463.5073,
+          "y1": 204.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 197.76350000000002,
+          "x1": 498.86949999999996,
+          "y1": 204.45790674394095
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 219.46720000000005,
+          "x1": 321.3207999999997,
+          "y1": 226.91124490690038
+        }
+      ]
+    },
+    {
+      "id": "a9b745b5-3a39-4a87-949b-eadf92997f03",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 68,
+      "modality": "text",
+      "text": "(a)  The graph is most appropriate for inclusion in the text.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "edd6e6ed-a61e-42bd-a5ef-d9a0f5fb652a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 331.3365,
+          "x1": 294.9733999999998,
+          "y1": 338.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "dbfa93bd-0631-4e48-a49e-54ab2d1eaf88",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 69,
+      "modality": "text",
+      "text": "\u2610 \u2610 (b)  The graph could be simply replaced by one sentence in the text: 'Eight out of 50",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "f5db79bb-9d31-4846-9728-ac3b9943c974",
+        "e0a255b6-b65c-4617-8476-f914eef4cd8c",
+        "ef48bc18-bf3f-4314-8be2-db5e003a66d8"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 331.9368,
+          "x1": 463.5073,
+          "y1": 338.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 331.9368,
+          "x1": 498.9228,
+          "y1": 338.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 343.1365,
+          "x1": 391.97540000000004,
+          "y1": 350.51518893756844
+        }
+      ]
+    },
+    {
+      "id": "88f58ebd-0437-48fc-8554-0415069a42ce",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 70,
+      "modality": "text",
+      "text": "\u2610 \u2610 patients with a mean age of 55 years were diagnosed with breast cancer'.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 15,
+      "source_element_ids": [
+        "df1f638e-bcdb-411d-bb7a-6c8cdf810dc9",
+        "7058000f-d9fa-4534-816d-17483239482d",
+        "bf38e495-9faa-4c01-b52f-d5159472a6c7"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 343.9368,
+          "x1": 463.5073,
+          "y1": 350.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 343.9368,
+          "x1": 498.9228,
+          "y1": 350.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 99.0434,
+          "y0": 354.9365,
+          "x1": 361.8703999999995,
+          "y1": 362.31518893756845
+        }
+      ]
+    },
+    {
+      "id": "10722371-7283-4a0f-b511-c456e8245df9",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 71,
+      "modality": "text",
+      "text": "(c)  The graph should be replaced by a table.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "9192c48f-f5e8-4b42-92aa-23fa4dc30b4b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 366.7365,
+          "x1": 244.32139999999984,
+          "y1": 374.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "314b27d5-b826-4d27-9e6b-29b364906165",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 72,
+      "modality": "text",
+      "text": "\u2610 \u2610 (d)  A pie chart is more appropriate for presenting this information than a bar graph.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 17,
+      "source_element_ids": [
+        "8de0a9b0-f4c7-402d-ace4-0a38940dd513",
+        "07bd70b2-626f-4e09-9c2f-a110a6889b7d",
+        "6d6e9416-2b7e-42d5-9d4b-6ba0e9d8b4c6"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 367.9368,
+          "x1": 463.5073,
+          "y1": 374.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 367.9368,
+          "x1": 498.9228,
+          "y1": 374.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 378.5365,
+          "x1": 386.5933999999996,
+          "y1": 385.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "20e96656-b05b-4504-9142-a937d66b4e26",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 73,
+      "modality": "text",
+      "text": "\u2610 \u2610 Question 3.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "497a9358-907d-4f24-9278-f0e7788a3e9f",
+        "f6c33881-2b7e-4560-b3ec-017f65fb9df3",
+        "a44115a8-7785-407c-8790-3bd91028095d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 379.9368,
+          "x1": 463.5073,
+          "y1": 386.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.5895,
+          "y0": 379.9368,
+          "x1": 498.86949999999996,
+          "y1": 386.631206743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 402.1365,
+          "x1": 128.75240000000002,
+          "y1": 409.58054490690034
+        }
+      ]
+    },
+    {
+      "id": "6043a14b-d9e3-4358-8f40-2a6b63265753",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 74,
+      "modality": "text",
+      "text": "When preparing graphs: \u2610",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "8c028fc4-2fa6-4a5f-b19b-5a9899caf88e",
+        "0a0a1cc5-8a03-4a13-8cd6-1588f1ef6c37"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 402.1365,
+          "x1": 217.9557999999999,
+          "y1": 409.51518893756844
+        },
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 413.8581,
+          "x1": 463.5073,
+          "y1": 420.55250674394097
+        }
+      ]
+    },
+    {
+      "id": "7888fc35-dc57-4b15-8490-f7c017835476",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 75,
+      "modality": "text",
+      "text": "\u2610 (a)  All figures must be referenced in the text.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "bf80f59d-8619-4462-ac5c-e4ab1d299c67",
+        "c57a764f-0086-40b0-ac9b-cf3888c7a094"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 413.8581,
+          "x1": 498.9228,
+          "y1": 420.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 413.9365,
+          "x1": 248.00239999999994,
+          "y1": 421.31518893756845
+        }
+      ]
+    },
+    {
+      "id": "ddbb4722-0a77-419b-901a-6adccc6d5288",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 76,
+      "modality": "text",
+      "text": "(b)  Do not include experimental details in the legend.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "b5d9a25b-024d-431c-964f-ecb11dca0a87"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 425.7365,
+          "x1": 278.4763999999998,
+          "y1": 433.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "c7f0ac51-ad05-487e-bc5f-a82d8fa7440e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 77,
+      "modality": "text",
+      "text": "\u2610 \u2610 (c)  Ensure that the size of the font and symbols are appropriate so that they can be read",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 20,
+      "source_element_ids": [
+        "46cadb09-c878-4bdc-8e70-dbe4bf4d984d",
+        "58356d53-59ee-4f54-8e8e-0af539f85935",
+        "f936931a-527f-406b-8a5c-ae7f3459e762"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 425.8581,
+          "x1": 463.5073,
+          "y1": 432.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 425.8581,
+          "x1": 498.9228,
+          "y1": 432.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 437.5365,
+          "x1": 400.7234,
+          "y1": 444.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "f299bb54-510a-492c-ae20-dfef601c2431",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 78,
+      "modality": "text",
+      "text": "\u2610 \u2610 when the graphs are printed.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "b3b6ed64-7f15-417c-ba13-9771279f549a",
+        "60c397b0-d6c1-430a-837b-9754185ddd70",
+        "6b318c85-2be7-4f65-a347-f73bdc297e1d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 437.8581,
+          "x1": 463.5073,
+          "y1": 444.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 437.8581,
+          "x1": 498.9228,
+          "y1": 444.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 99.0434,
+          "y0": 449.3365,
+          "x1": 201.20239999999995,
+          "y1": 456.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "fadb7c62-3b80-4be7-9fdf-cac2c413e941",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 79,
+      "modality": "text",
+      "text": "(d)  Always prepare them in full colour.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "75d4dd33-a73f-4a52-aea7-f5a8aeeaa3af"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 461.1365,
+          "x1": 226.95139999999992,
+          "y1": 468.51518893756844
+        }
+      ]
+    },
+    {
+      "id": "1d93167b-c569-4542-886c-dc7327de79e7",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 80,
+      "modality": "text",
+      "text": "\u2610 \u2610 Question 4.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "13aaca8b-f494-4894-ac4a-9fd1b04e6c1f",
+        "17d2251b-0c3c-420d-9b50-50f03a71a7ea",
+        "05912f02-4fe7-4589-8cc7-d60b0050c574"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 461.8581,
+          "x1": 463.5073,
+          "y1": 468.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 461.8581,
+          "x1": 498.9228,
+          "y1": 468.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 484.7365,
+          "x1": 128.75240000000002,
+          "y1": 492.1805449069003
+        }
+      ]
+    },
+    {
+      "id": "440623d9-a92d-4597-b00d-76c07c53017a",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 81,
+      "modality": "text",
+      "text": "Regarding graph legends: (a)  They are always placed below the graphs.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "61fc2ae0-9820-44a8-a9a5-411bec0c0ad3",
+        "1f557fe3-ebc1-49db-816f-de8ce1a3951d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 484.7365,
+          "x1": 223.74279999999987,
+          "y1": 492.1151889375684
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 496.5365,
+          "x1": 249.55039999999988,
+          "y1": 503.9151889375684
+        }
+      ]
+    },
+    {
+      "id": "41753aaa-fb31-45ab-a36c-52e99495ca42",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 82,
+      "modality": "text",
+      "text": "\u2610 \u2610 (b)  An example of a good legend is: 'Graph shows temperature vs. time'.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 15,
+      "source_element_ids": [
+        "6bb1f5db-d1df-450d-9226-cb06f644fe8e",
+        "aab5fb37-7a83-49df-88f2-5af5fb6439a3",
+        "961f9157-62f8-4c15-9570-a6c740db00ad"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.2273,
+          "y0": 497.8581,
+          "x1": 463.5073,
+          "y1": 504.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 497.8581,
+          "x1": 498.9228,
+          "y1": 504.55250674394097
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 508.3365,
+          "x1": 351.0163999999995,
+          "y1": 515.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "7ede61cf-09aa-42e0-a3e0-1693effccc8a",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 83,
+      "modality": "text",
+      "text": "\u2610 \u2610 (c)  They should be clear and concise.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "7c471282-12ce-49d1-aa37-2f8f710ba872",
+        "a33c336a-93b7-46c1-8e1d-304de1736157",
+        "c436d96d-311a-4440-9f7f-ae53e8902ef0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 509.8581,
+          "x1": 463.5052999999999,
+          "y1": 516.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 509.8581,
+          "x1": 498.9228,
+          "y1": 516.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 520.1365000000001,
+          "x1": 220.8043999999999,
+          "y1": 527.5151889375684
+        }
+      ]
+    },
+    {
+      "id": "0d57ed41-9d55-4744-8e11-a52f25962adf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 84,
+      "modality": "text",
+      "text": "\u2610 \u2610 (d)  They should provide an interpretation of the results.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "32523550-208b-4a53-a018-73e344f9658b",
+        "cb977c14-33d3-4347-81ce-0c323ffea641",
+        "f6d33465-80b3-49e7-86e8-60c1be4e4c32"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 521.8580999999999,
+          "x1": 463.5052999999999,
+          "y1": 528.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 521.8580999999999,
+          "x1": 498.9228,
+          "y1": 528.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 531.9365,
+          "x1": 286.2163999999998,
+          "y1": 539.3151889375685
+        }
+      ]
+    },
+    {
+      "id": "8e125696-9d20-4503-abe1-9032a724c486",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 85,
+      "modality": "text",
+      "text": "\u2610 \u2610 Question 5.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "8ce4602a-c7b3-42bb-8a10-72c7f8717946",
+        "f3125b67-e0d4-4616-b209-413adbafc5dc",
+        "651a5458-f9e7-4969-9af9-1e672d965aa0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 533.8580999999999,
+          "x1": 463.5052999999999,
+          "y1": 540.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 533.8580999999999,
+          "x1": 498.9228,
+          "y1": 540.552506743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 555.5364999999999,
+          "x1": 128.75240000000002,
+          "y1": 562.9805449069004
+        }
+      ]
+    },
+    {
+      "id": "66d1e059-e6ad-4435-8a9c-061441c557d1",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 86,
+      "modality": "text",
+      "text": "The following statements regarding types of graphs are true:",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "3370dacf-6e40-4f8b-bccf-8222320cf27a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 128.8378,
+          "y0": 555.5364999999999,
+          "x1": 348.1677999999996,
+          "y1": 562.9151889375685
+        }
+      ]
+    },
+    {
+      "id": "f6adbf68-4437-4c54-9c55-394fae1ee93e",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 87,
+      "modality": "text",
+      "text": "(a)  Box plots show a distribution of data.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "b92d0362-a020-49eb-8e4e-aed7f4947f59"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 567.3365,
+          "x1": 233.9623999999999,
+          "y1": 574.7151889375684
+        }
+      ]
+    },
+    {
+      "id": "50810911-7d9c-4414-99b9-e2dbceb21e7c",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 88,
+      "modality": "text",
+      "text": "\u2610 \u2610 (b)  Bar graphs are used to display continuous data.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 11,
+      "source_element_ids": [
+        "75ddf5c5-70bf-4a83-9250-b221a1249a57",
+        "a7952ca9-8f6b-465b-8e13-afff724122a7",
+        "b4d2e2c6-be6f-4c1e-8c2c-0ca1a3c79901"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 567.7793,
+          "x1": 463.5052999999999,
+          "y1": 574.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 567.7793,
+          "x1": 498.9228,
+          "y1": 574.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 579.1365000000001,
+          "x1": 268.8193999999998,
+          "y1": 586.5151889375684
+        }
+      ]
+    },
+    {
+      "id": "821bac9b-61cd-4a25-843a-1a93082298bf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 89,
+      "modality": "text",
+      "text": "\u2610 \u2610 (c)  Pie charts show classes of data in proportion to the whole data set.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 16,
+      "source_element_ids": [
+        "56778f17-dc8c-4447-b507-f51dea7cc21c",
+        "d8e1c274-29ec-4516-9565-3d9b975eec22",
+        "08d53edb-0e30-480e-9a6f-a95b4b759d11"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 579.7793,
+          "x1": 463.5052999999999,
+          "y1": 586.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 579.7793,
+          "x1": 498.9228,
+          "y1": 586.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 590.9365,
+          "x1": 336.6613999999996,
+          "y1": 598.3151889375685
+        }
+      ]
+    },
+    {
+      "id": "2402b0e0-eadf-4618-a388-f75949143ee6",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 90,
+      "modality": "text",
+      "text": "\u2610 \u2610 (d)  Line graphs allow the display of only one dependent variable.",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 13,
+      "source_element_ids": [
+        "c0379717-00a6-4f29-b086-23f8367b9657",
+        "617e69a8-0934-4c8f-8af1-f65650d4326c",
+        "abe7dbfe-5b4f-450d-9cdb-28ff8cedb595"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 591.7792999999999,
+          "x1": 463.5052999999999,
+          "y1": 598.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 591.7792999999999,
+          "x1": 498.9228,
+          "y1": 598.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 602.7365,
+          "x1": 321.26239999999956,
+          "y1": 610.1151889375684
+        }
+      ]
+    },
+    {
+      "id": "59c103aa-3063-413f-bbc3-b7fbf32ef575",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 91,
+      "modality": "text",
+      "text": "\u2610 \u2610 Doctor's particulars:",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "d0608dee-68b7-40f2-8e15-62dd7b3a529e",
+        "9fef3630-0914-4410-9f33-6a65c194b7d5",
+        "6f3b3792-2123-4ed5-a07a-5456a4e51433"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 450.22529999999995,
+          "y0": 603.7792999999999,
+          "x1": 463.5052999999999,
+          "y1": 610.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 485.6428,
+          "y0": 603.7792999999999,
+          "x1": 498.9228,
+          "y1": 610.473706743941
+        },
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 629.4852,
+          "x1": 166.9348,
+          "y1": 638.0463002979146
+        }
+      ]
+    },
+    {
+      "id": "3d6d2cf4-e9c0-453b-90f6-d533669f7073",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 92,
+      "modality": "text",
+      "text": "Name in full: __________________________________________________________________________________",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "aa1b4108-ae68-40e6-b269-4c5deb350b52"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 643.6022,
+          "x1": 509.4297999999991,
+          "y1": 650.9808889375685
+        }
+      ]
+    },
+    {
+      "id": "1c6070b2-c78d-44c6-812e-9d677601e8bb",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "bfdd4bc0-6c19-4247-aa36-d835bbb8e89d",
+      "order": 93,
+      "modality": "text",
+      "text": "MCR number: _____________________________________ Specialty: ___________________________________ Email address: _________________________________________________________________________________",
+      "retrieval_context": "Section: SINGAPORE MEDICAL COUNCIL CATEGORY 3B CME PROGRAMME Multiple Choice Questions (Code SMJ 200903B)",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "66acd87c-41ce-401b-b277-251e59305b55",
+        "584d39a4-ff18-4128-88f5-c453db918fbb"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 657.6022,
+          "x1": 508.7277999999991,
+          "y1": 664.9808889375685
+        },
+        {
+          "page_number": 5,
+          "x0": 85.5118,
+          "y0": 671.6022,
+          "x1": 510.6447999999991,
+          "y1": 678.9808889375685
+        }
+      ]
+    },
+    {
+      "id": "dbf30d09-374d-490e-9115-c685ea4e4ee0",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "a4eaed46-9a00-43f6-a743-bbacfeba460f",
+      "order": 94,
+      "modality": "text",
+      "text": "(1) Log on at the SMJ website: http://www.sma.org.sg/cme/smj and select the appropriate set of questions. (2) Select your answers and provide your name, email address and MCR number. Click on 'Submit answers' to submit.",
+      "retrieval_context": "Section: SUBMISSION INSTRUCTIONS:",
+      "asset_uri": null,
+      "token_count": 34,
+      "source_element_ids": [
+        "a26d02b8-9191-48d5-9bfa-0b7eca20eda8"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 703.8394000000001,
+          "x1": 511.6214000000014,
+          "y1": 716.6684531215772
+        }
+      ]
+    },
+    {
+      "id": "e7fcc2bc-23d2-4ad5-b12b-bf21cd2b3ccf",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "7f15a320-fe26-4255-9649-b55f696a330d",
+      "order": 95,
+      "modality": "text",
+      "text": "(1) Answers will be published in the SMJ May 2009 issue. (2) The MCR numbers of successful candidates will be posted online at www.sma.org.sg/cme/smj by 20 May 2009. (3) All online submissions will receive an automatic email acknowledgment. (4) Passing mark is 60%. No mark will be deducted for incorrect answers. (5) The SMJ editorial office will submit the list of successful candidates to the Singapore Medical Council.",
+      "retrieval_context": "Section: RESULTS:",
+      "asset_uri": null,
+      "token_count": 68,
+      "source_element_ids": [
+        "c4d2b710-144f-4b82-a2fd-3a70a7452b30"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 733.8394,
+          "x1": 511.90740000000187,
+          "y1": 754.1684531215772
+        }
+      ]
+    },
+    {
+      "id": "7607786e-0288-42e0-90ae-6354afcbb4f1",
+      "paper_id": "91e84a45-79a4-46d8-b4b1-81be721f5d1c",
+      "section_id": "7f15a320-fe26-4255-9649-b55f696a330d",
+      "order": 96,
+      "modality": "text",
+      "text": "Deadline for submission: (March 2009 SMJ 3B CME programme): 12 noon, 15 May 2009.",
+      "retrieval_context": "Section: RESULTS:",
+      "asset_uri": null,
+      "token_count": 14,
+      "source_element_ids": [
+        "e688419c-35d5-4d9e-b7c7-884656bd94c5"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 85.0394,
+          "y0": 763.8394,
+          "x1": 333.5604000000001,
+          "y1": 769.2156546549836
+        }
+      ]
+    }
+  ]
+}

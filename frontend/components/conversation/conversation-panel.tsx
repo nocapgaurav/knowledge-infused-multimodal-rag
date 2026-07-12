@@ -1,7 +1,8 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { MessageSquare, Trash2 } from "lucide-react";
+import { ArrowDown, Loader2, MessageSquare, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 import { CitationText } from "@/components/conversation/citation-text";
@@ -28,6 +29,11 @@ const STATUS_BADGE_TEXT = {
   insufficient_evidence: "Not found in this paper",
 } as const;
 
+/** How close to the bottom (in pixels) still counts as "at the bottom" --
+ * generous enough that the tail end of a message doesn't register as a
+ * deliberate scroll-away. */
+const BOTTOM_THRESHOLD_PX = 96;
+
 /**
  * The Conversation experience (Phase 4B): a tool for understanding the
  * paper, never the product itself -- every answer stays visibly tied to
@@ -39,9 +45,53 @@ export function ConversationPanel({ documentId }: { documentId: string }) {
   const ask = useAskQuestion(documentId);
   const openEvidence = useWorkspaceStore((state) => state.openEvidence);
 
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  // A ref mirrors the state so the ResizeObserver callback (created once)
+  // always reads the latest value instead of one captured at mount.
+  const isAtBottomRef = useRef(true);
+  const [isAtBottom, setIsAtBottom] = useState(true);
+
+  const scrollToBottom = useCallback((behavior: ScrollBehavior) => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    viewport.scrollTo({ top: viewport.scrollHeight, behavior });
+  }, []);
+
+  const handleViewportScroll = useCallback(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    const distanceFromBottom = viewport.scrollHeight - viewport.scrollTop - viewport.clientHeight;
+    const atBottom = distanceFromBottom <= BOTTOM_THRESHOLD_PX;
+    isAtBottomRef.current = atBottom;
+    setIsAtBottom(atBottom);
+  }, []);
+
+  // Follow new content -- a turn being appended, an answer replacing its
+  // "thinking" placeholder -- only while the reader hasn't deliberately
+  // scrolled away. A reader mid-scroll-up must never be yanked back down.
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+    const observer = new ResizeObserver(() => {
+      if (isAtBottomRef.current) scrollToBottom("auto");
+    });
+    observer.observe(content);
+    return () => observer.disconnect();
+  }, [scrollToBottom]);
+
   function handleClear() {
     clearConversation(documentId);
     toast.success("Conversation cleared");
+  }
+
+  function handleSubmit(question: string) {
+    // Sending a question always returns the reader to the live edge of the
+    // conversation, even if they had scrolled up to reread something.
+    isAtBottomRef.current = true;
+    setIsAtBottom(true);
+    ask.mutate(question);
+    requestAnimationFrame(() => scrollToBottom("smooth"));
   }
 
   return (
@@ -55,31 +105,61 @@ export function ConversationPanel({ documentId }: { documentId: string }) {
           </Button>
         </div>
       )}
-      <ScrollArea className="min-h-0 flex-1">
-        <div className="flex flex-col gap-6 p-4">
-          {turns.length === 0 ? (
-            <EmptyConversation />
-          ) : (
-            turns.map((turn) => (
-              <ConversationTurnView
-                key={turn.id}
-                turn={turn}
-                onSelectCitation={(citation) =>
-                  openEvidence(citation.knowledgeUnitId, {
-                    text: citation.textExcerpt,
-                    displayLabel: citation.displayLabel,
-                    pageNumbers: citation.pageNumbers,
-                    boundingBoxes: citation.boundingBoxes,
-                    modality: citation.modality,
-                  })
-                }
-              />
-            ))
-          )}
-        </div>
-      </ScrollArea>
-      <QuestionInput onSubmit={(question) => ask.mutate(question)} isSubmitting={ask.isPending} />
+      <div className="relative min-h-0 flex-1">
+        <ScrollArea
+          className="h-full"
+          viewportRef={viewportRef}
+          onViewportScroll={handleViewportScroll}
+        >
+          <div ref={contentRef} className="flex flex-col gap-6 p-4">
+            {turns.length === 0 ? (
+              <EmptyConversation />
+            ) : (
+              turns.map((turn) => (
+                <ConversationTurnView
+                  key={turn.id}
+                  turn={turn}
+                  onSelectCitation={(citation) =>
+                    openEvidence(citation.knowledgeUnitId, {
+                      text: citation.textExcerpt,
+                      displayLabel: citation.displayLabel,
+                      pageNumbers: citation.pageNumbers,
+                      boundingBoxes: citation.boundingBoxes,
+                      modality: citation.modality,
+                    })
+                  }
+                />
+              ))
+            )}
+          </div>
+        </ScrollArea>
+        <ScrollToLatestButton
+          visible={!isAtBottom && turns.length > 0}
+          onClick={() => scrollToBottom("smooth")}
+        />
+      </div>
+      <QuestionInput onSubmit={handleSubmit} isSubmitting={ask.isPending} />
     </div>
+  );
+}
+
+function ScrollToLatestButton({ visible, onClick }: { visible: boolean; onClick: () => void }) {
+  return (
+    <Button
+      type="button"
+      variant="secondary"
+      size="sm"
+      onClick={onClick}
+      aria-label="Scroll to latest message"
+      tabIndex={visible ? 0 : -1}
+      className={cn(
+        "absolute bottom-3 left-1/2 -translate-x-1/2 gap-1.5 rounded-full border shadow-md transition-all duration-200 ease-out",
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0",
+      )}
+    >
+      <ArrowDown className="size-3.5" />
+      Scroll to latest
+    </Button>
   );
 }
 
@@ -118,7 +198,10 @@ function ConversationTurnView({
       </div>
 
       {turn.status === "pending" && (
-        <p className={cn(TYPOGRAPHY.caption, "animate-pulse")}>Thinking through the evidence...</p>
+        <div className={cn(TYPOGRAPHY.caption, "flex items-center gap-1.5")}>
+          <Loader2 className="size-3 animate-spin" aria-hidden="true" />
+          <span className="animate-pulse">Thinking through the evidence...</span>
+        </div>
       )}
 
       {turn.status === "failed" && (

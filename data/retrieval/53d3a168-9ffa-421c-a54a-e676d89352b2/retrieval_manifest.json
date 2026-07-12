@@ -1,0 +1,18 @@
+{
+  "document_id": "53d3a168-9ffa-421c-a54a-e676d89352b2",
+  "query": "what this paper shows",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "4842adfbe022e28d2d5d48e7bc6936519557cb6269ce374cd4889bd9e3cac38b",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 20,
+    "candidates_expanded": 50,
+    "candidates_scored": 70,
+    "evidence_groups": 5,
+    "evidence_items": 14,
+    "duration_ms": 2165.628290968016
+  },
+  "created_at": "2026-07-12T05:46:58.529676Z"
+}

@@ -142,8 +142,12 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
+  /* Slightly more opaque than shadcn's stock 10%/15% -- at the original
+     values, panel dividers (sidebar/conversation/evidence) were nearly
+     invisible against the near-black background. Same white-on-dark
+     identity, just legible. */
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -156,7 +160,7 @@
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-border: oklch(1 0 0 / 14%);
   --sidebar-ring: oklch(0.556 0 0);
 
   /* Research-workspace domain tokens (Phase 3 semantic color categories). */
@@ -230,15 +234,43 @@ html.dark[data-high-contrast="true"] {
 
 /* Evidence highlighting inside the PDF viewer (Phase 4). Uses the
    theme's own evidence color so light/dark/high-contrast all inherit
-   the right appearance. */
+   the right appearance. A gentle fade-in (rather than popping straight
+   in) reads as "here's your answer" instead of a jarring flash --
+   `prefers-reduced-motion` above already neutralizes this animation. */
+@keyframes evidence-highlight-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .pdf-evidence-mark {
   background-color: color-mix(in oklch, var(--evidence) 30%, transparent);
   color: inherit;
   border-radius: 2px;
+  animation: evidence-highlight-in 0.25s ease-out;
 }
 
 .pdf-evidence-region {
   background-color: color-mix(in oklch, var(--evidence) 14%, transparent);
   outline: 2px solid color-mix(in oklch, var(--evidence) 65%, transparent);
   border-radius: 4px;
+  animation: evidence-highlight-in 0.25s ease-out;
+}
+
+/* A subtle cross-fade when the viewer lands on a new page -- a plain
+   instant swap reads as a flicker when navigating between citations. */
+@keyframes pdf-page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pdf-page-transition {
+  animation: pdf-page-in 0.2s ease-out;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FlaskConical, Search, Settings } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -15,10 +16,15 @@ import { useWorkspaceStore } from "@/store/workspace-store";
  * content, that belongs to the panels beneath it.
  */
 export function TopNav({ onOpenSearch }: { onOpenSearch: () => void }) {
+  const pathname = usePathname();
   const selectedDocumentId = useWorkspaceStore((state) => state.selectedDocumentId);
   const currentDocument = useDocumentLibraryStore((state) =>
     selectedDocumentId ? state.documents[selectedDocumentId] : undefined,
   );
+  // selectedDocumentId is persisted and only ever set, never cleared, on
+  // navigating away from a workspace route -- so the title must be gated
+  // on actually being on that document's route, not just on the store.
+  const isWorkspaceRoute = pathname?.startsWith("/workspace/") ?? false;
 
   return (
     <header className="flex h-14 shrink-0 items-center justify-between gap-4 border-b px-4">
@@ -28,7 +34,7 @@ export function TopNav({ onOpenSearch }: { onOpenSearch: () => void }) {
       </Link>
 
       <div className={`min-w-0 flex-1 text-center ${TYPOGRAPHY.workspaceTitle} truncate`}>
-        {currentDocument ? currentDocument.filename : ""}
+        {isWorkspaceRoute && currentDocument ? currentDocument.filename : ""}
       </div>
 
       <div className="flex items-center gap-1">

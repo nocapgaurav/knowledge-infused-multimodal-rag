@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Loader2, Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -14,10 +14,28 @@ export function QuestionInput({
   isSubmitting: boolean;
 }) {
   const [value, setValue] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const wasSubmitting = useRef(isSubmitting);
+  // Mirrors isSubmitting but updates synchronously on click, closing the
+  // window where rapid clicks land before the isSubmitting prop's
+  // re-render commits and each one slips past the isSubmitting check.
+  const submitInFlight = useRef(false);
+
+  // The reader almost always has a follow-up question -- return focus to
+  // the input the moment an answer finishes, without stealing it while
+  // they're doing something else mid-generation.
+  useEffect(() => {
+    if (wasSubmitting.current && !isSubmitting) {
+      textareaRef.current?.focus();
+    }
+    wasSubmitting.current = isSubmitting;
+    submitInFlight.current = isSubmitting;
+  }, [isSubmitting]);
 
   function submit() {
     const question = value.trim();
-    if (!question || isSubmitting) return;
+    if (!question || isSubmitting || submitInFlight.current) return;
+    submitInFlight.current = true;
     onSubmit(question);
     setValue("");
   }
@@ -32,6 +50,7 @@ export function QuestionInput({
   return (
     <div className="flex items-end gap-2 border-t p-3">
       <Textarea
+        ref={textareaRef}
         name="question"
         value={value}
         onChange={(event) => setValue(event.target.value)}

@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { ReactFlowProvider } from "reactflow";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ErrorBoundary } from "@/components/feedback/error-boundary";
@@ -26,10 +25,8 @@ export function AppProviders({ children }: { children: ReactNode }) {
         <QueryProvider>
           <TooltipProvider>
             <PdfProvider>
-              <ReactFlowProvider>
-                <ErrorBoundary label="The application">{children}</ErrorBoundary>
-                <Toaster />
-              </ReactFlowProvider>
+              <ErrorBoundary label="The application">{children}</ErrorBoundary>
+              <Toaster />
             </PdfProvider>
           </TooltipProvider>
         </QueryProvider>

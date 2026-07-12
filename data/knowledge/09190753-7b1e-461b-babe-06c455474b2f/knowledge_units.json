@@ -1,0 +1,740 @@
+{
+  "document_id": "09190753-7b1e-461b-babe-06c455474b2f",
+  "count": 25,
+  "chunks": [
+    {
+      "id": "b6682844-ee50-41ff-b4d1-8dc560a2802f",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": null,
+      "order": 0,
+      "modality": "text",
+      "text": "Gaurav Pandit",
+      "retrieval_context": "Title of this paper",
+      "asset_uri": null,
+      "token_count": 2,
+      "source_element_ids": [
+        "e54afb28-c84a-4c59-971b-02370f8013fb"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "a3f6c4f2-9721-42cb-b9c4-3c90058054ed",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": null,
+      "order": 1,
+      "modality": "text",
+      "text": "Software Engineer | B.Tech CSE '27 | New Delhi, Delhi",
+      "retrieval_context": "Authors and affiliations (title page)",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "6048f75f-2424-45aa-8414-17ea469f5323"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 184.834,
+          "y0": 50.4451504000001,
+          "x1": 409.55708991999995,
+          "y1": 58.362481600000024
+        }
+      ]
+    },
+    {
+      "id": "f8a60cef-6548-44ce-ad2a-1c20176a314f",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": null,
+      "order": 2,
+      "modality": "text",
+      "text": "+91-8527738778 | gauravvpandita@gmail.com |",
+      "retrieval_context": "Authors and affiliations (title page)",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "021cfe32-a310-452c-880c-4a8bfc57ff91",
+        "f6ba2af6-c0cb-4baa-b083-5d2cd5cc9227",
+        "5fd20db9-c41a-40c7-ba52-544d9a977fbe",
+        "b42276c6-7993-47b7-ac2c-2ebe844c995b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 113.711,
+          "y0": 63.60348320000003,
+          "x1": 179.23117471999987,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 188.43966751999986,
+          "y0": 63.60348320000003,
+          "x1": 190.99867807999985,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 200.21613727999986,
+          "y0": 63.60348320000003,
+          "x1": 311.0480143999997,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 320.2565071999997,
+          "y0": 63.60348320000003,
+          "x1": 322.8155177599997,
+          "y1": 74.8921808
+        }
+      ]
+    },
+    {
+      "id": "ce9777c3-fdad-4db1-a059-9609aff12cba",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": null,
+      "order": 3,
+      "modality": "text",
+      "text": "LinkedIn | GitHub | LeetCode",
+      "retrieval_context": "Authors and affiliations (title page)",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "58445fe3-5832-4712-a67c-a5252c44f642",
+        "60f47f9c-f100-40b0-a1b9-677725b3bbf9",
+        "490f5e6e-b885-4536-ac8d-82ec062cb080",
+        "defb421d-ab14-4577-a8ff-a20f49fefcab",
+        "8820d4ad-b29a-447a-b7b6-f638a421b7f3"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 332.0329769599997,
+          "y0": 63.60348320000003,
+          "x1": 367.7389750399997,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 376.94746783999966,
+          "y0": 63.60348320000003,
+          "x1": 379.50647839999965,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 388.72393759999966,
+          "y0": 63.60348320000003,
+          "x1": 419.2401833599996,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 428.4486761599996,
+          "y0": 63.60348320000003,
+          "x1": 431.0076867199996,
+          "y1": 74.8921808
+        },
+        {
+          "page_number": 1,
+          "x0": 440.2251459199996,
+          "y0": 63.60348320000003,
+          "x1": 478.49105119999956,
+          "y1": 74.8921808
+        }
+      ]
+    },
+    {
+      "id": "c6c0c067-ef46-4deb-8f31-21f52731072a",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "423f7b76-5424-4fbe-bb14-786df6f50545",
+      "order": 4,
+      "modality": "text",
+      "text": "Summer Intern May 2025 - Jul 2025",
+      "retrieval_context": "Section: Scaler AI Labs",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "5eec515f-f22b-466e-99d2-79f0bd98af6b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 37.31299999999999,
+          "y0": 125.86215040000002,
+          "x1": 98.94624032,
+          "y1": 133.77948159999994
+        },
+        {
+          "page_number": 1,
+          "x0": 471.21799999999996,
+          "y0": 111.14171839999995,
+          "x1": 567.92779712,
+          "y1": 122.54697920000001
+        }
+      ]
+    },
+    {
+      "id": "0c33a782-654e-43ff-a42e-29cd03fbebec",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "423f7b76-5424-4fbe-bb14-786df6f50545",
+      "order": 5,
+      "modality": "text",
+      "text": "Bangalore, India Designed and executed test cases for RL training environments , validating edge cases, evaluation pipelines, and grading logic; identified critical defects in reward functions and collaborated with engineering teams to reduce failure rates across multiple AI evaluation cycles .",
+      "retrieval_context": "Section: Scaler AI Labs",
+      "asset_uri": null,
+      "token_count": 41,
+      "source_element_ids": [
+        "dac8649d-4feb-4615-956c-47fb7430c163",
+        "542c7c9a-22f9-46bf-b6ce-51695b23edbb"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 500.164,
+          "y0": 125.86215040000002,
+          "x1": 567.2210156799997,
+          "y1": 133.77948159999994
+        },
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 138.47471839999992,
+          "x1": 565.4071222400003,
+          "y1": 172.67397920000008
+        }
+      ]
+    },
+    {
+      "id": "e13dc11b-dba1-4a48-8189-155570202d64",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "423f7b76-5424-4fbe-bb14-786df6f50545",
+      "order": 6,
+      "modality": "text",
+      "text": "Benchmarked frontier model evaluation systems , gaining hands-on exposure to LLM assessment infrastructures.",
+      "retrieval_context": "Section: Scaler AI Labs",
+      "asset_uri": null,
+      "token_count": 13,
+      "source_element_ids": [
+        "fc8e3dcd-16b4-4ff2-a3ad-e1c438fba200"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 174.65871839999988,
+          "x1": 535.0702044799998,
+          "y1": 186.06397919999995
+        }
+      ]
+    },
+    {
+      "id": "dd413e02-af4a-4f9c-9f7d-ce042c0052c3",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "c4d10eef-8994-43a4-b1bb-3e97bea29449",
+      "order": 7,
+      "modality": "text",
+      "text": "Architected a full-stack scheduling platform using Next.js, TypeScript, and PostgreSQL with RESTful API design; optimized query execution via indexing and efficient joins, improving API response time by 25% under 50+ concurrent bookings .",
+      "retrieval_context": "Section: Schedulr - Full-Stack Scheduling Platform | GitHub | Live",
+      "asset_uri": null,
+      "token_count": 33,
+      "source_element_ids": [
+        "f3642bfe-4380-4b62-839f-6413e3348b1d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 235.64971839999998,
+          "x1": 535.2979510399996,
+          "y1": 269.8499792000001
+        }
+      ]
+    },
+    {
+      "id": "cd29f65c-23e8-4c81-8218-26ebd47e92d5",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "c4d10eef-8994-43a4-b1bb-3e97bea29449",
+      "order": 8,
+      "modality": "text",
+      "text": "Implemented timezone-aware scheduling logic with automatic client-side detection and conflict resolution, reducing double-booking errors by 30% across distributed users.",
+      "retrieval_context": "Section: Schedulr - Full-Stack Scheduling Platform | GitHub | Live",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "62be8ced-a8c7-4ded-9d71-36b8b6d41b0a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 271.89648320000003,
+          "x1": 506.2835772799995,
+          "y1": 294.63597920000007
+        }
+      ]
+    },
+    {
+      "id": "ca18a247-e6d7-4be8-948b-9c98ff013d78",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "c4d10eef-8994-43a4-b1bb-3e97bea29449",
+      "order": 9,
+      "modality": "text",
+      "text": "Deployed on Vercel with environment-based configuration and GitHub-integrated CI workflow; integrated NextAuth for secure authentication and session management.",
+      "retrieval_context": "Section: Schedulr - Full-Stack Scheduling Platform | GitHub | Live",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "00664e9c-64d2-486f-bd6c-309b4d33c74f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 296.6207184,
+          "x1": 564.5239318399998,
+          "y1": 319.3691808000001
+        }
+      ]
+    },
+    {
+      "id": "861caae2-f002-4c0e-8518-a3f6983f741c",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "6c413094-b120-49cf-bf2f-28bdce425604",
+      "order": 10,
+      "modality": "text",
+      "text": "Built a real-time web application with a Flask REST API backend, exposing endpoints for live pose analysis and repetition tracking via webcam streams processed at 15-20 FPS .",
+      "retrieval_context": "Section: RepCoach - Real-Time Fitness Tracking System | GitHub",
+      "asset_uri": null,
+      "token_count": 28,
+      "source_element_ids": [
+        "fa68d6c3-7468-43bf-998c-4efd6adda98b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 345.27771839999997,
+          "x1": 551.0115670399998,
+          "y1": 368.0809792
+        }
+      ]
+    },
+    {
+      "id": "22cb53f5-6e0e-4826-8108-ec20956a331c",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "6c413094-b120-49cf-bf2f-28bdce425604",
+      "order": 11,
+      "modality": "text",
+      "text": "Designed computer vision inference pipelines using OpenCV and MediaPipe , achieving 85%+ accuracy in pose classification across 5+ exercise types.",
+      "retrieval_context": "Section: RepCoach - Real-Time Fitness Tracking System | GitHub",
+      "asset_uri": null,
+      "token_count": 20,
+      "source_element_ids": [
+        "efcdc094-4b93-47bb-b922-e07a6caf1f19"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 370.0647184,
+          "x1": 566.9332035200001,
+          "y1": 392.8131808
+        }
+      ]
+    },
+    {
+      "id": "9affd374-e930-4a41-918d-6848505eacca",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "6c413094-b120-49cf-bf2f-28bdce425604",
+      "order": 12,
+      "modality": "text",
+      "text": "Optimized frame-level processing and reduced per-frame inference overhead, cutting end-to-end feedback latency by 20% while maintaining real-time stream continuity.",
+      "retrieval_context": "Section: RepCoach - Real-Time Fitness Tracking System | GitHub",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "103df65e-8fd7-494a-9176-9978946c62fe"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 394.8517184,
+          "x1": 556.6290166399999,
+          "y1": 417.6001808
+        }
+      ]
+    },
+    {
+      "id": "982cd0f3-b8a0-4354-a8cc-5bf6a20003b4",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "8c5b8fdc-30d3-43ab-89e7-c50993f1a90f",
+      "order": 13,
+      "modality": "text",
+      "text": "Languages: Python, C++ , Javascript",
+      "retrieval_context": "Section: Technical Skills",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "ac49c7c0-e27f-41a4-8fb0-9e5458c87c48",
+        "8b868aab-3477-4f2a-8073-18380dbf3de4"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 449.882806,
+          "x1": 88.48493864000001,
+          "y1": 458.6897444
+        },
+        {
+          "page_number": 1,
+          "x0": 92.90833304000002,
+          "y0": 449.8927686,
+          "x1": 206.98608060000004,
+          "y1": 458.6897444
+        }
+      ]
+    },
+    {
+      "id": "aeaa3150-5663-44cd-8af1-3bde5532b424",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "8c5b8fdc-30d3-43ab-89e7-c50993f1a90f",
+      "order": 14,
+      "modality": "text",
+      "text": "Backend: Flask, FastAPI, REST API Design, API Integration",
+      "retrieval_context": "Section: Technical Skills",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "588e8842-7fd1-46e3-872b-7cc8502e17bc",
+        "8ece8928-00ec-4e43-ad29-5c430ff1f6bd"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 462.315806,
+          "x1": 78.70166544,
+          "y1": 471.1227444
+        },
+        {
+          "page_number": 1,
+          "x0": 83.12505984,
+          "y0": 462.3257686,
+          "x1": 311.02152736,
+          "y1": 471.1227444
+        }
+      ]
+    },
+    {
+      "id": "48372d7f-480b-46fe-b013-39962287fc27",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "8c5b8fdc-30d3-43ab-89e7-c50993f1a90f",
+      "order": 15,
+      "modality": "text",
+      "text": "Databases: PostgreSQL, MySQL AI / ML: OpenCV, MediaPipe, Scikit-Learn, NumPy, Machine Learning",
+      "retrieval_context": "Section: Technical Skills",
+      "asset_uri": null,
+      "token_count": 12,
+      "source_element_ids": [
+        "423695a5-3369-469a-a1f0-0db36ed20652",
+        "a8d4fbd9-8af7-44c7-9f42-b92ae55d6712",
+        "79fe9b87-edac-42f2-a791-f3e6a0a18104"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 474.748806,
+          "x1": 87.10212976,
+          "y1": 483.5557444
+        },
+        {
+          "page_number": 1,
+          "x0": 91.52552416,
+          "y0": 474.7587686,
+          "x1": 183.60585092000002,
+          "y1": 483.5557444
+        },
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 487.182806,
+          "x1": 356.81262574000004,
+          "y1": 495.9897444
+        }
+      ]
+    },
+    {
+      "id": "96121191-bfc2-4239-b063-9febafcdda8d",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "8c5b8fdc-30d3-43ab-89e7-c50993f1a90f",
+      "order": 16,
+      "modality": "text",
+      "text": "Tools & Platforms: Git, GitHub, Postman, Linux, Vercel, Docker",
+      "retrieval_context": "Section: Technical Skills",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "047fc8f5-504a-4ef4-9bfa-85befd51add0",
+        "b0026144-6eb9-469d-a2f9-16262d95226a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 499.615806,
+          "x1": 128.57742982,
+          "y1": 508.4227444
+        },
+        {
+          "page_number": 1,
+          "x0": 133.01078682,
+          "y0": 499.6257686,
+          "x1": 330.94174606000007,
+          "y1": 508.4227444
+        }
+      ]
+    },
+    {
+      "id": "9b1e88c6-3b44-4aaa-8f4f-55cd55711cea",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "e1e19126-eec6-4aea-bd92-7202af2b8e92",
+      "order": 17,
+      "modality": "text",
+      "text": "LeetCode CodeChef | LeetCode: Solved 450+ problems (200+ medium/hard) and earned 2\u00d7 100-Day Badges (2025, 2026), demonstrating strong consistency in algorithmic problem solving.",
+      "retrieval_context": "Section: Competitive Programming",
+      "asset_uri": null,
+      "token_count": 23,
+      "source_element_ids": [
+        "079a9054-8f96-4ce3-aa99-ed6d2602c3a8",
+        "d8d7359e-da27-467d-9e6d-d3d73f370e4b",
+        "d12d497d-0ee5-4c50-8905-da50bf961d01",
+        "087da3b0-5376-4bae-ba51-1e4eae69f4da"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 468.35713824,
+          "y0": 551.6047183999999,
+          "x1": 512.6081155200001,
+          "y1": 563.0099792
+        },
+        {
+          "page_number": 1,
+          "x0": 522.2425123200001,
+          "y0": 551.6047183999999,
+          "x1": 567.9245270400002,
+          "y1": 563.0099792
+        },
+        {
+          "page_number": 1,
+          "x0": 516.1498435200001,
+          "y0": 553.9449488,
+          "x1": 518.7097507200001,
+          "y1": 561.6530879104
+        },
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 568.2067184,
+          "x1": 566.9323068799999,
+          "y1": 590.9551808
+        }
+      ]
+    },
+    {
+      "id": "95403879-a898-4329-a8df-0c27853290d9",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "e1e19126-eec6-4aea-bd92-7202af2b8e92",
+      "order": 18,
+      "modality": "text",
+      "text": "CodeChef: Achieved a peak rating of 1678 through consistent participation in competitive programming contests.",
+      "retrieval_context": "Section: Competitive Programming",
+      "asset_uri": null,
+      "token_count": 14,
+      "source_element_ids": [
+        "f62d8046-3d5a-484d-851f-a00e9682302d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 592.9937184,
+          "x1": 511.1299164799996,
+          "y1": 604.3989792
+        }
+      ]
+    },
+    {
+      "id": "49874a8f-64af-4140-b387-a92f91e92064",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "4718e706-06f0-4a15-9550-9ac276013f57",
+      "order": 19,
+      "modality": "text",
+      "text": "Certificate Earned Oracle's professional certification in Generative AI, covering Large Language Models (LLMs), prompt engineering, retrieval-augmented generation (RAG), and AI deployment concepts.",
+      "retrieval_context": "Section: Oracle Cloud Infrastructure - Generative AI Professional",
+      "asset_uri": null,
+      "token_count": 22,
+      "source_element_ids": [
+        "18548d75-516a-46b2-b372-6fc73463a59d",
+        "2dfc44fc-d987-426c-b0d8-5741217f5c81"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 488.3444393599999,
+          "y0": 615.8677184000001,
+          "x1": 537.07592672,
+          "y1": 627.2729792
+        },
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 632.5314832,
+          "x1": 536.1246531199998,
+          "y1": 655.2171808
+        }
+      ]
+    },
+    {
+      "id": "89af5bab-076f-4992-9348-8a006f883ff8",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "08490adf-7b72-466b-a230-9985a26889fe",
+      "order": 20,
+      "modality": "text",
+      "text": "Bachelor of Technology in Computer Science and Engineering",
+      "retrieval_context": "Section: Bennett University",
+      "asset_uri": null,
+      "token_count": 8,
+      "source_element_ids": [
+        "73d8f779-82d7-4ed3-bed4-45c1b9efd461"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 37.313000000000045,
+          "y0": 701.2061504,
+          "x1": 286.50001568,
+          "y1": 709.1234816
+        }
+      ]
+    },
+    {
+      "id": "3f1c5bad-0752-4423-831f-e4702a99e4e7",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "cee6f1ff-4d87-409c-9756-50c7d0f224dc",
+      "order": 21,
+      "modality": "text",
+      "text": "2025 | 2023 - 2027",
+      "retrieval_context": "Section: Knowledge-Infused Multimodal QA System for Scientific Documents",
+      "asset_uri": null,
+      "token_count": 5,
+      "source_element_ids": [
+        "8b099756-415d-4538-95a3-a994f2bf2891",
+        "5910f04a-6394-46fa-966c-20143cf3ac81",
+        "b8c248fc-40c0-420e-8b42-0044254c9bdb"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 546.71032352,
+          "y0": 615.8677184000001,
+          "x1": 567.9248259200001,
+          "y1": 627.2729792
+        },
+        {
+          "page_number": 1,
+          "x0": 540.61765472,
+          "y0": 618.2079487999999,
+          "x1": 543.17756192,
+          "y1": 625.9160879103999
+        },
+        {
+          "page_number": 1,
+          "x0": 513.119,
+          "y0": 686.4867184,
+          "x1": 567.9261200000003,
+          "y1": 697.8919791999999
+        }
+      ]
+    },
+    {
+      "id": "3c3fdfbb-2a77-4236-a204-8166ee7f7553",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "cee6f1ff-4d87-409c-9756-50c7d0f224dc",
+      "order": 22,
+      "modality": "text",
+      "text": "Greater Noida, India 2026",
+      "retrieval_context": "Section: Knowledge-Infused Multimodal QA System for Scientific Documents",
+      "asset_uri": null,
+      "token_count": 4,
+      "source_element_ids": [
+        "1ab5fc4f-f66c-4463-9dd6-dc8cdaa3a848",
+        "1e4ad617-298d-4a04-9004-f15c09d93236"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 482.92694048,
+          "y0": 701.2061504,
+          "x1": 567.2182735999997,
+          "y1": 709.1234816
+        },
+        {
+          "page_number": 1,
+          "x0": 546.7127145600001,
+          "y0": 747.2627184,
+          "x1": 567.9272169600002,
+          "y1": 758.6679792
+        }
+      ]
+    },
+    {
+      "id": "e6ba1f54-d464-415c-9c14-7095e35e4d7a",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "cee6f1ff-4d87-409c-9756-50c7d0f224dc",
+      "order": 23,
+      "modality": "text",
+      "text": "Proposed a multimodal AI framework combining text, table, and figure understanding to enable evidence-grounded question answering over scientific PDFs, targeting document intelligence in research workflows.",
+      "retrieval_context": "Section: Knowledge-Infused Multimodal QA System for Scientific Documents",
+      "asset_uri": null,
+      "token_count": 25,
+      "source_element_ids": [
+        "dcabf967-1253-44f6-8686-ce7621ad1c73"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.328,
+          "y0": 767.6714832,
+          "x1": 544.8615132799998,
+          "y1": 790.3571808
+        }
+      ]
+    },
+    {
+      "id": "08f96147-7c24-4b5d-a418-9d5b551c4f19",
+      "paper_id": "09190753-7b1e-461b-babe-06c455474b2f",
+      "section_id": "cee6f1ff-4d87-409c-9756-50c7d0f224dc",
+      "order": 24,
+      "modality": "text",
+      "text": "Built a Vision-Language reasoning pipeline using multimodal embeddings, cross-modal fusion, and similarity-based retrieval, improving factual answer accuracy on multi-hop scientific queries.",
+      "retrieval_context": "Section: Knowledge-Infused Multimodal QA System for Scientific Documents",
+      "asset_uri": null,
+      "token_count": 21,
+      "source_element_ids": [
+        "ffe1fae6-5f06-45a6-b1fb-63cdebd10501"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 33.627,
+          "y0": 792.4584831999999,
+          "x1": 545.2614147199997,
+          "y1": 815.1441808
+        }
+      ]
+    }
+  ]
+}

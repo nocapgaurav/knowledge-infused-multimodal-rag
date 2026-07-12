@@ -1,0 +1,23 @@
+{
+  "document_id": "5bf62af7-add1-48e2-950e-f303832d41cc",
+  "query": "What did you just say about Figure 2 specifically?",
+  "generation_version": "1.0",
+  "prompt_version": "1.2",
+  "provider": "ollama",
+  "model_name": "qwen2.5:7b-instruct",
+  "model_version": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "answer_status": "unverified_answer",
+  "confidence": 0.6053946505,
+  "statistics": {
+    "context_sections_used": 16,
+    "context_sections_dropped": 0,
+    "claims_total": 10,
+    "claims_grounded": 0,
+    "citations_resolved": 0,
+    "citations_unresolved": 0,
+    "prompt_tokens": 2452,
+    "completion_tokens": 280,
+    "duration_ms": 32041.484500048682
+  },
+  "created_at": "2026-07-12T12:20:08.824221Z"
+}

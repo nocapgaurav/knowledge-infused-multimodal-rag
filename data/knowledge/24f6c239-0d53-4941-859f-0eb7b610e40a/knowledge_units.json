@@ -1,0 +1,1414 @@
+{
+  "document_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+  "count": 65,
+  "chunks": [
+    {
+      "id": "1a4d54a4-02cc-4612-941d-2eefea71d691",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 0,
+      "modality": "text",
+      "text": "Knowledge-Infused Multimodal Question Answering System for Scientific Research Papers",
+      "retrieval_context": "Title of this paper",
+      "asset_uri": null,
+      "token_count": 9,
+      "source_element_ids": [
+        "00a69460-e7c1-4ba4-b9cc-cd6dd21c4044"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "84290ead-3009-403f-b5be-f4dd80dd2116",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 1,
+      "modality": "text",
+      "text": "Mehak Mittal School of Computer Science Bennett University 444mehak@gmail.com Gaurav Pandit School of Computer Science Bennett University gauravpandita@gmail.com",
+      "retrieval_context": "Authors and affiliations (title page)",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "cda5005b-5b15-4d61-a802-aaa0e7626010",
+        "61a37f11-6ce3-496a-94a3-2a8d04b5671a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 91.27699999999999,
+          "y0": 118.54663099999993,
+          "x1": 139.4243741,
+          "y1": 125.71175089999997
+        },
+        {
+          "page_number": 1,
+          "x0": 68.44299999999998,
+          "y0": 127.82346489999998,
+          "x1": 162.25904710000006,
+          "y1": 152.59798463362824
+        },
+        {
+          "page_number": 1,
+          "x0": 194.61299999999997,
+          "y0": 118.54663099999993,
+          "x1": 288.4290471,
+          "y1": 152.59798463362824
+        }
+      ]
+    },
+    {
+      "id": "4b6ba27e-77ee-4f7a-bb0d-e7b70efd904a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 2,
+      "modality": "text",
+      "text": "Abstract -Scientific research papers present much more than just textual evidence; important supporting evidence is presented in table form, figure form and/or through domain specific knowledge. Although, large language models can provide fluently written and contextualized responses, these models have been shown to be primarily focused on processing text-based content and often fail to explicitly reference multimodal forms of evidence (i.e., tables, figures) thus, limiting the reliability, interpretability, and trustworthiness of such systems when applied to scientific applications. This paper introduces an architectural framework for multimodal question answering based on a multimodal representation of knowledge. Specifically this framework jointly processes textual content, tabular data and visual figures. A modular approach was taken with modality specific representations being created using modality specific encoders. These representations were then fused together using a structured crossmodal reasoning method. The modular nature of this architecture enabled the fusion of heterogeneous information sources and facilitated consistent reasoning over multiple modalities.Given a PDF version of a research paper and a user defined query, the system will identify relevant multimodal information within the document and create answers supported by explicit evidence referencing the original document, specifically including the relevant text segment(s), table(s) or figure(s). Additionally, the framework supports transparency by providing links to the referenced document elements.The experimental results demonstrate improved performance compared to text-only baselines, in terms of both answer accuracy and interpretability.",
+      "retrieval_context": "Abstract",
+      "asset_uri": null,
+      "token_count": 226,
+      "source_element_ids": [
+        "84f607dd-a6fb-4a07-af9d-21e58aaebb55"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 48.96400000000008,
+          "y0": 184.2301839999999,
+          "x1": 300.02452960000033,
+          "y1": 461.2829775999999
+        }
+      ]
+    },
+    {
+      "id": "105695af-733f-403e-bb12-fe654821011a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 3,
+      "modality": "text",
+      "text": "Index Terms -Multimodal Learning, Question Answering, Scientific Documents, Document Understanding",
+      "retrieval_context": "Keywords (index terms)",
+      "asset_uri": null,
+      "token_count": 10,
+      "source_element_ids": [
+        "d60d5625-3489-4456-b1aa-68d840b8d0c2"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 48.96400000000008,
+          "y0": 463.7471839999999,
+          "x1": 300.0245296000001,
+          "y1": 481.7709775999999
+        }
+      ]
+    },
+    {
+      "id": "2e13877a-b9e6-43e6-b17c-1bd770e4ded6",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 4,
+      "modality": "text",
+      "text": "School of Computer Science Bennett University apeksha.koul@bennett.edu.in",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 7,
+      "source_element_ids": [
+        "becc1bc2-f4e3-48fb-86bb-37b11c7916f2"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 446.73300000000006,
+          "y0": 127.82346489999998,
+          "x1": 540.9874025999999,
+          "y1": 152.59798463362824
+        }
+      ]
+    },
+    {
+      "id": "7ad9c383-943c-44f6-a4ef-e11a4fab05f0",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 5,
+      "modality": "text",
+      "text": "insights, resulting in incomplete or misleading interpretations. This limitation highlights the necessity of approaches that can jointly process and reason across multiple modalities [3], [4].",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 25,
+      "source_element_ids": [
+        "9b9c3551-7117-49ef-a066-44e87cffd633"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 311.9780000000001,
+          "y0": 183.93134740000005,
+          "x1": 563.0355199999995,
+          "y1": 216.39422560707976
+        }
+      ]
+    },
+    {
+      "id": "3250c2d7-97fa-4f22-b8cb-a5e781356453",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 6,
+      "modality": "text",
+      "text": "Although numerous advances in large language models have provided substantial improvements in both linguistic fluency and contextual understanding [5], current question-answering (QA) systems still have major issues when attempting to utilize information found within other media formats (e.g., tables and figures) [6], [7]. As a result, valuable scientific evidence contained in tables and/or figures is often missed.",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 57,
+      "source_element_ids": [
+        "7cdf81cc-fc4a-49f9-86c7-708dc9b92ddd"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 311.9780000000001,
+          "y0": 239.7223474000001,
+          "x1": 563.03552,
+          "y1": 320.0052256070798
+        }
+      ]
+    },
+    {
+      "id": "f91e9ad9-82b2-4254-b6a0-c2d6dabb0fde",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 7,
+      "modality": "text",
+      "text": "Additionally, most text-based QA systems do not provide an obvious way to prove if an answer was created based upon actual information in the source document. Since QA systems are typically being used for applications like peer review, validating research, and analyzing literature automatically, accuracy, transparency, and ability to understand why a particular answer was given are extremely important. Due to the fact that most text-based QA systems cannot link together information found in multiple types of data sources (heterogeneous), they can create false or unverified information about the source document [5], [8].",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 93,
+      "source_element_ids": [
+        "d4d69397-86a6-487f-85d0-32cd22995f17"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 311.9780000000001,
+          "y0": 343.3343474000002,
+          "x1": 563.03552,
+          "y1": 471.4372256070797
+        }
+      ]
+    },
+    {
+      "id": "d64773cb-bf8d-4bbe-93eb-e41cff2fda0f",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 8,
+      "modality": "text",
+      "text": "Another major issue exists because of the lack of structure when combining knowledge into a single system. In many cases, science requires connecting concepts, experiments, datasets, and theories throughout a document. Because there are no methods for modeling connections among components of a document, none of the previous methods were able to perform higher-level reasoning and contextually interpret the meaning of a document's contents [9], [10]. As a solution to all three of the previously described problems, this paper introduces a new multimodal question-answering system for scientific documents using knowledge. The proposed framework uses a modular approach that combines all three of the following types of input: written text; tabular data; visual images. This allows the system to reason across modalities and thus increase the quality and validity of answers produced. Additionally, emphasis is placed on producing answers that include explicit references to specific portions of the source document that support the answer. This increases the clarity and verifiability of the system's output.",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 163,
+      "source_element_ids": [
+        "d41bd498-e443-4d19-8c24-ca6a3c9e27ad"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 311.9780000000001,
+          "y0": 494.7663474000001,
+          "x1": 563.03552,
+          "y1": 718.5112256070797
+        }
+      ]
+    },
+    {
+      "id": "4738ac28-03ee-42de-8f24-2cdd1df86bb2",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 9,
+      "modality": "text",
+      "text": "Scientific publication across all fields is growing rapidly. It is becoming increasingly difficult for authors, peer-reviewers and users (practitioners) to find the most appropriate and current information contained within these articles. Because of their structured nature as well as multi-modal presentation of knowledge, unlike regular written documents, scientific literature contain knowledge that can be found at several locations throughout an article including; the actual written or text-based description, tables, figures and experimental results [1]-[3]. In order to have a complete understanding of this type of document one must read the textual content as well as interpret numerical values of data, graphical trends and domain specific relationships.",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 106,
+      "source_element_ids": [
+        "857cae34-d89d-403f-8358-41301a6161bc"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 48.96400000000009,
+          "y0": 518.1133474,
+          "x1": 300.0219200000002,
+          "y1": 670.1272256070797
+        }
+      ]
+    },
+    {
+      "id": "0a91048f-0821-4dcd-8cd4-c51364446d44",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "045ab2b2-4f31-412d-b2c9-55ba85d70ebe",
+      "order": 10,
+      "modality": "text",
+      "text": "For example; experimental results are often provided in tabular format whereas performance comparisons/trends are presented graphically via bar graphs, pie charts etc. Systems that rely solely on textual information often fail to capture such Sayanti Chatterjee School of Computer Science Bennett University chatterjisayanti@gmail.com Apeksha Koul*",
+      "retrieval_context": "Section: I. INTRODUCTION",
+      "asset_uri": null,
+      "token_count": 45,
+      "source_element_ids": [
+        "c66040e9-2c1e-4cd9-b14d-c9cce56de5c4"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 1,
+          "x0": 48.96400000000009,
+          "y0": 674.0933474000001,
+          "x1": 300.0219200000001,
+          "y1": 718.5112256070797
+        },
+        {
+          "page_number": 1,
+          "x0": 320.782,
+          "y0": 118.54663099999993,
+          "x1": 414.5980471,
+          "y1": 152.59798463362824
+        },
+        {
+          "page_number": 1,
+          "x0": 467.32000000000005,
+          "y0": 118.54663099999993,
+          "x1": 520.4008660000001,
+          "y1": 125.71175089999997
+        }
+      ]
+    },
+    {
+      "id": "9a7b5504-8c7f-43b4-a431-22e6ba4c491e",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "dad93458-7ae5-4aa7-b9c8-0458bc9ef917",
+      "order": 11,
+      "modality": "text",
+      "text": "Although many pre-trained vision-language models (VLMs) have achieved state-of-the-art results for various multimodal tasks, most VLMs focus solely on image-text interaction and do not include structured modality input such as tables. As a result, VLMs' application to scientific documents remains restricted, where a lot of important information is presented across figures, tables, and text. Structured reasoning over tabular data has been studied previously via the use of datasets like TabFact [9]. Therefore, while these previous studies were able to reason over structured tabular data, they lacked the capability to also reason over unstructured textual information and images as well. This limitation makes it difficult to reason comprehensively about the overall structure of a document in scientific contexts.",
+      "retrieval_context": "Section: Pre-trained Vision-Language Models and Cross-Modal Alignment",
+      "asset_uri": null,
+      "token_count": 117,
+      "source_element_ids": [
+        "a435205b-7c4c-4d81-a106-7bdde7d2ad75"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 48.963999999999984,
+          "y0": 94.56634740000004,
+          "x1": 300.02192,
+          "y1": 258.53622560708015
+        }
+      ]
+    },
+    {
+      "id": "89bf6974-2442-49b2-8cad-6481e24e21fd",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "8aaf853c-928a-4499-82c6-613d3ac90974",
+      "order": 12,
+      "modality": "text",
+      "text": "Reasoning about structured data using tables is being researched via a dataset named TabFact [9] that utilizes both table-text pairings for logic-based inference and to verify facts. This type of reasoning improves on prior work by enabling better structured data analysis and also supports improved numerical reasoning. Although this type of structure provides useful relationships among numbers and allows for an improvement in quantitative reasoning, it does so without regard for other forms of data (i.e., text or image). Thus, its inability to be integrated with other types of media results in limited capability for supporting the full comprehension of documents within scientific disciplines.",
+      "retrieval_context": "Section: Table Understanding and Structured Reasoning",
+      "asset_uri": null,
+      "token_count": 104,
+      "source_element_ids": [
+        "8555844b-c642-4c9e-80e8-ccd2e81bc506"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 48.963999999999984,
+          "y0": 283.75734740000047,
+          "x1": 300.02192,
+          "y1": 423.81622560708
+        }
+      ]
+    },
+    {
+      "id": "9a00fb5d-cd14-4a29-a9c0-cf8453a45d80",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "b20bf43d-19e7-4f30-b702-c5cbef84c091",
+      "order": 13,
+      "modality": "text",
+      "text": "Although recent work (e.g., SPIQA [10]) demonstrates how multimodal reasoning can be integrated into questionanswering systems using various types of information (textual content, tables and/or figures) found within a large corpus of scientific literature, there remains considerable difficulty in establishing consistent cross-modal reasoning to support explicit reference to verifiable evidence with response generation. There are few systems currently in existence which include methods for attributing the source(s) of evidence.",
+      "retrieval_context": "Section: Scientific Document Question Answering",
+      "asset_uri": null,
+      "token_count": 69,
+      "source_element_ids": [
+        "df91ee4b-eb27-409f-9e5d-80cd4920360b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 48.963999999999984,
+          "y0": 449.0373474000004,
+          "x1": 300.0219199999999,
+          "y1": 553.23122560708
+        }
+      ]
+    },
+    {
+      "id": "9d45d21c-b572-4848-bcef-497d46746ea4",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "60d8800e-8635-4c85-9ca3-da082e6ad96f",
+      "order": 14,
+      "modality": "text",
+      "text": "Current approaches have primarily focused on one modality at a time and/or treated each modality as separate and independent. For example, vision-language models (e.g., LLaVA [6], BLIP [11]) allow for image-text based reasoning; however, they do not address tables or visual/contextual information. Additionally, many systems currently do not provide explicit evidence grounding, which can lead to reduced transparency/reliability when applied to science. The motivation for developing an integrated multimodal framework is to create a single system capable of integrating text, tables, and images and providing both cross-modal reasoning and evidence-based answers.",
+      "retrieval_context": "Section: Limitations of Existing Approaches",
+      "asset_uri": null,
+      "token_count": 91,
+      "source_element_ids": [
+        "f39bbbd8-49a6-42f8-899d-d4224d45e31e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 48.963999999999984,
+          "y0": 578.4523474000002,
+          "x1": 300.02192,
+          "y1": 718.51122560708
+        }
+      ]
+    },
+    {
+      "id": "8eca5376-e6f4-4314-9e27-77e1c1295958",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "663a14bd-6374-43de-a976-217b7534b527",
+      "order": 15,
+      "modality": "text",
+      "text": "The multimodal question answering and document understanding methodologies currently used for each type of task are summarized with a side-by-side comparison as shown in Table I. The comparison demonstrates how all of these methods differ from one another based upon their objectives, methodology, datasets, and limitations. Most existing methods have focused primarily on individual modalities (i.e., vision, speech) or have been limited to single tasks (e.g. QA), without an overall approach to unified cross-modal reasoning and evidence grounding, which is what motivated this research.",
+      "retrieval_context": "Section: Comparative Analysis",
+      "asset_uri": null,
+      "token_count": 84,
+      "source_element_ids": [
+        "cffd83ce-1765-4a8b-b284-7dcdff6afb4a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 311.978,
+          "y0": 67.85734740000044,
+          "x1": 563.0355199999998,
+          "y1": 184.0062256070804
+        }
+      ]
+    },
+    {
+      "id": "06fe955f-7465-4e0f-8246-27b885336632",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "494950f4-b4f1-4ca6-a971-d8343ad3c7a9",
+      "order": 16,
+      "modality": "text",
+      "text": "An open system that integrates different kinds of data from research papers is proposed. It takes as input a PDF version of a research article and a natural language question about the content of that article, and produces as output an evidencebased response to that question using all available data (i.e., multimodally). The complete pipeline involves parsing the document, encoding each modality, fusing the encodings for all modalities, and generating answers.",
+      "retrieval_context": "Section: III. PROPOSED METHODOLOGY",
+      "asset_uri": null,
+      "token_count": 71,
+      "source_element_ids": [
+        "68756c04-56b6-4cf9-abb6-c6be668b4707"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 311.978,
+          "y0": 210.63134740000078,
+          "x1": 563.03552,
+          "y1": 302.8702256070806
+        }
+      ]
+    },
+    {
+      "id": "54dad352-7237-473c-8e9c-1e065d8ea3cf",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "17c54f95-8cc1-499d-808d-ec369f1fc95c",
+      "order": 17,
+      "modality": "text",
+      "text": "Two main sources are processed in this system. One source is a research paper, consisting of written text, tables and images; it has been translated into a form readable by machines so the individual parts can be analyzed as structural entities. The second source is a natural language query submitted by the user. It has been formatted into an appropriate representation for guiding how the retrieval and inference process will operate across multiple formats or 'modalities'.",
+      "retrieval_context": "Section: A. Input Layer",
+      "asset_uri": null,
+      "token_count": 76,
+      "source_element_ids": [
+        "d67b4c2f-55d1-4773-8229-ec0eebdd063a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 311.978,
+          "y0": 329.25334740000096,
+          "x1": 563.0355199999998,
+          "y1": 421.49122560708054
+        }
+      ]
+    },
+    {
+      "id": "24be82db-102f-4f8c-b6ec-78215b6fd4a1",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "dc33e29e-7682-4fd9-a3bb-fe40c449efea",
+      "order": 18,
+      "modality": "text",
+      "text": "The input document will be parsed to obtain all of the various modalities while retaining structural and contextual properties. For instance, textual content will be broken down into smaller segments (i.e., sections and/or paragraphs) in order to enable semantic processing. Tabular content will be obtained from each table through identification of rows, columns and numeric values; this enables logical reasoning about the relationships among the individual items or entities within a table. Visual components (e.g., graphs, charts, diagrams), along with any captions that may exist for them, will also be extracted so that both visual and contextual properties are retained. It should be noted that this step of parsing and separating the input document is essential to properly separate the different types of heterogeneous data contained therein; however it does allow for retention of the inter-modal relationships present.",
+      "retrieval_context": "Section: B. Multimodal Information Extraction",
+      "asset_uri": null,
+      "token_count": 138,
+      "source_element_ids": [
+        "fdf1a052-c8c6-4ef1-91c5-7f223dd3c34e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 311.978,
+          "y0": 447.8753474000009,
+          "x1": 563.0355199999999,
+          "y1": 635.7552256070805
+        }
+      ]
+    },
+    {
+      "id": "e942a135-9948-4da1-88c7-08d5159b4f1b",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "683c5348-42c9-4424-b482-7f0e9b7aaade",
+      "order": 19,
+      "modality": "text",
+      "text": "Each modality is separately processed with pre-trained model for generating modality-specific representations of each input. Dense semantic embedding of textual content is generated by encoding the textual content in a vector form using transformer based language models. The contextural dependency among all the sentences and section are captured by the transformer based language models. The tabular data is also processed using structurally aware encoder technique which enables the preservation of row/column relationship. This helps to reason about comparison/numerical values. In addition, image data from figure is processed using vision language model. The vision language model captures visual pattern and sematic cue derived from the corresponding caption. While these encoders create a unified representational space, they retain their respective modality characteristics.",
+      "retrieval_context": "Section: C. Modality-Specific Encoding",
+      "asset_uri": null,
+      "token_count": 120,
+      "source_element_ids": [
+        "cda7befa-1042-42e8-ad14-aa2f60d63509"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 2,
+          "x0": 311.978,
+          "y0": 662.138347400001,
+          "x1": 563.0355199999997,
+          "y1": 718.5112256070805
+        },
+        {
+          "page_number": 3,
+          "x0": 48.964,
+          "y0": 451.24934740000003,
+          "x1": 300.02152000000007,
+          "y1": 567.3972256070797
+        }
+      ]
+    },
+    {
+      "id": "d675ee04-f2fb-4b4b-9e99-49cb1dac7afc",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "683c5348-42c9-4424-b482-7f0e9b7aaade",
+      "order": 20,
+      "modality": "table",
+      "text": "TABLE I COMPARISON OF EXISTING MULTIMODAL QA AND DOCUMENT UNDERSTANDING APPROACHES\n\nTABLE I COMPARISON OF EXISTING MULTIMODAL QA AND DOCUMENT UNDERSTANDING APPROACHES\n\n| Author           |   Year | Objective                     | Method        | Dataset       | Techniques             | Limitations                 |\n|------------------|--------|-------------------------------|---------------|---------------|------------------------|-----------------------------|\n| Lee et al.       |   2024 | Multimodal KG rea- soning     | MMKG          | Custom MMKG   | Graph attention        | Needs curated KG            |\n| Roberts et al.   |   2024 | LVLM evaluation               | SciFIBench    | SciFIBench    | Benchmarking           | No KG integration           |\n| Pramanick et al. |   2024 | Scientific figure QA          | SPIQA         | SPIQA         | Multimodal retrieval   | PDF noise                   |\n| Saglam           |   2024 | KG multi-hop QA               | KG-QA         | Domain QA     | KG retrieval           | No multimodal fu- sion      |\n| He et al.        |   2024 | Graph-based QA                | G-Retriever   | Graph QA      | Graph retrieval        | Graph quality de- pendent   |\n| Jiang et al.     |   2024 | Retrieval + graph rea- soning | RAGraph       | Graph QA      | Contrastive learn- ing | No visual reason- ing       |\n| Zhang et al.     |   2024 | Multimodal KG com- pletion    | Native-KG     | MMKG          | Fusion + adversar- ial | Limited diversity           |\n| Xu et al.        |   2024 | KG-based QA                   | KG-RAG        | Industrial QA | Dense retrieval        | Domain restricted           |\n| Salemi et al.    |   2024 | RAG ranking                   | uRAG          | Open QA       | Cross-modal scor- ing  | No multimodal eval          |\n| Liu et al.       |   2024 | Conversational KG QA          | Conv-KGQA     | ConvQA        | KG prompting           | No multimodal in- tegration |\n| Masry et al.     |   2024 | Chart QA                      | ChartInstruct | ChartQA       | Data augmentation      | Chart-only focus            |\n| Zeng et al.      |   2024 | Chart reasoning               | ChartQA+      | ChartQA       | Prompt tuning          | Limited KG sup- port        |\n| Rao et al.       |   2025 | Grounded multimodal QA        | TableLLaMA    | VQA+KG        | KG alignment           | Graph quality sen- sitive   |\n| Biswas et al.    |   2025 | Dense retrieval               | Table-RAG     | MS MARCO      | RAG integration        | Limited KG usage            |\n| Martinez et al.  |   2025 | Multimodal benchmark          | MMMU          | MMMU          | KG constraints         | Small KG subsets            |\n| Lee et al.       |   2025 | Table + KG reasoning          | SemanticCamo  | TabFact       | Graph encoding         | Table-focused only          |\n| Mehta et al.     |   2025 | KG-enhanced RAG               | MELOV         | QA benchmarks | Feedback loops         | Complex training            |\n| Liu et al.       |   2023 | Vision-language QA            | LLaVA         | COCO, VQA     | Vision + LLM           | No table reasoning          |\n| Dai et al.       |   2023 | Vision-language pre- training | InstructBLIP  | VL datasets   | Instruction tuning     | Limited grounding           |\n| Masry et al.     |   2023 | Chart QA                      | ChartQA       | ChartQA       | OCR + vision           | No cross-modal fu- sion     |",
+      "retrieval_context": "Table 1",
+      "asset_uri": null,
+      "token_count": null,
+      "source_element_ids": [
+        "d3b5f11b-9b27-495c-8d8b-039435baf8c5",
+        "e3213cae-18e3-4dfd-85ce-5e9c119e9af6"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 48.38633728027344,
+          "y0": 78.33016204833984,
+          "x1": 562.9823608398438,
+          "y1": 427.2295227050781
+        }
+      ]
+    },
+    {
+      "id": "af7f7c4c-0ffe-46f6-9723-40f39536cc1f",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5d07aba1-d0df-4008-9f74-eb60c6dcea59",
+      "order": 21,
+      "modality": "text",
+      "text": "The encoded representations from different modalities are integrated into a unified representation through a fusion mechanism. This process aligns textual, numerical, and visual information, enabling the capture of complementary knowledge distributed across the document. By combining modalityspecific embeddings, relevant information can be accessed irrespective of its original form. As illustrated in Fig. 1, the proposed pipeline integrates modality-specific representations through a unified fusion mechanism.",
+      "retrieval_context": "Section: D. Multimodal Fusion",
+      "asset_uri": null,
+      "token_count": 64,
+      "source_element_ids": [
+        "fcd52452-3bcb-411d-804d-3dd57896962b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 48.964,
+          "y0": 614.3173474,
+          "x1": 300.0219200000001,
+          "y1": 718.5112256070796
+        }
+      ]
+    },
+    {
+      "id": "c1778a25-548b-4d41-88ec-60d995c9a22a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "49ae2998-be75-4cd1-8a52-773712195b20",
+      "order": 22,
+      "modality": "text",
+      "text": "When dealing with complex questions that require reasoning based upon data provided to us, we will reason using an integrated approach across all three types of data (text, numbers and images) as opposed to the traditional method of having one single type of data for each question. For example; contextual interpretation is provided through textual descriptions; quantitative analysis is accomplished through identifying numerical values within tables; and interpretive analysis of visual patterns are enabled by means of examining figures. The integrated nature of this reasoning process should provide increased consistency while reducing the risk of providing incomplete or misleading responses.",
+      "retrieval_context": "Section: E. Cross-Modal Reasoning",
+      "asset_uri": null,
+      "token_count": 100,
+      "source_element_ids": [
+        "1e72d1b6-b99a-423d-a5fc-9fe57958691a"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 311.978,
+          "y0": 466.3343474,
+          "x1": 563.0355199999998,
+          "y1": 606.3932256070797
+        }
+      ]
+    },
+    {
+      "id": "cb4e6bb3-20a1-4462-abd0-8d50f5384d82",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "dde13387-6e54-481b-bd8a-399e20848261",
+      "order": 23,
+      "modality": "text",
+      "text": "To determine the most relevant response, a similarity score is computed between the query representation and candidate multimodal representations:",
+      "retrieval_context": "Section: F. Answer Scoring Function",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "ead81c0d-c62b-4bf5-afe9-54d058bcabca"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 311.978,
+          "y0": 631.5563474,
+          "x1": 563.0355199999998,
+          "y1": 664.0192256070796
+        }
+      ]
+    },
+    {
+      "id": "46976f2b-c474-4932-a70e-d742553deada",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "dde13387-6e54-481b-bd8a-399e20848261",
+      "order": 24,
+      "modality": "text",
+      "text": "where q denotes the query embedding and m i represents the multimodal embedding of a document segment. This scoring mechanism enables ranking of candidate answers based on semantic relevance.",
+      "retrieval_context": "Section: F. Answer Scoring Function",
+      "asset_uri": null,
+      "token_count": 29,
+      "source_element_ids": [
+        "2a992da7-4f74-4cc6-ab85-6b567ffdef03"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 3,
+          "x0": 311.97799999999995,
+          "y0": 697.6855442,
+          "x1": 563.0399162,
+          "y1": 718.5112256070796
+        },
+        {
+          "page_number": 4,
+          "x0": 48.96400000000001,
+          "y0": 351.5123474,
+          "x1": 300.02152000000007,
+          "y1": 372.01922560707965
+        }
+      ]
+    },
+    {
+      "id": "f3484711-9c40-4a5e-a3e2-6c8ddf250839",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "dde13387-6e54-481b-bd8a-399e20848261",
+      "order": 25,
+      "modality": "figure",
+      "text": "Fig. 1. Proposed Knowledge-Infused Multimodal Question Answering Architecture",
+      "retrieval_context": "Figure 1",
+      "asset_uri": "figures/b66f09e8-b43d-43e9-9b16-6a1d8230f89c.png",
+      "token_count": null,
+      "source_element_ids": [
+        "b66f09e8-b43d-43e9-9b16-6a1d8230f89c",
+        "d52a89d4-f334-4b36-9722-a21062dc34a2"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 49.17987823486328,
+          "y0": 50.608394622802734,
+          "x1": 556.8967895507812,
+          "y1": 288.7100830078125
+        }
+      ]
+    },
+    {
+      "id": "20042097-6333-40e6-8501-27b01d65111c",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1fe68e79-1d5f-425f-bdc3-3b78a09e92cc",
+      "order": 26,
+      "modality": "text",
+      "text": "Responses were generated along with explicit support from the data provided. The link was made for each response to a component of the original source document (i.e., related text segment(s), table(s), figure(s)) providing the basis for each generated response. This provides additional transparency into how the generated response was produced; supports users verifying the accuracy of the generated response; and increases the ability to understand why an answer was generated as it relates to a given question within a scientific QA task.",
+      "retrieval_context": "Section: G. Evidence-Based Answer Generation",
+      "asset_uri": null,
+      "token_count": 82,
+      "source_element_ids": [
+        "342a283d-0e35-46ee-84cd-71fb9405b9d2"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.96400000000001,
+          "y0": 398.9753474,
+          "x1": 300.0219200000001,
+          "y1": 503.16922560707957
+        }
+      ]
+    },
+    {
+      "id": "e3753a41-6a28-426c-829a-d7f45d924445",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1fe68e79-1d5f-425f-bdc3-3b78a09e92cc",
+      "order": 27,
+      "modality": "text",
+      "text": "The system also ensures that selected evidence is semantically aligned with the question being asked and modalityconsistent. The confidence score for the relevance of each piece of evidence determines which evidence should be prioritized, thus minimizing ambiguity when determining whether an answer is reliable. Additionally, this process minimizes the occurrence of hallucinations because answers are grounded in verifiable information contained in the original document.",
+      "retrieval_context": "Section: G. Evidence-Based Answer Generation",
+      "asset_uri": null,
+      "token_count": 64,
+      "source_element_ids": [
+        "4cd7ee6a-84e9-4571-95ce-7511db81ab10"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.96400000000001,
+          "y0": 506.7163473999999,
+          "x1": 300.0219200000001,
+          "y1": 598.9552256070796
+        }
+      ]
+    },
+    {
+      "id": "d908dbc4-1aa3-49c9-95a5-e76022ea277e",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "846d8fcc-6805-4d37-a3bf-a5be8503170a",
+      "order": 28,
+      "modality": "text",
+      "text": "The proposed system will be an independent, modular multimodal system that handles all different types of information (textual, tabular, visual) simultaneously and makes decisions via a single decision making process. The modular design of the proposed system allows for individual processing of each type of input information while facilitating meaningful integration across these different modalities. In addition to its ability to handle multiple forms of input, the system's workflow includes breaking down each input document into separate modality specific elements; individually processing each modality element; and combining each processed element together to select a single output answer.",
+      "retrieval_context": "Section: IV. SYSTEM ARCHITECTURE",
+      "asset_uri": null,
+      "token_count": 97,
+      "source_element_ids": [
+        "5907cfdb-0748-45e0-a5a1-e77fab6510c4"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 48.96400000000001,
+          "y0": 626.2733473999999,
+          "x1": 300.02191999999997,
+          "y1": 718.5112256070796
+        },
+        {
+          "page_number": 4,
+          "x0": 311.978,
+          "y0": 351.5123474,
+          "x1": 563.0355199999996,
+          "y1": 395.9292256070796
+        }
+      ]
+    },
+    {
+      "id": "cdb87af5-92ff-4606-aa6e-0a1a1f6f37bf",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "a3457515-aff5-4543-ac70-c467632d9e20",
+      "order": 29,
+      "modality": "text",
+      "text": "Given a scientific research paper and a user query, the system first performs document parsing to extract relevant modalities, including textual content, tables, and figures. Each modality is routed through a dedicated processing pipeline, where it is transformed into an intermediate representation using modality-specific encoders. These representations are then passed to a fusion module, which aligns and aggregates information across modalities to generate candidate answers. The architecture ensures that each modality contributes independently while maintaining coherence in the final output. The detailed architecture of the system is shown in Fig. 2, highlighting the interaction between different modality-specific pipelines and the fusion mechanism.",
+      "retrieval_context": "Section: A. Overview",
+      "asset_uri": null,
+      "token_count": 102,
+      "source_element_ids": [
+        "122ecc2c-955e-4c7a-b200-5cd2aca919be"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 311.978,
+          "y0": 423.13934739999996,
+          "x1": 563.0355199999998,
+          "y1": 575.1532256070795
+        }
+      ]
+    },
+    {
+      "id": "c45c7042-1759-48ba-a4e2-dba286f231de",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "cc5bb8e2-62f0-42c5-853a-40c9227645ab",
+      "order": 30,
+      "modality": "text",
+      "text": "The design has three main processing streams (pipelines), with each stream being optimized for one type of input. The Text Pipeline is used to process the textual portions of the document (abstracts, methodology, results) by converting them into vector based representations that are semantically meaningful in terms of their context and relationship to other text within the section. The Table Pipeline is used to process structured information by retaining the dependency structure of rows and columns allowing for numerical computations over comparative results and experimental results. The Figure Pipeline processes visual content like figures, tables and charts through pre-trained Vision-Language Models which capture both visual characteristics as well as contextual characteristics of associated captions. Each pipeline generates candidates that can be combined during cross-modal fusion.",
+      "retrieval_context": "Section: B. Modality-Specific Pipelines",
+      "asset_uri": null,
+      "token_count": 125,
+      "source_element_ids": [
+        "0eede5d2-dc93-4074-bb72-cd655ff3e069"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 4,
+          "x0": 311.978,
+          "y0": 602.3623473999999,
+          "x1": 563.0355199999999,
+          "y1": 718.5112256070795
+        },
+        {
+          "page_number": 5,
+          "x0": 48.964,
+          "y0": 426.69834740000005,
+          "x1": 300.02152000000007,
+          "y1": 483.07122560707967
+        }
+      ]
+    },
+    {
+      "id": "697cee1a-90ae-4396-9011-a13331b5bc3a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "cc5bb8e2-62f0-42c5-853a-40c9227645ab",
+      "order": 31,
+      "modality": "figure",
+      "text": "Fig. 2. Architecture of the proposed multimodal QA system integrating text, table, and figure modalities through parallel encoding, fusion, and cross-modal reasoning, with evidence-grounded answer generation.",
+      "retrieval_context": "Figure 2",
+      "asset_uri": "figures/ae0a9514-434a-4e4e-b4ed-b660a4f2a387.png",
+      "token_count": null,
+      "source_element_ids": [
+        "ae0a9514-434a-4e4e-b4ed-b660a4f2a387",
+        "082a4601-ca04-4174-a0e5-3ad66810e34c"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 47.3645133972168,
+          "y0": 47.61521911621094,
+          "x1": 560.8726196289062,
+          "y1": 364.61322021484375
+        }
+      ]
+    },
+    {
+      "id": "7787cdb6-c06d-4b28-97c7-41bdb1b4063a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "ff217b3e-dc8a-4591-99ba-65df5b318f87",
+      "order": 32,
+      "modality": "text",
+      "text": "All modalities are processed independently in parallel, allowing the system to extract complementary information without compromising modality-specific characteristics. This design improves computational efficiency and ensures that the processing of one modality does not interfere with others. Furthermore, the parallel architecture enhances scalability by allowing additional modalities to be incorporated without modifying existing pipelines.",
+      "retrieval_context": "Section: C. Parallel Processing",
+      "asset_uri": null,
+      "token_count": 53,
+      "source_element_ids": [
+        "d78292ac-92db-436b-8a66-b50ff63d091e"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 48.964,
+          "y0": 514.5303474,
+          "x1": 300.02192,
+          "y1": 606.7682256070797
+        }
+      ]
+    },
+    {
+      "id": "eef7e543-ebb9-46bb-b970-56952c016537",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "a30e0b3b-5bb2-4d33-a50d-f37cebe99d58",
+      "order": 33,
+      "modality": "text",
+      "text": "The output of each pipeline is then fed into a 'fusion' layer. In this layer the modalities (text, table, figure) provide representations of the same input data but through different perspectives. These modalities are then merged together as one multimodal representation. The 'decision' layer produces a score for each candidate answer relative to its representation of the query. The highest scoring candidate answer has the best match with respect to confidence of the model and also how well it matches the context of the question.",
+      "retrieval_context": "Section: D. Fusion and Decision Layer",
+      "asset_uri": null,
+      "token_count": 85,
+      "source_element_ids": [
+        "7fc83cab-7353-44bc-bfd0-0ea3e4fe537f"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 48.964,
+          "y0": 638.2283474000001,
+          "x1": 300.0219200000001,
+          "y1": 718.5112256070797
+        },
+        {
+          "page_number": 5,
+          "x0": 311.978,
+          "y0": 426.69834740000005,
+          "x1": 563.0355199999999,
+          "y1": 447.2062256070797
+        }
+      ]
+    },
+    {
+      "id": "f94dc060-f2d9-47db-8f4d-b46281189f50",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "ef96334b-79bb-4fb1-bb48-6a5dacb32805",
+      "order": 34,
+      "modality": "text",
+      "text": "A major advantage of the architecture is the fact that it has the capability of providing users with answer explanations based on specific evidence from the source. The actual responses provided by the architecture are tied to reference points (i.e., tables, images, etc.) within a document for which the user would need to find in order to verify whether what was said by the architecture is true.",
+      "retrieval_context": "Section: E. Evidence Attribution",
+      "asset_uri": null,
+      "token_count": 67,
+      "source_element_ids": [
+        "58881bde-7be4-402f-8267-fad9d07b586d"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 311.978,
+          "y0": 476.9683474000001,
+          "x1": 563.0355199999998,
+          "y1": 557.2512256070796
+        }
+      ]
+    },
+    {
+      "id": "d30b587b-11e4-4831-90a9-d1e2c4725bab",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5ae279ba-5e05-4164-b565-0f97cd70f8c1",
+      "order": 35,
+      "modality": "text",
+      "text": "The use of separate pathways allows for easy addition of other modules (e.g., image processing or using prior knowledge) and does not require changing how an already working pathway works. As such, the architecture is able to be modified over time and will be able to adapt to changes that occur in the field of multimodal learning and support more complex tasks related to documents.",
+      "retrieval_context": "Section: F. Scalability and Extensibility",
+      "asset_uri": null,
+      "token_count": 65,
+      "source_element_ids": [
+        "abb64e89-9625-479d-8030-37689b6ffb96"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 311.978,
+          "y0": 587.0133474,
+          "x1": 563.0355199999998,
+          "y1": 667.2962256070797
+        }
+      ]
+    },
+    {
+      "id": "67c64c5b-1fab-40e9-8ec1-3c78fd84b7b4",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1ff78101-b013-44e7-a88b-74f85557c9c7",
+      "order": 36,
+      "modality": "text",
+      "text": "The proposed framework provides a solid base for multimodal question answering (QA) on scientific articles but still has many ways it could be improved. There are two major opportunities to extend this model.",
+      "retrieval_context": "Section: V. FUTURE WORK",
+      "asset_uri": null,
+      "token_count": 33,
+      "source_element_ids": [
+        "d0e512d2-a70c-4bb0-92f4-90237c9d70ba"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 5,
+          "x0": 311.978,
+          "y0": 698.0043474000001,
+          "x1": 563.0355199999996,
+          "y1": 718.5112256070797
+        },
+        {
+          "page_number": 6,
+          "x0": 48.964,
+          "y0": 52.42434739999999,
+          "x1": 300.02152,
+          "y1": 72.93222560707966
+        }
+      ]
+    },
+    {
+      "id": "690be8e0-c4f1-4056-ae05-31fd3219acf8",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1ff78101-b013-44e7-a88b-74f85557c9c7",
+      "order": 37,
+      "modality": "text",
+      "text": "Firstly, additional multimodal fusion methods have the potential to create better interactions between models by providing more detailed alignments among text, table and figure data. Secondly, integrating a knowledge graph into the model will allow the model to reason about structured information and provide multi-step inferences across multiple parts of a single article.",
+      "retrieval_context": "Section: V. FUTURE WORK",
+      "asset_uri": null,
+      "token_count": 53,
+      "source_element_ids": [
+        "3293b9e3-e3f9-4e12-b0b1-7783e0651557"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964,
+          "y0": 77.02034739999999,
+          "x1": 300.02192,
+          "y1": 157.30322560707987
+        }
+      ]
+    },
+    {
+      "id": "08a0c1b1-7092-4088-803e-d22c6f48647a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1ff78101-b013-44e7-a88b-74f85557c9c7",
+      "order": 38,
+      "modality": "text",
+      "text": "Further, there is a need for improving how well the QA system performs under adverse conditions; i.e., when provided with noisy input (e.g. poor quality PDF extractions or missing visual data). Also, developing the ability to perform domain specific tuning of the QA system using various domains' scientific dataset would likely lead to improvements in the QA system's performance within those specific areas.",
+      "retrieval_context": "Section: V. FUTURE WORK",
+      "asset_uri": null,
+      "token_count": 63,
+      "source_element_ids": [
+        "fd802801-1ea1-4268-805b-76e302574709"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964,
+          "y0": 161.3913474000002,
+          "x1": 300.02192,
+          "y1": 241.67422560708007
+        }
+      ]
+    },
+    {
+      "id": "17f26ef6-e00b-4e63-af0b-d5270ece8d04",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "1ff78101-b013-44e7-a88b-74f85557c9c7",
+      "order": 39,
+      "modality": "text",
+      "text": "Finally, since the QA system requires processing significant amounts of data to provide a QA response, improving the computational speed of the system will make the deployment of these systems feasible in a variety of real world scenarios (i.e. large scale literature reviews and automated research summaries).",
+      "retrieval_context": "Section: V. FUTURE WORK",
+      "asset_uri": null,
+      "token_count": 47,
+      "source_element_ids": [
+        "ce9ec73b-86e9-4eba-92fa-88f2025703a0"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964,
+          "y0": 245.76334740000038,
+          "x1": 300.02191999999997,
+          "y1": 314.0912256070801
+        }
+      ]
+    },
+    {
+      "id": "55d69b16-f481-471a-8166-d4138f27bd24",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5b1a240d-649c-4c07-be57-b500870559e8",
+      "order": 40,
+      "modality": "text",
+      "text": "Overall, the results demonstrate the importance of multimodal integration in scientific question answering and highlight its potential to improve both the accuracy and transparency of automated research analysis systems.",
+      "retrieval_context": "Section: VI. CONCLUSION",
+      "asset_uri": null,
+      "token_count": 29,
+      "source_element_ids": [
+        "c8673137-3060-4d52-bf4a-2bcea2c67fa2"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 311.978,
+          "y0": 76.3353474000005,
+          "x1": 563.0355199999997,
+          "y1": 120.75322560708025
+        }
+      ]
+    },
+    {
+      "id": "42b264ef-ca52-4bb1-99fc-698ab838c5ed",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5b1a240d-649c-4c07-be57-b500870559e8",
+      "order": 41,
+      "modality": "text",
+      "text": "A knowledge-infused multimodal question answering system for scientific research documents has been presented. The framework integrates textual, tabular, and visual modalities to generate accurate and evidence-grounded responses. By combining modality-specific processing with a unified fusion mechanism, complementary information distributed across different components of a document is effectively captured.",
+      "retrieval_context": "Section: VI. CONCLUSION",
+      "asset_uri": null,
+      "token_count": 48,
+      "source_element_ids": [
+        "87eee21a-c93a-4e10-8b83-5cde20d6a3d8"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964000000000006,
+          "y0": 349.24834740000045,
+          "x1": 300.02192,
+          "y1": 429.53122560708005
+        }
+      ]
+    },
+    {
+      "id": "7cbb2dc6-6e09-49b0-955b-3f210eefb2d6",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5b1a240d-649c-4c07-be57-b500870559e8",
+      "order": 42,
+      "modality": "text",
+      "text": "In addition to providing a common platform for the integration of multiple formats of data, the proposed framework also incorporates a method for attributing evidence to specific portions of a document. This attribute allows users to be confident in their decision-making processes and have greater confidence when using this type of technology. In comparison to traditional methods focused solely on text-based representations of information, the proposed framework explicitly utilizes cross-modal reasoning and therefore produces more reliable and transparent results than those produced by traditional frameworks.",
+      "retrieval_context": "Section: VI. CONCLUSION",
+      "asset_uri": null,
+      "token_count": 85,
+      "source_element_ids": [
+        "c5fdd9e6-6d7c-4df2-a2e6-a0b23d8eb38b"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964000000000006,
+          "y0": 433.6193474000004,
+          "x1": 300.02192,
+          "y1": 561.7232256070799
+        }
+      ]
+    },
+    {
+      "id": "0e818973-bfc4-4f8e-9267-393a27b4b3d0",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5b1a240d-649c-4c07-be57-b500870559e8",
+      "order": 43,
+      "modality": "text",
+      "text": "The structure of the proposed framework is designed as a series of modules. Each module may be independently developed allowing for easier scalability and adaptability to new formats and/or external sources of information. In addition to allowing for the easy adaptation to new formats and/or external sources of information, the modular nature of the proposed framework will allow for the inclusion of additional modalities, if necessary, and enable it to function seamlessly with other systems that use similar architectures.",
+      "retrieval_context": "Section: VI. CONCLUSION",
+      "asset_uri": null,
+      "token_count": 79,
+      "source_element_ids": [
+        "b426dde1-33b8-43ad-825a-a55181063bda"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964000000000006,
+          "y0": 565.8123474000004,
+          "x1": 300.02192,
+          "y1": 670.00522560708
+        }
+      ]
+    },
+    {
+      "id": "25bdd9e6-dae7-4bea-94cd-951f42c672e9",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": "5b1a240d-649c-4c07-be57-b500870559e8",
+      "order": 44,
+      "modality": "text",
+      "text": "Although the current implementation focuses on a lightweight prototype, it establishes a foundation for future research in multimodal document understanding. Future work will explore advanced fusion strategies, graph-based reason- ing, and knowledge integration techniques to further improve accuracy and reasoning capabilities.",
+      "retrieval_context": "Section: VI. CONCLUSION",
+      "asset_uri": null,
+      "token_count": 41,
+      "source_element_ids": [
+        "bd01526c-4b9b-4600-9645-0036c06c7838"
+      ],
+      "bounding_boxes": [
+        {
+          "page_number": 6,
+          "x0": 48.964000000000006,
+          "y0": 674.0933474000004,
+          "x1": 300.0219200000001,
+          "y1": 718.5112256070801
+        },
+        {
+          "page_number": 6,
+          "x0": 311.978,
+          "y0": 52.42534740000042,
+          "x1": 563.0355199999993,
+          "y1": 72.93222560708011
+        }
+      ]
+    },
+    {
+      "id": "2fb9ae8a-5616-492c-984a-4812cb1ac634",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 45,
+      "modality": "text",
+      "text": "Y. Xu, Y. Xu, T. Lv, L. Cui, F. Wei, G. Wang, Y. Lu, D. Florencio, C. Zhang, W. Che, M. Zhang, and L. Zhou, 'Layoutlmv2: Multi-modal pre-training for visually-rich document understanding,' in Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics , 2021.",
+      "retrieval_context": "Bibliography reference [1]",
+      "asset_uri": null,
+      "token_count": 47,
+      "source_element_ids": [
+        "92863ea2-f1b1-492f-b618-cd67218a25cd"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "81cf8ae5-e26a-4ee4-96c0-de5362684b5c",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 46,
+      "modality": "text",
+      "text": "G. Kim, T. Hong, M. Yim, J. Nam, J. Park, S. Yoon, and K. Jung, 'Donut: Document understanding transformer without ocr,' in ECCV , 2022.",
+      "retrieval_context": "Bibliography reference [2]",
+      "asset_uri": null,
+      "token_count": 25,
+      "source_element_ids": [
+        "4a7be86e-0460-4b1c-b795-4021d75b59c9"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "810b7fd6-de19-4696-84ad-24677ee45961",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 47,
+      "modality": "text",
+      "text": "X. Wang and et al., 'Pix2struct: Screenshot parsing as pretraining for visual language understanding,' in ICML , 2022.",
+      "retrieval_context": "Bibliography reference [3]",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "6408b15f-61ae-42b8-83e4-ec2b1fb6b957"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "2e8ba190-6fc7-4391-bf9f-ef1ca6dfc901",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 48,
+      "modality": "text",
+      "text": "A. Masry, D. Long, J. Tan, S. Joty, and E. Hoque, 'Chartqa: Question answering on charts,' in ACL , 2022.",
+      "retrieval_context": "Bibliography reference [4]",
+      "asset_uri": null,
+      "token_count": 20,
+      "source_element_ids": [
+        "f918bb86-287c-4a7e-ae09-181574c564e4"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "bcf02cc5-2bb4-4af6-a35e-a0f71a0cfd8b",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 49,
+      "modality": "text",
+      "text": "H. Touvron and et al., 'Llama: Open and efficient foundation language models,' in arXiv preprint (Meta AI) , 2023.",
+      "retrieval_context": "Bibliography reference [5]",
+      "asset_uri": null,
+      "token_count": 19,
+      "source_element_ids": [
+        "2ddd57bf-c863-4e7f-8212-ac7903fb824f"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "d697164e-9d51-4909-827b-4e761e83bc10",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 50,
+      "modality": "text",
+      "text": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Llava: Large language and vision assistant,' in Proceedings of CVPR , 2023.",
+      "retrieval_context": "Bibliography reference [6]",
+      "asset_uri": null,
+      "token_count": 22,
+      "source_element_ids": [
+        "c58a7de6-8c92-47a8-b2ff-52fe4ae3596d"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "6159a39c-c090-491c-a619-757b6e529155",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 51,
+      "modality": "text",
+      "text": "W. Dai, J. Li, D. Li, A. Tiong, J. Zhao, W. Wang, and J. Zhu, 'Instructblip: Towards general-purpose vision-language models,' in NeurIPS , 2023.",
+      "retrieval_context": "Bibliography reference [7]",
+      "asset_uri": null,
+      "token_count": 24,
+      "source_element_ids": [
+        "4cca90ae-ce10-4d41-8b43-cdbbb023b7be"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "1b2c4555-4f75-4561-9dca-e748f2e4a2ad",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 52,
+      "modality": "text",
+      "text": "A. Radford, J. W. Kim, C. Hallacy, and et al., 'Learning transferable visual models from natural language supervision,' in ICML , 2021.",
+      "retrieval_context": "Bibliography reference [8]",
+      "asset_uri": null,
+      "token_count": 22,
+      "source_element_ids": [
+        "816a39dc-732c-4125-a7f2-fc37745750f3"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "59513d38-1d77-4c98-b2e2-d5eb01b1b7a3",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 53,
+      "modality": "text",
+      "text": "W. Chen, W. Wang, X. Wang, and et al., 'Tabfact: A large-scale dataset for table-based fact verification,' in ICLR , 2020.",
+      "retrieval_context": "Bibliography reference [9]",
+      "asset_uri": null,
+      "token_count": 21,
+      "source_element_ids": [
+        "ef8fae54-fc80-4ca6-9f3c-1c1b89432e40"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "bfddf14d-7161-412b-bd45-424399ea5b86",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 54,
+      "modality": "text",
+      "text": "S. Pramanick and et al., 'Spiqa: Multimodal qa on scientific papers,' in NeurIPS Datasets and Benchmarks , 2024.",
+      "retrieval_context": "Bibliography reference [10]",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "e7bbd81c-e2f8-405a-b7cf-08b2af460576"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "2a68f4c6-cacc-4db5-a58c-fb80ea9f6de7",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 55,
+      "modality": "text",
+      "text": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip: Bootstrapping languageimage pre-training,' in ICML , 2022.",
+      "retrieval_context": "Bibliography reference [11]",
+      "asset_uri": null,
+      "token_count": 17,
+      "source_element_ids": [
+        "e074a681-863a-4ecf-bdff-d5aca7c80a93"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "1ba3c38b-4a67-477e-942b-912e45dfaa28",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 56,
+      "modality": "text",
+      "text": "X. Zhu and et al., 'Deplot: One-shot visual language reasoning,' in ICLR , 2023.",
+      "retrieval_context": "Bibliography reference [12]",
+      "asset_uri": null,
+      "token_count": 14,
+      "source_element_ids": [
+        "766d8487-8c97-4ff4-85a6-a775dd7ea2cf"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "3e17a344-1d02-4a09-84b1-5f892d9befbc",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 57,
+      "modality": "text",
+      "text": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pre-training of deep bidirectional transformers for language understanding,' in NAACL , 2019.",
+      "retrieval_context": "Bibliography reference [13]",
+      "asset_uri": null,
+      "token_count": 22,
+      "source_element_ids": [
+        "f6b27286-750f-4098-9c29-972a23390f40"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "1e525999-c6ba-4775-a095-258dca6c2859",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 58,
+      "modality": "text",
+      "text": "A. Vaswani, N. Shazeer, N. Parmar, and et al., 'Attention is all you need,' in NeurIPS , 2017.",
+      "retrieval_context": "Bibliography reference [14]",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "405d083d-bb49-4068-9f73-c6a4d109a8d4"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "e85cfbee-ccdf-4d46-8470-cc284ab38df1",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 59,
+      "modality": "text",
+      "text": "W. Li, W. Chen, W. Wang, and et al., 'Tapex: Table pre-training via learning a neural sql executor,' in International Conference on Learning Representations (ICLR) , 2021.",
+      "retrieval_context": "Bibliography reference [15]",
+      "asset_uri": null,
+      "token_count": 27,
+      "source_element_ids": [
+        "b934eb26-c2b9-4723-9eba-e940eba3de23"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "09fadea4-2381-4268-9fd8-95ab04dc5817",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 60,
+      "modality": "text",
+      "text": "S. Appalaraju, S. Bhagat, S. Sankaranarayanan, and et al., 'Docformer: End-to-end transformer for document understanding,' in International Conference on Computer Vision (ICCV) , 2021.",
+      "retrieval_context": "Bibliography reference [16]",
+      "asset_uri": null,
+      "token_count": 24,
+      "source_element_ids": [
+        "78f9c670-5efd-4c10-8cca-63c9b91adc83"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "61ca12fc-edbb-4d3f-8feb-b19dbef81ef4",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 61,
+      "modality": "text",
+      "text": "A. Singh and et al., 'Dit: Self-supervised pre-training for document image transformer,' in ACM Multimedia , 2022.",
+      "retrieval_context": "Bibliography reference [17]",
+      "asset_uri": null,
+      "token_count": 17,
+      "source_element_ids": [
+        "440edc65-49b1-4729-b36e-fddb765bec33"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "0a199575-66a8-4929-8c7d-a224b330c98c",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 62,
+      "modality": "text",
+      "text": "V. Zhong, C. Xiong, and R. Socher, 'Semantic parsing for table question answering,' in ACL , 2020.",
+      "retrieval_context": "Bibliography reference [18]",
+      "asset_uri": null,
+      "token_count": 17,
+      "source_element_ids": [
+        "6a4a4c2b-8086-4411-b2c4-bd452f21a63f"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "19cd7104-b44c-40e4-814f-46538586398a",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 63,
+      "modality": "text",
+      "text": "Y.-C. Chen, L. Li, L. Yu, and et al., 'Uniter: Universal image-text representation learning,' in ECCV , 2020.",
+      "retrieval_context": "Bibliography reference [19]",
+      "asset_uri": null,
+      "token_count": 18,
+      "source_element_ids": [
+        "dbb7286f-6644-4d93-8e76-d1c049e1d8ec"
+      ],
+      "bounding_boxes": []
+    },
+    {
+      "id": "d68892bf-7c89-4ff0-b79b-928be9951db2",
+      "paper_id": "24f6c239-0d53-4941-859f-0eb7b610e40a",
+      "section_id": null,
+      "order": 64,
+      "modality": "text",
+      "text": "S. Huang and et al., 'Kosmos-1: Multimodal large language model,' in NeurIPS , 2023.",
+      "retrieval_context": "Bibliography reference [20]",
+      "asset_uri": null,
+      "token_count": 14,
+      "source_element_ids": [
+        "296a161e-edea-4490-bfd5-86fbb8a56777"
+      ],
+      "bounding_boxes": []
+    }
+  ]
+}

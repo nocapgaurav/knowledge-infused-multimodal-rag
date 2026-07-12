@@ -1,0 +1,14 @@
+{
+  "document_id": "d5fff799-b320-4384-b91c-85664ff0a250",
+  "collection_name": "kimrag_baai_bge_m3_sha-1_text",
+  "vector_dimension": 4,
+  "distance_metric": "cosine",
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_version": "sha-1",
+  "artifact_version": "1.0",
+  "source_embedding_manifest": "7aacc57b140ba1138d390079b70714594f6f48dd76f06cc74479c5bcedda0c1b",
+  "checksum": "f2e407bf3e1453e3a1ad0ae8086829599ae9618c52005c23ed9b27abf925d862",
+  "indexed_vectors": 1,
+  "failed_vectors": 0,
+  "created_at": "2026-07-12T05:18:33.631302Z"
+}

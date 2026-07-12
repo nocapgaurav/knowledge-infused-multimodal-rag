@@ -1,0 +1,18 @@
+{
+  "document_id": "5bf62af7-add1-48e2-950e-f303832d41cc",
+  "query": "What did you just say about Figure 2 specifically?",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "e84b9b652de17874839207ef9c3c3b95f7767be794512b20b243765d40928cee",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 20,
+    "candidates_expanded": 34,
+    "candidates_scored": 54,
+    "evidence_groups": 5,
+    "evidence_items": 16,
+    "duration_ms": 8891.614834079519
+  },
+  "created_at": "2026-07-12T12:19:36.751488Z"
+}

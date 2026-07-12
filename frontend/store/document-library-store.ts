@@ -26,6 +26,9 @@ interface DocumentLibraryState {
   /** "Delete" only ever removes the local entry -- there is no backend
    * deletion capability to call. */
   removeDocument: (documentId: string) => void;
+  /** Cosmetic only, like the rest of this store -- there is no backend
+   * document metadata to update, so this just relabels the local entry. */
+  renameDocument: (documentId: string, filename: string) => void;
 }
 
 export const useDocumentLibraryStore = create<DocumentLibraryState>()(
@@ -72,6 +75,15 @@ export const useDocumentLibraryStore = create<DocumentLibraryState>()(
           const rest = { ...state.documents };
           delete rest[documentId];
           return { documents: rest };
+        }),
+
+      renameDocument: (documentId, filename) =>
+        set((state) => {
+          const existing = state.documents[documentId];
+          if (!existing) return state;
+          return {
+            documents: { ...state.documents, [documentId]: { ...existing, filename } },
+          };
         }),
     }),
     { name: "document-library-store" },

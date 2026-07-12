@@ -2,9 +2,10 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { EvidenceList } from "@/components/evidence/evidence-list";
+import { PdfSkeleton } from "@/components/pdf/pdf-skeleton";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TYPOGRAPHY } from "@/constants/typography";
@@ -14,14 +15,7 @@ import type { EvidenceItem, EvidenceTarget } from "@/types/view-models";
 
 const PdfViewer = dynamic(
   () => import("@/components/pdf/pdf-viewer").then((module) => module.PdfViewer),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-full items-center justify-center">
-        <Loader2 className="text-muted-foreground size-6 animate-spin" />
-      </div>
-    ),
-  },
+  { ssr: false, loading: () => <PdfSkeleton /> },
 );
 
 /** Evidence and PDF share the center panel via tabs (Phase 3: "Center:

@@ -47,3 +47,22 @@ Object.defineProperty(globalThis, "localStorage", {
 if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = () => {};
 }
+
+// jsdom has no Web Animations API either; Base UI's scroll-area calls
+// `getAnimations()` to decide when the auto-hide scrollbar has finished
+// fading. Every real browser implements this -- the shim just reports
+// "nothing running", which is always true in a DOM with no CSS engine.
+if (!Element.prototype.getAnimations) {
+  Element.prototype.getAnimations = () => [];
+}
+
+// jsdom has no layout engine, so ResizeObserver (used to follow a growing
+// conversation while auto-scrolled to the bottom) doesn't exist either.
+// Every real browser has it; this no-op shim just keeps it callable.
+if (typeof globalThis.ResizeObserver === "undefined") {
+  globalThis.ResizeObserver = class ResizeObserver {
+    observe(): void {}
+    unobserve(): void {}
+    disconnect(): void {}
+  };
+}

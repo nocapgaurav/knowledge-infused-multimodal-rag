@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Document, Page } from "react-pdf";
-import { ChevronLeft, ChevronRight, FileWarning, Loader2, ZoomIn, ZoomOut } from "lucide-react";
+import { ChevronLeft, ChevronRight, FileWarning, ZoomIn, ZoomOut } from "lucide-react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
+import { PdfSkeleton } from "@/components/pdf/pdf-skeleton";
 import { Button } from "@/components/ui/button";
 import { TYPOGRAPHY } from "@/constants/typography";
 import { loadPdfBlob } from "@/lib/pdf-storage";
@@ -59,6 +60,7 @@ export function PdfViewer({
     "idle" | "searching" | "text" | "region" | "page-only" | "not-found"
   >("idle");
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const pageContainerRef = useRef<HTMLDivElement | null>(null);
 
   // Persisted after commit, never inside a state updater: a Zustand write
   // notifies subscribers synchronously, and React may run updater
@@ -67,6 +69,19 @@ export function PdfViewer({
   useEffect(() => {
     setLastPdfPage(documentId, pageNumber);
   }, [documentId, pageNumber, setLastPdfPage]);
+
+  // Restart the page's fade-in on every page change without remounting
+  // `<Page>` -- a key-based remount would drop react-pdf's own canvas and
+  // re-trigger its internal loading state, which is the "abrupt jump"
+  // this is meant to avoid. Toggling the class and forcing a reflow
+  // restarts the CSS animation in place.
+  useEffect(() => {
+    const node = pageContainerRef.current;
+    if (!node) return;
+    node.classList.remove("pdf-page-transition");
+    void node.offsetWidth;
+    node.classList.add("pdf-page-transition");
+  }, [pageNumber]);
 
   useEffect(() => {
     let cancelled = false;
@@ -225,7 +240,7 @@ export function PdfViewer({
           }
           className="flex justify-center py-4"
         >
-          <div className="relative">
+          <div ref={pageContainerRef} className="pdf-page-transition relative">
             <Page
               pageNumber={pageNumber}
               scale={scale}
@@ -273,12 +288,7 @@ function escapeHtml(text: string): string {
 }
 
 function PdfLoading() {
-  return (
-    <div className="flex h-full flex-col items-center justify-center gap-2">
-      <Loader2 className="text-muted-foreground size-6 animate-spin" aria-hidden="true" />
-      <p className={TYPOGRAPHY.caption}>Loading PDF...</p>
-    </div>
-  );
+  return <PdfSkeleton />;
 }
 
 function PdfMessage({ title, description }: { title: string; description: string }) {

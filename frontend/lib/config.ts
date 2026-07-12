@@ -39,12 +39,6 @@ export const config = {
     maxSizeBytes: 50 * 1024 * 1024,
     acceptedMimeTypes: ["application/pdf"] as string[],
   },
-  featureFlags: {
-    /** Relationship visualization (Phase 3/4B: optional, user-initiated,
-     * never the default view). Kept behind a flag so it can be disabled
-     * entirely without touching component code. */
-    relatedContentGraphView: true,
-  },
 } as const;
 
 export type AppConfig = typeof config;

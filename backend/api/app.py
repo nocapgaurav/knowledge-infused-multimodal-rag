@@ -14,7 +14,6 @@ from backend.api.routes.health import router as health_router
 from backend.api.routes.indexing import router as indexing_router
 from backend.api.routes.parsing import router as parsing_router
 from backend.api.routes.representation import router as representation_router
-from backend.api.routes.retrieval import router as retrieval_router
 from backend.config.settings import get_settings
 from backend.shared.logging import configure_logging
 
@@ -57,7 +56,6 @@ def create_app() -> FastAPI:
     app.include_router(embedding_router)
     app.include_router(indexing_router)
     app.include_router(graph_router)
-    app.include_router(retrieval_router)
     app.include_router(generation_router)
     app.include_router(evaluation_router)
     register_exception_handlers(app)

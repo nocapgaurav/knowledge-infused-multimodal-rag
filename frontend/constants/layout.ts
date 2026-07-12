@@ -7,8 +7,7 @@ export const PANEL_WIDTH = {
   sidebarDefault: 280,
   sidebarMin: 220,
   sidebarMax: 360,
-  conversationDefaultPercent: 34,
-  contextDefaultPercent: 26,
+  conversationDefaultPercent: 50,
   panelMinPercent: 18,
 } as const;
 

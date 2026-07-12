@@ -1,0 +1,18 @@
+{
+  "document_id": "89fd0365-efcb-4d5e-a55a-ede6dad16470",
+  "query": "What is this document about?",
+  "retrieval_version": "1.0",
+  "retrieval_strategy_version": "1.1",
+  "representation_version": "f2894ca4b380ad51fd7a8ff73c7c6a9585e74f7750c22a334f6a5cf0a5ead2cf",
+  "embedding_version": "5617a9f61b028005a4858fdac845db406aefb181",
+  "graph_version": "1.0",
+  "statistics": {
+    "candidates_generated": 12,
+    "candidates_expanded": 0,
+    "candidates_scored": 12,
+    "evidence_groups": 5,
+    "evidence_items": 5,
+    "duration_ms": 1965.1287919841707
+  },
+  "created_at": "2026-07-12T12:22:40.292742Z"
+}
