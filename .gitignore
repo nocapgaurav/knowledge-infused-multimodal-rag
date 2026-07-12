@@ -37,3 +37,5 @@ storage/
 *.faiss
 *.index
 *.bin
+data/raw/
+data/retrieval/
