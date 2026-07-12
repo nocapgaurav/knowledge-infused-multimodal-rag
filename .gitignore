@@ -27,3 +27,13 @@ node_modules/
 
 # Docker
 *.log
+
+# Generated data
+data/embeddings/
+backend/storage/
+storage/
+
+# Optional generated indexes
+*.faiss
+*.index
+*.bin
