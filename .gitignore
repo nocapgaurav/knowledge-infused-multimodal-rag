@@ -39,3 +39,4 @@ storage/
 *.bin
 data/raw/
 data/retrieval/
+data/generation/
