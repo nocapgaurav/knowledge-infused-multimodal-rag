@@ -52,21 +52,6 @@ This project exists to address three specific problems:
 - **A real evaluation harness** — retrieval metrics (recall, precision, MRR, nDCG, hit rate), generation metrics (citation accuracy, grounding accuracy, unsupported-claim rate), and operational metrics (latency, throughput, CPU, memory), run against a real benchmark dataset.
 - **Local-first by design** — parsing, embedding, and generation all run locally; a document never has to leave the user's machine to be processed.
 
-## Screenshots
-
-> Screenshots pending capture. Once available, they will be added below and referenced from this section.
-
-| | |
-|---|---|
-| Upload & document library | _placeholder_ |
-| Conversation with citations | _placeholder_ |
-| Citation → PDF navigation | _placeholder_ |
-| Evidence panel | _placeholder_ |
-| Figure explanation | _placeholder_ |
-
-## Demo
-
-> A recorded walkthrough will be linked here once available.
 
 ## Architecture Overview
 
