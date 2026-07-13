@@ -5,21 +5,19 @@
 **Research Workspace** — evidence-grounded question answering over scientific PDFs, with retrieval fused across text, tables, figures, and a citation graph.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB.svg?logo=python&logoColor=white)](pyproject.toml)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg?logo=fastapi&logoColor=white)](backend/api/app.py)
-[![Next.js 15](https://img.shields.io/badge/Next.js-15.5-000000.svg?logo=nextdotjs&logoColor=white)](frontend/package.json)
-[![React 19](https://img.shields.io/badge/React-19.1-61DAFB.svg?logo=react&logoColor=black)](frontend/package.json)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6.svg?logo=typescript&logoColor=white)](frontend/tsconfig.json)
-[![Qdrant](https://img.shields.io/badge/Qdrant-vector%20search-DC244C.svg)](docker-compose.yml)
-[![Neo4j](https://img.shields.io/badge/Neo4j-knowledge%20graph-008CC1.svg?logo=neo4j&logoColor=white)](docker-compose.yml)
-[![Ollama](https://img.shields.io/badge/Ollama-local%20LLM-000000.svg)](backend/config/settings.py)
-[![Local-first](https://img.shields.io/badge/deployment-local--first-6f42c1.svg)](#deployment)
-
-[Overview](#overview) · [Features](#key-features) · [Architecture](#architecture-overview) · [Pipeline](#end-to-end-pipeline) · [Getting Started](#getting-started) · [Deployment](#deployment)
 
 </div>
 
 ---
+
+## Highlights
+
+- Evidence-grounded question answering over scientific PDFs
+- Multimodal retrieval across text, tables, and figures
+- Citation-backed responses with synchronized PDF navigation
+- Knowledge-graph-expanded retrieval, not just nearest-neighbor search
+- Local-first architecture using open-source models — no paid APIs
+- Modern full-stack application with FastAPI + Next.js
 
 ## Overview
 
@@ -51,7 +49,6 @@ This project exists to address three specific problems:
 - **Full generation traceability** — every answer carries a phase-by-phase trace (planning, retrieval, grounding, citation resolution).
 - **A real evaluation harness** — retrieval metrics (recall, precision, MRR, nDCG, hit rate), generation metrics (citation accuracy, grounding accuracy, unsupported-claim rate), and operational metrics (latency, throughput, CPU, memory), run against a real benchmark dataset.
 - **Local-first by design** — parsing, embedding, and generation all run locally; a document never has to leave the user's machine to be processed.
-
 
 ## Architecture Overview
 
@@ -92,25 +89,7 @@ flowchart LR
 - **Backend** (`backend/`) — a FastAPI service structured as one vertical package per pipeline stage (ingestion, parsing, chunking, embeddings, search, graph, retrieval, generation, evaluation), each following the same internal shape: `interfaces/` (ports) → `providers/` (the only place a vendor SDK is imported) → `services/` (orchestration) → `repository/` (per-stage storage) → `validator/` (structural checks at every phase boundary).
 - **Infrastructure** — Qdrant and Neo4j run in Docker; Ollama runs natively on the host and serves both the text generation model and the vision model used for figure analysis.
 
-A complete technical breakdown — full data flow, backend and frontend architecture, every pipeline in detail, storage layout, and error handling, with Mermaid diagrams throughout — lives in **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)**. For the engineering reasoning behind these choices, including why each major technology was selected over its alternatives, see **[`docs/SYSTEM_DESIGN.md`](docs/SYSTEM_DESIGN.md)**.
-
-## Technology Stack
-
-| Layer | Technology | Why |
-|---|---|---|
-| Backend | Python 3.12 · FastAPI · Pydantic v2 · Uvicorn | Pydantic-native validation shared with the domain model, `Depends()`-based DI as the single wiring point, and async support for a service whose real bottleneck is I/O to Qdrant/Neo4j/Ollama. |
-| Document parsing | [Docling](https://github.com/DS4SD/docling) — layout analysis, table structure extraction, figure rendering | Preserves real table cell structure and renders figures to image assets in one library, instead of flattening tables to text and needing a separate tool for figures. |
-| Embeddings | `sentence-transformers`, default model `BAAI/bge-m3` | A strong, long-context, locally-runnable embedding model — no hosted embedding API required. |
-| Vector search | [Qdrant](https://qdrant.tech/) (cosine similarity) | A running service with native per-document collections and payload filtering, not an in-process library (e.g. FAISS) that would need collection isolation and persistence hand-rolled. |
-| Knowledge graph | [Neo4j](https://neo4j.com/) 5 Community | A persistent, independently queryable graph (Cypher, bounded traversals) — the citation/reference graph must survive and be queried across requests, which an in-memory graph library (e.g. NetworkX) isn't built for. |
-| Generation | [Ollama](https://ollama.com/) — `qwen2.5:7b-instruct` for text answers, `gemma3:4b` for figure vision | A stable local HTTP API turns "the model" into just another networked dependency, like Qdrant and Neo4j, with no in-process model/GPU-memory management. `qwen2.5:7b` follows strict grounding instructions while staying light enough for consumer hardware. |
-| Frontend | Next.js 15 (App Router, Turbopack) · React 19 · TypeScript 5 | Deep-linkable, refresh-safe workspace routes alongside a fully interactive client experience; static types at the API/view-model boundary catch integration bugs at compile time. |
-| UI | Tailwind CSS v4 · shadcn/ui on Base UI primitives · `react-resizable-panels` · `react-pdf` · Framer Motion · `cmdk` | shadcn generates owned component source rather than an opaque dependency, and `react-pdf` gives the page/coordinate-level control the citation-highlighting feature depends on. |
-| State / data | Zustand (client state, persisted) · TanStack Query (server state) · Axios · Zod + React Hook Form | Client state (selection, panel sizes, conversation history) and server state (fetched data) are deliberately kept in separate systems with different caching models. |
-| Testing | Pytest (backend, 95 test files) · Vitest + Testing Library (frontend unit/component) · Playwright (frontend E2E) · `vitest-axe` (accessibility) | Playwright's auto-waiting model suits a UI backed by genuinely asynchronous, real-infrastructure operations (document processing, LLM generation) without flaky sleeps. |
-| Infra | Docker Compose (Qdrant + Neo4j) · local filesystem artifact storage per pipeline stage | One command gives every contributor identical, disposable local infrastructure. |
-
-The full reasoning behind each of these choices — including the alternatives considered and the trade-offs accepted — is in [`docs/SYSTEM_DESIGN.md`](docs/SYSTEM_DESIGN.md).
+The complete technical breakdown — full data flow, backend and frontend internals, every pipeline stage, storage layout, and error handling — along with the engineering reasoning behind each major technology choice, lives in the [Documentation](#documentation) section below.
 
 ## Repository Structure
 
@@ -145,116 +124,30 @@ knowledge-infused-multimodal-rag/
 
 ## End-to-End Pipeline
 
-Uploading a paper runs it through seven backend stages, each a REST call, each persisting its own artifact under `data/`:
-
-```mermaid
-flowchart TD
-    A["1 · Ingest<br/>POST /documents"] --> B["2 · Parse<br/>POST /documents/{id}/parse"]
-    B --> C["3 · Represent<br/>POST /documents/{id}/represent"]
-    C --> D["4 · Embed<br/>POST /documents/{id}/embed"]
-    D --> E["5 · Index<br/>POST /documents/{id}/index"]
-    E --> F["6 · Graph<br/>POST /documents/{id}/graph"]
-    F --> G["Ready for questions"]
-    G --> H["7 · Generate<br/>POST /documents/{id}/generate"]
-
-    A -.-> A1[("data/raw/{id}")]
-    B -.-> B1[("data/parsed/{id}")]
-    C -.-> C1[("data/knowledge/{id}")]
-    D -.-> D1[("data/embeddings/{id}")]
-    E -.-> E1[("Qdrant collection")]
-    F -.-> F1[("Neo4j graph")]
-    H -.-> H1[("data/generation/{id}")]
-```
-
-| Stage | Endpoint | What happens |
-|---|---|---|
-| **1. Ingest** | `POST /documents` | The uploaded PDF is validated (size limit, type) and persisted as-is with its upload metadata. |
-| **2. Parse** | `POST /documents/{id}/parse` | [Docling](https://github.com/DS4SD/docling) runs full layout analysis: text blocks, tables (with cell-level row/column structure), and figures (rendered to PNG), each carrying page-level bounding boxes. |
-| **3. Represent** | `POST /documents/{id}/represent` | The parsed paper is walked in reading order and split into **Knowledge Units** — see below. |
-| **4. Embed** | `POST /documents/{id}/embed` | Each Knowledge Unit is embedded with `sentence-transformers` (`BAAI/bge-m3` by default), prefixed with its structural label (e.g. `"Figure 2: ..."`) so retrieval understands *what kind* of thing it's matching, not just its raw text. |
-| **5. Index** | `POST /documents/{id}/index` | Embeddings are upserted into a per-document Qdrant collection (cosine similarity). |
-| **6. Graph** | `POST /documents/{id}/graph` | Knowledge Units and their relationships (citations, references, section continuations) are written into Neo4j as a real property graph. |
-| **7. Generate** | `POST /documents/{id}/generate` | A question triggers retrieval, then generation — see the dedicated sections below. |
-
-## Knowledge Unit Pipeline
-
-A **Knowledge Unit** is the atomic, citable piece of evidence in this system — internally a `Chunk` (`backend/domain/chunk.py`), one of `text`, `table`, or `figure`. Every Knowledge Unit carries:
-
-- its **modality** (`text` / `table` / `figure`),
-- its **reading-order position** in the document (used for neighbor expansion),
-- a **structural label** (`retrieval_context`) like `"Section: III. Methodology"`, `"Figure 2"`, or `"Authors and affiliations (title page)"`,
-- and one or more **bounding boxes** (page number + coordinates) — the exact region of the original PDF it came from.
+Uploading a paper runs it through a seven-stage backend pipeline before it's ready for questions:
 
 ```mermaid
 flowchart LR
-    P["Parsed Paper<br/>(text blocks, tables, figures)"] --> W["Walk in reading order"]
-    W --> S1["ParagraphStrategy"]
-    W --> S2["TableStrategy"]
-    W --> S3["FigureStrategy"]
-    S1 --> KU["Knowledge Unit<br/>(Chunk)"]
-    S2 --> KU
-    S3 --> KU
-    KU --> REL["Relationships<br/>CITES · REFERENCES · CONTINUES"]
-    KU --> OUT[("knowledge_units.json")]
-    REL --> OUT2[("relationships.json")]
+    A["1 · Ingest"] --> B["2 · Parse"]
+    B --> C["3 · Represent"]
+    C --> D["4 · Embed"]
+    D --> E["5 · Index"]
+    E --> F["6 · Graph"]
+    F --> G["Ready"]
+    G --> H["7 · Generate"]
 ```
 
-- **Paragraphs** are split with a configurable ceiling (250 words) and floor (4 words), so a Knowledge Unit is neither a whole page nor a single orphaned sentence.
-- **Tables** keep their caption fused with a markdown export of their actual cell structure (rows, columns, spans, headers) — a table is never flattened into a paragraph of prose.
-- **Figures** carry their caption as text and a pointer (`asset_uri`) to the rendered PNG, so the figure image itself is available later for vision analysis.
+| Stage | Endpoint | Purpose |
+|---|---|---|
+| 1. Ingest | `POST /documents` | Validate and store the uploaded PDF. |
+| 2. Parse | `POST /documents/{id}/parse` | Extract text, tables, and figures, each with page-level positions. |
+| 3. Represent | `POST /documents/{id}/represent` | Split the parsed paper into citable **Knowledge Units**. |
+| 4. Embed | `POST /documents/{id}/embed` | Generate a vector embedding for every Knowledge Unit. |
+| 5. Index | `POST /documents/{id}/index` | Store embeddings in a per-document vector index (Qdrant). |
+| 6. Graph | `POST /documents/{id}/graph` | Build a citation/reference graph connecting Knowledge Units (Neo4j). |
+| 7. Generate | `POST /documents/{id}/generate` | Retrieve relevant evidence and generate a grounded, cited answer. |
 
-## Retrieval Pipeline
-
-Retrieval is a four-phase pipeline that combines dense search with a real graph traversal, not a single vector-search call:
-
-```mermaid
-flowchart TD
-    Q["Question"] --> C1["Phase 1 · Candidate Generation<br/>embed query → Qdrant top-K (K=20, cosine)"]
-    C1 --> C2["Phase 2 · Evidence Expansion<br/>graph BFS in Neo4j (≤2 hops)<br/>CITES · REFERENCES · CONTINUES"]
-    C2 --> C3["Phase 3 · Evidence Evaluation<br/>Reciprocal Rank Fusion (k=60)<br/>over 4 signals"]
-    C3 --> C4["Phase 4 · Evidence Assembly<br/>group into ≤5 evidence groups<br/>≤2 primaries per section"]
-    C4 --> B["EvidenceBundle"]
-```
-
-1. **Candidate Generation** — the question is embedded with the same model used for indexing and matched against Qdrant (`top_k = 20`, cosine similarity), scoped to the current document.
-2. **Evidence Expansion** — a budgeted breadth-first traversal from those seed results through Neo4j, following `CITES` / `REFERENCES` / `CONTINUES` edges up to 2 hops deep, so a directly-cited reference or a continuing section can surface even if it wasn't itself a top vector match. Anything the graph discovers is re-fetched from Qdrant — the graph never invents text of its own.
-3. **Evidence Evaluation** — the combined pool is ranked with **Reciprocal Rank Fusion** (`score = Σ 1 / (60 + rank)`) across four independent signals: dense similarity, lexical term overlap, graph proximity, and relationship-type confidence.
-4. **Evidence Assembly** — the ranked pool is grouped into evidence groups (a primary Knowledge Unit plus its directly-connected supporting units), capped for diversity so one section can't dominate the whole answer.
-
-## Figure and Table Reasoning
-
-Every modality is retrievable, but each is prepared differently:
-
-- **Text** is embedded directly, with its structural label prefixed.
-- **Tables** keep cell-level structure from Docling (rows, columns, spans, headers) and are embedded as caption + structured markdown together — so a question about a specific column or comparison can match the table's actual content, not a lossy text summary of it.
-- **Figures** are embedded by their **caption only** at index time. The extra reasoning happens **at answer time, on demand**: when a question is classified as figure-centric, a local vision-language model (`gemma3:4b` via Ollama) is shown the actual rendered figure image and asked to describe, concretely, what's visually in it — components, layout, arrows, axes, labels. That description is explicitly layered onto the caption and clearly marked as automated visual analysis, never presented as the paper's own words, and the whole step degrades gracefully (falls back to caption-only) if the image or model is unavailable.
-
-## Citation System
-
-Every answer is required to cite its evidence, and every citation is independently verified before it reaches the client:
-
-```mermaid
-sequenceDiagram
-    participant LLM as Ollama (qwen2.5:7b-instruct)
-    participant CR as CitationResolver
-    participant FE as Frontend
-    participant PDF as PDF Viewer
-
-    LLM->>CR: "...as shown in [KU3]..."
-    CR->>CR: regex-extract every [KUn] / (KUn)
-    CR->>CR: resolve strictly against this prompt's label→evidence map
-    CR-->>FE: ResolvedCitation { knowledge_unit_id, page_numbers, bounding_boxes, modality }
-    FE->>FE: render citation as a clickable label in the answer
-    FE->>PDF: on click — jump to page, highlight bounding box
-```
-
-- Each evidence item shown to the model is tagged with a short label (`KU1`, `KU2`, ...) plus its structural identity, e.g. `[KU3] (Figure 2) ...`.
-- After generation, the `CitationResolver` regex-extracts every citation the model actually wrote and resolves it **strictly against the exact label map built for that specific prompt** — a citation to a label that was never shown is marked unresolved rather than trusted.
-- Resolved citations carry the originating Knowledge Unit's page numbers and bounding boxes straight through to the frontend, which is what lets clicking a citation jump the PDF viewer to the exact page and highlight the exact region — not just "somewhere in this document."
-
-## Conversation Memory
-
-Conversation history is **per-document and entirely client-side**. The backend has no concept of a session or a conversation — every `/documents/{id}/generate` call is a single, independent question with no server-side memory. The frontend (`store/conversation-store.ts`, Zustand + persisted to `localStorage`) keeps one running thread of question/answer turns per uploaded document, so switching between papers shows each paper's own conversation, and a hard refresh doesn't lose history.
+Retrieval combines vector search with graph traversal and rank fusion; generation runs entirely against retrieved evidence and verifies every citation before it reaches the client. The full mechanics of each stage — including the Knowledge Unit model, the retrieval algorithm, figure/table handling, the citation-resolution pipeline, and conversation memory — are in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ## Example Usage Workflow
 
@@ -426,6 +319,13 @@ Running the system therefore means running it on your own machine, following the
 - **Vector search / knowledge graph** — swap the local Qdrant/Neo4j containers for managed equivalents (e.g. Qdrant Cloud, Neo4j Aura).
 
 Local-first is the default because it best serves this project's actual goals — privacy, reproducibility, and zero marginal inference cost — not because the architecture is limited to it.
+
+## Documentation
+
+This README is intentionally a high-level overview. For a deeper technical dive:
+
+- **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** — the complete system architecture: full data flow, backend and frontend internals, every pipeline stage (parsing, Knowledge Units, embeddings, retrieval, generation, citations, conversation memory), storage layout, and error handling, with diagrams throughout.
+- **[`docs/SYSTEM_DESIGN.md`](docs/SYSTEM_DESIGN.md)** — the engineering reasoning behind these choices: why each major technology was selected, the trade-offs accepted, and the alternatives considered.
 
 ## License
 
